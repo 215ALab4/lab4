@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  6 NOV 2014 23:11
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  7 NOV 2014 01:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -247,6 +247,48 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
 )
 \openout1 = `writeupLab4.aux'.
 
@@ -413,34 +455,159 @@ Package pdftex.def Info: CORR3.png used on input line 139.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Missing character: There is no Ð in font cmr10!
 [1
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./NDAI1
-.png> <./NDAI2.png> <./NDAI3.png>] [2 <./SD1.png> <./SD2.png> <./SD3.png> <./CO
-RR1.png> <./CORR2.png> <./CORR3.png>] (./writeupLab4.aux)
+.png> <./NDAI2.png> <./NDAI3.png>]
+<AUCconverge.png, id=23, 481.8pt x 481.8pt>
+File: AUCconverge.png Graphic file (type png)
+ <use AUCconverge.png>
+Package pdftex.def Info: AUCconverge.png used on input line 161.
+(pdftex.def)             Requested size: 150.32504pt x 150.31952pt.
+
+<CVAUC.png, id=24, 481.8pt x 481.8pt>
+File: CVAUC.png Graphic file (type png)
+ <use CVAUC.png>
+Package pdftex.def Info: CVAUC.png used on input line 165.
+(pdftex.def)             Requested size: 150.32504pt x 150.31952pt.
+
+<imageAUC.png, id=25, 481.8pt x 481.8pt>
+File: imageAUC.png Graphic file (type png)
+ <use imageAUC.png>
+Package pdftex.def Info: imageAUC.png used on input line 169.
+(pdftex.def)             Requested size: 150.32504pt x 150.31952pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<ROC_block1.pdf, id=26, 505.89pt x 505.89pt>
+File: ROC_block1.pdf Graphic file (type pdf)
+ <use ROC_block1.pdf>
+Package pdftex.def Info: ROC_block1.pdf used on input line 179.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+<ROC_block2.pdf, id=27, 505.89pt x 505.89pt>
+File: ROC_block2.pdf Graphic file (type pdf)
+ <use ROC_block2.pdf>
+Package pdftex.def Info: ROC_block2.pdf used on input line 183.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+<ROC_block3.pdf, id=28, 505.89pt x 505.89pt>
+File: ROC_block3.pdf Graphic file (type pdf)
+ <use ROC_block3.pdf>
+Package pdftex.def Info: ROC_block3.pdf used on input line 187.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<ROC_block4.pdf, id=29, 505.89pt x 505.89pt>
+File: ROC_block4.pdf Graphic file (type pdf)
+ <use ROC_block4.pdf>
+Package pdftex.def Info: ROC_block4.pdf used on input line 194.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+<ROC_block5.pdf, id=30, 505.89pt x 505.89pt>
+File: ROC_block5.pdf Graphic file (type pdf)
+ <use ROC_block5.pdf>
+Package pdftex.def Info: ROC_block5.pdf used on input line 198.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+<ROC_block6.pdf, id=31, 505.89pt x 505.89pt>
+File: ROC_block6.pdf Graphic file (type pdf)
+ <use ROC_block6.pdf>
+Package pdftex.def Info: ROC_block6.pdf used on input line 202.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<ROC_block8.pdf, id=32, 505.89pt x 505.89pt>
+File: ROC_block8.pdf Graphic file (type pdf)
+ <use ROC_block8.pdf>
+Package pdftex.def Info: ROC_block8.pdf used on input line 209.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+<ROC_block9.pdf, id=33, 505.89pt x 505.89pt>
+File: ROC_block9.pdf Graphic file (type pdf)
+ <use ROC_block9.pdf>
+Package pdftex.def Info: ROC_block9.pdf used on input line 213.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+<ROC_block10.pdf, id=34, 505.89pt x 505.89pt>
+File: ROC_block10.pdf Graphic file (type pdf)
+ <use ROC_block10.pdf>
+Package pdftex.def Info: ROC_block10.pdf used on input line 217.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<ROC_block11.pdf, id=35, 505.89pt x 505.89pt>
+File: ROC_block11.pdf Graphic file (type pdf)
+ <use ROC_block11.pdf>
+Package pdftex.def Info: ROC_block11.pdf used on input line 224.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+<ROC_block12.pdf, id=36, 505.89pt x 505.89pt>
+File: ROC_block12.pdf Graphic file (type pdf)
+ <use ROC_block12.pdf>
+Package pdftex.def Info: ROC_block12.pdf used on input line 228.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<ROC_image1.pdf, id=37, 505.89pt x 505.89pt>
+File: ROC_image1.pdf Graphic file (type pdf)
+ <use ROC_image1.pdf>
+Package pdftex.def Info: ROC_image1.pdf used on input line 237.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+<ROC_image4.pdf, id=38, 505.89pt x 505.89pt>
+File: ROC_image4.pdf Graphic file (type pdf)
+ <use ROC_image4.pdf>
+Package pdftex.def Info: ROC_image4.pdf used on input line 241.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+<ROC_image8.pdf, id=39, 505.89pt x 505.89pt>
+File: ROC_image8.pdf Graphic file (type pdf)
+ <use ROC_image8.pdf>
+Package pdftex.def Info: ROC_image8.pdf used on input line 245.
+(pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Missing character: There is no Ð in font cmr10!
+[2 <./SD1.png> <./SD2.png> <./SD3.png> <./CORR1.png> <./CORR2.png> <./CORR3.png
+>] [3 <./AUCconverge.png> <./CVAUC.png> <./imageAUC.png> <./ROC_block1.pdf> <./
+ROC_block2.pdf> <./ROC_block3.pdf> <./ROC_block4.pdf> <./ROC_block5.pdf> <./ROC
+_block6.pdf>] [4 <./ROC_block8.pdf> <./ROC_block9.pdf> <./ROC_block10.pdf> <./R
+OC_block11.pdf> <./ROC_block12.pdf> <./ROC_image1.pdf> <./ROC_image4.pdf> <./RO
+C_image8.pdf>] (./writeupLab4.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3115 strings out of 493488
- 42262 string characters out of 3141326
- 110804 words of memory out of 3000000
- 6362 multiletter control sequences out of 15000+200000
+ 3200 strings out of 493488
+ 43760 string characters out of 3141326
+ 114805 words of memory out of 3000000
+ 6430 multiletter control sequences out of 15000+200000
  9376 words of font info for 34 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,11n,43p,289b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,11n,43p,927b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb>
-Output written on writeupLab4.pdf (2 pages, 282291 bytes).
+Output written on writeupLab4.pdf (4 pages, 381235 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 150 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

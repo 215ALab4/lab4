@@ -152,6 +152,102 @@ Blah blah...
 
 \subsection{Random Forest}
 
+For random forest, as in all the other classifiers, we divided the three images into equal sized quadrants (2X2) rectangles in order to do 12 fold validation on the dataset.  That is, for each iteration of the validation, we dropped one of the quadrants as a test set, and trained on the remaining 11 quadrants.  Keeping the images segments disjoint and continuous ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  We also trained on each image and tested on the remaining two.  To test convergence, one of the things we did was increase the training set from including 1 quadrant, to including 2 quadrants, up to including 11 quadrants (using the complement as the test set).  For each of the 3 aforementioned classes of training, we trained on a range of forest sizes, from 2 trees to 50.     Here are the results: 
+
+Finally, this entire set of training models was done with all the features, and then restricted to only SD, CORR and NDAI.  These three were particularly chosen because their GiniImportance was consistently ranked at least 2fold above the next highest in all the cross validations. As we also saw with the random forest model that just used SD, CORR, NDAI, it did not fare poorly compared to training the forests on all 9 predictors.  
+
+\begin{figure}[h]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{AUCconverge.png}
+  \caption{Smoothed convergence of AUC for growing training set 50 trees and 3 features}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{CVAUC.png}
+  \caption{AUC of test set in each fold with 50 trees and 3 features}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{imageAUC.png}
+  \caption{AUC of the three images with 50 trees and 3 features}\label{}
+\endminipage
+\end{figure}
+
+
+{\bf Cross Validation ROC curves}
+
+\begin{figure}[h]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{ROC_block1.pdf}
+  \caption{ROC fold 1}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{ROC_block2.pdf}
+  \caption{ROC fold 2}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{ROC_block3.pdf}
+  \caption{ROC fold 3}\label{}
+\endminipage
+\end{figure}
+
+\begin{figure}[h]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{ROC_block4.pdf}
+  \caption{ROC fold 4}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{ROC_block5.pdf}
+  \caption{ROC fold 5}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{ROC_block6.pdf}
+  \caption{ROC fold 6}\label{}
+\endminipage
+\end{figure}
+
+\begin{figure}[h]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{ROC_block8.pdf}
+  \caption{ROC fold 8}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{ROC_block9.pdf}
+  \caption{ROC fold 9}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{ROC_block10.pdf}
+  \caption{ROC fold 10}\label{}
+\endminipage
+\end{figure}
+
+\begin{figure}[h]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{ROC_block11.pdf}
+  \caption{ROC fold 11}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{ROC_block12.pdf}
+  \caption{ROC fold 12}\label{}
+\endminipage
+\end{figure}
+
+{\bf ROC curves for cross validation between images} 
+
+\begin{figure}[h]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{ROC_image1.pdf}
+  \caption{Trained on image1}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{ROC_image4.pdf}
+  \caption{Trained on image2}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{ROC_image8.pdf}
+  \caption{Trained on image3}\label{}
+\endminipage
+\end{figure}
+
+
 \section{Reproducibility}
 
 {\bf How we organized out code and github repo}
