@@ -1,21 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.16)  7 NOV 2014 10:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  7 NOV 2014 10:51
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **writeupLab4.tex
-(D:\coursework\stat215a\group\writeupLab4.tex
+(./writeupLab4.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("D:\MiKTeX 2.9\tex\latex\base\article.cls"
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("D:\MiKTeX 2.9\tex\latex\base\size10.clo"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -30,31 +23,31 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("D:\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("D:\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("D:\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("D:\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("D:\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("D:\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("D:\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("D:\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -62,15 +55,15 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-("D:\MiKTeX 2.9\tex\latex\graphics\color.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-("D:\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip43
 \fb@frw=\dimen105
@@ -78,10 +71,10 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen107
 \FrameSep=\dimen108
 )
-("D:\MiKTeX 2.9\tex\latex\base\alltt.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip44
 \f@ncyO@elh=\skip45
 \f@ncyO@erh=\skip46
@@ -92,7 +85,7 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 \f@ncyO@olf=\skip51
 \f@ncyO@orf=\skip52
 )
-("D:\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks15
 \thm@bodyfont=\toks16
@@ -104,24 +97,24 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip55
 \dth@everypar=\toks20
 )
-("D:\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip56
 
 For additional information on amsmath, use the `?' option.
-("D:\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("D:\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks21
 \ex@=\dimen109
 ))
-("D:\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen110
 )
-("D:\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
@@ -162,7 +155,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen118
 \WF@size=\dimen119
 \c@WF@wrappedlines=\count100
@@ -170,7 +163,7 @@ LaTeX Info: Redefining \] on input line 2666.
 \WF@everypar=\toks26
 Package: wrapfig 2003/01/31  v 3.6
 )
-("D:\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count101
 \float@exts=\toks27
@@ -178,18 +171,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks28
 \@floatcapt=\box30
 )
-("D:\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("D:\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("D:\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("D:\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count102
@@ -204,9 +197,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen126
 \Gm@layoutvoffset=\dimen127
 \Gm@dimlist=\toks29
-
-("D:\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.sty
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
@@ -219,7 +211,7 @@ tim
 \c@proposition=\count111
 \c@definition=\count112
 
-(D:\coursework\stat215a\group\writeupLab4.aux
+(./writeupLab4.aux
 
 LaTeX Warning: Label `' multiply defined.
 
@@ -308,6 +300,8 @@ LaTeX Warning: Label `' multiply defined.
 LaTeX Warning: Label `' multiply defined.
 
 )
+\openout1 = `writeupLab4.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
 LaTeX Font Info:    ... okay on input line 79.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
@@ -320,7 +314,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
 LaTeX Font Info:    ... okay on input line 79.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
 LaTeX Font Info:    ... okay on input line 79.
- (C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen128
@@ -333,7 +327,50 @@ LaTeX Font Info:    ... okay on input line 79.
 \MPnumerator=\count117
 \makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks31
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -449,185 +486,390 @@ Package pdftex.def Info: CORR3.png used on input line 154.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<QDArocCV.png, id=14, 707.64375pt x 483.8075pt>
+<Image1Experts.png, id=14, 715.67375pt x 543.02875pt>
+File: Image1Experts.png Graphic file (type png)
+ <use Image1Experts.png>
+Package pdftex.def Info: Image1Experts.png used on input line 160.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+<Image1Raw.png, id=15, 715.67375pt x 543.02875pt>
+File: Image1Raw.png Graphic file (type png)
+ <use Image1Raw.png>
+Package pdftex.def Info: Image1Raw.png used on input line 161.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+Overfull \hbox (33.44632pt too wide) in paragraph at lines 160--162
+[][] [] 
+ []
+
+<Image2Experts.png, id=16, 715.67375pt x 543.02875pt>
+File: Image2Experts.png Graphic file (type png)
+ <use Image2Experts.png>
+Package pdftex.def Info: Image2Experts.png used on input line 163.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+<Image2Raw.png, id=17, 715.67375pt x 543.02875pt>
+File: Image2Raw.png Graphic file (type png)
+ <use Image2Raw.png>
+Package pdftex.def Info: Image2Raw.png used on input line 164.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+Overfull \hbox (33.44632pt too wide) in paragraph at lines 163--165
+[][] [] 
+ []
+
+<Image3Experts.png, id=18, 715.67375pt x 543.02875pt>
+File: Image3Experts.png Graphic file (type png)
+ <use Image3Experts.png>
+Package pdftex.def Info: Image3Experts.png used on input line 166.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+<Image3Raw.png, id=19, 715.67375pt x 543.02875pt>
+File: Image3Raw.png Graphic file (type png)
+ <use Image3Raw.png>
+Package pdftex.def Info: Image3Raw.png used on input line 167.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+Overfull \hbox (33.44632pt too wide) in paragraph at lines 166--168
+[][] [] 
+ []
+
+<Image1NDAI.png, id=20, 657.45625pt x 552.0625pt>
+File: Image1NDAI.png Graphic file (type png)
+ <use Image1NDAI.png>
+Package pdftex.def Info: Image1NDAI.png used on input line 173.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+<Image2NDAI.png, id=21, 657.45625pt x 552.0625pt>
+File: Image2NDAI.png Graphic file (type png)
+ <use Image2NDAI.png>
+Package pdftex.def Info: Image2NDAI.png used on input line 174.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+<Image3NDAI.png, id=22, 657.45625pt x 552.0625pt>
+File: Image3NDAI.png Graphic file (type png)
+ <use Image3NDAI.png>
+Package pdftex.def Info: Image3NDAI.png used on input line 175.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+Underfull \hbox (badness 5133) in paragraph at lines 173--176
+[][] []
+ []
+
+<Image1SD.png, id=23, 657.45625pt x 552.0625pt>
+File: Image1SD.png Graphic file (type png)
+ <use Image1SD.png>
+Package pdftex.def Info: Image1SD.png used on input line 180.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+<Image2SD.png, id=24, 657.45625pt x 552.0625pt>
+File: Image2SD.png Graphic file (type png)
+ <use Image2SD.png>
+Package pdftex.def Info: Image2SD.png used on input line 181.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+<Image3SD.png, id=25, 657.45625pt x 552.0625pt>
+File: Image3SD.png Graphic file (type png)
+ <use Image3SD.png>
+Package pdftex.def Info: Image3SD.png used on input line 182.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+Underfull \hbox (badness 5133) in paragraph at lines 180--183
+[][] []
+ []
+
+<Image1CORR.png, id=26, 657.45625pt x 552.0625pt>
+File: Image1CORR.png Graphic file (type png)
+ <use Image1CORR.png>
+Package pdftex.def Info: Image1CORR.png used on input line 187.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+<Image2CORR.png, id=27, 657.45625pt x 552.0625pt>
+File: Image2CORR.png Graphic file (type png)
+ <use Image2CORR.png>
+Package pdftex.def Info: Image2CORR.png used on input line 188.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+<Image3CORR.png, id=28, 657.45625pt x 552.0625pt>
+File: Image3CORR.png Graphic file (type png)
+ <use Image3CORR.png>
+Package pdftex.def Info: Image3CORR.png used on input line 189.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+Underfull \hbox (badness 5133) in paragraph at lines 187--190
+[][] []
+ []
+
+<QDArocCV.png, id=29, 707.64375pt x 483.8075pt>
 File: QDArocCV.png Graphic file (type png)
  <use QDArocCV.png>
-Package pdftex.def Info: QDArocCV.png used on input line 168.
+Package pdftex.def Info: QDArocCV.png used on input line 201.
 (pdftex.def)             Requested size: 230.18253pt x 157.36845pt.
 
-<AUCcvQDA.png, id=15, 707.64375pt x 483.8075pt>
+<AUCcvQDA.png, id=30, 707.64375pt x 483.8075pt>
 File: AUCcvQDA.png Graphic file (type png)
  <use AUCcvQDA.png>
-Package pdftex.def Info: AUCcvQDA.png used on input line 172.
+Package pdftex.def Info: AUCcvQDA.png used on input line 205.
 (pdftex.def)             Requested size: 230.18253pt x 157.36845pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Image1FullLogit.png, id=31, 715.67375pt x 543.02875pt>
+File: Image1FullLogit.png Graphic file (type png)
+
+<use Image1FullLogit.png>
+Package pdftex.def Info: Image1FullLogit.png used on input line 217.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+<Image1FullLogitProb.png, id=32, 715.67375pt x 543.02875pt>
+File: Image1FullLogitProb.png Graphic file (type png)
+
+<use Image1FullLogitProb.png>
+Package pdftex.def Info: Image1FullLogitProb.png used on input line 218.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+Overfull \hbox (33.44632pt too wide) in paragraph at lines 217--219
+[][] [] 
+ []
+
+<Image2FullLogit.png, id=33, 715.67375pt x 543.02875pt>
+File: Image2FullLogit.png Graphic file (type png)
+
+<use Image2FullLogit.png>
+Package pdftex.def Info: Image2FullLogit.png used on input line 220.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+<Image2FullLogitProb.png, id=34, 715.67375pt x 543.02875pt>
+File: Image2FullLogitProb.png Graphic file (type png)
+
+<use Image2FullLogitProb.png>
+Package pdftex.def Info: Image2FullLogitProb.png used on input line 221.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+Overfull \hbox (33.44632pt too wide) in paragraph at lines 220--222
+[][] [] 
+ []
+
+<Image3FullLogit.png, id=35, 715.67375pt x 543.02875pt>
+File: Image3FullLogit.png Graphic file (type png)
+
+<use Image3FullLogit.png>
+Package pdftex.def Info: Image3FullLogit.png used on input line 223.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+<Image3FullLogitProb.png, id=36, 715.67375pt x 543.02875pt>
+File: Image3FullLogitProb.png Graphic file (type png)
+
+<use Image3FullLogitProb.png>
+Package pdftex.def Info: Image3FullLogitProb.png used on input line 224.
+(pdftex.def)             Requested size: 250.48956pt x 190.0629pt.
+
+Overfull \hbox (33.44632pt too wide) in paragraph at lines 223--225
+[][] [] 
+ []
 
 [1
 
-{C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/coursewor
-k/stat215a/group/NDAI1.png> <D:/coursework/stat215a/group/NDAI2.png> <D:/course
-work/stat215a/group/NDAI3.png>] <AUCconverge.png, id=27, 481.8pt x 481.8pt>
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./NDAI1
+.png> <./NDAI2.png> <./NDAI3.png>]
+<Image1Errors.png, id=49, 657.45625pt x 552.0625pt>
+File: Image1Errors.png Graphic file (type png)
+ <use Image1Errors.png>
+Package pdftex.def Info: Image1Errors.png used on input line 230.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+<Image2Errors.png, id=50, 657.45625pt x 552.0625pt>
+File: Image2Errors.png Graphic file (type png)
+ <use Image2Errors.png>
+Package pdftex.def Info: Image2Errors.png used on input line 231.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+<Image3Errors.png, id=51, 657.45625pt x 552.0625pt>
+File: Image3Errors.png Graphic file (type png)
+ <use Image3Errors.png>
+Package pdftex.def Info: Image3Errors.png used on input line 232.
+(pdftex.def)             Requested size: 230.11313pt x 193.22476pt.
+
+Underfull \hbox (badness 5133) in paragraph at lines 230--233
+[][] []
+ []
+
+<LogisticHyperplane.png, id=52, 464.73625pt x 482.80376pt>
+File: LogisticHyperplane.png Graphic file (type png)
+
+<use LogisticHyperplane.png>
+Package pdftex.def Info: LogisticHyperplane.png used on input line 238.
+(pdftex.def)             Requested size: 232.36755pt x 241.40129pt.
+ <AUCconverge.png, id=53, 481.8pt x 481.8pt>
 File: AUCconverge.png Graphic file (type png)
 
 <use AUCconverge.png>
-Package pdftex.def Info: AUCconverge.png used on input line 189.
+Package pdftex.def Info: AUCconverge.png used on input line 251.
 (pdftex.def)             Requested size: 150.32504pt x 150.31952pt.
- <CVAUC.png, id=28, 481.8pt x 481.8pt>
+ <CVAUC.png, id=54, 481.8pt x 481.8pt>
 File: CVAUC.png Graphic file (type png)
  <use CVAUC.png>
-Package pdftex.def Info: CVAUC.png used on input line 193.
+Package pdftex.def Info: CVAUC.png used on input line 255.
 (pdftex.def)             Requested size: 150.32504pt x 150.31952pt.
 
-<imageAUC.png, id=29, 481.8pt x 481.8pt>
+<imageAUC.png, id=55, 481.8pt x 481.8pt>
 File: imageAUC.png Graphic file (type png)
  <use imageAUC.png>
-Package pdftex.def Info: imageAUC.png used on input line 197.
+Package pdftex.def Info: imageAUC.png used on input line 259.
 (pdftex.def)             Requested size: 150.32504pt x 150.31952pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ROC_block1.pdf, id=30, 505.89pt x 505.89pt>
+<ROC_block1.pdf, id=56, 505.89pt x 505.89pt>
 File: ROC_block1.pdf Graphic file (type pdf)
  <use ROC_block1.pdf>
-Package pdftex.def Info: ROC_block1.pdf used on input line 207.
+Package pdftex.def Info: ROC_block1.pdf used on input line 269.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
-<ROC_block2.pdf, id=31, 505.89pt x 505.89pt>
+<ROC_block2.pdf, id=57, 505.89pt x 505.89pt>
 File: ROC_block2.pdf Graphic file (type pdf)
  <use ROC_block2.pdf>
-Package pdftex.def Info: ROC_block2.pdf used on input line 211.
+Package pdftex.def Info: ROC_block2.pdf used on input line 273.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
-<ROC_block3.pdf, id=32, 505.89pt x 505.89pt>
+<ROC_block3.pdf, id=58, 505.89pt x 505.89pt>
 File: ROC_block3.pdf Graphic file (type pdf)
  <use ROC_block3.pdf>
-Package pdftex.def Info: ROC_block3.pdf used on input line 215.
+Package pdftex.def Info: ROC_block3.pdf used on input line 277.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ROC_block4.pdf, id=33, 505.89pt x 505.89pt>
+<ROC_block4.pdf, id=59, 505.89pt x 505.89pt>
 File: ROC_block4.pdf Graphic file (type pdf)
  <use ROC_block4.pdf>
-Package pdftex.def Info: ROC_block4.pdf used on input line 222.
+Package pdftex.def Info: ROC_block4.pdf used on input line 284.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
-<ROC_block5.pdf, id=34, 505.89pt x 505.89pt>
+<ROC_block5.pdf, id=60, 505.89pt x 505.89pt>
 File: ROC_block5.pdf Graphic file (type pdf)
  <use ROC_block5.pdf>
-Package pdftex.def Info: ROC_block5.pdf used on input line 226.
+Package pdftex.def Info: ROC_block5.pdf used on input line 288.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
-<ROC_block6.pdf, id=35, 505.89pt x 505.89pt>
+<ROC_block6.pdf, id=61, 505.89pt x 505.89pt>
 File: ROC_block6.pdf Graphic file (type pdf)
  <use ROC_block6.pdf>
-Package pdftex.def Info: ROC_block6.pdf used on input line 230.
+Package pdftex.def Info: ROC_block6.pdf used on input line 292.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ROC_block8.pdf, id=36, 505.89pt x 505.89pt>
+<ROC_block8.pdf, id=62, 505.89pt x 505.89pt>
 File: ROC_block8.pdf Graphic file (type pdf)
  <use ROC_block8.pdf>
-Package pdftex.def Info: ROC_block8.pdf used on input line 237.
+Package pdftex.def Info: ROC_block8.pdf used on input line 299.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
-<ROC_block9.pdf, id=37, 505.89pt x 505.89pt>
+<ROC_block9.pdf, id=63, 505.89pt x 505.89pt>
 File: ROC_block9.pdf Graphic file (type pdf)
  <use ROC_block9.pdf>
-Package pdftex.def Info: ROC_block9.pdf used on input line 241.
+Package pdftex.def Info: ROC_block9.pdf used on input line 303.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
-<ROC_block10.pdf, id=38, 505.89pt x 505.89pt>
+<ROC_block10.pdf, id=64, 505.89pt x 505.89pt>
 File: ROC_block10.pdf Graphic file (type pdf)
  <use ROC_block10.pdf>
-Package pdftex.def Info: ROC_block10.pdf used on input line 245.
+Package pdftex.def Info: ROC_block10.pdf used on input line 307.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ROC_block11.pdf, id=39, 505.89pt x 505.89pt>
+<ROC_block11.pdf, id=65, 505.89pt x 505.89pt>
 File: ROC_block11.pdf Graphic file (type pdf)
  <use ROC_block11.pdf>
-Package pdftex.def Info: ROC_block11.pdf used on input line 252.
+Package pdftex.def Info: ROC_block11.pdf used on input line 314.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
-<ROC_block12.pdf, id=40, 505.89pt x 505.89pt>
+<ROC_block12.pdf, id=66, 505.89pt x 505.89pt>
 File: ROC_block12.pdf Graphic file (type pdf)
  <use ROC_block12.pdf>
-Package pdftex.def Info: ROC_block12.pdf used on input line 256.
+Package pdftex.def Info: ROC_block12.pdf used on input line 318.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ROC_image1.pdf, id=41, 505.89pt x 505.89pt>
+<ROC_image1.pdf, id=67, 505.89pt x 505.89pt>
 File: ROC_image1.pdf Graphic file (type pdf)
  <use ROC_image1.pdf>
-Package pdftex.def Info: ROC_image1.pdf used on input line 265.
+Package pdftex.def Info: ROC_image1.pdf used on input line 327.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
-<ROC_image4.pdf, id=42, 505.89pt x 505.89pt>
+<ROC_image4.pdf, id=68, 505.89pt x 505.89pt>
 File: ROC_image4.pdf Graphic file (type pdf)
  <use ROC_image4.pdf>
-Package pdftex.def Info: ROC_image4.pdf used on input line 269.
+Package pdftex.def Info: ROC_image4.pdf used on input line 331.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
-<ROC_image8.pdf, id=43, 505.89pt x 505.89pt>
+<ROC_image8.pdf, id=69, 505.89pt x 505.89pt>
 File: ROC_image8.pdf Graphic file (type pdf)
  <use ROC_image8.pdf>
-Package pdftex.def Info: ROC_image8.pdf used on input line 273.
+Package pdftex.def Info: ROC_image8.pdf used on input line 335.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<LogitROC.png, id=70, 657.45625pt x 513.92pt>
+File: LogitROC.png Graphic file (type png)
+ <use LogitROC.png>
+Package pdftex.def Info: LogitROC.png used on input line 341.
+(pdftex.def)             Requested size: 460.21625pt x 359.74153pt.
+ [2 <./SD1.png> <./SD2.png> <./SD3.png> <./CORRvsNDAI.png (PNG copy)> <./CORRvs
+SD.png (PNG copy)> <./NDAIvsSD.png (PNG copy)>]
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¿ in font cmr10!
 Missing character: There is no ½ in font cmr10!
-[2 <D:/coursework/stat215a/group/SD1.png> <D:/coursework/stat215a/group/SD2.png
-> <D:/coursework/stat215a/group/SD3.png> <D:/coursework/stat215a/group/CORRvsND
-AI.png (PNG copy)> <D:/coursework/stat215a/group/CORRvsSD.png (PNG copy)> <D:/c
-oursework/stat215a/group/NDAIvsSD.png (PNG copy)>] [3 <D:/coursework/stat215a/g
-roup/CORR1.png> <D:/coursework/stat215a/group/CORR2.png> <D:/coursework/stat215
-a/group/CORR3.png> <D:/coursework/stat215a/group/QDArocCV.png> <D:/coursework/s
-tat215a/group/AUCcvQDA.png>] [4 <D:/coursework/stat215a/group/AUCconverge.png> 
-<D:/coursework/stat215a/group/CVAUC.png> <D:/coursework/stat215a/group/imageAUC
-.png> <D:/coursework/stat215a/group/ROC_block1.pdf> <D:/coursework/stat215a/gro
-up/ROC_block2.pdf> <D:/coursework/stat215a/group/ROC_block3.pdf> <D:/coursework
-/stat215a/group/ROC_block4.pdf> <D:/coursework/stat215a/group/ROC_block5.pdf> <
-D:/coursework/stat215a/group/ROC_block6.pdf>] [5 <D:/coursework/stat215a/group/
-ROC_block8.pdf> <D:/coursework/stat215a/group/ROC_block9.pdf> <D:/coursework/st
-at215a/group/ROC_block10.pdf> <D:/coursework/stat215a/group/ROC_block11.pdf> <D
-:/coursework/stat215a/group/ROC_block12.pdf> <D:/coursework/stat215a/group/ROC_
-image1.pdf> <D:/coursework/stat215a/group/ROC_image4.pdf> <D:/coursework/stat21
-5a/group/ROC_image8.pdf>] (D:\coursework\stat215a\group\writeupLab4.aux)
+ [3 <./CORR1.png> <./CORR2.png> <./CORR3.png>]
+[4 <./Image1Experts.png> <./Image1Raw.png> <./Image2Experts.png> <./Image2Raw.p
+ng> <./Image3Experts.png> <./Image3Raw.png>] [5 <./Image1NDAI.png> <./Image2NDA
+I.png> <./Image3NDAI.png>] [6 <./Image1SD.png> <./Image2SD.png> <./Image3SD.png
+>] [7 <./Image1CORR.png> <./Image2CORR.png> <./Image3CORR.png>] [8 <./QDArocCV.
+png> <./AUCcvQDA.png>] [9 <./Image1FullLogit.png> <./Image1FullLogitProb.png> <
+./Image2FullLogit.png> <./Image2FullLogitProb.png> <./Image3FullLogit.png> <./I
+mage3FullLogitProb.png>] [10 <./Image1Errors.png> <./Image2Errors.png> <./Image
+3Errors.png>] [11 <./LogisticHyperplane.png> <./AUCconverge.png> <./CVAUC.png> 
+<./imageAUC.png>] [12 <./ROC_block1.pdf> <./ROC_block2.pdf> <./ROC_block3.pdf> 
+<./ROC_block4.pdf> <./ROC_block5.pdf> <./ROC_block6.pdf> <./ROC_block8.pdf> <./
+ROC_block9.pdf> <./ROC_block10.pdf>] [13 <./ROC_block11.pdf> <./ROC_block12.pdf
+> <./ROC_image1.pdf> <./ROC_image4.pdf> <./ROC_image8.pdf>] [14 <./LogitROC.png
+>] (./writeupLab4.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2891 strings out of 493921
- 37044 string characters out of 3152899
- 108089 words of memory out of 3000000
- 6128 multiletter control sequences out of 15000+200000
- 9376 words of font info for 34 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 31i,11n,43p,928b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsl10.pfb>
-Output written on writeupLab4.pdf (5 pages, 652700 bytes).
+ 3360 strings out of 493315
+ 46826 string characters out of 6137904
+ 124432 words of memory out of 5000000
+ 6704 multiletter control sequences out of 15000+600000
+ 9376 words of font info for 34 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 38i,11n,43p,927b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on writeupLab4.pdf (14 pages, 7170906 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 words of extra memory for PDF output out of 10000 (max. 10000000)
 
