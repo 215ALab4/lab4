@@ -128,6 +128,21 @@ Blah blah...
 
 \begin{figure}[h]
 \minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{CORRvsNDAI.png}
+  \caption{CORR vs. NDAI Plot of Image 1}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{CORRvsSD.png}
+  \caption{CORR vs. SD Plot of Image 1}\label{}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{NDAIvsSD.png}
+  \caption{NDAI vs. SD Plot of Image1}\label{}
+\endminipage
+\end{figure}
+
+\begin{figure}[h]
+\minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{CORR1.png}
   \caption{CORR density Image 1}\label{}
 \endminipage\hfill
@@ -142,11 +157,24 @@ Blah blah...
 \end{figure}
 
 
-
-
 \section{Modeling}
 
-\subsection{LDA/QDA}
+\subsection{LDA}
+
+\subsection{QDA}
+
+\begin{figure}[h]
+\minipage{0.49\textwidth}
+  \includegraphics[width=\linewidth]{QDArocCV.png}
+  \caption{Response Operator Curve for 12-fold Cross-valudation of QDA}\label{}
+\endminipage\hfill
+\minipage{0.49\textwidth}
+  \includegraphics[width=\linewidth]{AUCcvQDA.png}
+  \caption{AUC for QDA Classifiers}\label{rocauc}
+\endminipage\hfill
+\end{figure}
+
+Cross-validation for QDA revealed that while the method works extremely well in some cases, producing AUC scores of almost 1, it sometimes fails to perform better than even the theoretical random classifier.
 
 \subsection{Logit/Probit}
 
@@ -255,7 +283,7 @@ Finally, this entire set of training models was done with all the features, and 
 
  \begin{thebibliography}{1}
 
-\bibitem{notes} Ben-Hur, A., Elisseeff, A., Guyon, I.: A stability based method for discovering structure in clustered data. In: Pacific Symposium on Biocomputing, pp. 6Ð17.   
+\bibitem{notes} Ben-Hur, A., Elisseeff, A., Guyon, I.: A stability based method for discovering structure in clustered data. In: Pacific Symposium on Biocomputing, pp. 6ï¿½17.   
 \end{thebibliography}
 
 
