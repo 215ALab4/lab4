@@ -105,7 +105,7 @@ Figure 1 displays the unprocessed image files for comparison with Figure 2, the 
 \end{figure}
 \subsection{Densities of NDAI, SD and CORR}
 
-The following three plots gives us a sense of what can be learned from NDAI, SD and CORR.  The densities are grouped by their expert labels, red is for 'no cloud', green are for 'unknown' and blue for 'cloud'. We can see that NDAI has reasonably good separation between cloud and no cloud, in all three pictures, which is confirmed in our later modeling sections by Gini importance measures found in the random forest model and it's importance as a variable in LDA/QDA and logit models. SD does not have such a good separation within the lower regions of the SD values, however it is still clear that pixels labelled as clouds are the only values with higher SD values.  We thus expect the two features in combination can help determine whether a pixel with high NDAI should be labelled as a cloud by using the SD feature.  Finally CORR values appear to be a good separator for image 2, but much less so for image 1.  This uneven distribution of CORR values between images prompted us to cross validate our models across images, in addition to the folds created by dividing each image into 4 quadrants. 
+The following three plots gives us a sense of what can be learned from NDAI, SD and CORR.  The densities are grouped by their expert labels, red is for `no cloud', green are for `unknown' and blue for `cloud'. We can see that NDAI has reasonably good separation between cloud and no cloud, in all three pictures, which is confirmed in our later modeling sections by Gini importance measures found in the random forest model and it's importance as a variable in LDA/QDA and logit models. In comparison, SD does not have as  good of a separation within the smaller SD values, however it is still clear that pixels labelled as clouds are the only pixels with higher SD values.  We thus expect the two features in combination can help determine whether a pixel with high NDAI should be labelled as a cloud by using the SD feature.  Finally CORR values appear to be a good separator for image 2, but much less so for image 1.  This uneven distribution of CORR values between images prompted us to cross validate our models across images, in addition to the folds created by dividing each image into 4 quadrants. 
 
 \begin{figure}[H]
 \minipage{0.32\textwidth}
@@ -245,101 +245,75 @@ We now discuss the trends in misclassification. As depicted in the above figure,
 
 \subsection{Random Forest}
 
-For random forest, as in all the other classifiers, we divided the three images into equal sized quadrants (2X2) rectangles in order to do 12 fold validation on the dataset.  That is, for each iteration of the validation, we dropped one of the quadrants as a test set, and trained on the remaining 11 quadrants.  Keeping the images segments disjoint and continuous ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  We also trained on each image and tested on the remaining two.  To test convergence, one of the things we did was increase the training set from including 1 quadrant, to including 2 quadrants, up to including 11 quadrants (using the complement as the test set).  For each of the 3 aforementioned classes of training, we trained on a range of forest sizes, from 2 trees to 50.     Here are the results: 
+For random forest, as in all the other classifiers, we divided the three images into equal sized quadrants (2X2) rectangles in order to do 12 fold validation on the dataset.  That is, for each iteration of the validation, we dropped one of the quadrants as a test set, and trained on the remaining 11 quadrants.  Keeping the test segments as disjoint chunks from the test set ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  As such, we also expect the performance of the model on these test sets to be a much better predicator of how our model will perform on new images than if we randomly subsampled the validation folds.  Indeed, after doing random subsampling, we noticed that the AUC was at a high 0.999 for all cross validations, whereas by cross validating on the isolated quadrants, our AUC curves had much higher variance, as seen below: \\
 
-Finally, this entire set of training models was done with all the features, and then restricted to only SD, CORR and NDAI.  These three were particularly chosen because their GiniImportance was consistently ranked at least 2fold above the next highest in all the cross validations. As we also saw with the random forest model that just used SD, CORR, NDAI, it did not fare poorly compared to training the forests on all 9 predictors.  
+\begin{figure}[H]
+\minipage{0.2\textwidth}
+  \includegraphics[width=\linewidth, height = 150pts]{AUC_12folds.png}
+\endminipage\hfill
+\minipage{0.8\textwidth}%
+  \includegraphics[width=\linewidth, height = 150pts]{ROC_fold_comparison.png}
+\endminipage
+  \caption{ROC across all 12 folds of quadrants}\label{}
+\end{figure}
 
-\begin{figure}[h]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{AUCconverge.png}
+We also trained on each image and tested on the remaining two. \\
+
+
+  \begin{figure}[H]
+\minipage{0.5\textwidth}
+\centering
+  \includegraphics[width=150pts, height = 80pts ]{AUC_images.png}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 150pts]{ROC_image1.pdf}
+\endminipage\hfill
+  \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
+\end{figure}
+
+  \begin{figure}[H]
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 150pts ]{ROC_image4.pdf}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 150pts]{ROC_image8.pdf}
+\endminipage\hfill
+  \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
+\end{figure}
+
+
+ To test convergence, one of the things we did was increase the training set from including 1 quadrant, to including 2 quadrants, up to including 11 quadrants (using the complement as the test set).  For each of the 3 aforementioned classes of training, we trained on a range of forest sizes, from 2 trees to 50. It was interesting to note that the continuity of increasing the training set by neighbouring quadrants displayed much less convergence than by increasing the training quadrant set in a randomly subsampled way.  The following three plots make this clear.  In the first case....\\
+
+\begin{figure}[H]
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 180pts]{ROC_converge1.pdf}
+    \caption{Convergence of ROC training on increasing number of quadrants}\label{}
+\endminipage
+\minipage{0.5\textwidth}
+
+\includegraphics[width=\linewidth, height = 180pts]{AUCconverge.png}
   \caption{Smoothed convergence of AUC for growing training set 50 trees and 3 features}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{CVAUC.png}
-  \caption{AUC of test set in each fold with 50 trees and 3 features}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{imageAUC.png}
-  \caption{AUC of the three images with 50 trees and 3 features}\label{}
 \endminipage
+
+  \end{figure}
+  
+  \begin{figure}[H]
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 180pts ]{ROC_converge_shuffle1.pdf}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 180pts]{ROC_converge_shuffle2.pdf}
+\endminipage\hfill
+  \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
 \end{figure}
-
-
-{\bf Cross Validation ROC curves}
-
-\begin{figure}[h]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{ROC_block1.pdf}
-  \caption{ROC fold 1}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{ROC_block2.pdf}
-  \caption{ROC fold 2}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{ROC_block3.pdf}
-  \caption{ROC fold 3}\label{}
-\endminipage
-\end{figure}
-
-\begin{figure}[h]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{ROC_block4.pdf}
-  \caption{ROC fold 4}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{ROC_block5.pdf}
-  \caption{ROC fold 5}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{ROC_block6.pdf}
-  \caption{ROC fold 6}\label{}
-\endminipage
-\end{figure}
-
-\begin{figure}[h]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{ROC_block8.pdf}
-  \caption{ROC fold 8}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{ROC_block9.pdf}
-  \caption{ROC fold 9}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{ROC_block10.pdf}
-  \caption{ROC fold 10}\label{}
-\endminipage
-\end{figure}
-
-\begin{figure}[h]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{ROC_block11.pdf}
-  \caption{ROC fold 11}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{ROC_block12.pdf}
-  \caption{ROC fold 12}\label{}
-\endminipage
-\end{figure}
-
-{\bf ROC curves for cross validation between images} 
-
-\begin{figure}[h]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{ROC_image1.pdf}
-  \caption{Trained on image1}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{ROC_image4.pdf}
-  \caption{Trained on image2}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{ROC_image8.pdf}
-  \caption{Trained on image3}\label{}
-\endminipage
-\end{figure}
-
+  
+To gather a quantitative measurement of the importance of each feature, we first ran random forest using all the features and looked at the GIni importance measure.  This is calculated by recording the difference between the Gini measure of a random forest's predictions on a fold and the Gini measure with a particular feature's values randomly shuffled.  The intuition is that if a feature were crucial to the forest's trees, than randomly shuffling that feature will drastically decrease it's Gini measure.  Sure enough, NDAI, SD and CORR   consistently ranked as the clear top three in all cross validations. \\
+\begin{wrapfigure}{R}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{Gini_mean_sd.png}
+\caption{Mean Gini Importance Measure across 12 folds}
+\end{wrapfigure}
+{\bf Where was the model performing poorly?}
 
 \section{Reproducibility}
 
