@@ -56,6 +56,7 @@
 \usepackage{alltt}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\usepackage{float}
 \setlength{\parskip}{\smallskipamount}
 \setlength{\parindent}{0pt}
 \usepackage{amsthm}
@@ -91,42 +92,51 @@ Stat 215A, Fall 2014}
 Blah blah...
 
 \section{EDA}
-\subsection{Densities of the three most important features as selected by paper}
+\subsection{Densities of NDAI, SD and CORR}
 
+The following three plots gives us a sense of what can be learned from NDAI, SD and CORR.  The densities are grouped by their expert labels, red is for 'no cloud', green are for 'unknown' and blue for 'cloud'. We can see that NDAI has reasonably good separation between cloud and no cloud, in all three pictures, which is confirmed in our later modeling sections by Gini importance measures found in the random forest model and it's importance as a variable in LDA/QDA and logit models. SD does not have such a good separation within the lower regions of the SD values, however it is still clear that pixels labelled as clouds are the only values with higher SD values.  We thus expect the two features in combination can help determine whether a pixel with high NDAI should be labelled as a cloud by using the SD feature.  Finally CORR values appear to be a good separator for image 2, but much less so for image 1.  This uneven distribution of CORR values between images prompted us to cross validate our models across images, in addition to the folds created by dividing each image into 4 quadrants. 
 
-
-\begin{figure}[h]
+\begin{figure}[H]
 \minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{NDAI1.png}
-  \caption{NDAI density Image 1}\label{}
+  \includegraphics[width=\linewidth, height = 100pts ]{NDAI1.png}
 \endminipage\hfill
 \minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{NDAI2.png}
-  \caption{NDAI density Image 2}\label{}
+  \includegraphics[width=\linewidth, height = 100pts]{NDAI2.png}
 \endminipage\hfill
 \minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{NDAI3.png}
-  \caption{NDAI density Image 3}\label{}
+  \includegraphics[width=\linewidth, height = 100pts]{NDAI3.png}
 \endminipage
+  \caption{NDAI density plot for Image 1, 2, 3 (respectively).}\label{}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{SD1.png}
-  \caption{SD density Image 1}\label{}
+  \includegraphics[width=\linewidth, height = 100pts]{SD1.png}
 \endminipage\hfill
 \minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{SD2.png}
-  \caption{SD density Image 2}\label{}
+  \includegraphics[width=\linewidth, height = 100pts]{SD2.png}
 \endminipage\hfill
 \minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{SD3.png}
-  \caption{SD density Image 3}\label{}
+  \includegraphics[width=\linewidth, height = 100pts]{SD3.png}
 \endminipage
+  \caption{SD density plot for Image 1, 2, 3 (respectively).}
+\end{figure}
+
+\begin{figure}[H]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth, height = 100pts]{CORR1.png}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth, height = 100pts]{CORR2.png}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth, height = 100pts]{CORR3.png}
+\endminipage
+  \caption{CORR density plot for Image 1, 2, 3 (respectively).}\label{}
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{CORRvsNDAI.png}
   \caption{CORR vs. NDAI Plot of Image 1}\label{}
@@ -138,21 +148,6 @@ Blah blah...
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{NDAIvsSD.png}
   \caption{NDAI vs. SD Plot of Image1}\label{}
-\endminipage
-\end{figure}
-
-\begin{figure}[h]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{CORR1.png}
-  \caption{CORR density Image 1}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{CORR2.png}
-  \caption{CORR density Image 2}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{CORR3.png}
-  \caption{CORR density Image 3}\label{}
 \endminipage
 \end{figure}
 
