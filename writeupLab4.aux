@@ -13,56 +13,59 @@
 \newlabel{}{{5}{2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces NDAI vs. SD Plot of Image1}}{2}}
 \newlabel{}{{6}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Modeling}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}LDA}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}QDA}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Logit/Probit}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Images with expert labels on left and radiance from AN on right.}}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.}}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Mapped SD readings. Higher values show cloud boundaries, though also shows uneven terrain.}}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Mapped CORR readings. Cloudy regions tend to be lighter, but not as strongly as in NDAI.}}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Raw images with AN radiances.}}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Images with expert classifications.}}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Mapped SD readings. Higher values show cloud boundaries, though also shows uneven terrain.}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Mapped CORR readings. Cloudy regions tend to be lighter, but not as strongly as in NDAI.}}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Modeling}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}LDA}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}QDA}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Response Operator Curve for 12-fold Cross-valudation of QDA}}{5}}
+\newlabel{}{{12}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces AUC for QDA Classifiers}}{5}}
+\newlabel{rocauc}{{13}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Logit/Probit}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces We see a minimum in misclassification rate at .38.}}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Binary classifications with threshold = .38 for logit trained via 12-fold CV.}}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Probabilities for logit trained via 12-fold CV.}}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Classification results from logit with respect to the expert labels.}}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces ROC curve for our Logit model. AUC is .95.}}{8}}
 \bibcite{notes}{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Response Operator Curve for 12-fold Cross-valudation of QDA}}{7}}
-\newlabel{}{{11}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces AUC for QDA Classifiers}}{7}}
-\newlabel{rocauc}{{12}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Random Forest}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Reproducibility}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Left: Binary classifications with threshold = .5 for logit trained via 12-fold CV. Right: Logit cloud probabilities.}}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Classification results from logit. There are more false positive than false negatives.}}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Plot of false positives and false negatives against features. Red are FP, green FN. This allows us to visualize the hyperplane that separates our data. The threshold is .5.}}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Smoothed convergence of AUC for growing training set 50 trees and 3 features}}{10}}
-\newlabel{}{{16}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces AUC of test set in each fold with 50 trees and 3 features}}{10}}
-\newlabel{}{{17}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces AUC of the three images with 50 trees and 3 features}}{10}}
-\newlabel{}{{18}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces ROC fold 1}}{11}}
-\newlabel{}{{19}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces ROC fold 2}}{11}}
-\newlabel{}{{20}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces ROC fold 3}}{11}}
-\newlabel{}{{21}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces ROC fold 4}}{11}}
-\newlabel{}{{22}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces ROC fold 5}}{11}}
-\newlabel{}{{23}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces ROC fold 6}}{11}}
-\newlabel{}{{24}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces ROC fold 8}}{11}}
-\newlabel{}{{25}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces ROC fold 9}}{11}}
-\newlabel{}{{26}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces ROC fold 10}}{11}}
-\newlabel{}{{27}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces ROC fold 11}}{12}}
-\newlabel{}{{28}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces ROC fold 12}}{12}}
-\newlabel{}{{29}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Trained on image1}}{12}}
-\newlabel{}{{30}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Trained on image2}}{12}}
-\newlabel{}{{31}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Trained on image3}}{12}}
-\newlabel{}{{32}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces ROC curve of our logistic regression model. AUC is 0.95.}}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Coefficient values through iterations of 12-fold CV.}}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Random Forest}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Reproducibility}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Smoothed convergence of AUC for growing training set 50 trees and 3 features}}{10}}
+\newlabel{}{{20}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces AUC of test set in each fold with 50 trees and 3 features}}{10}}
+\newlabel{}{{21}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces AUC of the three images with 50 trees and 3 features}}{10}}
+\newlabel{}{{22}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces ROC fold 1}}{10}}
+\newlabel{}{{23}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces ROC fold 2}}{10}}
+\newlabel{}{{24}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces ROC fold 3}}{10}}
+\newlabel{}{{25}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces ROC fold 4}}{10}}
+\newlabel{}{{26}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces ROC fold 5}}{10}}
+\newlabel{}{{27}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces ROC fold 6}}{10}}
+\newlabel{}{{28}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces ROC fold 8}}{11}}
+\newlabel{}{{29}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces ROC fold 9}}{11}}
+\newlabel{}{{30}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces ROC fold 10}}{11}}
+\newlabel{}{{31}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces ROC fold 11}}{11}}
+\newlabel{}{{32}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces ROC fold 12}}{11}}
+\newlabel{}{{33}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Trained on image1}}{11}}
+\newlabel{}{{34}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Trained on image2}}{11}}
+\newlabel{}{{35}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces Trained on image3}}{11}}
+\newlabel{}{{36}{11}}

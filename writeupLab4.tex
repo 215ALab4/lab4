@@ -151,37 +151,28 @@ The following three plots gives us a sense of what can be learned from NDAI, SD 
 \endminipage
 \end{figure}
 
-\begin{figure}
-\includegraphics[scale = .35]{Image1Experts.png}
-\includegraphics[scale = .35]{Image1Raw.png}
-
-\includegraphics[scale = .35]{Image2Experts.png}
-\includegraphics[scale = .35]{Image2Raw.png}
-
-\includegraphics[scale = .35]{Image3Experts.png}
-\includegraphics[scale = .35]{Image3Raw.png}
-
-\caption{Images with expert labels on left and radiance from AN on right.}
+\begin{figure}[H]
+\includegraphics[width = 18cm, height=10cm]{RAWEDA.png}
+\caption{Raw images with AN radiances.}
 \end{figure}
 
-\begin{figure}
-\includegraphics[scale = .35]{Image1NDAI.png}
-\includegraphics[scale = .35]{Image2NDAI.png}
-\includegraphics[scale = .35]{Image3NDAI.png}
+\begin{figure}[H]
+\includegraphics[width = 18cm, height=10cm]{EXPERTSEDA.png}
+\caption{Images with expert classifications.}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width = 18cm, height = 10cm]{NDAIEDA.png}
 \caption{Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.}
 \end{figure}
 
-\begin{figure}
-\includegraphics[scale = .35]{Image1SD.png}
-\includegraphics[scale = .35]{Image2SD.png}
-\includegraphics[scale = .35]{Image3SD.png}
+\begin{figure}[H]
+\includegraphics[width = 18cm, height = 10cm]{SDEDA.png}
 \caption{Mapped SD readings. Higher values show cloud boundaries, though also shows uneven terrain.}
 \end{figure}
 
-\begin{figure}
-\includegraphics[scale = .35]{Image1CORR.png}
-\includegraphics[scale = .35]{Image2CORR.png}
-\includegraphics[scale = .35]{Image3CORR.png}
+\begin{figure}[H]
+\includegraphics[width = 18cm, height = 10cm]{CORREDA.png}
 \caption{Mapped CORR readings. Cloudy regions tend to be lighter, but not as strongly as in NDAI.}
 \end{figure}
 
@@ -205,35 +196,37 @@ The following three plots gives us a sense of what can be learned from NDAI, SD 
 Cross-validation for QDA revealed that while the method works extremely well in some cases, producing AUC scores of almost 1, it sometimes fails to perform better than even the theoretical random classifier.  In particular, the classifier does not seem to be good at discerning snow from clouds in regions where there are many dark pixels.  For example, during cross-validation, the watery bottom-left quadrant of image 2 and ridge-ridden left edge of image 3 poses significant problems to our classifiers.
 
 \subsection{Logit/Probit}
-The logit model obtained via averaging after 12-fold cross-validation has $\hat{y}_i = -4.027 + 2.278 * NDAI_i - 0.089 * SD_i + 10.803 * CORR_i.$
+The logit model obtained via averaging after 12-fold cross-validation has $\hat{y}_i = -3.356 + 1.900 * NDAI_i - 0.074 * SD_i + 9.002 * CORR_i.$
 
-
-\begin{figure}
-\includegraphics[scale = .35]{Image1FullLogit.png}
-\includegraphics[scale = .35]{Image1FullLogitProb.png}
-
-\includegraphics[scale = .35]{Image2FullLogit.png}
-\includegraphics[scale = .35]{Image2FullLogitProb.png}
-
-\includegraphics[scale = .35]{Image3FullLogit.png}
-\includegraphics[scale = .35]{Image3FullLogitProb.png}
-
-\caption{Left: Binary classifications with threshold = .5 for logit trained via 12-fold CV. Right: Logit cloud probabilities.}
+\begin{figure}[H]
+\includegraphics[scale = .5]{threshold.png}
+\caption{We see a minimum in misclassification rate at .38.}
 \end{figure}
 
-\begin{figure}
-\includegraphics[scale = .35]{Image1Errors.png}
-\includegraphics[scale = .35]{Image2Errors.png}
-\includegraphics[scale = .35]{Image3Errors.png}
-\caption{Classification results from logit. There are more false positive than false negatives.}
+\begin{figure}[H]
+\includegraphics[width = 18cm, height = 10cm]{LogitClassification.png}
+\caption{Binary classifications with threshold = .38 for logit trained via 12-fold CV.}
 \end{figure}
 
-\begin{center}
-\begin{figure}
-\includegraphics[scale = .5]{LogisticHyperplane.png}
-\caption{Plot of false positives and false negatives against features. Red are FP, green FN. This allows us to visualize the hyperplane that separates our data. The threshold is .5.}
+\begin{figure}[H]
+\includegraphics[width = 18cm, height = 10cm]{LogitProbabilities.png}
+\caption{Probabilities for logit trained via 12-fold CV.}
 \end{figure}
-\end{center}
+
+\begin{figure}[H]
+\includegraphics[width = 18cm, height = 10cm]{ClassificationOutcomes.png}
+\caption{Classification results from logit with respect to the expert labels.}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale = .5]{LogitROC.png}
+\caption{ROC curve for our Logit model. AUC is .95.}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale = .5]{ParameterConvergence.png}
+\caption{Coefficient values through iterations of 12-fold CV.}
+\end{figure}
 
 \subsection{Random Forest}
 
@@ -330,11 +323,6 @@ Finally, this entire set of training models was done with all the features, and 
   \includegraphics[width=\linewidth]{ROC_image8.pdf}
   \caption{Trained on image3}\label{}
 \endminipage
-\end{figure}
-
-\begin{figure}
-\includegraphics[scale = .7]{LogitROC.png}
-\caption{ROC curve of our logistic regression model. AUC is 0.95.}
 \end{figure}
 
 
