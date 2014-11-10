@@ -83,10 +83,9 @@
 \title{Lab 4-Binary Classifier\\
 Stat 215A, Fall 2014}
 
-\author{PLEASE WRITE YXiang (Lisha) Li}
+\author{Xiang (Lisha) Li, Jonathan Fischer, Andrew Do, Hye Soo Choi}
 
 \maketitle
-
 
 \section{Introduction}
 Blah blah...
@@ -152,27 +151,27 @@ The following three plots gives us a sense of what can be learned from NDAI, SD 
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width = 18cm, height=10cm]{RAWEDA.png}
+\includegraphics[width = 18cm, height=8cm]{RAWEDA.png}
 \caption{Raw images with AN radiances.}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width = 18cm, height=10cm]{EXPERTSEDA.png}
+\includegraphics[width = 18cm, height=8cm]{EXPERTSEDA.png}
 \caption{Images with expert classifications.}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width = 18cm, height = 10cm]{NDAIEDA.png}
+\includegraphics[width = 18cm, height = 8cm]{NDAIEDA.png}
 \caption{Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width = 18cm, height = 10cm]{SDEDA.png}
+\includegraphics[width = 18cm, height = 8cm]{SDEDA.png}
 \caption{Mapped SD readings. Higher values show cloud boundaries, though also shows uneven terrain.}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width = 18cm, height = 10cm]{CORREDA.png}
+\includegraphics[width = 18cm, height = 8cm]{CORREDA.png}
 \caption{Mapped CORR readings. Cloudy regions tend to be lighter, but not as strongly as in NDAI.}
 \end{figure}
 
@@ -196,20 +195,22 @@ The following three plots gives us a sense of what can be learned from NDAI, SD 
 Cross-validation for QDA revealed that while the method works extremely well in some cases, producing AUC scores of almost 1, it sometimes fails to perform better than even the theoretical random classifier.  In particular, the classifier does not seem to be good at discerning snow from clouds in regions where there are many dark pixels.  For example, during cross-validation, the watery bottom-left quadrant of image 2 and ridge-ridden left edge of image 3 poses significant problems to our classifiers.
 
 \subsection{Logit/Probit}
-The logit model obtained via averaging after 12-fold cross-validation has $\hat{y}_i = -3.356 + 1.900 * NDAI_i - 0.074 * SD_i + 9.002 * CORR_i.$
+The logit model obtained via averaging after 12-fold cross-validation has $y_i = -3.356 + 1.900 * NDAI_i - 0.074 * SD_i + 9.002 * CORR_i$ where $P_i$(Cloud) = $ \frac{1}{1 + e^{-y_i}}$. 
 
 \begin{figure}[H]
-\includegraphics[scale = .5]{threshold.png}
+\begin{center}
+\includegraphics[scale = .35]{threshold.png}
 \caption{We see a minimum in misclassification rate at .38.}
+\end{center}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width = 18cm, height = 10cm]{LogitClassification.png}
+\includegraphics[width = 18cm, height = 8cm]{LogitClassification.png}
 \caption{Binary classifications with threshold = .38 for logit trained via 12-fold CV.}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width = 18cm, height = 10cm]{LogitProbabilities.png}
+\includegraphics[width = 18cm, height = 8cm]{LogitProbabilities.png}
 \caption{Probabilities for logit trained via 12-fold CV.}
 \end{figure}
 
@@ -219,13 +220,17 @@ The logit model obtained via averaging after 12-fold cross-validation has $\hat{
 \end{figure}
 
 \begin{figure}[H]
+\begin{center}
 \includegraphics[scale = .5]{LogitROC.png}
 \caption{ROC curve for our Logit model. AUC is .95.}
+\end{center}
 \end{figure}
 
 \begin{figure}[H]
+\begin{center}
 \includegraphics[scale = .5]{ParameterConvergence.png}
 \caption{Coefficient values through iterations of 12-fold CV.}
+\end{center}
 \end{figure}
 
 \subsection{Random Forest}
