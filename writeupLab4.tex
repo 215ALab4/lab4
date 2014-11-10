@@ -91,6 +91,18 @@ Stat 215A, Fall 2014}
 Blah blah...
 
 \section{EDA}
+
+\subsection{Plots of Raw and Expertly Labelled Images}
+Figure 1 displays the unprocessed image files for comparison with Figure 2, the expertly-labelled files. With the human eye it is not so difficult to parse cloud from ground based on these images, but we see that cloudy and clear pixels alike run through wide spans of AN so other features must be used.
+\begin{figure}[H]
+\includegraphics[width = 18cm, height=8cm]{RAWEDA.png}
+\caption{Raw images with AN radiances.}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width = 18cm, height=8cm]{EXPERTSEDA.png}
+\caption{Images with expert classifications. Proportions: 39.8$\%$ unknown, 23.4$\%$ cloudy, 36.8$\%$ clear.}
+\end{figure}
 \subsection{Densities of NDAI, SD and CORR}
 
 The following three plots gives us a sense of what can be learned from NDAI, SD and CORR.  The densities are grouped by their expert labels, red is for 'no cloud', green are for 'unknown' and blue for 'cloud'. We can see that NDAI has reasonably good separation between cloud and no cloud, in all three pictures, which is confirmed in our later modeling sections by Gini importance measures found in the random forest model and it's importance as a variable in LDA/QDA and logit models. SD does not have such a good separation within the lower regions of the SD values, however it is still clear that pixels labelled as clouds are the only values with higher SD values.  We thus expect the two features in combination can help determine whether a pixel with high NDAI should be labelled as a cloud by using the SD feature.  Finally CORR values appear to be a good separator for image 2, but much less so for image 1.  This uneven distribution of CORR values between images prompted us to cross validate our models across images, in addition to the folds created by dividing each image into 4 quadrants. 
@@ -150,16 +162,8 @@ The following three plots gives us a sense of what can be learned from NDAI, SD 
 \endminipage
 \end{figure}
 
-\begin{figure}[H]
-\includegraphics[width = 18cm, height=8cm]{RAWEDA.png}
-\caption{Raw images with AN radiances.}
-\end{figure}
-
-\begin{figure}[H]
-\includegraphics[width = 18cm, height=8cm]{EXPERTSEDA.png}
-\caption{Images with expert classifications.}
-\end{figure}
-
+\subsection{Mapped Features}
+The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatially. In agreement with the NDAI density plots, higher NDAI values indicate increased likelihood of the presence of clouds, and the NDAI plots look quite similar to the binary classification plots. The SD maps show areas of high variance in the radiances thereby providing a decent outline of cloud boundaries. Unfortunately, this can also lead to the highlighting of uneven ground regions. Finally, the CORR images resemble weakened versions of their NDAI counterparts though with some additional strange behavior in the bottom left corners of Images 1 and 2. 
 \begin{figure}[H]
 \includegraphics[width = 18cm, height = 8cm]{NDAIEDA.png}
 \caption{Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.}
@@ -167,7 +171,7 @@ The following three plots gives us a sense of what can be learned from NDAI, SD 
 
 \begin{figure}[H]
 \includegraphics[width = 18cm, height = 8cm]{SDEDA.png}
-\caption{Mapped SD readings. Higher values show cloud boundaries, though also shows uneven terrain.}
+\caption{Mapped SD readings. Higher values show cloud boundaries, though also show uneven terrain.}
 \end{figure}
 
 \begin{figure}[H]
@@ -197,6 +201,8 @@ Cross-validation for QDA revealed that while the method works extremely well in 
 \subsection{Logit/Probit}
 The logit model obtained via averaging after 12-fold cross-validation has $y_i = -3.356 + 1.900 * NDAI_i - 0.074 * SD_i + 9.002 * CORR_i$ where $P_i$(Cloud) = $ \frac{1}{1 + e^{-y_i}}$. 
 
+To choose our cutoff value for declaring a pixel cloudy, we varied the cutoffs from .01 to 1 and calculated the misclassification error of our model at that threshold on expertly-labelled pixels. The figure below shows that the optimal threshold for this model is at .38, with an error of just under 10.1$\%$. As a consequence of this low threshold, we observe more false positives than false negatives. This will be further explored below.
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale = .35]{threshold.png}
@@ -204,11 +210,13 @@ The logit model obtained via averaging after 12-fold cross-validation has $y_i =
 \end{center}
 \end{figure}
 
+Figure 15 gives the binary classifications overlaid on the images. Visual comparision with the expertly-labelled images suggests that we are slightly biased towards the presence of clouds as 74.2$\%$ of unlabelled points have been classified as cloudy, though this may be due to some artifact of the expert labelling scheme.
 \begin{figure}[H]
 \includegraphics[width = 18cm, height = 8cm]{LogitClassification.png}
 \caption{Binary classifications with threshold = .38 for logit trained via 12-fold CV.}
 \end{figure}
 
+Here we see the logit probabilites plotted spatially. This should approximate how the image would appear if the ground were not covered in snow and ice, so comparison with Figure 1 is especially appropriate. 
 \begin{figure}[H]
 \includegraphics[width = 18cm, height = 8cm]{LogitProbabilities.png}
 \caption{Probabilities for logit trained via 12-fold CV.}
@@ -219,10 +227,12 @@ The logit model obtained via averaging after 12-fold cross-validation has $y_i =
 \caption{Classification results from logit with respect to the expert labels.}
 \end{figure}
 
+We now discuss the trends in misclassification. As depicted in the above figure, we have many more false positives than false negatives with large regions sometimes completely misclassified. These regions are often situated on boundaries of labelled and unlabelled points. Calculation shows the false negative rate to be 7.5$\%$ and the false positive rate to be 11.7$\%$. 
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale = .5]{LogitROC.png}
-\caption{ROC curve for our Logit model. AUC is .95.}
+\caption{ROC curve for our logit model. AUC is .95.}
 \end{center}
 \end{figure}
 

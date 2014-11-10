@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 NOV 2014 14:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 NOV 2014 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -384,169 +384,167 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<NDAI1.png, id=1, 481.8pt x 481.8pt>
-File: NDAI1.png Graphic file (type png)
- <use NDAI1.png>
-Package pdftex.def Info: NDAI1.png used on input line 100.
-(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
+<RAWEDA.png, id=1, 657.45625pt x 507.8975pt>
+File: RAWEDA.png Graphic file (type png)
+ <use RAWEDA.png>
+Package pdftex.def Info: RAWEDA.png used on input line 98.
+(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 100--101
-[]\OT1/cmr/m/n/10 s[] 
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 98--99
+[][] 
  []
 
-<NDAI2.png, id=3, 481.8pt x 481.8pt>
-File: NDAI2.png Graphic file (type png)
- <use NDAI2.png>
-Package pdftex.def Info: NDAI2.png used on input line 103.
-(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
+<EXPERTSEDA.png, id=3, 657.45625pt x 507.8975pt>
+File: EXPERTSEDA.png Graphic file (type png)
+ <use EXPERTSEDA.png>
+Package pdftex.def Info: EXPERTSEDA.png used on input line 103.
+(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 103--104
-[]\OT1/cmr/m/n/10 s[] 
- []
-
-<NDAI3.png, id=4, 481.8pt x 481.8pt>
-File: NDAI3.png Graphic file (type png)
- <use NDAI3.png>
-Package pdftex.def Info: NDAI3.png used on input line 106.
-(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
-
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 106--107
-[]\OT1/cmr/m/n/10 s[] 
- []
-
-<SD1.png, id=5, 481.8pt x 481.8pt>
-File: SD1.png Graphic file (type png)
- <use SD1.png>
-Package pdftex.def Info: SD1.png used on input line 113.
-(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
-
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 113--114
-[]\OT1/cmr/m/n/10 s[] 
- []
-
-<SD2.png, id=6, 481.8pt x 481.8pt>
-File: SD2.png Graphic file (type png)
- <use SD2.png>
-Package pdftex.def Info: SD2.png used on input line 116.
-(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
-
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 116--117
-[]\OT1/cmr/m/n/10 s[] 
- []
-
-<SD3.png, id=7, 481.8pt x 481.8pt>
-File: SD3.png Graphic file (type png)
- <use SD3.png>
-Package pdftex.def Info: SD3.png used on input line 119.
-(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
-
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 119--120
-[]\OT1/cmr/m/n/10 s[] 
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 103--104
+[][] 
  []
 
 [1
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./NDAI1
-.png> <./NDAI2.png> <./NDAI3.png>] <CORR1.png, id=20, 481.8pt x 481.8pt>
-File: CORR1.png Graphic file (type png)
-
-<use CORR1.png>
-Package pdftex.def Info: CORR1.png used on input line 126.
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./RAWED
+A.png>] <NDAI1.png, id=14, 481.8pt x 481.8pt>
+File: NDAI1.png Graphic file (type png)
+ <use NDAI1.png>
+Package pdftex.def Info: NDAI1.png used on input line 112.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 126--127
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 112--113
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<CORR2.png, id=21, 481.8pt x 481.8pt>
+<NDAI2.png, id=15, 481.8pt x 481.8pt>
+File: NDAI2.png Graphic file (type png)
+ <use NDAI2.png>
+Package pdftex.def Info: NDAI2.png used on input line 115.
+(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
+
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 115--116
+[]\OT1/cmr/m/n/10 s[] 
+ []
+
+<NDAI3.png, id=16, 481.8pt x 481.8pt>
+File: NDAI3.png Graphic file (type png)
+ <use NDAI3.png>
+Package pdftex.def Info: NDAI3.png used on input line 118.
+(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
+
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 118--119
+[]\OT1/cmr/m/n/10 s[] 
+ []
+
+<SD1.png, id=17, 481.8pt x 481.8pt>
+File: SD1.png Graphic file (type png)
+ <use SD1.png>
+Package pdftex.def Info: SD1.png used on input line 125.
+(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
+
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 125--126
+[]\OT1/cmr/m/n/10 s[] 
+ []
+
+<SD2.png, id=18, 481.8pt x 481.8pt>
+File: SD2.png Graphic file (type png)
+ <use SD2.png>
+Package pdftex.def Info: SD2.png used on input line 128.
+(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
+
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 128--129
+[]\OT1/cmr/m/n/10 s[] 
+ []
+
+<SD3.png, id=19, 481.8pt x 481.8pt>
+File: SD3.png Graphic file (type png)
+ <use SD3.png>
+Package pdftex.def Info: SD3.png used on input line 131.
+(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
+
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 131--132
+[]\OT1/cmr/m/n/10 s[] 
+ []
+
+[2 <./EXPERTSEDA.png> <./NDAI1.png> <./NDAI2.png> <./NDAI3.png>]
+<CORR1.png, id=28, 481.8pt x 481.8pt>
+File: CORR1.png Graphic file (type png)
+ <use CORR1.png>
+Package pdftex.def Info: CORR1.png used on input line 138.
+(pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
+
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 138--139
+[]\OT1/cmr/m/n/10 s[] 
+ []
+
+<CORR2.png, id=29, 481.8pt x 481.8pt>
 File: CORR2.png Graphic file (type png)
  <use CORR2.png>
-Package pdftex.def Info: CORR2.png used on input line 129.
+Package pdftex.def Info: CORR2.png used on input line 141.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 129--130
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 141--142
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<CORR3.png, id=22, 481.8pt x 481.8pt>
+<CORR3.png, id=30, 481.8pt x 481.8pt>
 File: CORR3.png Graphic file (type png)
  <use CORR3.png>
-Package pdftex.def Info: CORR3.png used on input line 132.
+Package pdftex.def Info: CORR3.png used on input line 144.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 132--133
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 144--145
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<CORRvsNDAI.png, id=23, 707.64375pt x 483.8075pt>
+<CORRvsNDAI.png, id=31, 707.64375pt x 483.8075pt>
 File: CORRvsNDAI.png Graphic file (type png)
  <use CORRvsNDAI.png>
-Package pdftex.def Info: CORRvsNDAI.png used on input line 140.
+Package pdftex.def Info: CORRvsNDAI.png used on input line 152.
 (pdftex.def)             Requested size: 150.32504pt x 102.76897pt.
 
-<CORRvsSD.png, id=24, 707.64375pt x 483.8075pt>
+<CORRvsSD.png, id=32, 707.64375pt x 483.8075pt>
 File: CORRvsSD.png Graphic file (type png)
  <use CORRvsSD.png>
-Package pdftex.def Info: CORRvsSD.png used on input line 144.
+Package pdftex.def Info: CORRvsSD.png used on input line 156.
 (pdftex.def)             Requested size: 150.32504pt x 102.76897pt.
 
-<NDAIvsSD.png, id=25, 707.64375pt x 483.8075pt>
+<NDAIvsSD.png, id=33, 707.64375pt x 483.8075pt>
 File: NDAIvsSD.png Graphic file (type png)
  <use NDAIvsSD.png>
-Package pdftex.def Info: NDAIvsSD.png used on input line 148.
+Package pdftex.def Info: NDAIvsSD.png used on input line 160.
 (pdftex.def)             Requested size: 150.32504pt x 102.76897pt.
 
-<RAWEDA.png, id=26, 657.45625pt x 507.8975pt>
-File: RAWEDA.png Graphic file (type png)
- <use RAWEDA.png>
-Package pdftex.def Info: RAWEDA.png used on input line 154.
-(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
-
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 154--155
-[][] 
- []
-
-[2 <./SD1.png> <./SD2.png> <./SD3.png> <./CORR1.png> <./CORR2.png> <./CORR3.png
-> <./CORRvsNDAI.png (PNG copy)> <./CORRvsSD.png (PNG copy)> <./NDAIvsSD.png (PN
-G copy)>] <EXPERTSEDA.png, id=37, 657.45625pt x 507.8975pt>
-File: EXPERTSEDA.png Graphic file (type png)
-
-<use EXPERTSEDA.png>
-Package pdftex.def Info: EXPERTSEDA.png used on input line 159.
-(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
-
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 159--160
-[][] 
- []
-
-<NDAIEDA.png, id=38, 657.45625pt x 507.8975pt>
+<NDAIEDA.png, id=34, 657.45625pt x 507.8975pt>
 File: NDAIEDA.png Graphic file (type png)
  <use NDAIEDA.png>
-Package pdftex.def Info: NDAIEDA.png used on input line 164.
+Package pdftex.def Info: NDAIEDA.png used on input line 168.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 164--165
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 168--169
 [][] 
  []
 
-[3 <./RAWEDA.png> <./EXPERTSEDA.png>]
-<SDEDA.png, id=44, 657.45625pt x 507.8975pt>
+[3 <./SD1.png> <./SD2.png> <./SD3.png> <./CORR1.png> <./CORR2.png> <./CORR3.png
+> <./CORRvsNDAI.png (PNG copy)> <./CORRvsSD.png (PNG copy)> <./NDAIvsSD.png (PN
+G copy)>] <SDEDA.png, id=44, 657.45625pt x 507.8975pt>
 File: SDEDA.png Graphic file (type png)
  <use SDEDA.png>
-Package pdftex.def Info: SDEDA.png used on input line 169.
+Package pdftex.def Info: SDEDA.png used on input line 173.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 169--170
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 173--174
 [][] 
  []
 
 <CORREDA.png, id=45, 657.45625pt x 507.8975pt>
 File: CORREDA.png Graphic file (type png)
  <use CORREDA.png>
-Package pdftex.def Info: CORREDA.png used on input line 174.
+Package pdftex.def Info: CORREDA.png used on input line 178.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 174--175
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 178--179
 [][] 
  []
 
@@ -554,29 +552,29 @@ Overfull \hbox (42.40672pt too wide) in paragraph at lines 174--175
 <QDArocCV.png, id=51, 707.64375pt x 483.8075pt>
 File: QDArocCV.png Graphic file (type png)
  <use QDArocCV.png>
-Package pdftex.def Info: QDArocCV.png used on input line 186.
+Package pdftex.def Info: QDArocCV.png used on input line 190.
 (pdftex.def)             Requested size: 230.18253pt x 157.36845pt.
 
 <AUCcvQDA.png, id=52, 707.64375pt x 483.8075pt>
 File: AUCcvQDA.png Graphic file (type png)
  <use AUCcvQDA.png>
-Package pdftex.def Info: AUCcvQDA.png used on input line 190.
+Package pdftex.def Info: AUCcvQDA.png used on input line 194.
 (pdftex.def)             Requested size: 230.18253pt x 157.36845pt.
-
-<threshold.png, id=53, 657.45625pt x 507.8975pt>
+ [5 <./CORREDA.png> <./QDArocCV.png> <./AUCcvQDA.png>]
+<threshold.png, id=59, 657.45625pt x 507.8975pt>
 File: threshold.png Graphic file (type png)
  <use threshold.png>
-Package pdftex.def Info: threshold.png used on input line 202.
+Package pdftex.def Info: threshold.png used on input line 208.
 (pdftex.def)             Requested size: 230.11313pt x 177.76678pt.
- [5 <./CORREDA.png> <./QDArocCV.png> <./AUCcvQDA.png>]
+
 <LogitClassification.png, id=60, 657.45625pt x 507.8975pt>
 File: LogitClassification.png Graphic file (type png)
 
 <use LogitClassification.png>
-Package pdftex.def Info: LogitClassification.png used on input line 208.
+Package pdftex.def Info: LogitClassification.png used on input line 215.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 208--209
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 215--216
 [][] 
  []
 
@@ -584,10 +582,10 @@ Overfull \hbox (42.40672pt too wide) in paragraph at lines 208--209
 File: LogitProbabilities.png Graphic file (type png)
 
 <use LogitProbabilities.png>
-Package pdftex.def Info: LogitProbabilities.png used on input line 213.
+Package pdftex.def Info: LogitProbabilities.png used on input line 221.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 213--214
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 221--222
 [][] 
  []
 
@@ -596,78 +594,79 @@ Overfull \hbox (42.40672pt too wide) in paragraph at lines 213--214
 File: ClassificationOutcomes.png Graphic file (type png)
 
 <use ClassificationOutcomes.png>
-Package pdftex.def Info: ClassificationOutcomes.png used on input line 218.
+Package pdftex.def Info: ClassificationOutcomes.png used on input line 226.
 (pdftex.def)             Requested size: 512.16174pt x 284.53691pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 218--219
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 226--227
 [][] 
  []
 
-<LogitROC.png, id=74, 657.45625pt x 513.92pt>
+[7 <./LogitProbabilities.png> <./ClassificationOutcomes.png>]
+<LogitROC.png, id=80, 657.45625pt x 513.92pt>
 File: LogitROC.png Graphic file (type png)
  <use LogitROC.png>
-Package pdftex.def Info: LogitROC.png used on input line 224.
+Package pdftex.def Info: LogitROC.png used on input line 234.
 (pdftex.def)             Requested size: 328.72733pt x 256.95937pt.
- [7 <./LogitProbabilities.png> <./ClassificationOutcomes.png>]
+
 <ParameterConvergence.png, id=81, 657.45625pt x 507.8975pt>
 File: ParameterConvergence.png Graphic file (type png)
 
 <use ParameterConvergence.png>
-Package pdftex.def Info: ParameterConvergence.png used on input line 231.
+Package pdftex.def Info: ParameterConvergence.png used on input line 241.
 (pdftex.def)             Requested size: 328.72733pt x 253.94814pt.
  [8 <./LogitROC.png> <./ParameterConvergence.png>] <AUCconverge.png, id=87, 481
 .8pt x 481.8pt>
 File: AUCconverge.png Graphic file (type png)
  <use AUCconverge.png>
-Package pdftex.def Info: AUCconverge.png used on input line 244.
+Package pdftex.def Info: AUCconverge.png used on input line 254.
 (pdftex.def)             Requested size: 150.32504pt x 150.31952pt.
 
 <CVAUC.png, id=88, 481.8pt x 481.8pt>
 File: CVAUC.png Graphic file (type png)
  <use CVAUC.png>
-Package pdftex.def Info: CVAUC.png used on input line 248.
+Package pdftex.def Info: CVAUC.png used on input line 258.
 (pdftex.def)             Requested size: 150.32504pt x 150.31952pt.
 
 <imageAUC.png, id=89, 481.8pt x 481.8pt>
 File: imageAUC.png Graphic file (type png)
  <use imageAUC.png>
-Package pdftex.def Info: imageAUC.png used on input line 252.
+Package pdftex.def Info: imageAUC.png used on input line 262.
 (pdftex.def)             Requested size: 150.32504pt x 150.31952pt.
 
 <ROC_block1.pdf, id=90, 505.89pt x 505.89pt>
 File: ROC_block1.pdf Graphic file (type pdf)
  <use ROC_block1.pdf>
-Package pdftex.def Info: ROC_block1.pdf used on input line 262.
+Package pdftex.def Info: ROC_block1.pdf used on input line 272.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_block2.pdf, id=91, 505.89pt x 505.89pt>
 File: ROC_block2.pdf Graphic file (type pdf)
  <use ROC_block2.pdf>
-Package pdftex.def Info: ROC_block2.pdf used on input line 266.
+Package pdftex.def Info: ROC_block2.pdf used on input line 276.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_block3.pdf, id=92, 505.89pt x 505.89pt>
 File: ROC_block3.pdf Graphic file (type pdf)
  <use ROC_block3.pdf>
-Package pdftex.def Info: ROC_block3.pdf used on input line 270.
+Package pdftex.def Info: ROC_block3.pdf used on input line 280.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_block4.pdf, id=93, 505.89pt x 505.89pt>
 File: ROC_block4.pdf Graphic file (type pdf)
  <use ROC_block4.pdf>
-Package pdftex.def Info: ROC_block4.pdf used on input line 277.
+Package pdftex.def Info: ROC_block4.pdf used on input line 287.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_block5.pdf, id=94, 505.89pt x 505.89pt>
 File: ROC_block5.pdf Graphic file (type pdf)
  <use ROC_block5.pdf>
-Package pdftex.def Info: ROC_block5.pdf used on input line 281.
+Package pdftex.def Info: ROC_block5.pdf used on input line 291.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_block6.pdf, id=95, 505.89pt x 505.89pt>
 File: ROC_block6.pdf Graphic file (type pdf)
  <use ROC_block6.pdf>
-Package pdftex.def Info: ROC_block6.pdf used on input line 285.
+Package pdftex.def Info: ROC_block6.pdf used on input line 295.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 
@@ -676,19 +675,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <ROC_block8.pdf, id=96, 505.89pt x 505.89pt>
 File: ROC_block8.pdf Graphic file (type pdf)
  <use ROC_block8.pdf>
-Package pdftex.def Info: ROC_block8.pdf used on input line 292.
+Package pdftex.def Info: ROC_block8.pdf used on input line 302.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_block9.pdf, id=97, 505.89pt x 505.89pt>
 File: ROC_block9.pdf Graphic file (type pdf)
  <use ROC_block9.pdf>
-Package pdftex.def Info: ROC_block9.pdf used on input line 296.
+Package pdftex.def Info: ROC_block9.pdf used on input line 306.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_block10.pdf, id=98, 505.89pt x 505.89pt>
 File: ROC_block10.pdf Graphic file (type pdf)
  <use ROC_block10.pdf>
-Package pdftex.def Info: ROC_block10.pdf used on input line 300.
+Package pdftex.def Info: ROC_block10.pdf used on input line 310.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 
@@ -697,13 +696,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <ROC_block11.pdf, id=99, 505.89pt x 505.89pt>
 File: ROC_block11.pdf Graphic file (type pdf)
  <use ROC_block11.pdf>
-Package pdftex.def Info: ROC_block11.pdf used on input line 307.
+Package pdftex.def Info: ROC_block11.pdf used on input line 317.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_block12.pdf, id=100, 505.89pt x 505.89pt>
 File: ROC_block12.pdf Graphic file (type pdf)
  <use ROC_block12.pdf>
-Package pdftex.def Info: ROC_block12.pdf used on input line 311.
+Package pdftex.def Info: ROC_block12.pdf used on input line 321.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 
@@ -712,19 +711,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <ROC_image1.pdf, id=101, 505.89pt x 505.89pt>
 File: ROC_image1.pdf Graphic file (type pdf)
  <use ROC_image1.pdf>
-Package pdftex.def Info: ROC_image1.pdf used on input line 320.
+Package pdftex.def Info: ROC_image1.pdf used on input line 330.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_image4.pdf, id=102, 505.89pt x 505.89pt>
 File: ROC_image4.pdf Graphic file (type pdf)
  <use ROC_image4.pdf>
-Package pdftex.def Info: ROC_image4.pdf used on input line 324.
+Package pdftex.def Info: ROC_image4.pdf used on input line 334.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 <ROC_image8.pdf, id=103, 505.89pt x 505.89pt>
 File: ROC_image8.pdf Graphic file (type pdf)
  <use ROC_image8.pdf>
-Package pdftex.def Info: ROC_image8.pdf used on input line 328.
+Package pdftex.def Info: ROC_image8.pdf used on input line 338.
 (pdftex.def)             Requested size: 150.32504pt x 150.32466pt.
 
 
@@ -750,7 +749,7 @@ Here is how much of TeX's memory you used:
  6645 multiletter control sequences out of 15000+600000
  9376 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,11n,43p,1121b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,43p,1121b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -763,7 +762,7 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on writeupLab4.pdf (11 pages, 2364345 bytes).
+Output written on writeupLab4.pdf (11 pages, 2367727 bytes).
 PDF statistics:
  227 PDF objects out of 1000 (max. 8388607)
  119 compressed objects within 2 object streams
