@@ -2,15 +2,15 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}EDA}{1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Plots of Raw and Expertly Labelled Images}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Densities of NDAI, SD and CORR}{1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Raw images with AN radiances.\relax }}{1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Images with expert classifications. Proportions: 39.8$\%$ unknown, 23.4$\%$ cloudy, 36.8$\%$ clear.\relax }}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Densities of NDAI, SD and CORR}{2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces NDAI density plot for Image 1, 2, 3 (respectively).\relax }}{2}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{}{{3}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces SD density plot for Image 1, 2, 3 (respectively).\relax }}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces CORR density plot for Image 1, 2, 3 (respectively).\relax }}{3}}
-\newlabel{}{{5}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces SD density plot for Image 1, 2, 3 (respectively).\relax }}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces CORR density plot for Image 1, 2, 3 (respectively).\relax }}{2}}
+\newlabel{}{{5}{2}}
 \newlabel{CorrNdai}{{6a}{3}}
 \newlabel{sub@CorrNdai}{{a}{3}}
 \newlabel{CorrSd}{{6b}{3}}
@@ -20,27 +20,28 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Scatter plots of the pairs of features used in the analyses. Red points denote pixels that were labeled as not clouds and blue points represent cloudy pixels.\relax }}{3}}
 \newlabel{fig:Scatter}{{6}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Mapped Features}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.\relax }}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.\relax }}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Mapped SD readings. Higher values show cloud boundaries, though also show uneven terrain.\relax }}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Mapped CORR readings. Cloudy regions tend to be lighter, but not as strongly as in NDAI.\relax }}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Modeling}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}QDA/LDA}{5}}
-\newlabel{12-foldROC}{{10a}{5}}
-\newlabel{sub@12-foldROC}{{a}{5}}
-\newlabel{12-foldAUC}{{10b}{5}}
-\newlabel{sub@12-foldAUC}{{b}{5}}
-\newlabel{12-foldAUCdiff}{{10c}{5}}
-\newlabel{sub@12-foldAUCdiff}{{c}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces (10a\hbox {}) shows the ROC curves for each of the 12 folds of cross validation. (10b\hbox {}) and (10c\hbox {}) show evidence via AUC estimates that QDA performs slightly better than LDA. Note that in both analysis, fold 1 has an abnormally low AUC.\relax }}{5}}
-\newlabel{fig:qda_lda}{{10}{5}}
-\newlabel{qda1_conf}{{\caption@xref {qda1_conf}{ on input line 231}}{6}}
-\newlabel{sub@qda1_conf}{{}{6}}
-\newlabel{qda2_conf}{{\caption@xref {qda2_conf}{ on input line 235}}{6}}
-\newlabel{sub@qda2_conf}{{}{6}}
-\newlabel{qda3_conf}{{\caption@xref {qda3_conf}{ on input line 239}}{6}}
-\newlabel{sub@qda3_conf}{{}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces A comparison between the output of QDA and expert labels.\relax }}{6}}
-\newlabel{fig:QDAconf}{{11}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Mapped CORR readings. Cloudy regions tend to be lighter, but not as strongly as in NDAI.\relax }}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Modeling}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}QDA/LDA}{4}}
+\newlabel{12-foldROC}{{10a}{4}}
+\newlabel{sub@12-foldROC}{{a}{4}}
+\newlabel{12-foldAUC}{{10b}{4}}
+\newlabel{sub@12-foldAUC}{{b}{4}}
+\newlabel{12-foldAUCdiff}{{10c}{4}}
+\newlabel{sub@12-foldAUCdiff}{{c}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces (10a\hbox {}) shows the ROC curves for each of the 12 folds of cross validation. (10b\hbox {}) and (10c\hbox {}) show evidence via AUC estimates that QDA performs slightly better than LDA. Note that in both analysis, fold 1 has an abnormally low AUC.\relax }}{4}}
+\newlabel{fig:qda_lda}{{10}{4}}
+\newlabel{qda1_conf}{{\caption@xref {qda1_conf}{ on input line 231}}{5}}
+\newlabel{sub@qda1_conf}{{}{5}}
+\newlabel{qda2_conf}{{\caption@xref {qda2_conf}{ on input line 235}}{5}}
+\newlabel{sub@qda2_conf}{{}{5}}
+\newlabel{qda3_conf}{{\caption@xref {qda3_conf}{ on input line 239}}{5}}
+\newlabel{sub@qda3_conf}{{}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces A comparison between the output of QDA and expert labels.\relax }}{5}}
+\newlabel{fig:QDAconf}{{11}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Logit}{5}}
 \newlabel{qda1}{{\caption@xref {qda1}{ on input line 249}}{6}}
 \newlabel{sub@qda1}{{}{6}}
 \newlabel{qda2}{{\caption@xref {qda2}{ on input line 253}}{6}}
@@ -49,27 +50,29 @@
 \newlabel{sub@qda3}{{}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Posterior probabilities of being a cloud as given by QDA\relax }}{6}}
 \newlabel{fig:QDA}{{12}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Logit/Probit}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces We see a minimum in misclassification rate at .38.\relax }}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces We see a minimum in misclassification rate at .38.\relax }}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Binary classifications with threshold = .38 for logit trained via 12-fold CV.\relax }}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Probabilities for logit trained via 12-fold CV.\relax }}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Classification results from logit with respect to the expert labels.\relax }}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces ROC curve for our logit model. AUC is .95.\relax }}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Coefficient values through iterations of 12-fold CV.\relax }}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Random Forest}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces ROC across all 12 folds of quadrants\relax }}{10}}
-\newlabel{}{{19}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Convergence of ROC training on increasing number of quadrants in shuffled order\relax }}{10}}
-\newlabel{}{{20}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Convergence of ROC training on increasing number of quadrants in shuffled order\relax }}{11}}
-\newlabel{}{{21}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Convergence of ROC training on increasing number of quadrants\relax }}{11}}
-\newlabel{}{{22}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Smoothed convergence of AUC for growing training set 50 trees and 3 features\relax }}{11}}
-\newlabel{}{{23}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Convergence of ROC training on increasing number of quadrants in shuffled order\relax }}{12}}
-\newlabel{}{{24}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Gini importance measures across folds\relax }}{12}}
-\newlabel{}{{25}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Probabilities for logit trained via 12-fold CV.\relax }}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Classification results from logit with respect to the expert labels.\relax }}{7}}
+\newlabel{ROC}{{\caption@xref {ROC}{ on input line 300}}{8}}
+\newlabel{sub@ROC}{{}{8}}
+\newlabel{Convergence in CV}{{\caption@xref {Convergence in CV}{ on input line 304}}{8}}
+\newlabel{sub@Convergence in CV}{{}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Left: ROC Curve with AUC=.95. Right: Parameter convergence through iterations of CV. 1 - Intercept, 2 - NDAI, 3 - SD, 4 - CORR\relax }}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Random Forest}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces ROC across all 12 folds of quadrants\relax }}{8}}
+\newlabel{}{{18}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Convergence of ROC training on increasing number of quadrants in shuffled order\relax }}{9}}
+\newlabel{}{{19}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Convergence of ROC training on increasing number of quadrants in shuffled order\relax }}{9}}
+\newlabel{}{{20}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Convergence of ROC training on increasing number of quadrants\relax }}{10}}
+\newlabel{}{{21}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Smoothed convergence of AUC for growing training set 50 trees and 3 features\relax }}{10}}
+\newlabel{}{{22}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Convergence of ROC training on increasing number of quadrants in shuffled order\relax }}{10}}
+\newlabel{}{{23}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Gini importance measures across folds\relax }}{11}}
+\newlabel{}{{24}{11}}
 \bibcite{notes}{1}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Reproducibility}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Reproducibility}{13}}
