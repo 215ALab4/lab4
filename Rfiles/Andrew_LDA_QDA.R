@@ -1,8 +1,9 @@
-require(dplyr)
-require(reshape2)
-require(MASS)
-require(ROCR)
-require(ggplot2)
+library(dplyr)
+library(reshape2)
+library(MASS)
+library(ROCR)
+library(mvtnorm)
+library(ggplot2)
 
 setwd("D:/coursework/stat215A/lab4")
 
@@ -125,22 +126,53 @@ MyPerformance <- function(method.object, data, labels){
 }
 
 ###############################################################################
+# Class covariance and mean
+#
+
+CloudCovMean <- function(data){
+  # Finds within-class covariance and mean for being a cloud
+  # Input: 
+  #   data - a data frame with NDAI, SD, CORR, and labels as its columns
+  # Ouput: 
+  #   A list with class covariances and means which can be called on
+  #   with cloud.cov, cloud.mean
+  
+  cloud <- dplyr::select(data, NDAI, SD, CORR,label)
+  cloud <- filter(cloud, label==1) %>% dplyr::select(-label)
+  
+  cloud.cov <- cov(cloud)
+  
+  cloud.mean <- colMeans(cloud)
+  
+  return(list(cloud.cov=cloud.cov, cloud.mean=cloud.mean))
+}
+
+###############################################################################
 # Cross-Validation Function
 #
 
-KFoldCV <- function(splitimages, analysis=qda){
+KFoldCV <- function(splitimages, method="qda"){
   # Takes the prepartitioned image data set and performs an
   # n-fold cross-validation
   # Input:
   #   splitimages - output of the SplitImage function, a list of data frames
   #     This can also be a list of data frames to be used for cross-validation
   #     e.g. list(image1,image2,image3)
-  #   analysis - method to use.  currently tested only for lda and qda
+  #   method - string specifying.  currently tested only for lda and qda
   # Output:
   #   predictions - a data frame with the posterior probabilities
   #     for each fold and the predicted class of each case
   #   roc - a data frame with the roc for each fold
   #   auc - a vector specifying the auc for each roc
+
+  if (method=="qda"){
+    analysis=qda
+  } else if (method=="lda"){
+    analysis=lda
+  } else {
+    stop('I told you only LDA or QDA would work.  Why did you try something else?
+         kappa')
+  }
   
   n <- length(splitimages) #number of folds
   
@@ -178,8 +210,8 @@ KFoldCV <- function(splitimages, analysis=qda){
     auc[i] <- MyPerformance(train, im$features, im$labels)$auc
     
   }
-  
   return(list(predictions=predictions, roc=roc, auc=auc))
+
 }
 
 ###############################################################################
@@ -265,30 +297,29 @@ names(image3) <- collabs
 # -Pairwise EDA- 
 # 
 # This script generates the ggplot objects containing the scatterplots in our
-# EDA section     
+# EDA section
 
-corr.ndai.eda <- ggplot() + 
-                 geom_jitter(data=filter(image1, label!=0), 
-                             aes(x=CORR, y=NDAI, 
-                                 group=factor(label), colour=factor(label)), 
-                             alpha=0.5) +
+labeled.image1 <- filter(image1, label!=0)
+
+corr.ndai.eda <- ggplot(labeled.image1) + 
+                 geom_jitter(aes(x=CORR, y=NDAI, 
+                                 group=factor(label), colour=factor(label),
+                                 alpha=0.5)) +
                  ggtitle("CORR vs. NDAI EDA") +
                  theme(legend.position="none", aspect.ratio=1)
   
 
-ndai.sd.eda <- ggplot() + 
-               geom_jitter(data=filter(image1, label!=0), 
-                           aes(x=NDAI, y=SD, 
-                               group=factor(label), colour=factor(label)), 
-                           alpha=0.5) +
+ndai.sd.eda <- ggplot(labeled.image1) + 
+               geom_jitter(aes(x=NDAI, y=SD, 
+                  group=factor(label), colour=factor(label),
+                  alpha=0.5)) +
                ggtitle("NDAI vs. SD EDA") +
                theme(legend.position="none", aspect.ratio=1)
 
-corr.sd.eda <- ggplot() + 
-               geom_jitter(data=filter(image1, label!=0), 
-                           aes(x=SD, y=CORR, 
-                               group=factor(label), colour=factor(label)), 
-                           alpha=0.5) +
+corr.sd.eda <- ggplot(labeled.image1) + 
+               geom_jitter(aes(x=CORR, y=SD, 
+                  group=factor(label), colour=factor(label),
+                  alpha=0.5)) +
                ggtitle("CORR vs. SD EDA") +
                theme(legend.position="none", aspect.ratio=1)
 
@@ -302,39 +333,50 @@ images.loo <- c(SplitImage(image1,1,1),
                 SplitImage(image2,1,1),
                 SplitImage(image3,1,1))
 
-lda.CV.loo <- KFoldCV(images.loo, analysis=lda)
-qda.CV.loo <- KFoldCV(images.loo, analysis=qda)
+lda.cv.loo <- KFoldCV(images.loo, method="lda")
+qda.cv.loo <- KFoldCV(images.loo, method="qda")
 
 # Each image is split into 4 horizontal bands resulting in 12 folds
 images.4x1 <- c(SplitImage(image1,1,4),
                 SplitImage(image2,1,4),
                 SplitImage(image3,1,4))
 
-lda.CV.12folds <- KFoldCV(images.4x1, analysis=lda)
-qda.CV.12folds <- KFoldCV(images.4x1, analysis=qda)
+lda.cv.12folds <- KFoldCV(images.4x1, method="lda")
+qda.cv.12folds <- KFoldCV(images.4x1, method="qda")
 
 # ROC for LOOCV 
-lda.ROC.loo <- ggplot(lda.CV.loo$roc) +
+lda.roc.loo <- ggplot(lda.cv.loo$roc) +
   geom_line(aes(x=FPR,y=TPR, group=fold, color=fold)) +
   scale_colour_discrete(name  ="Image Left Out") +
   ggtitle("ROC for One-Image-Left-Out CV of LDA")
 
-qda.ROC.loo <- ggplot(qda.CV.loo$roc) +
+qda.roc.loo <- ggplot(qda.cv.loo$roc) +
   geom_line(aes(x=FPR,y=TPR, group=fold, color=fold)) +
   scale_colour_discrete(name  ="Image Left Out") +
   ggtitle("ROC for One-Image-Left-Out CV of QDA")
 
-# ROC for 12-Fold CV
-roc.aes <- list(geom_line(aes(x=FPR,y=TPR, group=fold, color=fold)),
-                scale_colour_discrete(name  ="Fold"),
-                theme(aspect.ratio=1))
+# Train on all three images then tested on all three images "Averaging"
+images.all <- rbind(image1,image2,image3)
+labeled.images.all <- filter(images.all, label!=0)
+qda.all <- qda(label ~ NDAI + SD + CORR, 
+               data = labeled.images.all)
+posterior.qda.all <- MyPosterior(images.all, qda.all)
+perf.qda.all <- MyPerformance(qda.all, labeled.images.all, labeled.images.all$label)
+perf.qda.all$auc
+roc.qda.all <- mutate(perf.qda.all$roc, fold="Average") 
 
-qda.ROC.12folds <- ggplot(qda.CV.12folds$roc) + roc.aes +
+# ROC for 12-Fold CV
+qda.roc.12folds <- ggplot() + 
+  geom_line(data=qda.cv.12folds$roc, aes(x=FPR,y=TPR, group=fold, color=fold)) +
+  geom_line(data=roc.qda.all, aes(x=FPR, y=TPR, size=fold)) +
+  scale_size_discrete(name="") +
+  scale_colour_discrete(name  ="Fold") +
+  theme(aspect.ratio=1) +
   ggtitle("ROC for QDA 12-Fold CV of QDA")
 
 # AUC for 12-Fold CV
-auc.12folds <- data.frame(LDA=lda.CV.12folds$auc,
-                          QDA=qda.CV.12folds$auc,
+auc.12folds <- data.frame(LDA=lda.cv.12folds$auc,
+                          QDA=qda.cv.12folds$auc,
                           Fold=1:12) %>% 
                melt(id="Fold", variable.name="Method",value.name="AUC") %>%
                ggplot() + 
@@ -347,7 +389,7 @@ auc.12folds <- data.frame(LDA=lda.CV.12folds$auc,
                  guides(size=FALSE)
 
 # Comparison between the AUC for LDA and QDA at each fold
-auc.comp.plot <- data.frame(diff=qda.CV.12folds$auc-lda.CV.12folds$auc,
+auc.comp.plot <- data.frame(diff=qda.cv.12folds$auc-lda.cv.12folds$auc,
                             fold=1:12) %>%
                  ggplot() +
                    geom_point(aes(x=fold, y=diff, size=3)) + 
@@ -360,10 +402,12 @@ auc.comp.plot <- data.frame(diff=qda.CV.12folds$auc-lda.CV.12folds$auc,
 
 
 # Reconstruct the images from their split form
-qda.recon.12fold <- ImageReconstruct(deconstructed=qda.CV.12folds$predictions, 
+qda.recon.12fold <- ImageReconstruct(deconstructed=qda.cv.12folds$predictions, 
                                      nimages=3, xsplit=1, ysplit=4)
-qda.recon.loo <- ImageReconstruct(deconstructed=qda.CV.loo$predictions, 
+qda.recon.loo <- ImageReconstruct(deconstructed=qda.cv.loo$predictions, 
                                   nimages=3, xsplit=1, ysplit=1)
+
+
 
 ###############################################################################
 # -Probability Plots-  
@@ -430,7 +474,7 @@ ggsave(filename="CORR_vs_SD.png", plot=corr.sd.eda,
        height=5, width=5)
 
 # ROC Curves + AUC
-ggsave(filename="ROC_12_folds_DA.png", plot=qda.ROC.12folds,
+ggsave(filename="ROC_12_folds_DA.png", plot=qda.roc.12folds,
        height=5, width=5)
 ggsave(filename="AUC_12_folds_DA.png", plot=auc.12folds,
        height=5, width=5)
@@ -461,3 +505,4 @@ ggsave(filename="qda2_prob.png", plot=qda2.prob.plot,
 ggsave(filename="qda3_prob.png", plot=qda3.prob.plot,
        height=5, width=5)
 }
+mahalanobis
