@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 NOV 2014 14:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 NOV 2014 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -372,14 +372,14 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 99.
 
-<../figures/RAWEDA.png, id=1, 657.45625pt x 507.8975pt>
+<../figures/RAWEDA.png, id=1, 697.60625pt x 588.1975pt>
 File: ../figures/RAWEDA.png Graphic file (type png)
 
 <use ../figures/RAWEDA.png>
 Package pdftex.def Info: ../figures/RAWEDA.png used on input line 100.
-(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
+(pdftex.def)             Requested size: 512.17558pt x 142.26524pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 100--101
+Overfull \hbox (42.42056pt too wide) in paragraph at lines 100--101
 [][] 
  []
 
@@ -387,14 +387,14 @@ Overfull \hbox (42.40672pt too wide) in paragraph at lines 100--101
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 104.
 
-<../figures/EXPERTSEDA.png, id=3, 783.92876pt x 588.1975pt>
+<../figures/EXPERTSEDA.png, id=3, 703.62875pt x 588.1975pt>
 File: ../figures/EXPERTSEDA.png Graphic file (type png)
 
 <use ../figures/EXPERTSEDA.png>
 Package pdftex.def Info: ../figures/EXPERTSEDA.png used on input line 105.
-(pdftex.def)             Requested size: 512.17924pt x 142.26524pt.
+(pdftex.def)             Requested size: 512.1416pt x 142.26524pt.
 
-Overfull \hbox (42.42422pt too wide) in paragraph at lines 105--106
+Overfull \hbox (42.38658pt too wide) in paragraph at lines 105--106
 [][] 
  []
 
@@ -519,38 +519,38 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [2 <../figures/EXPERTSEDA.png> <../figures/NDAI1.png> <../figures/NDAI2.png> <.
 ./figures/NDAI3.png> <../figures/SD1.png> <../figures/SD2.png> <../figures/SD3.
 png> <../figures/CORR1.png> <../figures/CORR2.png> <../figures/CORR3.png>]
-<../figures/NDAIEDA.png, id=40, 657.45625pt x 507.8975pt>
+<../figures/NDAIEDA.png, id=40, 697.60625pt x 588.1975pt>
 File: ../figures/NDAIEDA.png Graphic file (type png)
 
 <use ../figures/NDAIEDA.png>
 Package pdftex.def Info: ../figures/NDAIEDA.png used on input line 177.
-(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
+(pdftex.def)             Requested size: 512.17558pt x 142.26524pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 177--178
+Overfull \hbox (42.42056pt too wide) in paragraph at lines 177--178
 [][] 
  []
 
-<../figures/SDEDA.png, id=41, 657.45625pt x 507.8975pt>
+<../figures/SDEDA.png, id=41, 697.60625pt x 588.1975pt>
 File: ../figures/SDEDA.png Graphic file (type png)
 
 <use ../figures/SDEDA.png>
 Package pdftex.def Info: ../figures/SDEDA.png used on input line 182.
-(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
+(pdftex.def)             Requested size: 512.17558pt x 142.26524pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 182--183
+Overfull \hbox (42.42056pt too wide) in paragraph at lines 182--183
 [][] 
  []
 
 [3 <../figures/CORR_vs_NDAI.png (PNG copy)> <../figures/CORR_vs_SD.png (PNG cop
 y)> <../figures/NDAI_vs_SD.png (PNG copy)> <../figures/NDAIEDA.png>]
-<../figures/CORREDA.png, id=47, 657.45625pt x 507.8975pt>
+<../figures/CORREDA.png, id=47, 697.60625pt x 588.1975pt>
 File: ../figures/CORREDA.png Graphic file (type png)
 
 <use ../figures/CORREDA.png>
 Package pdftex.def Info: ../figures/CORREDA.png used on input line 187.
-(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
+(pdftex.def)             Requested size: 512.17558pt x 142.26524pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 187--188
+Overfull \hbox (42.42056pt too wide) in paragraph at lines 187--188
 [][] 
  []
 
@@ -635,29 +635,29 @@ File: ../figures/threshold.png Graphic file (type png)
 Package pdftex.def Info: ../figures/threshold.png used on input line 272.
 (pdftex.def)             Requested size: 230.11313pt x 177.76678pt.
 
-<../figures/LogitClassification.png, id=80, 657.45625pt x 507.8975pt>
+<../figures/LogitClassification.png, id=80, 703.62875pt x 588.1975pt>
 File: ../figures/LogitClassification.png Graphic file (type png)
 
 <use ../figures/LogitClassification.png>
 Package pdftex.def Info: ../figures/LogitClassification.png used on input line 
 279.
-(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
+(pdftex.def)             Requested size: 512.1416pt x 142.26524pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 279--280
+Overfull \hbox (42.38658pt too wide) in paragraph at lines 279--280
 [][] 
  []
 
 [6 <../figures/qda1_prob.png (PNG copy)> <../figures/qda2_prob.png (PNG copy)> 
 <../figures/qda3_prob.png (PNG copy)> <../figures/threshold.png>]
-<../figures/LogitProbabilities.png, id=85, 657.45625pt x 507.8975pt>
+<../figures/LogitProbabilities.png, id=85, 703.62875pt x 588.1975pt>
 File: ../figures/LogitProbabilities.png Graphic file (type png)
 
 <use ../figures/LogitProbabilities.png>
 Package pdftex.def Info: ../figures/LogitProbabilities.png used on input line 2
 85.
-(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
+(pdftex.def)             Requested size: 512.1416pt x 142.26524pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 285--286
+Overfull \hbox (42.38658pt too wide) in paragraph at lines 285--286
 [][] 
  []
 
@@ -1022,7 +1022,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
 13/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2013
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on writeupLab4.pdf (13 pages, 5251419 bytes).
+Output written on writeupLab4.pdf (13 pages, 5756907 bytes).
 PDF statistics:
  245 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams
