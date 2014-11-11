@@ -53,6 +53,7 @@
 \definecolor{errorcolor}{rgb}{1, 0, 0}
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
+\usepackage{textcomp}
 \usepackage{alltt}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -88,9 +89,17 @@ Stat 215A, Fall 2014}
 \author{Andrew Do, Hye Soo Choi, Jonathan Fischer, Xiang (Lisha) Li }
 
 \maketitle
-
 \section{Introduction}
-Blah blah...
+\subsection{Data} Based on the recordings from the NASA's Multiangle Imaging SpectroRa-diometer (MISR) imagery, the data used to train the classification models is a collection of measurements from the three different images provided. Data units for these images were provided from MISR measurement of blocks 20-22 over three consecutive orbits. Instead of overfitting to individual images, we combined data to construct general classification models. The true classification of pixels is taken to be that provided by the expert and called as expert label. Nonetheless, some regions which was equivocal to the expert remained unlabelled.
+
+
+MISR collected electromagnetic radiation measurements using nine cameras at nine different angles, each of which views Earth scenes in four spectral bands (blue, green, red, and near-infrared).  MISR collects huge amount of Data due to its global coverage at high spatial resolution. Each MISR pixel encompasses 275m$\times$ 275m region, yielding tremendous amount of data. Due to this massiveness of the MISR readings and transmission channel constraints, only the red radiances were transmitted at full resolution from all cameras. It was also stated that all four bands have similar reflectance signatures over ice, snow, and clouds. Thus, only the red radiances which has high spatial resolution were used in constructing three features SD, CORR, and NDAI.  In our data, in addition to the three features, five of the nine angles' radiances were given.
+
+\subsection{Features} The nine cameras had different views at the following angles: 70.5\textdegree (Df), 60.0\textdegree (Cf), 45.6\textdegree (Bf), and 26.1\textdegree (Af) in the forward direction; 0.0\textdegree (An) in the nadir direction and 26.1\textdegree (Aa), 45.6\textdegree (Ba), 60.0\textdegree (Ca), and 70.5\textdegree (Da) in the aft direction, where "f" indicated the forward
+direction, and "a" indicates the aft direction. Note that we are only given radiances for angles Df, Cf, Bf, An, Af. The nadir (vertically downward) viewing camera(An) has a strong advantage over cameras from other viewpoint since it is least influenced by atmospheric scattering and least distorted by surface topographic effects. Data derived from two angle Af and Aa cameras was aimed at determining topographic heights and cloud heights by using parallex from these two view angles. The two Bf and Ba camera are positioned to utilize aerosol sensitivity. Based on theoretical finding that the directionally oriented reflectance variation over different types of cloud is minimized at 60.0 degree angle, the two Cf and Ca cameras are positioned at 60.0 degree angle, which is also considered as crucial due to its significant role in estimating the amount of reflection at each ground point. High angle view of Df and Da cameras is designed to present maximal sensitivity to off-nadir effects. 
+
+
+The features CORR, SD, and NDAI are an average linear correlation of radiation measurements at different view angles, the standard deviation within groups of MISR angle An camera red radiation measurements, and a ratio between the difference and sum of the mean radiation measurements from the first and fifth angle associated with a particular pixel region, respectively. It was stated that extensive exploratory data analysis combined with specific domain knowledge, such as the fact that ice and snow surfaces scatter radiation more isotropically than clouds, the three features are found to be most useful in differentiating surface pixels from cloudy ones. High values of CORR alludes to either cloud-free condition or the presence of low altitude cloud. SD is designed to aid identifying smooth surface where the correlation between different MISR viewpoints are muted by measurement noise. Larger NDAI values imply the presence of clouds.
 
 \section{EDA}
 
