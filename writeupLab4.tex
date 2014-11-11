@@ -208,7 +208,7 @@ The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatiall
     \caption{AUC Differences}
     \label{12-foldAUCdiff}
   \end{subfigure}    
-  \label{qda_lda}
+  \label{fig:qda_lda}
   \caption{(\ref{12-foldROC}) shows the ROC curves for each of the 12 folds of cross validation.  (\ref{12-foldAUC}) and (\ref{12-foldAUCdiff}) show evidence via AUC estimates that QDA performs slightly better than LDA.  Note that in both analysis, fold 1 has an abnormally low AUC.}
 \end{figure}
 Linear discriminant analysis (LDA) for binary classification aims to separate the feature space using a hyperplane.  It assumes that the each class is normally distributed with means $\mu_0$ and $\mu_1$ and that the two classes are homoscedastic with covariance matrix $\Sigma_0=\Sigma_1=\Sigma$.  Quadratic discriminant analysis works in the same manner except that it makes no assumptions about the covariance matrix.  Thus given the multivariate Guassian distribution:
@@ -219,7 +219,7 @@ where $c=1,2$ is the class label.  Let $p_c$ be the prior probability of class $
 \begin{equation}
 P(x \in \textrm{ Class } c \vert X=x) = \frac{f_c(x) p_c}{f_1(x) p_1 + f_2(x) p_2}
 \end{equation}
-We can then classify each point by selecting a probability threshold and hard-assigning based on whether or not the posterior probability was higher or lower than that threshold.  Both LDA and QDA were carried out during our analyis of the data, but as we suspected from our exploratory data anaylsis, QDA performed slightly better than LDA when we compared the results side-by-side (see figure \ref{qda_lda}).
+We can then classify each point by selecting a probability threshold and hard-assigning based on whether or not the posterior probability was higher or lower than that threshold.  Both LDA and QDA were carried out during our analyis of the data, but as we suspected from our exploratory data anaylsis, QDA performed slightly better than LDA when we compared the results side-by-side (see figure \ref{fig:qda_lda}).
 During cross-validation, each image was divided into four horizontal strips, resulting in 12 folds to be used in our validation procedure.  In each iteration, we withheld one of the strips and trained on the remaining 11.  The resulting images after piecing the horizontal strips back together can be seen in figure \ref{fig:QDA}.
 Cross-validation for QDA revealed that while the method works extremely well in some cases, producing AUC scores of almost 1, it sometimes fails to perform better than even the theoretical random classifier.  In particular, the classifier does not seem to be good at discerning snow from clouds in regions where there are many dark pixels corresponding to geographical features.  The most indicative example of this is seen in image 1 where the algorithm misclassifies an entire ridge-filled region as clouds.  We also noticed that there were some misclassifications within large cloudy regions.  Figure \ref{fig:QDAconf} shows this nicely.
 
