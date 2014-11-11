@@ -25,7 +25,9 @@ rf.specific <- function(train, num.tree){
     #columns 4 up to the second last.  The 3rd column contains the labels
   #num.tree is the number of trees we wish to use in our forest
   
-  rf <- try(randomForest(x = train[,4:(ncol(train)-1)], y = droplevels(as.factor(train[,3])), ntree=num.tree, confusion = T, importance = T))
+  rf <- try(randomForest(x = train[,4:(ncol(train)-1)], y = 
+                           droplevels(as.factor(train[,3])), ntree=num.tree, 
+                         confusion = T, importance = T))
   return(rf)
 }
 
@@ -109,21 +111,35 @@ half.row <- as.integer(nrow(image1)/2)
 image1$block.x <- c(rep(TRUE,half.row), rep(FALSE, half.row+1))
 image1 <- arrange(image1, (y))
 image1$block.y <- c(rep(TRUE, half.row),rep(FALSE, half.row+1))
-image1 <- image1 %.% mutate(fold = ifelse(block.x==TRUE & block.y==FALSE, 2, 1), fold = ifelse(block.x==TRUE & block.y==TRUE, 3, fold), fold = ifelse(block.x == FALSE & block.y == TRUE, 4, fold))
+image1 <- image1 %.% mutate(fold = ifelse(block.x==TRUE & block.y==FALSE, 2, 1),
+                            fold = ifelse(block.x==TRUE & block.y==TRUE, 3,
+                                          fold), 
+                            fold = ifelse(block.x == FALSE & block.y == TRUE, 4,
+                                          fold))
 
 image2 <- arrange(image2, (x))
 half.row <- as.integer(nrow(image2)/2)
 image2$block.x <- c(rep(TRUE,half.row), rep(FALSE, half.row))
 image2 <- arrange(image2, (y))
 image2$block.y <- c(rep(TRUE, half.row),rep(FALSE, half.row))
-image2 <- image2 %.% mutate(fold = ifelse(block.x==TRUE & block.y==FALSE, 6, 5), fold = ifelse(block.x==TRUE & block.y==TRUE, 7, fold), fold = ifelse(block.x == FALSE & block.y == TRUE, 8, fold))
+image2 <- image2 %.% mutate(fold = ifelse(block.x==TRUE & 
+                                            block.y==FALSE, 6, 5), 
+                            fold = ifelse(block.x==TRUE & 
+                                            block.y==TRUE, 7, fold), 
+                            fold = ifelse(block.x == FALSE & block.y == TRUE, 
+                                          8, fold))
 
 image3 <- arrange(image3, (x))
 half.row <- as.integer(nrow(image3)/2)
 image3$block.x <- c(rep(TRUE,half.row), rep(FALSE, half.row+1))
 image3 <- arrange(image3, (y))
 image3$block.y <- c(rep(TRUE, half.row),rep(FALSE, half.row+1))
-image3 <- image3 %.% mutate(fold = ifelse(block.x==TRUE & block.y==FALSE, 10, 9), fold = ifelse(block.x==TRUE & block.y==TRUE, 11, fold), fold = ifelse(block.x == FALSE & block.y == TRUE, 12, fold))
+image3 <- image3 %.% mutate(fold = ifelse(block.x==TRUE & block.y==FALSE,
+                                          10, 9), fold = ifelse(block.x==TRUE & 
+                                                                  block.y==TRUE,
+                                                                11, fold), fold 
+                            = ifelse(block.x == FALSE & block.y == TRUE, 12, 
+                                     fold))
 
 combined <- rbind(image1, image2, image3)
 combined$block.x <- NULL
