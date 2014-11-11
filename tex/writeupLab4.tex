@@ -265,7 +265,7 @@ Logistic regression is a widely-used discriminative classification model arising
 
 The logit model obtained via averaging after 12-fold cross-validation has $y_i = -3.356 + 1.900 * NDAI_i - 0.074 * SD_i + 9.002 * CORR_i$ where $P_i$(Cloud) = $ \frac{1}{1 + e^{-y_i}}$. To choose our cutoff value for declaring a pixel cloudy, we varied the cutoffs from .01 to 1 and calculated the misclassification error of our model at that threshold on expertly-labelled pixels. The figure below shows that the optimal threshold for this model is at .38, with an error of just under 10.1$\%$. As a consequence of this low threshold, we observe more false positives than false negatives. This will be further explored below.
 
-Cross-validation was done by dividing each image into quandrants and holding one quadrant out for testing in each iteration of training. There were thus 12-folds in the CV procedure. We chose blocks to comprise each fold rather than a random subsample of points in order to compensate for the correlation of errors among neighboring points. 
+Cross-validation was done by dividing each image into quandrants and holding one quadrant out for testing in each iteration of training. There were thus 12-folds in the CV procedure. We chose blocks to comprise each fold rather than a random subsample of points in order to compensate for the correlation of errors among neighboring points. The average CV error was 11.48$\%$. The ROC curve of the logit model is given in Figure 17 and has an AUC of .95.
 
 \begin{figure}[H]
 \begin{center}
@@ -291,7 +291,7 @@ Here we see the logit probabilites plotted spatially. This should approximate ho
 \caption{Classification results from logit with respect to the expert labels.}
 \end{figure}
 
-We now discuss the trends in misclassification. As depicted in the above figure, we have many more false positives than false negatives with large regions sometimes completely misclassified. These regions are often situated on boundaries of labelled and unlabelled points. Calculation shows the false negative rate to be 7.5$\%$ and the false positive rate to be 11.7$\%$. Models with interaction terms were considered and yielded very slight improvement as measured by drop in misclassification rate from .104 to .092. However, comparison of the misclassification plots showed that the increased complexity did not resolve the large clusters of false positives observed in each image. 
+We now discuss the trends in misclassification. As depicted in the above figure, we have many more false positives than false negatives with large regions sometimes completely misclassified. These regions are often situated on boundaries of labelled and unlabelled points. Calculation shows the false negative rate to be 7.5$\%$ and the false positive rate to be 11.7$\%$. Models with interaction terms were considered and yielded very slight improvement as measured by drop in data-wide misclassification rate from .104 to .091. However, comparison of the misclassification plots showed that the increased complexity did not resolve the large clusters of false positives observed in each image. Especially concerning areas are the large tracts of false positives on the "island" in the southwest corner of image 1 and the southeast sections of images 2 and 3. Looking at the NDAI images only suggests these areas to be cloudy, but the AN radiance images have dark or uneven patches in these areas. Our model may thus be responding to irregularities in the ground's terrain.
 
 \begin{figure}[h]
   \centering 
@@ -305,6 +305,10 @@ We now discuss the trends in misclassification. As depicted in the above figure,
   \end{subfigure}  
     \caption{Left: ROC Curve with AUC=.95. Right: Parameter convergence through iterations of CV. 1 - Intercept, 2 - NDAI, 3 - SD, 4 - CORR}
 \end{figure}
+
+The right half of Figure 17 displays the estimated coefficient values output by logistic regression at each stage of cross-validation. The points are a running average of the previously estimated coefficients, so we expect them to converge towards the higher iteration values. After the first few iterations for all four coefficients, we see convergent behavior, particularly for the intercept and NDAI terms. 
+
+As found in our other models, one image outperformed the others when used as a trainer. In the case of logit, trainng on image 3 gave substantially better predictions than training on either of the other images.The AUC's were .91, .876, and .96 when training was done on image 1, 2, and 3, respectively, with associated misclassification rates .155, .204, and .096. These results inform our hypothesis that images similar to image 3 will be difficult to classify unless similar data was included in the training set. Examination illustrates that image 3 has much sharper variation in its visual features than the other two images, a phenomenon that is only partially captured by our chosen covariates. Hence we expect our predictions to be fairly accurate on images with smooth changes within cloud and ground surfaces but possibly off in regions of intense heterogeneity.
 
 \subsection{Random Forest}
 
