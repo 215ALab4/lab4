@@ -85,7 +85,7 @@
 \title{Lab 4-Binary Classifier\\
 Stat 215A, Fall 2014}
 
-\author{Xiang (Lisha) Li, Jonathan Fischer, Andrew Do, Hye Soo Choi}
+\author{Andrew Do, Hye Soo Choi, Jonathan Fischer, Xiang (Lisha) Li }
 
 \maketitle
 
@@ -245,15 +245,15 @@ Cross-validation for QDA revealed that while the method works extremely well in 
 \begin{figure}[h]
   \centering 
   \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\linewidth]{qda1.prob.plot}
+    \includegraphics[width=\linewidth]{qda1_prob.png}
     \label{qda1}
   \end{subfigure} 
   \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\linewidth]{qda2.prob.plot}
+    \includegraphics[width=\linewidth]{qda2_prob.png}
     \label{qda2}
   \end{subfigure}  
   \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\linewidth]{qda3.prob.plot}
+    \includegraphics[width=\linewidth]{qda3_prob.png}
     \label{qda3}
   \end{subfigure}  
   \caption{Posterior probabilities of being a cloud as given by QDA}
@@ -370,11 +370,17 @@ We also trained on each image and tested on the remaining two. \\
 \end{figure}
   
 To gather a quantitative measurement of the importance of each feature, we first ran random forest using all the features and looked at the GIni importance measure.  This is calculated by recording the difference between the Gini measure of a random forest's predictions on a fold and the Gini measure with a particular feature's values randomly shuffled.  The intuition is that if a feature were crucial to the forest's trees, than randomly shuffling that feature will drastically decrease it's Gini measure.  Sure enough, NDAI, SD and CORR   consistently ranked as the clear top three in all cross validations. \\
-\begin{wrapfigure}{R}{0.3\textwidth}
-\centering
-\includegraphics[width=0.25\textwidth]{Gini_mean_sd.png}
-\caption{Mean Gini Importance Measure across 12 folds}
-\end{wrapfigure}
+
+  \begin{figure}[H]
+\minipage{0.4\textwidth}
+  \includegraphics[width=\linewidth, height = 140pts ]{Gini_mean_sd.png}
+\endminipage\hfill
+\minipage{0.6\textwidth}
+  \includegraphics[width=\linewidth, height = 180pts]{Gini_importance.png}
+\endminipage\hfill
+  \caption{Gini importance measures across folds}\label{}
+\end{figure}
+
 {\bf Where was the model performing poorly?}
 
   \begin{figure}[H]
