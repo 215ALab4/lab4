@@ -1,25 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 NOV 2014 10:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 NOV 2014 13:49
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **writeupLab4.tex
 (./writeupLab4.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
-ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
-rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
-kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
- polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
-lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
-welsh, loaded.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size10.clo
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -34,31 +23,31 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -66,15 +55,15 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/framed/framed.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip43
 \fb@frw=\dimen105
@@ -82,10 +71,10 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen107
 \FrameSep=\dimen108
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/alltt.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip44
 \f@ncyO@elh=\skip45
 \f@ncyO@erh=\skip46
@@ -96,8 +85,8 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 \f@ncyO@olf=\skip51
 \f@ncyO@orf=\skip52
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2009/07/02 v2.20.1
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks15
 \thm@bodyfont=\toks16
 \thm@headfont=\toks17
@@ -108,41 +97,41 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@headsep=\skip55
 \dth@everypar=\toks20
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip56
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks21
 \ex@=\dimen109
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen110
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count89
 \leftroot@=\count90
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count91
 \DOTSCASE@=\count92
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen111
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count93
 \c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
@@ -163,10 +152,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip57
 \multlinetaggap=\skip58
 \mathdisplay@stack=\toks25
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen118
 \WF@size=\dimen119
 \c@WF@wrappedlines=\count100
@@ -174,7 +163,7 @@ LaTeX Info: Redefining \] on input line 2667.
 \WF@everypar=\toks26
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count101
 \float@exts=\toks27
@@ -182,55 +171,57 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks28
 \@floatcapt=\box30
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen120
 \captionmargin@=\dimen121
 \captionwidth=\dimen122
-\caption@indent=\dimen123
-\caption@parindent=\dimen124
-\caption@hangindent=\dimen125
+\caption@tempdima=\dimen123
+\caption@indent=\dimen124
+\caption@parindent=\dimen125
+\caption@hangindent=\dimen126
 )
 \c@ContinuedFloat=\count102
 Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count103
 \c@subtable=\count104
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count105
 \Gm@cntv=\count106
 \c@Gm@tempcnt=\count107
-\Gm@bindingoffset=\dimen126
-\Gm@wd@mp=\dimen127
-\Gm@odd@mp=\dimen128
-\Gm@even@mp=\dimen129
-\Gm@layoutwidth=\dimen130
-\Gm@layoutheight=\dimen131
-\Gm@layouthoffset=\dimen132
-\Gm@layoutvoffset=\dimen133
+\Gm@bindingoffset=\dimen127
+\Gm@wd@mp=\dimen128
+\Gm@odd@mp=\dimen129
+\Gm@even@mp=\dimen130
+\Gm@layoutwidth=\dimen131
+\Gm@layoutheight=\dimen132
+\Gm@layouthoffset=\dimen133
+\Gm@layoutvoffset=\dimen134
 \Gm@dimlist=\toks29
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
@@ -283,24 +274,24 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
- (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
-\scratchdimen=\dimen134
+\scratchdimen=\dimen135
 \scratchbox=\box31
 \nofMPsegments=\count117
 \nofMParguments=\count118
 \everyMPshowfont=\toks30
 \MPscratchCnt=\count119
-\MPscratchDim=\dimen135
+\MPscratchDim=\dimen136
 \MPnumerator=\count120
 \makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks31
-) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -309,22 +300,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -336,7 +327,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -377,35 +368,39 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 99.
+
 <../figures/RAWEDA.png, id=1, 657.45625pt x 507.8975pt>
 File: ../figures/RAWEDA.png Graphic file (type png)
 
 <use ../figures/RAWEDA.png>
 Package pdftex.def Info: ../figures/RAWEDA.png used on input line 100.
-(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
+(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
 
 Overfull \hbox (42.40672pt too wide) in paragraph at lines 100--101
 [][] 
  []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 104.
 
 <../figures/EXPERTSEDA.png, id=3, 657.45625pt x 507.8975pt>
 File: ../figures/EXPERTSEDA.png Graphic file (type png)
 
 <use ../figures/EXPERTSEDA.png>
 Package pdftex.def Info: ../figures/EXPERTSEDA.png used on input line 105.
-(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
+(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
 
 Overfull \hbox (42.40672pt too wide) in paragraph at lines 105--106
 [][] 
  []
 
-[1
-
-{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../figu
-res/RAWEDA.png>] <../figures/NDAI1.png, id=14, 481.8pt x 481.8pt>
+<../figures/NDAI1.png, id=4, 481.8pt x 481.8pt>
 File: ../figures/NDAI1.png Graphic file (type png)
-
-<use ../figures/NDAI1.png>
+ <use ../figures/NDAI1.png>
 Package pdftex.def Info: ../figures/NDAI1.png used on input line 114.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
@@ -413,7 +408,7 @@ Overfull \hbox (3.93892pt too wide) in paragraph at lines 114--115
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/NDAI2.png, id=15, 481.8pt x 481.8pt>
+<../figures/NDAI2.png, id=5, 481.8pt x 481.8pt>
 File: ../figures/NDAI2.png Graphic file (type png)
  <use ../figures/NDAI2.png>
 Package pdftex.def Info: ../figures/NDAI2.png used on input line 117.
@@ -423,7 +418,7 @@ Overfull \hbox (3.93892pt too wide) in paragraph at lines 117--118
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/NDAI3.png, id=16, 481.8pt x 481.8pt>
+<../figures/NDAI3.png, id=6, 481.8pt x 481.8pt>
 File: ../figures/NDAI3.png Graphic file (type png)
  <use ../figures/NDAI3.png>
 Package pdftex.def Info: ../figures/NDAI3.png used on input line 120.
@@ -433,9 +428,13 @@ Overfull \hbox (3.93892pt too wide) in paragraph at lines 120--121
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/SD1.png, id=17, 481.8pt x 481.8pt>
+[1
+
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../figu
+res/RAWEDA.png>] <../figures/SD1.png, id=17, 481.8pt x 481.8pt>
 File: ../figures/SD1.png Graphic file (type png)
- <use ../figures/SD1.png>
+
+<use ../figures/SD1.png>
 Package pdftex.def Info: ../figures/SD1.png used on input line 127.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
@@ -463,11 +462,9 @@ Overfull \hbox (3.93892pt too wide) in paragraph at lines 133--134
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[2 <../figures/EXPERTSEDA.png> <../figures/NDAI1.png> <../figures/NDAI2.png> <.
-./figures/NDAI3.png>] <../figures/CORR1.png, id=28, 481.8pt x 481.8pt>
+<../figures/CORR1.png, id=20, 481.8pt x 481.8pt>
 File: ../figures/CORR1.png Graphic file (type png)
-
-<use ../figures/CORR1.png>
+ <use ../figures/CORR1.png>
 Package pdftex.def Info: ../figures/CORR1.png used on input line 140.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
@@ -475,7 +472,7 @@ Overfull \hbox (3.93892pt too wide) in paragraph at lines 140--141
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/CORR2.png, id=29, 481.8pt x 481.8pt>
+<../figures/CORR2.png, id=21, 481.8pt x 481.8pt>
 File: ../figures/CORR2.png Graphic file (type png)
  <use ../figures/CORR2.png>
 Package pdftex.def Info: ../figures/CORR2.png used on input line 143.
@@ -485,7 +482,7 @@ Overfull \hbox (3.93892pt too wide) in paragraph at lines 143--144
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/CORR3.png, id=30, 481.8pt x 481.8pt>
+<../figures/CORR3.png, id=22, 481.8pt x 481.8pt>
 File: ../figures/CORR3.png Graphic file (type png)
  <use ../figures/CORR3.png>
 Package pdftex.def Info: ../figures/CORR3.png used on input line 146.
@@ -495,65 +492,69 @@ Overfull \hbox (3.93892pt too wide) in paragraph at lines 146--147
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/CORR_vs_NDAI.png, id=31, 361.35pt x 361.35pt>
+<../figures/CORR_vs_NDAI.png, id=23, 361.35pt x 361.35pt>
 File: ../figures/CORR_vs_NDAI.png Graphic file (type png)
 
 <use ../figures/CORR_vs_NDAI.png>
 Package pdftex.def Info: ../figures/CORR_vs_NDAI.png used on input line 155.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/CORR_vs_SD.png, id=32, 361.35pt x 361.35pt>
+<../figures/CORR_vs_SD.png, id=24, 361.35pt x 361.35pt>
 File: ../figures/CORR_vs_SD.png Graphic file (type png)
 
 <use ../figures/CORR_vs_SD.png>
 Package pdftex.def Info: ../figures/CORR_vs_SD.png used on input line 160.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/NDAI_vs_SD.png, id=33, 361.35pt x 361.35pt>
+<../figures/NDAI_vs_SD.png, id=25, 361.35pt x 361.35pt>
 File: ../figures/NDAI_vs_SD.png Graphic file (type png)
 
 <use ../figures/NDAI_vs_SD.png>
 Package pdftex.def Info: ../figures/NDAI_vs_SD.png used on input line 165.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/NDAIEDA.png, id=34, 657.45625pt x 507.8975pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <../figures/EXPERTSEDA.png> <../figures/NDAI1.png> <../figures/NDAI2.png> <.
+./figures/NDAI3.png> <../figures/SD1.png> <../figures/SD2.png> <../figures/SD3.
+png> <../figures/CORR1.png> <../figures/CORR2.png> <../figures/CORR3.png>]
+<../figures/NDAIEDA.png, id=40, 657.45625pt x 507.8975pt>
 File: ../figures/NDAIEDA.png Graphic file (type png)
 
 <use ../figures/NDAIEDA.png>
 Package pdftex.def Info: ../figures/NDAIEDA.png used on input line 177.
-(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
+(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
 
 Overfull \hbox (42.40672pt too wide) in paragraph at lines 177--178
 [][] 
  []
 
-[3 <../figures/SD1.png> <../figures/SD2.png> <../figures/SD3.png> <../figures/C
-ORR1.png> <../figures/CORR2.png> <../figures/CORR3.png> <../figures/CORR_vs_NDA
-I.png (PNG copy)> <../figures/CORR_vs_SD.png (PNG copy)> <../figures/NDAI_vs_SD
-.png (PNG copy)>] <../figures/SDEDA.png, id=45, 657.45625pt x 507.8975pt>
+<../figures/SDEDA.png, id=41, 657.45625pt x 507.8975pt>
 File: ../figures/SDEDA.png Graphic file (type png)
 
 <use ../figures/SDEDA.png>
 Package pdftex.def Info: ../figures/SDEDA.png used on input line 182.
-(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
+(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
 
 Overfull \hbox (42.40672pt too wide) in paragraph at lines 182--183
 [][] 
  []
 
-<../figures/CORREDA.png, id=46, 657.45625pt x 507.8975pt>
+[3 <../figures/CORR_vs_NDAI.png (PNG copy)> <../figures/CORR_vs_SD.png (PNG cop
+y)> <../figures/NDAI_vs_SD.png (PNG copy)> <../figures/NDAIEDA.png>]
+<../figures/CORREDA.png, id=47, 657.45625pt x 507.8975pt>
 File: ../figures/CORREDA.png Graphic file (type png)
 
 <use ../figures/CORREDA.png>
 Package pdftex.def Info: ../figures/CORREDA.png used on input line 187.
-(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
+(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
 
 Overfull \hbox (42.40672pt too wide) in paragraph at lines 187--188
 [][] 
  []
 
-[4 <../figures/NDAIEDA.png> <../figures/SDEDA.png>]
-<../figures/ROC_12_folds_DA.png, id=52, 361.35pt x 361.35pt>
+<../figures/ROC_12_folds_DA.png, id=48, 361.35pt x 361.35pt>
 File: ../figures/ROC_12_folds_DA.png Graphic file (type png)
 
 <use ../figures/ROC_12_folds_DA.png>
@@ -561,7 +562,7 @@ Package pdftex.def Info: ../figures/ROC_12_folds_DA.png used on input line 198.
 
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/AUC_12_folds_DA.png, id=53, 361.35pt x 361.35pt>
+<../figures/AUC_12_folds_DA.png, id=49, 361.35pt x 361.35pt>
 File: ../figures/AUC_12_folds_DA.png Graphic file (type png)
 
 <use ../figures/AUC_12_folds_DA.png>
@@ -569,15 +570,15 @@ Package pdftex.def Info: ../figures/AUC_12_folds_DA.png used on input line 203.
 
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/AUC_difference.png, id=54, 361.35pt x 361.35pt>
+<../figures/AUC_difference.png, id=50, 361.35pt x 361.35pt>
 File: ../figures/AUC_difference.png Graphic file (type png)
 
 <use ../figures/AUC_difference.png>
 Package pdftex.def Info: ../figures/AUC_difference.png used on input line 208.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
- [5 <../figures/CORREDA.png> <../figures/ROC_12_folds_DA.png> <../figures/AUC_1
-2_folds_DA.png> <../figures/AUC_difference.png>] <../figures/qda1_12fold_conf.p
-ng, id=70, 361.35pt x 361.35pt>
+ [4 <../figures/SDEDA.png> <../figures/CORREDA.png> <../figures/ROC_12_folds_DA
+.png> <../figures/AUC_12_folds_DA.png> <../figures/AUC_difference.png>]
+<../figures/qda1_12fold_conf.png, id=59, 361.35pt x 361.35pt>
 File: ../figures/qda1_12fold_conf.png Graphic file (type png)
 
 <use ../figures/qda1_12fold_conf.png>
@@ -585,7 +586,7 @@ Package pdftex.def Info: ../figures/qda1_12fold_conf.png used on input line 230
 .
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/qda2_12fold_conf.png, id=71, 361.35pt x 361.35pt>
+<../figures/qda2_12fold_conf.png, id=60, 361.35pt x 361.35pt>
 File: ../figures/qda2_12fold_conf.png Graphic file (type png)
 
 <use ../figures/qda2_12fold_conf.png>
@@ -593,7 +594,7 @@ Package pdftex.def Info: ../figures/qda2_12fold_conf.png used on input line 234
 .
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/qda3_12fold_conf.png, id=72, 361.35pt x 361.35pt>
+<../figures/qda3_12fold_conf.png, id=61, 361.35pt x 361.35pt>
 File: ../figures/qda3_12fold_conf.png Graphic file (type png)
 
 <use ../figures/qda3_12fold_conf.png>
@@ -601,423 +602,430 @@ Package pdftex.def Info: ../figures/qda3_12fold_conf.png used on input line 238
 .
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/qda1_prob.png, id=73, 361.35pt x 361.35pt>
+<../figures/qda1_prob.png, id=62, 361.35pt x 361.35pt>
 File: ../figures/qda1_prob.png Graphic file (type png)
 
 <use ../figures/qda1_prob.png>
 Package pdftex.def Info: ../figures/qda1_prob.png used on input line 248.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/qda2_prob.png, id=74, 361.35pt x 361.35pt>
+<../figures/qda2_prob.png, id=63, 361.35pt x 361.35pt>
 File: ../figures/qda2_prob.png Graphic file (type png)
 
 <use ../figures/qda2_prob.png>
 Package pdftex.def Info: ../figures/qda2_prob.png used on input line 252.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<../figures/qda3_prob.png, id=75, 361.35pt x 361.35pt>
+<../figures/qda3_prob.png, id=64, 361.35pt x 361.35pt>
 File: ../figures/qda3_prob.png Graphic file (type png)
 
 <use ../figures/qda3_prob.png>
 Package pdftex.def Info: ../figures/qda3_prob.png used on input line 256.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
- [6 <../figures/qda1_12fold_conf.png> <../figures/qda2_12fold_conf.png> <../fig
-ures/qda3_12fold_conf.png> <../figures/qda1_prob.png (PNG copy)> <../figures/qd
-a2_prob.png (PNG copy)> <../figures/qda3_prob.png (PNG copy)>] <../figures/thre
-shold.png, id=82, 657.45625pt x 507.8975pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <../figures/qda1_12fold_conf.png> <../figures/qda2_12fold_conf.png> <../figu
+res/qda3_12fold_conf.png>]
+<../figures/threshold.png, id=79, 657.45625pt x 507.8975pt>
 File: ../figures/threshold.png Graphic file (type png)
 
 <use ../figures/threshold.png>
-Package pdftex.def Info: ../figures/threshold.png used on input line 270.
+Package pdftex.def Info: ../figures/threshold.png used on input line 272.
 (pdftex.def)             Requested size: 230.11313pt x 177.76678pt.
 
-<../figures/LogitClassification.png, id=83, 657.45625pt x 507.8975pt>
+<../figures/LogitClassification.png, id=80, 657.45625pt x 507.8975pt>
 File: ../figures/LogitClassification.png Graphic file (type png)
 
 <use ../figures/LogitClassification.png>
 Package pdftex.def Info: ../figures/LogitClassification.png used on input line 
-277.
-(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
+279.
+(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 277--278
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 279--280
 [][] 
  []
 
-<../figures/LogitProbabilities.png, id=84, 657.45625pt x 507.8975pt>
+[6 <../figures/qda1_prob.png (PNG copy)> <../figures/qda2_prob.png (PNG copy)> 
+<../figures/qda3_prob.png (PNG copy)> <../figures/threshold.png>]
+<../figures/LogitProbabilities.png, id=85, 657.45625pt x 507.8975pt>
 File: ../figures/LogitProbabilities.png Graphic file (type png)
 
 <use ../figures/LogitProbabilities.png>
 Package pdftex.def Info: ../figures/LogitProbabilities.png used on input line 2
-83.
-(pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
+85.
+(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 283--284
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 285--286
 [][] 
  []
 
-[7 <../figures/threshold.png> <../figures/LogitClassification.png>]
-<../figures/ClassificationOutcomes.png, id=91, 657.45625pt x 507.8975pt>
+<../figures/ClassificationOutcomes.png, id=86, 657.45625pt x 507.8975pt>
 File: ../figures/ClassificationOutcomes.png Graphic file (type png)
 
 <use ../figures/ClassificationOutcomes.png>
 Package pdftex.def Info: ../figures/ClassificationOutcomes.png used on input li
-ne 288.
-(pdftex.def)             Requested size: 512.16174pt x 284.53691pt.
+ne 290.
+(pdftex.def)             Requested size: 512.16174pt x 142.26457pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 288--289
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 290--291
 [][] 
  []
 
-<../figures/LogitROC.png, id=92, 657.45625pt x 513.92pt>
+[7 <../figures/LogitClassification.png> <../figures/LogitProbabilities.png> <..
+/figures/ClassificationOutcomes.png>]
+<../figures/LogitROC.png, id=94, 657.45625pt x 513.92pt>
 File: ../figures/LogitROC.png Graphic file (type png)
 
 <use ../figures/LogitROC.png>
-Package pdftex.def Info: ../figures/LogitROC.png used on input line 296.
-(pdftex.def)             Requested size: 328.72733pt x 256.95937pt.
- [8 <../figures/LogitProbabilities.png> <../figures/ClassificationOutcomes.png>
-]
-<../figures/ParameterConvergence.png, id=98, 657.45625pt x 507.8975pt>
+Package pdftex.def Info: ../figures/LogitROC.png used on input line 299.
+(pdftex.def)             Requested size: 164.41711pt x 128.51889pt.
+
+<../figures/ParameterConvergence.png, id=95, 657.45625pt x 507.8975pt>
 File: ../figures/ParameterConvergence.png Graphic file (type png)
 
 <use ../figures/ParameterConvergence.png>
 Package pdftex.def Info: ../figures/ParameterConvergence.png used on input line
  303.
-(pdftex.def)             Requested size: 328.72733pt x 253.94814pt.
+(pdftex.def)             Requested size: 164.41711pt x 127.0128pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
-[9 <../figures/LogitROC.png> <../figures/ParameterConvergence.png>]
-<../figures/AUC_12_folds.png, id=104, 173.64874pt x 247.92625pt>
+<../figures/AUC_12_folds.png, id=96, 173.64874pt x 247.92625pt>
 File: ../figures/AUC_12_folds.png Graphic file (type png)
 
 <use ../figures/AUC_12_folds.png>
-Package pdftex.def Info: ../figures/AUC_12_folds.png used on input line 314.
+Package pdftex.def Info: ../figures/AUC_12_folds.png used on input line 319.
 (pdftex.def)             Requested size: 93.95174pt x 150.00151pt.
 
-Overfull \hbox (3.94661pt too wide) in paragraph at lines 314--315
+Overfull \hbox (3.94661pt too wide) in paragraph at lines 319--320
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_fold_comparison.png, id=105, 481.8pt x 481.8pt>
+<../figures/ROC_fold_comparison.png, id=97, 481.8pt x 481.8pt>
 File: ../figures/ROC_fold_comparison.png Graphic file (type png)
 
 <use ../figures/ROC_fold_comparison.png>
 Package pdftex.def Info: ../figures/ROC_fold_comparison.png used on input line 
-317.
+322.
 (pdftex.def)             Requested size: 375.81718pt x 149.99605pt.
 
-Overfull \hbox (3.95619pt too wide) in paragraph at lines 317--318
+Overfull \hbox (3.95619pt too wide) in paragraph at lines 322--323
 []\OT1/cmr/m/n/10 s[] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
+[8 <../figures/LogitROC.png> <../figures/ParameterConvergence.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
  []
 
-<../figures/AUC_images.png, id=106, 181.67876pt x 102.3825pt>
+<../figures/AUC_images.png, id=103, 181.67876pt x 102.3825pt>
 File: ../figures/AUC_images.png Graphic file (type png)
 
 <use ../figures/AUC_images.png>
-Package pdftex.def Info: ../figures/AUC_images.png used on input line 328.
+Package pdftex.def Info: ../figures/AUC_images.png used on input line 333.
 (pdftex.def)             Requested size: 150.00323pt x 80.00487pt.
 
-<../figures/ROC_image1.pdf, id=107, 505.89pt x 505.89pt>
+<../figures/ROC_image1.pdf, id=104, 505.89pt x 505.89pt>
 File: ../figures/ROC_image1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image1.pdf>
-Package pdftex.def Info: ../figures/ROC_image1.pdf used on input line 331.
+Package pdftex.def Info: ../figures/ROC_image1.pdf used on input line 336.
 (pdftex.def)             Requested size: 234.88132pt x 150.00046pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 331--332
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 336--337
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_image4.pdf, id=108, 505.89pt x 505.89pt>
+<../figures/ROC_image4.pdf, id=105, 505.89pt x 505.89pt>
 File: ../figures/ROC_image4.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image4.pdf>
-Package pdftex.def Info: ../figures/ROC_image4.pdf used on input line 338.
+Package pdftex.def Info: ../figures/ROC_image4.pdf used on input line 343.
 (pdftex.def)             Requested size: 234.88132pt x 150.00046pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 338--339
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 343--344
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_image8.pdf, id=109, 505.89pt x 505.89pt>
+<../figures/ROC_image8.pdf, id=106, 505.89pt x 505.89pt>
 File: ../figures/ROC_image8.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image8.pdf>
-Package pdftex.def Info: ../figures/ROC_image8.pdf used on input line 341.
+Package pdftex.def Info: ../figures/ROC_image8.pdf used on input line 346.
 (pdftex.def)             Requested size: 234.88132pt x 150.00046pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 341--342
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 346--347
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[10 <../figures/AUC_12_folds.png> <../figures/ROC_fold_comparison.png> <../figu
-res/AUC_images.png> <../figures/ROC_image1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
-<../figures/ROC_converge1.pdf, id=121, 505.89pt x 505.89pt>
+[9 <../figures/AUC_12_folds.png> <../figures/ROC_fold_comparison.png> <../figur
+es/AUC_images.png> <../figures/ROC_image1.pdf> <../figures/ROC_image4.pdf> <../
+figures/ROC_image8.pdf>]
+<../figures/ROC_converge1.pdf, id=128, 505.89pt x 505.89pt>
 File: ../figures/ROC_converge1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge1.pdf>
-Package pdftex.def Info: ../figures/ROC_converge1.pdf used on input line 351.
+Package pdftex.def Info: ../figures/ROC_converge1.pdf used on input line 356.
 (pdftex.def)             Requested size: 234.88132pt x 179.99745pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 351--352
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 356--357
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/AUCconverge.png, id=122, 481.8pt x 481.8pt>
+<../figures/AUCconverge.png, id=129, 481.8pt x 481.8pt>
 File: ../figures/AUCconverge.png Graphic file (type png)
 
 <use ../figures/AUCconverge.png>
-Package pdftex.def Info: ../figures/AUCconverge.png used on input line 356.
+Package pdftex.def Info: ../figures/AUCconverge.png used on input line 361.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 356--357
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 361--362
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_converge_shuffle1.pdf, id=123, 505.89pt x 505.89pt>
+<../figures/ROC_converge_shuffle1.pdf, id=130, 505.89pt x 505.89pt>
 File: ../figures/ROC_converge_shuffle1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge_shuffle1.pdf>
 Package pdftex.def Info: ../figures/ROC_converge_shuffle1.pdf used on input lin
-e 364.
+e 369.
 (pdftex.def)             Requested size: 234.88132pt x 179.99745pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 364--365
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 369--370
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_converge_shuffle2.pdf, id=124, 505.89pt x 505.89pt>
+<../figures/ROC_converge_shuffle2.pdf, id=131, 505.89pt x 505.89pt>
 File: ../figures/ROC_converge_shuffle2.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge_shuffle2.pdf>
 Package pdftex.def Info: ../figures/ROC_converge_shuffle2.pdf used on input lin
-e 367.
+e 372.
 (pdftex.def)             Requested size: 234.88132pt x 179.99745pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 367--368
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 372--373
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[11 <../figures/ROC_image4.pdf> <../figures/ROC_image8.pdf> <../figures/ROC_con
-verge1.pdf> <../figures/AUCconverge.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
-<../figures/Gini_mean_sd.png, id=146, 389.455pt x 185.69376pt>
+<../figures/Gini_mean_sd.png, id=132, 389.455pt x 185.69376pt>
 File: ../figures/Gini_mean_sd.png Graphic file (type png)
 
 <use ../figures/Gini_mean_sd.png>
-Package pdftex.def Info: ../figures/Gini_mean_sd.png used on input line 376.
+Package pdftex.def Info: ../figures/Gini_mean_sd.png used on input line 381.
 (pdftex.def)             Requested size: 187.89897pt x 140.00383pt.
 
-Overfull \hbox (3.94427pt too wide) in paragraph at lines 376--377
+Overfull \hbox (3.94427pt too wide) in paragraph at lines 381--382
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/Gini_importance.png, id=147, 481.8pt x 481.8pt>
+<../figures/Gini_importance.png, id=133, 481.8pt x 481.8pt>
 File: ../figures/Gini_importance.png Graphic file (type png)
 
 <use ../figures/Gini_importance.png>
-Package pdftex.def Info: ../figures/Gini_importance.png used on input line 379.
+Package pdftex.def Info: ../figures/Gini_importance.png used on input line 384.
 
 (pdftex.def)             Requested size: 281.86288pt x 179.9982pt.
 
-Overfull \hbox (3.95146pt too wide) in paragraph at lines 379--380
+Overfull \hbox (3.95146pt too wide) in paragraph at lines 384--385
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/classification_1.png, id=148, 481.8pt x 481.8pt>
+[10 <../figures/ROC_converge1.pdf> <../figures/AUCconverge.png> <../figures/ROC
+_converge_shuffle1.pdf> <../figures/ROC_converge_shuffle2.pdf>]
+<../figures/classification_1.png, id=159, 481.8pt x 481.8pt>
 File: ../figures/classification_1.png Graphic file (type png)
 
 <use ../figures/classification_1.png>
-Package pdftex.def Info: ../figures/classification_1.png used on input line 388
+Package pdftex.def Info: ../figures/classification_1.png used on input line 393
 .
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 388--389
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 393--394
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/label_1.png, id=149, 481.8pt x 481.8pt>
+<../figures/label_1.png, id=160, 481.8pt x 481.8pt>
 File: ../figures/label_1.png Graphic file (type png)
 
 <use ../figures/label_1.png>
-Package pdftex.def Info: ../figures/label_1.png used on input line 391.
+Package pdftex.def Info: ../figures/label_1.png used on input line 396.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 391--392
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 396--397
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[12 <../figures/ROC_converge_shuffle1.pdf> <../figures/ROC_converge_shuffle2.pd
-f> <../figures/Gini_mean_sd.png> <../figures/Gini_importance.png>]
-<../figures/classification_3.png, id=170, 481.8pt x 481.8pt>
+<../figures/classification_3.png, id=161, 481.8pt x 481.8pt>
 File: ../figures/classification_3.png Graphic file (type png)
 
 <use ../figures/classification_3.png>
-Package pdftex.def Info: ../figures/classification_3.png used on input line 397
+Package pdftex.def Info: ../figures/classification_3.png used on input line 402
 .
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 397--398
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 402--403
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/label_3.png, id=171, 481.8pt x 481.8pt>
+<../figures/label_3.png, id=162, 481.8pt x 481.8pt>
 File: ../figures/label_3.png Graphic file (type png)
 
 <use ../figures/label_3.png>
-Package pdftex.def Info: ../figures/label_3.png used on input line 400.
+Package pdftex.def Info: ../figures/label_3.png used on input line 405.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 400--401
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 405--406
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/classification_4.png, id=172, 481.8pt x 481.8pt>
+<../figures/classification_4.png, id=163, 481.8pt x 481.8pt>
 File: ../figures/classification_4.png Graphic file (type png)
 
 <use ../figures/classification_4.png>
-Package pdftex.def Info: ../figures/classification_4.png used on input line 406
+Package pdftex.def Info: ../figures/classification_4.png used on input line 411
 .
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 406--407
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 411--412
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/label_4.png, id=173, 481.8pt x 481.8pt>
+<../figures/label_4.png, id=164, 481.8pt x 481.8pt>
 File: ../figures/label_4.png Graphic file (type png)
 
 <use ../figures/label_4.png>
-Package pdftex.def Info: ../figures/label_4.png used on input line 409.
+Package pdftex.def Info: ../figures/label_4.png used on input line 414.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 409--410
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 414--415
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/classification_9.png, id=174, 481.8pt x 481.8pt>
+[11 <../figures/Gini_mean_sd.png> <../figures/Gini_importance.png> <../figures/
+classification_1.png> <../figures/label_1.png> <../figures/classification_3.png
+> <../figures/label_3.png>]
+<../figures/classification_9.png, id=175, 481.8pt x 481.8pt>
 File: ../figures/classification_9.png Graphic file (type png)
 
 <use ../figures/classification_9.png>
-Package pdftex.def Info: ../figures/classification_9.png used on input line 416
+Package pdftex.def Info: ../figures/classification_9.png used on input line 421
 .
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 416--417
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 421--422
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/label_9.png, id=175, 481.8pt x 481.8pt>
+<../figures/label_9.png, id=176, 481.8pt x 481.8pt>
 File: ../figures/label_9.png Graphic file (type png)
 
 <use ../figures/label_9.png>
-Package pdftex.def Info: ../figures/label_9.png used on input line 419.
+Package pdftex.def Info: ../figures/label_9.png used on input line 424.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 419--420
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 424--425
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[13 <../figures/classification_1.png> <../figures/label_1.png> <../figures/clas
-sification_3.png> <../figures/label_3.png> <../figures/classification_4.png> <.
-./figures/label_4.png>]
-<../figures/classification_10.png, id=186, 481.8pt x 481.8pt>
+<../figures/classification_10.png, id=177, 481.8pt x 481.8pt>
 File: ../figures/classification_10.png Graphic file (type png)
 
 <use ../figures/classification_10.png>
-Package pdftex.def Info: ../figures/classification_10.png used on input line 42
-5.
+Package pdftex.def Info: ../figures/classification_10.png used on input line 43
+0.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 425--426
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 430--431
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/label_10.png, id=187, 481.8pt x 481.8pt>
+<../figures/label_10.png, id=178, 481.8pt x 481.8pt>
 File: ../figures/label_10.png Graphic file (type png)
 
 <use ../figures/label_10.png>
-Package pdftex.def Info: ../figures/label_10.png used on input line 428.
+Package pdftex.def Info: ../figures/label_10.png used on input line 433.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 428--429
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 433--434
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/classification_11.png, id=188, 481.8pt x 481.8pt>
+<../figures/classification_11.png, id=179, 481.8pt x 481.8pt>
 File: ../figures/classification_11.png Graphic file (type png)
 
 <use ../figures/classification_11.png>
 Package pdftex.def Info: ../figures/classification_11.png used on input line 43
-4.
+9.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 434--435
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 439--440
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/label_11.png, id=189, 481.8pt x 481.8pt>
+<../figures/label_11.png, id=180, 481.8pt x 481.8pt>
 File: ../figures/label_11.png Graphic file (type png)
 
 <use ../figures/label_11.png>
-Package pdftex.def Info: ../figures/label_11.png used on input line 437.
+Package pdftex.def Info: ../figures/label_11.png used on input line 442.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 437--438
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 442--443
 []\OT1/cmr/m/n/10 s[] 
  []
 
+[12 <../figures/classification_4.png> <../figures/label_4.png> <../figures/clas
+sification_9.png> <../figures/label_9.png> <../figures/classification_10.png> <
+../figures/label_10.png>]
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¿ in font cmr10!
 Missing character: There is no ½ in font cmr10!
-[14 <../figures/classification_9.png> <../figures/label_9.png> <../figures/clas
-sification_10.png> <../figures/label_10.png> <../figures/classification_11.png>
- <../figures/label_11.png>] [15] (./writeupLab4.aux)
+ [13 <../figures/classification_11.png> <../figures/label_11.png>] (./writeupLa
+b4.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4428 strings out of 493488
- 68889 string characters out of 3141326
- 129582 words of memory out of 3000000
- 7618 multiletter control sequences out of 15000+200000
- 9675 words of font info for 35 fonts, out of 3000000 for 9000
+ 4465 strings out of 493315
+ 69604 string characters out of 6137904
+ 134557 words of memory out of 5000000
+ 7800 multiletter control sequences out of 15000+600000
+ 9675 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,12n,43p,1125b,446s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
-2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2
-012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2012
+ 38i,12n,43p,1181b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2013
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on writeupLab4.pdf (15 pages, 5229813 bytes).
+Output written on writeupLab4.pdf (13 pages, 5223235 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 245 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
