@@ -52,20 +52,26 @@ False.positive.False.negative.Plots <- function{
                                                     classification),
                             classification = ifelse(predicted !=label & 
                                                       predicted == "-1", 
-                                                    "false positive", 
+                                                    "false negative",
                                                     classification),
                             classification = ifelse(label != predicted & 
                                                       label == "-1", 
-                                                    "false negative", 
+                                                    "false positive",
                                                     classification))
   fpr <- geom_point(aes(x=x, y=y, color=classification))
   image.NDAI <- geom_point(aes(x=x, y=y, color = NDAI))
   raw.image <- geom_point(aes(x=x, y=y, color=as.factor(label)))
+  
+  colour <- scale_colour_manual(values = c("true positive" = "white",
+  "false positive" = "black",
+  "true negative" = "#3366FF",
+  "false negative" = "#FF00CC",
+  "Unknown" = "#999999"))
 
   im3 <- ggplot(image)
 
   png("classification_10.png")
-  im3+fpr
+  im3+fpr+colour
   dev.off()
 
   png("label_10.png")
