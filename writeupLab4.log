@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.16)  10 NOV 2014 18:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.16)  10 NOV 2014 19:08
 entering extended mode
 **writeupLab4.tex
 (D:\coursework\stat215a\group\writeupLab4.tex
@@ -520,13 +520,6 @@ Package pdftex.def Info: AUC_difference.png used on input line 207.
  [5 <D:/coursework/stat215a/group/CORREDA.png> <D:/coursework/stat215a/group/RO
 C_12_folds_DA.png> <D:/coursework/stat215a/group/AUC_12_folds_DA.png> <D:/cours
 ework/stat215a/group/AUC_difference.png>]
-
-Package caption Warning: \label without proper \caption on input line 211.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `qda_lda' on page 6 undefined on input line 222.
-
 <qda1_12fold_conf.png, id=69, 361.35pt x 361.35pt>
 File: qda1_12fold_conf.png Graphic file (type png)
  <use qda1_12fold_conf.png>
@@ -598,7 +591,7 @@ Package pdftex.def Info: threshold.png used on input line 269.
  [6 <D:/coursework/stat215a/group/qda1_12fold_conf.png> <D:/coursework/stat215a
 /group/qda2_12fold_conf.png> <D:/coursework/stat215a/group/qda3_12fold_conf.png
 >]
-<LogitClassification.png, id=80, 657.45625pt x 507.8975pt>
+<LogitClassification.png, id=79, 657.45625pt x 507.8975pt>
 File: LogitClassification.png Graphic file (type png)
 
 <use LogitClassification.png>
@@ -609,7 +602,7 @@ Overfull \hbox (42.40672pt too wide) in paragraph at lines 276--277
 [][] 
  []
 
-<LogitProbabilities.png, id=81, 657.45625pt x 507.8975pt>
+<LogitProbabilities.png, id=80, 657.45625pt x 507.8975pt>
 File: LogitProbabilities.png Graphic file (type png)
 
 <use LogitProbabilities.png>
@@ -622,7 +615,7 @@ Overfull \hbox (42.40672pt too wide) in paragraph at lines 282--283
 
 [7 <D:/coursework/stat215a/group/threshold.png> <D:/coursework/stat215a/group/L
 ogitClassification.png>]
-<ClassificationOutcomes.png, id=88, 657.45625pt x 507.8975pt>
+<ClassificationOutcomes.png, id=87, 657.45625pt x 507.8975pt>
 File: ClassificationOutcomes.png Graphic file (type png)
 
 <use ClassificationOutcomes.png>
@@ -633,14 +626,14 @@ Overfull \hbox (42.40672pt too wide) in paragraph at lines 287--288
 [][] 
  []
 
-<LogitROC.png, id=89, 657.45625pt x 513.92pt>
+<LogitROC.png, id=88, 657.45625pt x 513.92pt>
 File: LogitROC.png Graphic file (type png)
  <use LogitROC.png>
 Package pdftex.def Info: LogitROC.png used on input line 295.
 (pdftex.def)             Requested size: 328.72733pt x 256.95937pt.
  [8 <D:/coursework/stat215a/group/LogitProbabilities.png> <D:/coursework/stat21
 5a/group/ClassificationOutcomes.png>]
-<ParameterConvergence.png, id=95, 657.45625pt x 507.8975pt>
+<ParameterConvergence.png, id=94, 657.45625pt x 507.8975pt>
 File: ParameterConvergence.png Graphic file (type png)
 
 <use ParameterConvergence.png>
@@ -652,7 +645,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 309--310
  []
 
 [9 <D:/coursework/stat215a/group/LogitROC.png> <D:/coursework/stat215a/group/Pa
-rameterConvergence.png>] <AUC_12_folds.png, id=101, 173.64874pt x 247.92625pt>
+rameterConvergence.png>] <AUC_12_folds.png, id=100, 173.64874pt x 247.92625pt>
 File: AUC_12_folds.png Graphic file (type png)
 
 <use AUC_12_folds.png>
@@ -663,7 +656,7 @@ Overfull \hbox (3.94661pt too wide) in paragraph at lines 313--314
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_fold_comparison.png, id=102, 481.8pt x 481.8pt>
+<ROC_fold_comparison.png, id=101, 481.8pt x 481.8pt>
 File: ROC_fold_comparison.png Graphic file (type png)
 
 <use ROC_fold_comparison.png>
@@ -679,13 +672,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
-<AUC_images.png, id=103, 181.67876pt x 102.3825pt>
+<AUC_images.png, id=102, 181.67876pt x 102.3825pt>
 File: AUC_images.png Graphic file (type png)
  <use AUC_images.png>
 Package pdftex.def Info: AUC_images.png used on input line 327.
 (pdftex.def)             Requested size: 150.00323pt x 80.00487pt.
 
-<ROC_image1.pdf, id=104, 505.89pt x 505.89pt>
+<ROC_image1.pdf, id=103, 505.89pt x 505.89pt>
 File: ROC_image1.pdf Graphic file (type pdf)
  <use ROC_image1.pdf>
 Package pdftex.def Info: ROC_image1.pdf used on input line 330.
@@ -695,7 +688,7 @@ Overfull \hbox (3.94826pt too wide) in paragraph at lines 330--331
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_image4.pdf, id=105, 505.89pt x 505.89pt>
+<ROC_image4.pdf, id=104, 505.89pt x 505.89pt>
 File: ROC_image4.pdf Graphic file (type pdf)
  <use ROC_image4.pdf>
 Package pdftex.def Info: ROC_image4.pdf used on input line 337.
@@ -705,7 +698,7 @@ Overfull \hbox (3.94826pt too wide) in paragraph at lines 337--338
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_image8.pdf, id=106, 505.89pt x 505.89pt>
+<ROC_image8.pdf, id=105, 505.89pt x 505.89pt>
 File: ROC_image8.pdf Graphic file (type pdf)
  <use ROC_image8.pdf>
 Package pdftex.def Info: ROC_image8.pdf used on input line 340.
@@ -722,7 +715,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
-<ROC_converge1.pdf, id=118, 505.89pt x 505.89pt>
+<ROC_converge1.pdf, id=117, 505.89pt x 505.89pt>
 File: ROC_converge1.pdf Graphic file (type pdf)
  <use ROC_converge1.pdf>
 Package pdftex.def Info: ROC_converge1.pdf used on input line 350.
@@ -732,7 +725,7 @@ Overfull \hbox (3.94826pt too wide) in paragraph at lines 350--351
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<AUCconverge.png, id=119, 481.8pt x 481.8pt>
+<AUCconverge.png, id=118, 481.8pt x 481.8pt>
 File: AUCconverge.png Graphic file (type png)
  <use AUCconverge.png>
 Package pdftex.def Info: AUCconverge.png used on input line 355.
@@ -742,7 +735,7 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 355--356
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_converge_shuffle1.pdf, id=120, 505.89pt x 505.89pt>
+<ROC_converge_shuffle1.pdf, id=119, 505.89pt x 505.89pt>
 File: ROC_converge_shuffle1.pdf Graphic file (type pdf)
 
 <use ROC_converge_shuffle1.pdf>
@@ -753,7 +746,7 @@ Overfull \hbox (3.94826pt too wide) in paragraph at lines 363--364
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_converge_shuffle2.pdf, id=121, 505.89pt x 505.89pt>
+<ROC_converge_shuffle2.pdf, id=120, 505.89pt x 505.89pt>
 File: ROC_converge_shuffle2.pdf Graphic file (type pdf)
 
 <use ROC_converge_shuffle2.pdf>
@@ -767,13 +760,13 @@ Overfull \hbox (3.94826pt too wide) in paragraph at lines 366--367
 [11 <D:/coursework/stat215a/group/ROC_image4.pdf> <D:/coursework/stat215a/group
 /ROC_image8.pdf> <D:/coursework/stat215a/group/ROC_converge1.pdf> <D:/coursewor
 k/stat215a/group/AUCconverge.png>]
-<Gini_mean_sd.png, id=143, 389.455pt x 185.69376pt>
+<Gini_mean_sd.png, id=142, 389.455pt x 185.69376pt>
 File: Gini_mean_sd.png Graphic file (type png)
  <use Gini_mean_sd.png>
 Package pdftex.def Info: Gini_mean_sd.png used on input line 374.
 (pdftex.def)             Requested size: 117.43875pt x 55.99472pt.
 
-<classification_1.png, id=144, 481.8pt x 481.8pt>
+<classification_1.png, id=143, 481.8pt x 481.8pt>
 File: classification_1.png Graphic file (type png)
  <use classification_1.png>
 Package pdftex.def Info: classification_1.png used on input line 381.
@@ -783,7 +776,7 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 381--382
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<label_1.png, id=145, 481.8pt x 481.8pt>
+<label_1.png, id=144, 481.8pt x 481.8pt>
 File: label_1.png Graphic file (type png)
  <use label_1.png>
 Package pdftex.def Info: label_1.png used on input line 384.
@@ -793,7 +786,7 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 384--385
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<classification_3.png, id=146, 481.8pt x 481.8pt>
+<classification_3.png, id=145, 481.8pt x 481.8pt>
 File: classification_3.png Graphic file (type png)
  <use classification_3.png>
 Package pdftex.def Info: classification_3.png used on input line 390.
@@ -803,7 +796,7 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 390--391
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<label_3.png, id=147, 481.8pt x 481.8pt>
+<label_3.png, id=146, 481.8pt x 481.8pt>
 File: label_3.png Graphic file (type png)
  <use label_3.png>
 Package pdftex.def Info: label_3.png used on input line 393.
@@ -908,16 +901,13 @@ a/group/label_10.png> <D:/coursework/stat215a/group/classification_11.png> <D:/
 coursework/stat215a/group/label_11.png> <D:/coursework/stat215a/group/Gini_mean
 _sd.png>] (D:\coursework\stat215a\group\writeupLab4.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  4107 strings out of 493921
- 59620 string characters out of 3152899
- 120381 words of memory out of 3000000
+ 59624 string characters out of 3152899
+ 120353 words of memory out of 3000000
  7310 multiletter control sequences out of 15000+200000
  9675 words of font info for 35 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -933,7 +923,7 @@ type1/public/amsfonts/cm/cmr5.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /fonts/type1/public/amsfonts/cm/cmsl10.pfb><D:/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D
 :/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on writeupLab4.pdf (14 pages, 3682402 bytes).
+Output written on writeupLab4.pdf (14 pages, 3682403 bytes).
 PDF statistics:
  240 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

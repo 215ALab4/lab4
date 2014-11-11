@@ -208,8 +208,8 @@ The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatiall
     \caption{AUC Differences}
     \label{12-foldAUCdiff}
   \end{subfigure}    
-  \label{fig:qda_lda}
   \caption{(\ref{12-foldROC}) shows the ROC curves for each of the 12 folds of cross validation.  (\ref{12-foldAUC}) and (\ref{12-foldAUCdiff}) show evidence via AUC estimates that QDA performs slightly better than LDA.  Note that in both analysis, fold 1 has an abnormally low AUC.}
+  \label{fig:qda_lda}
 \end{figure}
 Linear discriminant analysis (LDA) for binary classification aims to separate the feature space using a hyperplane.  It assumes that the each class is normally distributed with means $\mu_0$ and $\mu_1$ and that the two classes are homoscedastic with covariance matrix $\Sigma_0=\Sigma_1=\Sigma$.  Quadratic discriminant analysis works in the same manner except that it makes no assumptions about the covariance matrix.  Thus given the multivariate Guassian distribution:
 \begin{equation}
