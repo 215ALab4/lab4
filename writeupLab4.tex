@@ -56,7 +56,6 @@
 \usepackage{alltt}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\usepackage{float}
 \setlength{\parskip}{\smallskipamount}
 \setlength{\parindent}{0pt}
 \usepackage{amsthm}
@@ -64,6 +63,8 @@
 \usepackage{wrapfig}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage[margin=1in]{geometry}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
@@ -147,20 +148,27 @@ The following three plots gives us a sense of what can be learned from NDAI, SD 
 \end{figure}
 
 
-\begin{figure}[H]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{CORRvsNDAI.png}
-  \caption{CORR vs. NDAI Plot of Image 1}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{CORRvsSD.png}
-  \caption{CORR vs. SD Plot of Image 1}\label{}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{NDAIvsSD.png}
-  \caption{NDAI vs. SD Plot of Image1}\label{}
-\endminipage
+\begin{figure}[h]
+  \centering 
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{CORR_vs_NDAI.png}
+    \caption{CORR vs. NDAI Plot of Image 1}
+    \label{CorrNdai}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{CORR_vs_SD.png}
+    \caption{CORR vs. SD Plot of Image 1}
+    \label{CorrSd}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{NDAI_vs_SD.png}
+    \caption{NDAI vs. SD Plot of Image1}
+    \label{NdaiSd}
+  \end{subfigure}
+  \caption{Scatter plots of the pairs of features used in the analyses. Red points denote pixels that were labeled as not clouds and blue points represent cloudy pixels.}
+  \label{fig:Scatter}
 \end{figure}
+Figure \ref{fig:Scatter} shows hope that our selected features may be able to distinguish between cloudy and icy pixels.  The rounded boundaries suggest that non-linear surfaces may be necessary to separate the feature space.
 
 \subsection{Mapped Features}
 The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatially. In agreement with the NDAI density plots, higher NDAI values indicate increased likelihood of the presence of clouds, and the NDAI plots look quite similar to the binary classification plots. The SD maps show areas of high variance in the radiances thereby providing a decent outline of cloud boundaries. Unfortunately, this can also lead to the highlighting of uneven ground regions. Finally, the CORR images resemble weakened versions of their NDAI counterparts though with some additional strange behavior in the bottom left corners of Images 1 and 2. 
@@ -181,22 +189,75 @@ The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatiall
 
 \section{Modeling}
 
-\subsection{LDA}
-
-\subsection{QDA}
+\subsection{QDA/LDA}
 
 \begin{figure}[h]
-\minipage{0.49\textwidth}
-  \includegraphics[width=\linewidth]{QDArocCV.png}
-  \caption{Response Operator Curve for 12-fold Cross-valudation of QDA}\label{}
-\endminipage\hfill
-\minipage{0.49\textwidth}
-  \includegraphics[width=\linewidth]{AUCcvQDA.png}
-  \caption{AUC for QDA Classifiers}\label{rocauc}
-\endminipage\hfill
+  \centering 
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{ROC_12_folds_DA.png}
+    \caption{ROC for 12-fold CV of QDA}
+    \label{12-foldROC}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{AUC_12_folds_DA.png}
+    \caption{AUC for LDA QDA Classifiers}
+    \label{12-foldAUC}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{AUC_difference.png}
+    \caption{AUC Differences}
+    \label{12-foldAUCdiff}
+  \end{subfigure}    
+  \label{qda_lda}
+  \caption{(\ref{12-foldROC}) shows the ROC curves for each of the 12 folds of cross validation.  (\ref{12-foldAUC}) and (\ref{12-foldAUCdiff}) show evidence via AUC estimates that QDA performs slightly better than LDA.  Note that in both analysis, fold 1 has an abnormally low AUC.}
+\end{figure}
+Linear discriminant analysis (LDA) for binary classification aims to separate the feature space using a hyperplane.  It assumes that the each class is normally distributed with means $\mu_0$ and $\mu_1$ and that the two classes are homoscedastic with covariance matrix $\Sigma_0=\Sigma_1=\Sigma$.  Quadratic discriminant analysis works in the same manner except that it makes no assumptions about the covariance matrix.  Thus given the multivariate Guassian distribution:
+\begin{equation}
+f_c(x) = \frac{1}{(2 \pi)^{p/2} \vert \Sigma_c \vert ^{1/2}} e^{-\frac{1}{2}(x-\mu_c)^T \Sigma_c^{-1} (x-\mu_c)}
+\end{equation}
+where $c=1,2$ is the class label.  Let $p_c$ be the prior probability of class $c$.  We can calculate the probability for a case $x$ belonging to class $c$ by:
+\begin{equation}
+P(x \in \textrm{ Class } c \vert X=x) = \frac{f_c(x) p_c}{f_1(x) p_1 + f_2(x) p_2}
+\end{equation}
+We can then classify each point by selecting a probability threshold and hard-assigning based on whether or not the posterior probability was higher or lower than that threshold.  Both LDA and QDA were carried out during our analyis of the data, but as we suspected from our exploratory data anaylsis, QDA performed slightly better than LDA when we compared the results side-by-side (see figure \ref{qda_lda}).
+During cross-validation, each image was divided into four horizontal strips, resulting in 12 folds to be used in our validation procedure.  In each iteration, we withheld one of the strips and trained on the remaining 11.  The resulting images after piecing the horizontal strips back together can be seen in figure \ref{fig:QDA}.
+Cross-validation for QDA revealed that while the method works extremely well in some cases, producing AUC scores of almost 1, it sometimes fails to perform better than even the theoretical random classifier.  In particular, the classifier does not seem to be good at discerning snow from clouds in regions where there are many dark pixels corresponding to geographical features.  The most indicative example of this is seen in image 1 where the algorithm misclassifies an entire ridge-filled region as clouds.  We also noticed that there were some misclassifications within large cloudy regions.  Figure \ref{fig:QDAconf} shows this nicely.
+
+\begin{figure}[h]
+  \centering 
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{qda1_12fold_conf}
+    \label{qda1_conf}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{qda2_12fold_conf}
+    \label{qda2_conf}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{qda3_12fold_conf}
+    \label{qda3_conf}
+  \end{subfigure}  
+  \caption{A comparison between the output of QDA and expert labels.}
+  \label{fig:QDAconf}
 \end{figure}
 
-Cross-validation for QDA revealed that while the method works extremely well in some cases, producing AUC scores of almost 1, it sometimes fails to perform better than even the theoretical random classifier.  In particular, the classifier does not seem to be good at discerning snow from clouds in regions where there are many dark pixels.  For example, during cross-validation, the watery bottom-left quadrant of image 2 and ridge-ridden left edge of image 3 poses significant problems to our classifiers.
+\begin{figure}[h]
+  \centering 
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{qda1.prob.plot}
+    \label{qda1}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{qda2.prob.plot}
+    \label{qda2}
+  \end{subfigure}  
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{qda3.prob.plot}
+    \label{qda3}
+  \end{subfigure}  
+  \caption{Posterior probabilities of being a cloud as given by QDA}
+  \label{fig:QDA}
+\end{figure}
 
 \subsection{Logit/Probit}
 The logit model obtained via averaging after 12-fold cross-validation has $y_i = -3.356 + 1.900 * NDAI_i - 0.074 * SD_i + 9.002 * CORR_i$ where $P_i$(Cloud) = $ \frac{1}{1 + e^{-y_i}}$. 
@@ -249,7 +310,7 @@ For random forest, as in all the other classifiers, we divided the three images 
 
 \begin{figure}[H]
 \minipage{0.2\textwidth}
-  \includegraphics[width=\linewidth, height = 150pts]{AUC_12folds.png}
+  \includegraphics[width=\linewidth, height = 150pts]{AUC_12_folds.png}
 \endminipage\hfill
 \minipage{0.8\textwidth}%
   \includegraphics[width=\linewidth, height = 150pts]{ROC_fold_comparison.png}

@@ -1,25 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 NOV 2014 16:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.16)  10 NOV 2014 18:56
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
 **writeupLab4.tex
-(./writeupLab4.tex
+(D:\coursework\stat215a\group\writeupLab4.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
-ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
-rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
-kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
- polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
-lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
-welsh, loaded.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("D:\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size10.clo
+("D:\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -34,31 +30,31 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+("D:\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+("D:\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+("D:\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+("D:\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("D:\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("D:\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("D:\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("D:\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -66,15 +62,15 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/color.sty
+("D:\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/color.cfg
+("D:\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/framed/framed.sty
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip43
 \fb@frw=\dimen105
@@ -82,10 +78,10 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen107
 \FrameSep=\dimen108
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/alltt.sty
+("D:\MiKTeX 2.9\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip44
 \f@ncyO@elh=\skip45
 \f@ncyO@erh=\skip46
@@ -96,145 +92,157 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 \f@ncyO@olf=\skip51
 \f@ncyO@orf=\skip52
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count88
-\float@exts=\toks15
-\float@box=\box26
-\@float@everytoks=\toks16
-\@floatcapt=\box27
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2009/07/02 v2.20.1
-\thm@style=\toks17
-\thm@bodyfont=\toks18
-\thm@headfont=\toks19
-\thm@notefont=\toks20
-\thm@headpunct=\toks21
+("D:\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks15
+\thm@bodyfont=\toks16
+\thm@headfont=\toks17
+\thm@notefont=\toks18
+\thm@headpunct=\toks19
 \thm@preskip=\skip53
 \thm@postskip=\skip54
 \thm@headsep=\skip55
-\dth@everypar=\toks22
+\dth@everypar=\toks20
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+("D:\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip56
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
+("D:\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
+("D:\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks23
+\@emptytoks=\toks21
 \ex@=\dimen109
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("D:\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen110
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
+("D:\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count89
-LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count90
-\leftroot@=\count91
-LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count92
-\DOTSCASE@=\count93
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
 \big@size=\dimen111
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count94
-\c@MaxMatrixCols=\count95
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
-\c@parentequation=\count96
-\dspbrk@lvl=\count97
-\tag@help=\toks24
-\row@=\count98
-\column@=\count99
-\maxfields@=\count100
-\andhelp@=\toks25
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks22
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks23
 \eqnshift@=\dimen112
 \alignsep@=\dimen113
 \tagshift@=\dimen114
 \tagwidth@=\dimen115
 \totwidth@=\dimen116
 \lineht@=\dimen117
-\@envbody=\toks26
+\@envbody=\toks24
 \multlinegap=\skip57
 \multlinetaggap=\skip58
-\mathdisplay@stack=\toks27
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
 \wrapoverhang=\dimen118
 \WF@size=\dimen119
-\c@WF@wrappedlines=\count101
-\WF@box=\box30
-\WF@everypar=\toks28
+\c@WF@wrappedlines=\count100
+\WF@box=\box28
+\WF@everypar=\toks26
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
+("D:\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks27
+\float@box=\box29
+\@float@everytoks=\toks28
+\@floatcapt=\box30
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen120
+\captionmargin@=\dimen121
+\captionwidth=\dimen122
+\caption@tempdima=\dimen123
+\caption@indent=\dimen124
+\caption@parindent=\dimen125
+\caption@hangindent=\dimen126
+)
+\c@ContinuedFloat=\count102
+Package caption Info: float package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count103
+\c@subtable=\count104
+)
+("D:\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("D:\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+("D:\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("D:\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count102
-\Gm@cntv=\count103
-\c@Gm@tempcnt=\count104
-\Gm@bindingoffset=\dimen120
-\Gm@wd@mp=\dimen121
-\Gm@odd@mp=\dimen122
-\Gm@even@mp=\dimen123
-\Gm@layoutwidth=\dimen124
-\Gm@layoutheight=\dimen125
-\Gm@layouthoffset=\dimen126
-\Gm@layoutvoffset=\dimen127
+\Gm@cnth=\count105
+\Gm@cntv=\count106
+\c@Gm@tempcnt=\count107
+\Gm@bindingoffset=\dimen127
+\Gm@wd@mp=\dimen128
+\Gm@odd@mp=\dimen129
+\Gm@even@mp=\dimen130
+\Gm@layoutwidth=\dimen131
+\Gm@layoutheight=\dimen132
+\Gm@layouthoffset=\dimen133
+\Gm@layoutvoffset=\dimen134
 \Gm@dimlist=\toks29
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/upquote/upquote.sty
+
+("D:\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-\c@corollary=\count105
-\c@theorem=\count106
-\c@example=\count107
-\c@question=\count108
-\c@remark=\count109
-\c@conjecture=\count110
-\c@proposition=\count111
-\c@definition=\count112
+\c@corollary=\count108
+\c@theorem=\count109
+\c@example=\count110
+\c@question=\count111
+\c@remark=\count112
+\c@conjecture=\count113
+\c@proposition=\count114
+\c@definition=\count115
 
-(./writeupLab4.aux
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
+(D:\coursework\stat215a\group\writeupLab4.aux
 
 LaTeX Warning: Label `' multiply defined.
 
@@ -257,77 +265,35 @@ LaTeX Warning: Label `' multiply defined.
 LaTeX Warning: Label `' multiply defined.
 
 )
-\openout1 = `writeupLab4.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
- (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+ (C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
-\scratchdimen=\dimen128
+\scratchcounter=\count116
+\scratchdimen=\dimen135
 \scratchbox=\box31
-\nofMPsegments=\count114
-\nofMParguments=\count115
+\nofMPsegments=\count117
+\nofMParguments=\count118
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count116
-\MPscratchDim=\dimen129
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen136
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks31
-) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -365,514 +331,611 @@ e
 <RAWEDA.png, id=1, 657.45625pt x 507.8975pt>
 File: RAWEDA.png Graphic file (type png)
  <use RAWEDA.png>
-Package pdftex.def Info: RAWEDA.png used on input line 98.
+Package pdftex.def Info: RAWEDA.png used on input line 99.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 98--99
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 99--100
 [][] 
  []
 
 <EXPERTSEDA.png, id=3, 657.45625pt x 507.8975pt>
 File: EXPERTSEDA.png Graphic file (type png)
  <use EXPERTSEDA.png>
-Package pdftex.def Info: EXPERTSEDA.png used on input line 103.
+Package pdftex.def Info: EXPERTSEDA.png used on input line 104.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 103--104
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 104--105
 [][] 
  []
 
 [1
 
-{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./RAWED
-A.png>] <NDAI1.png, id=14, 481.8pt x 481.8pt>
+{C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/coursewor
+k/stat215a/group/RAWEDA.png>] <NDAI1.png, id=13, 481.8pt x 481.8pt>
 File: NDAI1.png Graphic file (type png)
- <use NDAI1.png>
-Package pdftex.def Info: NDAI1.png used on input line 112.
+
+<use NDAI1.png>
+Package pdftex.def Info: NDAI1.png used on input line 113.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 112--113
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 113--114
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<NDAI2.png, id=15, 481.8pt x 481.8pt>
+<NDAI2.png, id=14, 481.8pt x 481.8pt>
 File: NDAI2.png Graphic file (type png)
  <use NDAI2.png>
-Package pdftex.def Info: NDAI2.png used on input line 115.
+Package pdftex.def Info: NDAI2.png used on input line 116.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 115--116
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 116--117
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<NDAI3.png, id=16, 481.8pt x 481.8pt>
+<NDAI3.png, id=15, 481.8pt x 481.8pt>
 File: NDAI3.png Graphic file (type png)
  <use NDAI3.png>
-Package pdftex.def Info: NDAI3.png used on input line 118.
+Package pdftex.def Info: NDAI3.png used on input line 119.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 118--119
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 119--120
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<SD1.png, id=17, 481.8pt x 481.8pt>
+<SD1.png, id=16, 481.8pt x 481.8pt>
 File: SD1.png Graphic file (type png)
  <use SD1.png>
-Package pdftex.def Info: SD1.png used on input line 125.
+Package pdftex.def Info: SD1.png used on input line 126.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 125--126
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 126--127
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<SD2.png, id=18, 481.8pt x 481.8pt>
+<SD2.png, id=17, 481.8pt x 481.8pt>
 File: SD2.png Graphic file (type png)
  <use SD2.png>
-Package pdftex.def Info: SD2.png used on input line 128.
+Package pdftex.def Info: SD2.png used on input line 129.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 128--129
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 129--130
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<SD3.png, id=19, 481.8pt x 481.8pt>
+<SD3.png, id=18, 481.8pt x 481.8pt>
 File: SD3.png Graphic file (type png)
  <use SD3.png>
-Package pdftex.def Info: SD3.png used on input line 131.
+Package pdftex.def Info: SD3.png used on input line 132.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 131--132
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 132--133
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[2 <./EXPERTSEDA.png> <./NDAI1.png> <./NDAI2.png> <./NDAI3.png>]
-<CORR1.png, id=28, 481.8pt x 481.8pt>
+[2 <D:/coursework/stat215a/group/EXPERTSEDA.png> <D:/coursework/stat215a/group/
+NDAI1.png> <D:/coursework/stat215a/group/NDAI2.png> <D:/coursework/stat215a/gro
+up/NDAI3.png>] <CORR1.png, id=27, 481.8pt x 481.8pt>
 File: CORR1.png Graphic file (type png)
  <use CORR1.png>
-Package pdftex.def Info: CORR1.png used on input line 138.
+Package pdftex.def Info: CORR1.png used on input line 139.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 138--139
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 139--140
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<CORR2.png, id=29, 481.8pt x 481.8pt>
+<CORR2.png, id=28, 481.8pt x 481.8pt>
 File: CORR2.png Graphic file (type png)
  <use CORR2.png>
-Package pdftex.def Info: CORR2.png used on input line 141.
+Package pdftex.def Info: CORR2.png used on input line 142.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 141--142
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 142--143
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<CORR3.png, id=30, 481.8pt x 481.8pt>
+<CORR3.png, id=29, 481.8pt x 481.8pt>
 File: CORR3.png Graphic file (type png)
  <use CORR3.png>
-Package pdftex.def Info: CORR3.png used on input line 144.
+Package pdftex.def Info: CORR3.png used on input line 145.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 144--145
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 145--146
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<CORRvsNDAI.png, id=31, 707.64375pt x 483.8075pt>
-File: CORRvsNDAI.png Graphic file (type png)
- <use CORRvsNDAI.png>
-Package pdftex.def Info: CORRvsNDAI.png used on input line 152.
-(pdftex.def)             Requested size: 150.32504pt x 102.76897pt.
+<CORR_vs_NDAI.png, id=30, 361.35pt x 361.35pt>
+File: CORR_vs_NDAI.png Graphic file (type png)
+ <use CORR_vs_NDAI.png>
+Package pdftex.def Info: CORR_vs_NDAI.png used on input line 154.
+(pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<CORRvsSD.png, id=32, 707.64375pt x 483.8075pt>
-File: CORRvsSD.png Graphic file (type png)
- <use CORRvsSD.png>
-Package pdftex.def Info: CORRvsSD.png used on input line 156.
-(pdftex.def)             Requested size: 150.32504pt x 102.76897pt.
+<CORR_vs_SD.png, id=31, 361.35pt x 361.35pt>
+File: CORR_vs_SD.png Graphic file (type png)
+ <use CORR_vs_SD.png>
+Package pdftex.def Info: CORR_vs_SD.png used on input line 159.
+(pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<NDAIvsSD.png, id=33, 707.64375pt x 483.8075pt>
-File: NDAIvsSD.png Graphic file (type png)
- <use NDAIvsSD.png>
-Package pdftex.def Info: NDAIvsSD.png used on input line 160.
-(pdftex.def)             Requested size: 150.32504pt x 102.76897pt.
+<NDAI_vs_SD.png, id=32, 361.35pt x 361.35pt>
+File: NDAI_vs_SD.png Graphic file (type png)
+ <use NDAI_vs_SD.png>
+Package pdftex.def Info: NDAI_vs_SD.png used on input line 164.
+(pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
-<NDAIEDA.png, id=34, 657.45625pt x 507.8975pt>
+<NDAIEDA.png, id=33, 657.45625pt x 507.8975pt>
 File: NDAIEDA.png Graphic file (type png)
  <use NDAIEDA.png>
-Package pdftex.def Info: NDAIEDA.png used on input line 168.
+Package pdftex.def Info: NDAIEDA.png used on input line 176.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 168--169
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 176--177
 [][] 
  []
 
-[3 <./SD1.png> <./SD2.png> <./SD3.png> <./CORR1.png> <./CORR2.png> <./CORR3.png
-> <./CORRvsNDAI.png (PNG copy)> <./CORRvsSD.png (PNG copy)> <./NDAIvsSD.png (PN
-G copy)>] <SDEDA.png, id=44, 657.45625pt x 507.8975pt>
+[3 <D:/coursework/stat215a/group/SD1.png> <D:/coursework/stat215a/group/SD2.png
+> <D:/coursework/stat215a/group/SD3.png> <D:/coursework/stat215a/group/CORR1.pn
+g> <D:/coursework/stat215a/group/CORR2.png> <D:/coursework/stat215a/group/CORR3
+.png> <D:/coursework/stat215a/group/CORR_vs_NDAI.png (PNG copy)> <D:/coursework
+/stat215a/group/CORR_vs_SD.png (PNG copy)> <D:/coursework/stat215a/group/NDAI_v
+s_SD.png (PNG copy)>] <SDEDA.png, id=44, 657.45625pt x 507.8975pt>
 File: SDEDA.png Graphic file (type png)
- <use SDEDA.png>
-Package pdftex.def Info: SDEDA.png used on input line 173.
+
+<use SDEDA.png>
+Package pdftex.def Info: SDEDA.png used on input line 181.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 173--174
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 181--182
 [][] 
  []
 
 <CORREDA.png, id=45, 657.45625pt x 507.8975pt>
 File: CORREDA.png Graphic file (type png)
  <use CORREDA.png>
-Package pdftex.def Info: CORREDA.png used on input line 178.
+Package pdftex.def Info: CORREDA.png used on input line 186.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 178--179
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 186--187
 [][] 
  []
 
-[4 <./NDAIEDA.png> <./SDEDA.png>]
-<QDArocCV.png, id=51, 707.64375pt x 483.8075pt>
-File: QDArocCV.png Graphic file (type png)
- <use QDArocCV.png>
-Package pdftex.def Info: QDArocCV.png used on input line 190.
-(pdftex.def)             Requested size: 230.18253pt x 157.36845pt.
+[4 <D:/coursework/stat215a/group/NDAIEDA.png> <D:/coursework/stat215a/group/SDE
+DA.png>] <ROC_12_folds_DA.png, id=51, 361.35pt x 361.35pt>
+File: ROC_12_folds_DA.png Graphic file (type png)
 
-<AUCcvQDA.png, id=52, 707.64375pt x 483.8075pt>
-File: AUCcvQDA.png Graphic file (type png)
- <use AUCcvQDA.png>
-Package pdftex.def Info: AUCcvQDA.png used on input line 194.
-(pdftex.def)             Requested size: 230.18253pt x 157.36845pt.
- [5 <./CORREDA.png> <./QDArocCV.png> <./AUCcvQDA.png>]
-<threshold.png, id=59, 657.45625pt x 507.8975pt>
+<use ROC_12_folds_DA.png>
+Package pdftex.def Info: ROC_12_folds_DA.png used on input line 197.
+(pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
+ <AUC_12_folds_DA.png, id=52, 361.35pt x 361.35pt>
+File: AUC_12_folds_DA.png Graphic file (type png)
+
+<use AUC_12_folds_DA.png>
+Package pdftex.def Info: AUC_12_folds_DA.png used on input line 202.
+(pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
+ <AUC_difference.png, id=53, 361.35pt x 361.35pt>
+File: AUC_difference.png Graphic file (type png)
+
+<use AUC_difference.png>
+Package pdftex.def Info: AUC_difference.png used on input line 207.
+(pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
+ [5 <D:/coursework/stat215a/group/CORREDA.png> <D:/coursework/stat215a/group/RO
+C_12_folds_DA.png> <D:/coursework/stat215a/group/AUC_12_folds_DA.png> <D:/cours
+ework/stat215a/group/AUC_difference.png>]
+
+Package caption Warning: \label without proper \caption on input line 211.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `qda_lda' on page 6 undefined on input line 222.
+
+<qda1_12fold_conf.png, id=69, 361.35pt x 361.35pt>
+File: qda1_12fold_conf.png Graphic file (type png)
+ <use qda1_12fold_conf.png>
+Package pdftex.def Info: qda1_12fold_conf.png used on input line 229.
+(pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
+
+<qda2_12fold_conf.png, id=70, 361.35pt x 361.35pt>
+File: qda2_12fold_conf.png Graphic file (type png)
+ <use qda2_12fold_conf.png>
+Package pdftex.def Info: qda2_12fold_conf.png used on input line 233.
+(pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
+
+<qda3_12fold_conf.png, id=71, 361.35pt x 361.35pt>
+File: qda3_12fold_conf.png Graphic file (type png)
+ <use qda3_12fold_conf.png>
+Package pdftex.def Info: qda3_12fold_conf.png used on input line 237.
+(pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
+
+
+LaTeX Warning: File `qda1.prob.plot' not found on input line 247.
+
+
+! LaTeX Error: Unknown graphics extension: .prob.plot.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...raphics[width=\linewidth]{qda1.prob.plot}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `qda2.prob.plot' not found on input line 251.
+
+
+! LaTeX Error: Unknown graphics extension: .prob.plot.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.251 ...raphics[width=\linewidth]{qda2.prob.plot}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `qda3.prob.plot' not found on input line 255.
+
+
+! LaTeX Error: Unknown graphics extension: .prob.plot.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.255 ...raphics[width=\linewidth]{qda3.prob.plot}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<threshold.png, id=72, 657.45625pt x 507.8975pt>
 File: threshold.png Graphic file (type png)
  <use threshold.png>
-Package pdftex.def Info: threshold.png used on input line 208.
+Package pdftex.def Info: threshold.png used on input line 269.
 (pdftex.def)             Requested size: 230.11313pt x 177.76678pt.
-
-<LogitClassification.png, id=60, 657.45625pt x 507.8975pt>
+ [6 <D:/coursework/stat215a/group/qda1_12fold_conf.png> <D:/coursework/stat215a
+/group/qda2_12fold_conf.png> <D:/coursework/stat215a/group/qda3_12fold_conf.png
+>]
+<LogitClassification.png, id=80, 657.45625pt x 507.8975pt>
 File: LogitClassification.png Graphic file (type png)
 
 <use LogitClassification.png>
-Package pdftex.def Info: LogitClassification.png used on input line 215.
+Package pdftex.def Info: LogitClassification.png used on input line 276.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 215--216
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 276--277
 [][] 
  []
 
-<LogitProbabilities.png, id=61, 657.45625pt x 507.8975pt>
+<LogitProbabilities.png, id=81, 657.45625pt x 507.8975pt>
 File: LogitProbabilities.png Graphic file (type png)
 
 <use LogitProbabilities.png>
-Package pdftex.def Info: LogitProbabilities.png used on input line 221.
+Package pdftex.def Info: LogitProbabilities.png used on input line 282.
 (pdftex.def)             Requested size: 512.16174pt x 227.62178pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 221--222
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 282--283
 [][] 
  []
 
-[6 <./threshold.png> <./LogitClassification.png>]
-<ClassificationOutcomes.png, id=73, 657.45625pt x 507.8975pt>
+[7 <D:/coursework/stat215a/group/threshold.png> <D:/coursework/stat215a/group/L
+ogitClassification.png>]
+<ClassificationOutcomes.png, id=88, 657.45625pt x 507.8975pt>
 File: ClassificationOutcomes.png Graphic file (type png)
 
 <use ClassificationOutcomes.png>
-Package pdftex.def Info: ClassificationOutcomes.png used on input line 226.
+Package pdftex.def Info: ClassificationOutcomes.png used on input line 287.
 (pdftex.def)             Requested size: 512.16174pt x 284.53691pt.
 
-Overfull \hbox (42.40672pt too wide) in paragraph at lines 226--227
+Overfull \hbox (42.40672pt too wide) in paragraph at lines 287--288
 [][] 
  []
 
-[7 <./LogitProbabilities.png> <./ClassificationOutcomes.png>]
-<LogitROC.png, id=80, 657.45625pt x 513.92pt>
+<LogitROC.png, id=89, 657.45625pt x 513.92pt>
 File: LogitROC.png Graphic file (type png)
  <use LogitROC.png>
-Package pdftex.def Info: LogitROC.png used on input line 234.
+Package pdftex.def Info: LogitROC.png used on input line 295.
 (pdftex.def)             Requested size: 328.72733pt x 256.95937pt.
-
-<ParameterConvergence.png, id=81, 657.45625pt x 507.8975pt>
+ [8 <D:/coursework/stat215a/group/LogitProbabilities.png> <D:/coursework/stat21
+5a/group/ClassificationOutcomes.png>]
+<ParameterConvergence.png, id=95, 657.45625pt x 507.8975pt>
 File: ParameterConvergence.png Graphic file (type png)
 
 <use ParameterConvergence.png>
-Package pdftex.def Info: ParameterConvergence.png used on input line 241.
+Package pdftex.def Info: ParameterConvergence.png used on input line 302.
 (pdftex.def)             Requested size: 328.72733pt x 253.94814pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 
  []
 
-[8 <./LogitROC.png> <./ParameterConvergence.png>]
-<AUC_12folds.png, id=87, 173.64874pt x 247.92625pt>
-File: AUC_12folds.png Graphic file (type png)
- <use AUC_12folds.png>
-Package pdftex.def Info: AUC_12folds.png used on input line 252.
+[9 <D:/coursework/stat215a/group/LogitROC.png> <D:/coursework/stat215a/group/Pa
+rameterConvergence.png>] <AUC_12_folds.png, id=101, 173.64874pt x 247.92625pt>
+File: AUC_12_folds.png Graphic file (type png)
+
+<use AUC_12_folds.png>
+Package pdftex.def Info: AUC_12_folds.png used on input line 313.
 (pdftex.def)             Requested size: 93.95174pt x 150.00151pt.
 
-Overfull \hbox (3.94661pt too wide) in paragraph at lines 252--253
+Overfull \hbox (3.94661pt too wide) in paragraph at lines 313--314
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_fold_comparison.png, id=88, 481.8pt x 481.8pt>
+<ROC_fold_comparison.png, id=102, 481.8pt x 481.8pt>
 File: ROC_fold_comparison.png Graphic file (type png)
 
 <use ROC_fold_comparison.png>
-Package pdftex.def Info: ROC_fold_comparison.png used on input line 255.
+Package pdftex.def Info: ROC_fold_comparison.png used on input line 316.
 (pdftex.def)             Requested size: 375.81718pt x 149.99605pt.
 
-Overfull \hbox (3.95619pt too wide) in paragraph at lines 255--256
+Overfull \hbox (3.95619pt too wide) in paragraph at lines 316--317
 []\OT1/cmr/m/n/10 s[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
-<AUC_images.png, id=89, 181.67876pt x 102.3825pt>
+<AUC_images.png, id=103, 181.67876pt x 102.3825pt>
 File: AUC_images.png Graphic file (type png)
  <use AUC_images.png>
-Package pdftex.def Info: AUC_images.png used on input line 266.
+Package pdftex.def Info: AUC_images.png used on input line 327.
 (pdftex.def)             Requested size: 150.00323pt x 80.00487pt.
 
-<ROC_image1.pdf, id=90, 505.89pt x 505.89pt>
+<ROC_image1.pdf, id=104, 505.89pt x 505.89pt>
 File: ROC_image1.pdf Graphic file (type pdf)
  <use ROC_image1.pdf>
-Package pdftex.def Info: ROC_image1.pdf used on input line 269.
+Package pdftex.def Info: ROC_image1.pdf used on input line 330.
 (pdftex.def)             Requested size: 234.88132pt x 150.00046pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 269--270
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 330--331
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_image4.pdf, id=91, 505.89pt x 505.89pt>
+<ROC_image4.pdf, id=105, 505.89pt x 505.89pt>
 File: ROC_image4.pdf Graphic file (type pdf)
  <use ROC_image4.pdf>
-Package pdftex.def Info: ROC_image4.pdf used on input line 276.
+Package pdftex.def Info: ROC_image4.pdf used on input line 337.
 (pdftex.def)             Requested size: 234.88132pt x 150.00046pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 276--277
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 337--338
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_image8.pdf, id=92, 505.89pt x 505.89pt>
+<ROC_image8.pdf, id=106, 505.89pt x 505.89pt>
 File: ROC_image8.pdf Graphic file (type pdf)
  <use ROC_image8.pdf>
-Package pdftex.def Info: ROC_image8.pdf used on input line 279.
+Package pdftex.def Info: ROC_image8.pdf used on input line 340.
 (pdftex.def)             Requested size: 234.88132pt x 150.00046pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 279--280
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 340--341
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[9 <./AUC_12folds.png> <./ROC_fold_comparison.png> <./AUC_images.png> <./ROC_im
-age1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+[10 <D:/coursework/stat215a/group/AUC_12_folds.png> <D:/coursework/stat215a/gro
+up/ROC_fold_comparison.png> <D:/coursework/stat215a/group/AUC_images.png> <D:/c
+oursework/stat215a/group/ROC_image1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
-<ROC_converge1.pdf, id=104, 505.89pt x 505.89pt>
+<ROC_converge1.pdf, id=118, 505.89pt x 505.89pt>
 File: ROC_converge1.pdf Graphic file (type pdf)
  <use ROC_converge1.pdf>
-Package pdftex.def Info: ROC_converge1.pdf used on input line 289.
+Package pdftex.def Info: ROC_converge1.pdf used on input line 350.
 (pdftex.def)             Requested size: 234.88132pt x 179.99745pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 289--290
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 350--351
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<AUCconverge.png, id=105, 481.8pt x 481.8pt>
+<AUCconverge.png, id=119, 481.8pt x 481.8pt>
 File: AUCconverge.png Graphic file (type png)
  <use AUCconverge.png>
-Package pdftex.def Info: AUCconverge.png used on input line 294.
+Package pdftex.def Info: AUCconverge.png used on input line 355.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 294--295
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 355--356
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_converge_shuffle1.pdf, id=106, 505.89pt x 505.89pt>
+<ROC_converge_shuffle1.pdf, id=120, 505.89pt x 505.89pt>
 File: ROC_converge_shuffle1.pdf Graphic file (type pdf)
 
 <use ROC_converge_shuffle1.pdf>
-Package pdftex.def Info: ROC_converge_shuffle1.pdf used on input line 302.
+Package pdftex.def Info: ROC_converge_shuffle1.pdf used on input line 363.
 (pdftex.def)             Requested size: 234.88132pt x 179.99745pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 302--303
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 363--364
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<ROC_converge_shuffle2.pdf, id=107, 505.89pt x 505.89pt>
+<ROC_converge_shuffle2.pdf, id=121, 505.89pt x 505.89pt>
 File: ROC_converge_shuffle2.pdf Graphic file (type pdf)
 
 <use ROC_converge_shuffle2.pdf>
-Package pdftex.def Info: ROC_converge_shuffle2.pdf used on input line 305.
+Package pdftex.def Info: ROC_converge_shuffle2.pdf used on input line 366.
 (pdftex.def)             Requested size: 234.88132pt x 179.99745pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 305--306
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 366--367
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[10 <./ROC_image4.pdf> <./ROC_image8.pdf> <./ROC_converge1.pdf> <./AUCconverge.
-png>] <Gini_mean_sd.png, id=129, 389.455pt x 185.69376pt>
+[11 <D:/coursework/stat215a/group/ROC_image4.pdf> <D:/coursework/stat215a/group
+/ROC_image8.pdf> <D:/coursework/stat215a/group/ROC_converge1.pdf> <D:/coursewor
+k/stat215a/group/AUCconverge.png>]
+<Gini_mean_sd.png, id=143, 389.455pt x 185.69376pt>
 File: Gini_mean_sd.png Graphic file (type png)
-
-<use Gini_mean_sd.png>
-Package pdftex.def Info: Gini_mean_sd.png used on input line 313.
+ <use Gini_mean_sd.png>
+Package pdftex.def Info: Gini_mean_sd.png used on input line 374.
 (pdftex.def)             Requested size: 117.43875pt x 55.99472pt.
- <classification_1.png, id=130, 481.8pt x 481.8pt>
-File: classification_1.png Graphic file (type png)
 
-<use classification_1.png>
-Package pdftex.def Info: classification_1.png used on input line 320.
+<classification_1.png, id=144, 481.8pt x 481.8pt>
+File: classification_1.png Graphic file (type png)
+ <use classification_1.png>
+Package pdftex.def Info: classification_1.png used on input line 381.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 320--321
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 381--382
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<label_1.png, id=131, 481.8pt x 481.8pt>
+<label_1.png, id=145, 481.8pt x 481.8pt>
 File: label_1.png Graphic file (type png)
  <use label_1.png>
-Package pdftex.def Info: label_1.png used on input line 323.
+Package pdftex.def Info: label_1.png used on input line 384.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 323--324
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 384--385
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<classification_3.png, id=132, 481.8pt x 481.8pt>
+<classification_3.png, id=146, 481.8pt x 481.8pt>
 File: classification_3.png Graphic file (type png)
  <use classification_3.png>
-Package pdftex.def Info: classification_3.png used on input line 329.
+Package pdftex.def Info: classification_3.png used on input line 390.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 329--330
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 390--391
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<label_3.png, id=133, 481.8pt x 481.8pt>
+<label_3.png, id=147, 481.8pt x 481.8pt>
 File: label_3.png Graphic file (type png)
  <use label_3.png>
-Package pdftex.def Info: label_3.png used on input line 332.
+Package pdftex.def Info: label_3.png used on input line 393.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 332--333
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 393--394
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[11 <./ROC_converge_shuffle1.pdf> <./ROC_converge_shuffle2.pdf> <./classificati
-on_1.png> <./label_1.png>] <classification_4.png, id=154, 481.8pt x 481.8pt>
+[12 <D:/coursework/stat215a/group/ROC_converge_shuffle1.pdf> <D:/coursework/sta
+t215a/group/ROC_converge_shuffle2.pdf> <D:/coursework/stat215a/group/classifica
+tion_1.png> <D:/coursework/stat215a/group/label_1.png>]
+<classification_4.png, id=167, 481.8pt x 481.8pt>
 File: classification_4.png Graphic file (type png)
-
-<use classification_4.png>
-Package pdftex.def Info: classification_4.png used on input line 338.
+ <use classification_4.png>
+Package pdftex.def Info: classification_4.png used on input line 399.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 338--339
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 399--400
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<label_4.png, id=155, 481.8pt x 481.8pt>
+<label_4.png, id=168, 481.8pt x 481.8pt>
 File: label_4.png Graphic file (type png)
  <use label_4.png>
-Package pdftex.def Info: label_4.png used on input line 341.
+Package pdftex.def Info: label_4.png used on input line 402.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 341--342
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 402--403
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<classification_9.png, id=156, 481.8pt x 481.8pt>
+<classification_9.png, id=169, 481.8pt x 481.8pt>
 File: classification_9.png Graphic file (type png)
  <use classification_9.png>
-Package pdftex.def Info: classification_9.png used on input line 348.
+Package pdftex.def Info: classification_9.png used on input line 409.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 348--349
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 409--410
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<label_9.png, id=157, 481.8pt x 481.8pt>
+<label_9.png, id=170, 481.8pt x 481.8pt>
 File: label_9.png Graphic file (type png)
  <use label_9.png>
-Package pdftex.def Info: label_9.png used on input line 351.
+Package pdftex.def Info: label_9.png used on input line 412.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 351--352
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 412--413
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<classification_10.png, id=158, 481.8pt x 481.8pt>
+<classification_10.png, id=171, 481.8pt x 481.8pt>
 File: classification_10.png Graphic file (type png)
  <use classification_10.png>
-Package pdftex.def Info: classification_10.png used on input line 357.
+Package pdftex.def Info: classification_10.png used on input line 418.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 357--358
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 418--419
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<label_10.png, id=159, 481.8pt x 481.8pt>
+<label_10.png, id=172, 481.8pt x 481.8pt>
 File: label_10.png Graphic file (type png)
  <use label_10.png>
-Package pdftex.def Info: label_10.png used on input line 360.
+Package pdftex.def Info: label_10.png used on input line 421.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 360--361
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 421--422
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[12 <./classification_3.png> <./label_3.png> <./classification_4.png> <./label_
-4.png> <./classification_9.png> <./label_9.png>]
-<classification_11.png, id=169, 481.8pt x 481.8pt>
+[13 <D:/coursework/stat215a/group/classification_3.png> <D:/coursework/stat215a
+/group/label_3.png> <D:/coursework/stat215a/group/classification_4.png> <D:/cou
+rsework/stat215a/group/label_4.png> <D:/coursework/stat215a/group/classificatio
+n_9.png> <D:/coursework/stat215a/group/label_9.png>]
+<classification_11.png, id=183, 481.8pt x 481.8pt>
 File: classification_11.png Graphic file (type png)
  <use classification_11.png>
-Package pdftex.def Info: classification_11.png used on input line 366.
+Package pdftex.def Info: classification_11.png used on input line 427.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 366--367
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 427--428
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<label_11.png, id=170, 481.8pt x 481.8pt>
+<label_11.png, id=184, 481.8pt x 481.8pt>
 File: label_11.png Graphic file (type png)
  <use label_11.png>
-Package pdftex.def Info: label_11.png used on input line 369.
+Package pdftex.def Info: label_11.png used on input line 430.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 369--370
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 430--431
 []\OT1/cmr/m/n/10 s[] 
  []
 
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¿ in font cmr10!
 Missing character: There is no ½ in font cmr10!
-[13 <./classification_10.png> <./label_10.png> <./classification_11.png> <./lab
-el_11.png> <./Gini_mean_sd.png>] (./writeupLab4.aux)
+[14 <D:/coursework/stat215a/group/classification_10.png> <D:/coursework/stat215
+a/group/label_10.png> <D:/coursework/stat215a/group/classification_11.png> <D:/
+coursework/stat215a/group/label_11.png> <D:/coursework/stat215a/group/Gini_mean
+_sd.png>] (D:\coursework\stat215a\group\writeupLab4.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3312 strings out of 493488
- 46116 string characters out of 3141326
- 110874 words of memory out of 3000000
- 6520 multiletter control sequences out of 15000+200000
- 9376 words of font info for 34 fonts, out of 3000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,12n,43p,1125b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on writeupLab4.pdf (13 pages, 2779952 bytes).
+ 4107 strings out of 493921
+ 59620 string characters out of 3152899
+ 120381 words of memory out of 3000000
+ 7310 multiletter control sequences out of 15000+200000
+ 9675 words of font info for 35 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 36i,12n,43p,1126b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr5.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsl10.pfb><D:/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D
+:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on writeupLab4.pdf (14 pages, 3682402 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 240 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
