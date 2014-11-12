@@ -361,23 +361,23 @@ We also trained on each image and tested on the remaining two. The AUC values ob
 {\bf Where was the model performing poorly?}
 The images below show classification errors for models trained on 2 images and tested on the other, as noted above in the AUC table, these models unsurprisingly performed worse than training on 11/12 of the folds.  Nonetheless, they are a useful indication of where prediction errors occurred.  In general, when the training set included image 3, the model performed better.  Only when image 3 was not included did we get obtain an AUC value less than 90.   
   \begin{figure}[H]
-\minipage{0.5\textwidth}
+\minipage{0.53\textwidth}
   \includegraphics[width=\linewidth, height = 170pts ]{classification_image1.png}
 \endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 170pts]{label_1.png}
+\minipage{0.47\textwidth}
+  \includegraphics[width=\linewidth, height = 170pts]{NDAI_image1.png}
 \endminipage\hfill
-\caption{prediction error for image 1-trained on image 2 and 3}
+\caption{prediction error for image 1-trained on image 2 and 3 juxtaposed with NDAI}
 \end{figure}
 
   \begin{figure}[H]
-\minipage{0.5\textwidth}
+\minipage{0.53\textwidth}
   \includegraphics[width=\linewidth, height = 170pts ]{classification_image3.png}
 \endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 170pts]{label_9.png}
+\minipage{0.47\textwidth}
+  \includegraphics[width=\linewidth, height = 170pts]{NDAI_image3.png}
 \endminipage\hfill
-\caption{prediction error for image 3-trained on image 1 and 2}
+\caption{prediction error for image 3-trained on image 1 and 2 juxtaposed with NDAI}
 \end{figure}
 
 {\bf Convergence} 
