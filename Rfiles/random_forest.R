@@ -453,6 +453,18 @@ Gini.reformat <- function{
 }
 
 ################################################################################
+# Gives Gini mean importance file.
+
+Gini.Mean.sd <- function(Gini){
+    
+    #Gini should be passed in from Gini.reformat function.
+    png("Gini_mean_sd.png")
+    grid.table(Gini[,12:14],show.rownames=T)
+    dev.off()
+}
+
+
+################################################################################
 # Reshape Gini
 
 Reshape.Gini <- function(Gini){
@@ -534,8 +546,13 @@ if (ImageSave){
     Gini <- Reshape.Gini(Gini.reformat(Gini.data.frame))
     Reshape.Gini <- function(Gini)
     
+    #Gini_mean_sd table png
+    Gini.Mean.sd(Gini.reformat(Gini.data.frame))
+    
     #AUC table
     AUC.table
+    
+    
     
     
 }
