@@ -311,18 +311,20 @@ ROC.curve.data.frame <- function(ROC.curve.data.frame.begin){
   # in sprintf below with 'convergence'.  Same with 'image'
   # writes to csv the ROC dataframe to be plotted in the random_forest_plots.R file
   
-  filename <- sprintf("%dRF_block.Rdata", i)
-  load(filename)
-  rocData <- roc.data(rf, filter(combined, fold == i) )
-  x.values <- rocData@x.values[[1]]
-  col.length <- length(x.values)
-  data <- as.data.frame(1:col.length)
-  colnames(data)[1] <- "fold.number"
-  fold.name <- sprintf("%d fold", i)
-  data[,1] <- fold.name
-  data$x.values <- x.values
-  data$y.values <- rocData@y.values[[1]]
-  ROC.data <<- rbind(ROC.data, data)
+  for (i in c(2:6, 8:12)){
+      filename <- sprintf("%dRF_block.Rdata", i)
+      load(filename)
+      rocData <- roc.data(rf, filter(combined, fold == i) )
+      x.values <- rocData@x.values[[1]]
+      col.length <- length(x.values)
+      data <- as.data.frame(1:col.length)
+      colnames(data)[1] <- "fold.number"
+      fold.name <- sprintf("%d fold", i)
+      data[,1] <- fold.name
+      data$x.values <- x.values
+      data$y.values <- rocData@y.values[[1]]
+      ROC.data <<- rbind(ROC.data, data)
+  }
   write.csv(ROC.data, "ROC_convergence_comparison.csv")
   return(ROC.data)
 }
@@ -401,10 +403,12 @@ False.positive.False.negative.Plots <- function(image, rf, k){
 
 
 plot.roc <- function(filename){
+    
+    
     ROC.data <- read.csv(filename)
     colnames(ROC.data)[2] <- "False.positive.rate"
     colnames(ROC.data)[3] <- "True.positive.rate"
-    pdf("ROC_converge_comparison.pdf")
+    pdf("ROC_fold_comparison.df")
     ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
       geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants))
     dev.off()
