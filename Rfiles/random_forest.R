@@ -281,6 +281,46 @@ convergence.cv <- foreach(i = 1:11)%dopar% {
 }
 
 ################################################################################
+#here we shuffle the folds to test convergence results
+
+combined <- transform(combined, fold = sample(fold, replace=FALSE))
+
+convergence.cv.shuffle.1 <- foreach(i = 1:11)%dopar% {
+    
+    train <- filter(combined, fold <= i) #so we drop the ith fold
+    test <- anti_join(combined, train) #test on the ith fold
+    rf <- try(rf.specific(train, num.tree))
+    conf <- try(confusion.generate(rf,test))
+    filename.table <-sprintf("ROC_converge_shuffle1%d.csv", i)
+    write.csv(conf, file=filename.table)
+    auc <- try(auc.value(rf, test))
+    filename.auc <- sprintf("AUC_converge_shuffle1%d.csv", i)
+    write.csv(auc, file=filename.auc)
+    filename <- sprintf("%sRF_converge_shuffle1.Rdata", i)
+    try(save(rf,file =filename))
+    return(filename) 
+}
+
+#shuffled again
+
+combined <- transform(combined, fold = sample(fold, replace=FALSE))
+
+convergence.cv.shuffle.2 <- foreach(i = 1:11)%dopar% {
+    
+    train <- filter(combined, fold <= i) #so we drop the ith fold
+    test <- anti_join(combined, train) #test on the ith fold
+    rf <- try(rf.specific(train, num.tree))
+    conf <- try(confusion.generate(rf,test))
+    filename.table <-sprintf("ROC_converge_shuffle2%d.csv", i)
+    write.csv(conf, file=filename.table)
+    auc <- try(auc.value(rf, test))
+    filename.auc <- sprintf("AUC_converge_shuffle2%d.csv", i)
+    write.csv(auc, file=filename.auc)
+    filename <- sprintf("%sRF_converge_shuffle2.Rdata", i)
+    try(save(rf,file =filename))
+    return(filename) 
+}
+################################################################################
 # ROC curve data frame for plotting (of the 12 folds)
 #
 
@@ -550,6 +590,14 @@ if (ImageSave){
     False.positive.False.negative.Plots(image, rf, 3)
     
     # ROC comparison plots
+    filename <- "ROC_convergence_comparison.csv"
+    
+    plot.roc(filename)
+    
+    filename <- "ROC_convergence_comparison.csv"
+    
+    plot.roc(filename)
+    
     filename <- "ROC_convergence_comparison.csv"
     
     plot.roc(filename)
