@@ -324,14 +324,14 @@ convergence.cv.shuffle.2 <- foreach(i = 1:11)%dopar% {
 # ROC curve data frame for plotting (of the 12 folds)
 #
 
-ROC.curve.data.frame.begin <- function(filename){
+ROC.curve.data.frame.begin.fold <- function{
   # First seed the dataframe with the ROC curve information from the 1st fold
   # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y 
   # values)
   # To output ROC information for the convergence data, just substitute 'block'
   # in sprintf below with 'convergence'.  Same with 'image'
   
-  load(filename)
+  load("1RF_block.Rdata")
   roc.data <- roc.data(rf, filter(combined, fold == 1) )
   x.values <- roc.data@x.values[[1]]
   col.length <- length(x.values)
@@ -343,10 +343,71 @@ ROC.curve.data.frame.begin <- function(filename){
   
   return(ROC.data)
 }
+
+
+ROC.curve.data.frame.begin.converge <- function{
+    # First seed the dataframe with the ROC curve information from the 1st fold
+    # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y
+    # values)
+    # To output ROC information for the convergence data, just substitute 'block'
+    # in sprintf below with 'convergence'.  Same with 'image'
+    
+    load("1RF_converge.Rdata")
+    roc.data <- roc.data(rf, filter(combined, fold == 1) )
+    x.values <- roc.data@x.values[[1]]
+    col.length <- length(x.values)
+    ROC.data <- as.data.frame(1:col.length)
+    ROC.data[,1] <- "1st fold"
+    colnames(ROC.data)[1] <- "fold.number"
+    ROC.data$x.values <- x.values
+    ROC.data$y.values <- roc.data@y.values[[1]]
+    
+    return(ROC.data)
+}
+
+ROC.curve.data.frame.begin.shuffle1 <- function{
+    # First seed the dataframe with the ROC curve information from the 1st fold
+    # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y
+    # values)
+    # To output ROC information for the convergence data, just substitute 'block'
+    # in sprintf below with 'convergence'.  Same with 'image'
+    
+    load("RF_converge_shuffle11.Rdata")
+    roc.data <- roc.data(rf, filter(combined, fold == 1) )
+    x.values <- roc.data@x.values[[1]]
+    col.length <- length(x.values)
+    ROC.data <- as.data.frame(1:col.length)
+    ROC.data[,1] <- "1st fold"
+    colnames(ROC.data)[1] <- "fold.number"
+    ROC.data$x.values <- x.values
+    ROC.data$y.values <- roc.data@y.values[[1]]
+    
+    return(ROC.data)
+}
+
+ROC.curve.data.frame.begin.shuffle2 <- function{
+    # First seed the dataframe with the ROC curve information from the 1st fold
+    # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y
+    # values)
+    # To output ROC information for the convergence data, just substitute 'block'
+    # in sprintf below with 'convergence'.  Same with 'image'
+    
+    load("RF_converge_shuffle21.Rdata")
+    roc.data <- roc.data(rf, filter(combined, fold == 1) )
+    x.values <- roc.data@x.values[[1]]
+    col.length <- length(x.values)
+    ROC.data <- as.data.frame(1:col.length)
+    ROC.data[,1] <- "1st fold"
+    colnames(ROC.data)[1] <- "fold.number"
+    ROC.data$x.values <- x.values
+    ROC.data$y.values <- roc.data@y.values[[1]]
+    
+    return(ROC.data)
+}
 ################################################################################
 # Create entire ROC curve dataframe
 
-ROC.curve.data.frame.block <- function(ROC.curve.data.frame.begin(filname)){
+ROC.curve.data.frame.block <- function(ROC.curve.data.frame.begin.fold){
 
   # Input previous function: ROC.curve.data.frame.begin
   # outputs the entire dataframe of ROC curve data for all other folds.  
@@ -372,7 +433,7 @@ ROC.curve.data.frame.block <- function(ROC.curve.data.frame.begin(filname)){
   return(ROC.data)
 }
 
-ROC.curve.data.frame.converge <- function(ROC.curve.data.frame.begin(filname)){
+ROC.curve.data.frame.converge <- function(ROC.curve.data.frame.begin.converge){
     
     # Input previous function: ROC.curve.data.frame.begin
     # outputs the entire dataframe of ROC curve data for all other folds.
@@ -399,7 +460,7 @@ ROC.curve.data.frame.converge <- function(ROC.curve.data.frame.begin(filname)){
 }
 
 
-ROC.curve.data.frame.shuffle <- function(ROC.curve.data.frame.begin(filname)){
+ROC.curve.data.frame.shuffle <- function(ROC.curve.data.frame.begin.shuffle1){
     
     # Input previous function: ROC.curve.data.frame.begin
     # outputs the entire dataframe of ROC curve data for all other folds.
@@ -422,6 +483,32 @@ ROC.curve.data.frame.shuffle <- function(ROC.curve.data.frame.begin(filname)){
         ROC.data <<- rbind(ROC.data, data)
     }
     write.csv(ROC.data, "ROC_converge_shuffle1.csv")
+    return(ROC.data)
+}
+
+ROC.curve.data.frame.shuffle <- function(ROC.curve.data.frame.begin.shuffle2){
+    
+    # Input previous function: ROC.curve.data.frame.begin
+    # outputs the entire dataframe of ROC curve data for all other folds.
+    # to output ROC information for the convergence data, just substite 'block'
+    # in sprintf below with 'convergence'.  Same with 'image'
+    # writes to csv the ROC dataframe to be plotted in the random_forest_plots.R file
+    
+    for (i in c(2:6, 8:12)){
+        filename <- sprintf("ROC_converge_shuffle2%d.Rdata", i)
+        load(filename)
+        rocData <- roc.data(rf, filter(combined, fold == i) )
+        x.values <- rocData@x.values[[1]]
+        col.length <- length(x.values)
+        data <- as.data.frame(1:col.length)
+        colnames(data)[1] <- "fold.number"
+        fold.name <- sprintf("%d fold", i)
+        data[,1] <- fold.name
+        data$x.values <- x.values
+        data$y.values <- rocData@y.values[[1]]
+        ROC.data <<- rbind(ROC.data, data)
+    }
+    write.csv(ROC.data, "ROC_converge_shuffle2.csv")
     return(ROC.data)
 }
 
@@ -494,7 +581,7 @@ False.positive.False.negative.Plots <- function(image, rf, k){
 ################################################################################
 # ROC curve plot functions
 
-# We gave an example of what riles contains the comparison csv, 
+# We gave an example of what files contains the comparison csv,
 # this is generated in the random_forest.R file
 
 
