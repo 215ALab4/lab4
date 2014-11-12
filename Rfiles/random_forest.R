@@ -324,14 +324,14 @@ convergence.cv.shuffle.2 <- foreach(i = 1:11)%dopar% {
 # ROC curve data frame for plotting (of the 12 folds)
 #
 
-ROC.curve.data.frame.begin <- function{
+ROC.curve.data.frame.begin <- function(filename){
   # First seed the dataframe with the ROC curve information from the 1st fold
   # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y 
   # values)
   # To output ROC information for the convergence data, just substitute 'block'
   # in sprintf below with 'convergence'.  Same with 'image'
   
-  load("1RF_block.Rdata")
+  load(filename)
   roc.data <- roc.data(rf, filter(combined, fold == 1) )
   x.values <- roc.data@x.values[[1]]
   col.length <- length(x.values)
@@ -346,8 +346,8 @@ ROC.curve.data.frame.begin <- function{
 ################################################################################
 # Create entire ROC curve dataframe
 
-ROC.curve.data.frame <- function(ROC.curve.data.frame.begin){
- 
+ROC.curve.data.frame <- function(ROC.curve.data.frame.begin(filname){
+
   # Input previous function: ROC.curve.data.frame.begin
   # outputs the entire dataframe of ROC curve data for all other folds.  
   # to output ROC information for the convergence data, just substite 'block'
@@ -451,7 +451,7 @@ plot.roc <- function(filename){
     ROC.data <- read.csv(filename)
     colnames(ROC.data)[2] <- "False.positive.rate"
     colnames(ROC.data)[3] <- "True.positive.rate"
-    pdf("ROC_fold_comparison.df")
+    pdf("ROC_fold_comparison.pdf")
     ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
       geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants))
     dev.off()
@@ -590,6 +590,9 @@ if (ImageSave){
     False.positive.False.negative.Plots(image, rf, 3)
     
     # ROC comparison plots
+    filename <- "1RF_block.Rdata"
+    ROC.curve.data.frame <- function(ROC.curve.data.frame.begin(filname))
+    
     filename <- "ROC_convergence_comparison.csv"
     
     plot.roc(filename)
