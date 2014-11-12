@@ -366,7 +366,7 @@ The AUC values for training on 2/3 of the images and testing on the remaining im
 \end{figure}
 
 {\bf Convergence} 
- To test convergence, one of the things we did was increase the training set from including 1 quadrant, to including 2 quadrants, up to including 11 quadrants (using the complement as the test set).  For each of the 3 aforementioned classes of training, we trained on a range of forest sizes, from 2 trees to 50. It was interesting to note that the continuity of increasing the training set by neighbouring quadrants displayed much less convergence than by increasing the training quadrant set in a randomly subsampled way.  The following three plots make this clear.  In the first case....\\
+ To test convergence, we trained on an increasing number of quadrants and looked at whether the AUC values increased as we increased the training set.  We also trained random forest with a range of forest sizes, from 2 trees to 50, by 25 trees, we were seeing very similar predictive behaviour.  Finally, since we only had 9 and 3 features to train on, branching out on 2 features or greater per node in the tree was not necessary, we stuck with the finest level of detail possible and used 1 feature per node. It was interesting to note that the continuity of increasing the training set by neighbouring quadrants displayed much less convergence than by increasing the training quadrant set in a randomly subsampled way.  The following three plots make this clear.  This shows how important the continuity between neighbouring pixels are in prediction, which is something we did not want to pick up on in our models, since that does not generalize well to new data.  \\
 
 \begin{figure}[H]
 \minipage{0.5\textwidth}
@@ -411,7 +411,7 @@ To gather a quantitative measurement of the importance of each feature, we first
 
  \begin{thebibliography}{1}
 
-\bibitem{notes} Ben-Hur, A., Elisseeff, A., Guyon, I.: A stability based method for discovering structure in clustered data. In: Pacific Symposium on Biocomputing, pp. 6�17.   
+\bibitem{notes} 
 \end{thebibliography}
 
 
