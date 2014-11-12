@@ -103,12 +103,12 @@ The feature CORR is an average linear correlation of radiation measurements at d
 \subsection{Plots of Raw and Expertly Labelled Images}
 Figure 1 displays the unprocessed image files for comparison with Figure 2, the expertly-labelled files. With the human eye it is not so difficult to parse cloud from ground based on these images, but we see that cloudy and clear pixels alike run through wide spans of AN so other features must be used.
 \begin{figure}[h]
-\includegraphics[width = 18cm, height=5cm]{RAWEDA.png}
+\includegraphics[width = 18cm, height=4.5cm]{RAWEDA.png}
 \caption{Raw images with AN radiances.}
 \end{figure}
 
 \begin{figure}[h]
-\includegraphics[width = 18cm, height=5cm]{EXPERTSEDA.png}
+\includegraphics[width = 18cm, height=4.5cm]{EXPERTSEDA.png}
 \caption{Images with expert classifications. Proportions: 39.8$\%$ unknown, 23.4$\%$ cloudy, 36.8$\%$ clear.}
 \end{figure}
 \subsection{Densities of NDAI, SD and CORR}
@@ -155,7 +155,7 @@ The following three plots give us a sense of what can be learned from NDAI, SD a
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[]
   \centering 
   \begin{subfigure}[b]{0.3\textwidth}
     \includegraphics[width=\linewidth]{CORR_vs_NDAI.png}
@@ -178,18 +178,19 @@ The following three plots give us a sense of what can be learned from NDAI, SD a
 
 \subsection{Mapped Features}
 The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatially. In agreement with the NDAI density plots, higher NDAI values indicate increased likelihood of the presence of clouds, and the NDAI plots look quite similar to the binary classification plots. The SD maps show areas of high variance in the radiances thereby providing a decent outline of cloud boundaries. Furthermore, SD performs well at detecting smooth regions in the image while NDAI is noisy throughout. Unfortunately, this can lead to the highlighting of uneven ground regions. Finally, the CORR images resemble weakened versions of their NDAI counterparts though with some additional strange behavior in the bottom left corners of Images 1 and 2. 
+
 \begin{figure}[H]
-\includegraphics[width = 18cm, height = 5cm]{NDAIEDA.png}
+\includegraphics[width = 18cm, height = 4.5cm]{NDAIEDA.png}
 \caption{Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width = 18cm, height = 5cm]{SDEDA.png}
+\includegraphics[width = 18cm, height = 4.5cm]{SDEDA.png}
 \caption{Mapped SD readings. Higher values show cloud boundaries, though also show uneven terrain.}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width = 18cm, height = 5cm]{CORREDA.png}
+\includegraphics[width = 18cm, height = 4.5cm]{CORREDA.png}
 \caption{Mapped CORR readings. Cloudy regions tend to be lighter, but not as strongly as in NDAI.}
 \end{figure}
 
@@ -345,15 +346,15 @@ We also trained on each image and tested on the remaining two. \\
   \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
 \end{figure}
 
-  \begin{figure}[H]
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 150pts ]{ROC_image4.pdf}
-\endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 150pts]{ROC_image8.pdf}
-\endminipage\hfill
-  \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
-\end{figure}
+%  \begin{figure}[H]
+%\minipage{0.5\textwidth}
+% \includegraphics[width=\linewidth, height = 150pts ]{ROC_image4.pdf}
+%\endminipage\hfill
+%\minipage{0.5\textwidth}
+%  \includegraphics[width=\linewidth, height = 150pts]{ROC_image8.pdf}
+%\endminipage\hfill
+%  \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
+%\end{figure}
 
  To test convergence, one of the things we did was increase the training set from including 1 quadrant, to including 2 quadrants, up to including 11 quadrants (using the complement as the test set).  For each of the 3 aforementioned classes of training, we trained on a range of forest sizes, from 2 trees to 50. It was interesting to note that the continuity of increasing the training set by neighbouring quadrants displayed much less convergence than by increasing the training quadrant set in a randomly subsampled way.  The following three plots make this clear.  In the first case....\\
 
