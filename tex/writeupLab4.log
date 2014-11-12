@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 NOV 2014 15:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 NOV 2014 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -473,31 +473,31 @@ Missing character: There is no ù in font cmr10!
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 108.
+               Default added (so using `tbp') on input line 106.
 
 <../figures/RAWEDA.png, id=12, 697.60625pt x 588.1975pt>
 File: ../figures/RAWEDA.png Graphic file (type png)
 
 <use ../figures/RAWEDA.png>
-Package pdftex.def Info: ../figures/RAWEDA.png used on input line 109.
+Package pdftex.def Info: ../figures/RAWEDA.png used on input line 107.
 (pdftex.def)             Requested size: 512.17558pt x 142.26524pt.
 
-Overfull \hbox (42.42056pt too wide) in paragraph at lines 109--110
+Overfull \hbox (42.42056pt too wide) in paragraph at lines 107--108
 [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 113.
+               Default added (so using `tbp') on input line 111.
 
 <../figures/EXPERTSEDA.png, id=14, 703.62875pt x 588.1975pt>
 File: ../figures/EXPERTSEDA.png Graphic file (type png)
 
 <use ../figures/EXPERTSEDA.png>
-Package pdftex.def Info: ../figures/EXPERTSEDA.png used on input line 114.
+Package pdftex.def Info: ../figures/EXPERTSEDA.png used on input line 112.
 (pdftex.def)             Requested size: 512.1416pt x 142.26524pt.
 
-Overfull \hbox (42.38658pt too wide) in paragraph at lines 114--115
+Overfull \hbox (42.38658pt too wide) in paragraph at lines 112--113
 [][] 
  []
 
@@ -505,90 +505,90 @@ Overfull \hbox (42.38658pt too wide) in paragraph at lines 114--115
 <../figures/NDAI1.png, id=21, 481.8pt x 481.8pt>
 File: ../figures/NDAI1.png Graphic file (type png)
  <use ../figures/NDAI1.png>
-Package pdftex.def Info: ../figures/NDAI1.png used on input line 123.
+Package pdftex.def Info: ../figures/NDAI1.png used on input line 121.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 123--124
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 121--122
 []\OT1/cmr/m/n/10 s[] 
  []
 
 <../figures/NDAI2.png, id=22, 481.8pt x 481.8pt>
 File: ../figures/NDAI2.png Graphic file (type png)
  <use ../figures/NDAI2.png>
-Package pdftex.def Info: ../figures/NDAI2.png used on input line 126.
+Package pdftex.def Info: ../figures/NDAI2.png used on input line 124.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 126--127
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 124--125
 []\OT1/cmr/m/n/10 s[] 
  []
 
 <../figures/NDAI3.png, id=23, 481.8pt x 481.8pt>
 File: ../figures/NDAI3.png Graphic file (type png)
  <use ../figures/NDAI3.png>
-Package pdftex.def Info: ../figures/NDAI3.png used on input line 129.
+Package pdftex.def Info: ../figures/NDAI3.png used on input line 127.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 129--130
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 127--128
 []\OT1/cmr/m/n/10 s[] 
  []
 
 <../figures/SD1.png, id=24, 481.8pt x 481.8pt>
 File: ../figures/SD1.png Graphic file (type png)
  <use ../figures/SD1.png>
-Package pdftex.def Info: ../figures/SD1.png used on input line 136.
+Package pdftex.def Info: ../figures/SD1.png used on input line 134.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 136--137
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 134--135
 []\OT1/cmr/m/n/10 s[] 
  []
 
 <../figures/SD2.png, id=25, 481.8pt x 481.8pt>
 File: ../figures/SD2.png Graphic file (type png)
  <use ../figures/SD2.png>
-Package pdftex.def Info: ../figures/SD2.png used on input line 139.
+Package pdftex.def Info: ../figures/SD2.png used on input line 137.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 139--140
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 137--138
 []\OT1/cmr/m/n/10 s[] 
  []
 
 <../figures/SD3.png, id=26, 481.8pt x 481.8pt>
 File: ../figures/SD3.png Graphic file (type png)
  <use ../figures/SD3.png>
-Package pdftex.def Info: ../figures/SD3.png used on input line 142.
+Package pdftex.def Info: ../figures/SD3.png used on input line 140.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 142--143
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 140--141
 []\OT1/cmr/m/n/10 s[] 
  []
 
 <../figures/CORR1.png, id=27, 481.8pt x 481.8pt>
 File: ../figures/CORR1.png Graphic file (type png)
  <use ../figures/CORR1.png>
-Package pdftex.def Info: ../figures/CORR1.png used on input line 149.
+Package pdftex.def Info: ../figures/CORR1.png used on input line 147.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 149--150
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 147--148
 []\OT1/cmr/m/n/10 s[] 
  []
 
 <../figures/CORR2.png, id=28, 481.8pt x 481.8pt>
 File: ../figures/CORR2.png Graphic file (type png)
  <use ../figures/CORR2.png>
-Package pdftex.def Info: ../figures/CORR2.png used on input line 152.
+Package pdftex.def Info: ../figures/CORR2.png used on input line 150.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 152--153
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 150--151
 []\OT1/cmr/m/n/10 s[] 
  []
 
 <../figures/CORR3.png, id=29, 481.8pt x 481.8pt>
 File: ../figures/CORR3.png Graphic file (type png)
  <use ../figures/CORR3.png>
-Package pdftex.def Info: ../figures/CORR3.png used on input line 155.
+Package pdftex.def Info: ../figures/CORR3.png used on input line 153.
 (pdftex.def)             Requested size: 150.31952pt x 99.99736pt.
 
-Overfull \hbox (3.93892pt too wide) in paragraph at lines 155--156
+Overfull \hbox (3.93892pt too wide) in paragraph at lines 153--154
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -596,21 +596,21 @@ Overfull \hbox (3.93892pt too wide) in paragraph at lines 155--156
 File: ../figures/CORR_vs_NDAI.png Graphic file (type png)
 
 <use ../figures/CORR_vs_NDAI.png>
-Package pdftex.def Info: ../figures/CORR_vs_NDAI.png used on input line 164.
+Package pdftex.def Info: ../figures/CORR_vs_NDAI.png used on input line 162.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
 <../figures/CORR_vs_SD.png, id=31, 361.35pt x 361.35pt>
 File: ../figures/CORR_vs_SD.png Graphic file (type png)
 
 <use ../figures/CORR_vs_SD.png>
-Package pdftex.def Info: ../figures/CORR_vs_SD.png used on input line 169.
+Package pdftex.def Info: ../figures/CORR_vs_SD.png used on input line 167.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
 <../figures/NDAI_vs_SD.png, id=32, 361.35pt x 361.35pt>
 File: ../figures/NDAI_vs_SD.png Graphic file (type png)
 
 <use ../figures/NDAI_vs_SD.png>
-Package pdftex.def Info: ../figures/NDAI_vs_SD.png used on input line 174.
+Package pdftex.def Info: ../figures/NDAI_vs_SD.png used on input line 172.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
 
@@ -620,10 +620,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../figures/NDAIEDA.png Graphic file (type png)
 
 <use ../figures/NDAIEDA.png>
-Package pdftex.def Info: ../figures/NDAIEDA.png used on input line 186.
+Package pdftex.def Info: ../figures/NDAIEDA.png used on input line 184.
 (pdftex.def)             Requested size: 512.17558pt x 142.26524pt.
 
-Overfull \hbox (42.42056pt too wide) in paragraph at lines 186--187
+Overfull \hbox (42.42056pt too wide) in paragraph at lines 184--185
 [][] 
  []
 
@@ -634,10 +634,10 @@ ures/SD1.png> <../figures/SD2.png> <../figures/SD3.png> <../figures/CORR1.png>
 File: ../figures/SDEDA.png Graphic file (type png)
 
 <use ../figures/SDEDA.png>
-Package pdftex.def Info: ../figures/SDEDA.png used on input line 191.
+Package pdftex.def Info: ../figures/SDEDA.png used on input line 189.
 (pdftex.def)             Requested size: 512.17558pt x 142.26524pt.
 
-Overfull \hbox (42.42056pt too wide) in paragraph at lines 191--192
+Overfull \hbox (42.42056pt too wide) in paragraph at lines 189--190
 [][] 
  []
 
@@ -645,10 +645,10 @@ Overfull \hbox (42.42056pt too wide) in paragraph at lines 191--192
 File: ../figures/CORREDA.png Graphic file (type png)
 
 <use ../figures/CORREDA.png>
-Package pdftex.def Info: ../figures/CORREDA.png used on input line 196.
+Package pdftex.def Info: ../figures/CORREDA.png used on input line 194.
 (pdftex.def)             Requested size: 512.17558pt x 142.26524pt.
 
-Overfull \hbox (42.42056pt too wide) in paragraph at lines 196--197
+Overfull \hbox (42.42056pt too wide) in paragraph at lines 194--195
 [][] 
  []
 
@@ -658,7 +658,7 @@ y)> <../figures/NDAI_vs_SD.png (PNG copy)> <../figures/NDAIEDA.png> <../figures
 File: ../figures/ROC_12_folds_DA.png Graphic file (type png)
 
 <use ../figures/ROC_12_folds_DA.png>
-Package pdftex.def Info: ../figures/ROC_12_folds_DA.png used on input line 207.
+Package pdftex.def Info: ../figures/ROC_12_folds_DA.png used on input line 205.
 
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
@@ -666,7 +666,7 @@ Package pdftex.def Info: ../figures/ROC_12_folds_DA.png used on input line 207.
 File: ../figures/AUC_12_folds_DA.png Graphic file (type png)
 
 <use ../figures/AUC_12_folds_DA.png>
-Package pdftex.def Info: ../figures/AUC_12_folds_DA.png used on input line 212.
+Package pdftex.def Info: ../figures/AUC_12_folds_DA.png used on input line 210.
 
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
@@ -674,7 +674,7 @@ Package pdftex.def Info: ../figures/AUC_12_folds_DA.png used on input line 212.
 File: ../figures/AUC_difference.png Graphic file (type png)
 
 <use ../figures/AUC_difference.png>
-Package pdftex.def Info: ../figures/AUC_difference.png used on input line 217.
+Package pdftex.def Info: ../figures/AUC_difference.png used on input line 215.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
  [5 <../figures/CORREDA.png> <../figures/ROC_12_folds_DA.png> <../figures/AUC_1
 2_folds_DA.png> <../figures/AUC_difference.png>] <../figures/qda1_12fold_conf.p
@@ -682,7 +682,7 @@ ng, id=71, 361.35pt x 361.35pt>
 File: ../figures/qda1_12fold_conf.png Graphic file (type png)
 
 <use ../figures/qda1_12fold_conf.png>
-Package pdftex.def Info: ../figures/qda1_12fold_conf.png used on input line 239
+Package pdftex.def Info: ../figures/qda1_12fold_conf.png used on input line 237
 .
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
@@ -690,7 +690,7 @@ Package pdftex.def Info: ../figures/qda1_12fold_conf.png used on input line 239
 File: ../figures/qda2_12fold_conf.png Graphic file (type png)
 
 <use ../figures/qda2_12fold_conf.png>
-Package pdftex.def Info: ../figures/qda2_12fold_conf.png used on input line 243
+Package pdftex.def Info: ../figures/qda2_12fold_conf.png used on input line 241
 .
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
@@ -698,7 +698,7 @@ Package pdftex.def Info: ../figures/qda2_12fold_conf.png used on input line 243
 File: ../figures/qda3_12fold_conf.png Graphic file (type png)
 
 <use ../figures/qda3_12fold_conf.png>
-Package pdftex.def Info: ../figures/qda3_12fold_conf.png used on input line 247
+Package pdftex.def Info: ../figures/qda3_12fold_conf.png used on input line 245
 .
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
@@ -706,21 +706,21 @@ Package pdftex.def Info: ../figures/qda3_12fold_conf.png used on input line 247
 File: ../figures/qda1_prob.png Graphic file (type png)
 
 <use ../figures/qda1_prob.png>
-Package pdftex.def Info: ../figures/qda1_prob.png used on input line 257.
+Package pdftex.def Info: ../figures/qda1_prob.png used on input line 255.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
 <../figures/qda2_prob.png, id=75, 361.35pt x 361.35pt>
 File: ../figures/qda2_prob.png Graphic file (type png)
 
 <use ../figures/qda2_prob.png>
-Package pdftex.def Info: ../figures/qda2_prob.png used on input line 261.
+Package pdftex.def Info: ../figures/qda2_prob.png used on input line 259.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
 
 <../figures/qda3_prob.png, id=76, 361.35pt x 361.35pt>
 File: ../figures/qda3_prob.png Graphic file (type png)
 
 <use ../figures/qda3_prob.png>
-Package pdftex.def Info: ../figures/qda3_prob.png used on input line 265.
+Package pdftex.def Info: ../figures/qda3_prob.png used on input line 263.
 (pdftex.def)             Requested size: 140.92793pt x 140.92593pt.
  [6 <../figures/qda1_12fold_conf.png> <../figures/qda2_12fold_conf.png> <../fig
 ures/qda3_12fold_conf.png> <../figures/qda1_prob.png (PNG copy)> <../figures/qd
@@ -729,7 +729,7 @@ shold.png, id=83, 657.45625pt x 507.8975pt>
 File: ../figures/threshold.png Graphic file (type png)
 
 <use ../figures/threshold.png>
-Package pdftex.def Info: ../figures/threshold.png used on input line 281.
+Package pdftex.def Info: ../figures/threshold.png used on input line 279.
 (pdftex.def)             Requested size: 230.11313pt x 177.76678pt.
 
 <../figures/LogitClassification.png, id=84, 703.62875pt x 588.1975pt>
@@ -737,10 +737,10 @@ File: ../figures/LogitClassification.png Graphic file (type png)
 
 <use ../figures/LogitClassification.png>
 Package pdftex.def Info: ../figures/LogitClassification.png used on input line 
-288.
+286.
 (pdftex.def)             Requested size: 512.1416pt x 142.26524pt.
 
-Overfull \hbox (42.38658pt too wide) in paragraph at lines 288--289
+Overfull \hbox (42.38658pt too wide) in paragraph at lines 286--287
 [][] 
  []
 
@@ -749,10 +749,10 @@ File: ../figures/LogitProbabilities.png Graphic file (type png)
 
 <use ../figures/LogitProbabilities.png>
 Package pdftex.def Info: ../figures/LogitProbabilities.png used on input line 2
-94.
+92.
 (pdftex.def)             Requested size: 512.1416pt x 142.26524pt.
 
-Overfull \hbox (42.38658pt too wide) in paragraph at lines 294--295
+Overfull \hbox (42.38658pt too wide) in paragraph at lines 292--293
 [][] 
  []
 
@@ -762,10 +762,10 @@ File: ../figures/ClassificationOutcomes.png Graphic file (type png)
 
 <use ../figures/ClassificationOutcomes.png>
 Package pdftex.def Info: ../figures/ClassificationOutcomes.png used on input li
-ne 299.
+ne 297.
 (pdftex.def)             Requested size: 512.14838pt x 142.26524pt.
 
-Overfull \hbox (42.39336pt too wide) in paragraph at lines 299--300
+Overfull \hbox (42.39336pt too wide) in paragraph at lines 297--298
 [][] 
  []
 
@@ -773,7 +773,7 @@ Overfull \hbox (42.39336pt too wide) in paragraph at lines 299--300
 File: ../figures/LogitROC.png Graphic file (type png)
 
 <use ../figures/LogitROC.png>
-Package pdftex.def Info: ../figures/LogitROC.png used on input line 308.
+Package pdftex.def Info: ../figures/LogitROC.png used on input line 306.
 (pdftex.def)             Requested size: 164.41711pt x 128.51889pt.
 
 <../figures/ParameterConvergence.png, id=94, 657.45625pt x 507.8975pt>
@@ -781,7 +781,7 @@ File: ../figures/ParameterConvergence.png Graphic file (type png)
 
 <use ../figures/ParameterConvergence.png>
 Package pdftex.def Info: ../figures/ParameterConvergence.png used on input line
- 312.
+ 310.
 (pdftex.def)             Requested size: 164.41711pt x 127.0128pt.
 
 
@@ -789,7 +789,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8 <../figures/LogitProbabilities.png> <../figures/ClassificationOutcomes.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
@@ -797,10 +797,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 324--325
 File: ../figures/AUC_12_folds.png Graphic file (type png)
 
 <use ../figures/AUC_12_folds.png>
-Package pdftex.def Info: ../figures/AUC_12_folds.png used on input line 328.
+Package pdftex.def Info: ../figures/AUC_12_folds.png used on input line 326.
 (pdftex.def)             Requested size: 93.95174pt x 150.00151pt.
 
-Overfull \hbox (3.94661pt too wide) in paragraph at lines 328--329
+Overfull \hbox (3.94661pt too wide) in paragraph at lines 326--327
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -809,15 +809,15 @@ File: ../figures/ROC_fold_comparison.png Graphic file (type png)
 
 <use ../figures/ROC_fold_comparison.png>
 Package pdftex.def Info: ../figures/ROC_fold_comparison.png used on input line 
-331.
+329.
 (pdftex.def)             Requested size: 375.81718pt x 149.99605pt.
 
-Overfull \hbox (3.95619pt too wide) in paragraph at lines 331--332
+Overfull \hbox (3.95619pt too wide) in paragraph at lines 329--330
 []\OT1/cmr/m/n/10 s[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
  []
 
@@ -825,17 +825,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 336--337
 File: ../figures/AUC_images.png Graphic file (type png)
 
 <use ../figures/AUC_images.png>
-Package pdftex.def Info: ../figures/AUC_images.png used on input line 342.
+Package pdftex.def Info: ../figures/AUC_images.png used on input line 340.
 (pdftex.def)             Requested size: 150.00323pt x 80.00487pt.
 
 <../figures/ROC_image1.pdf, id=103, 505.89pt x 505.89pt>
 File: ../figures/ROC_image1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image1.pdf>
-Package pdftex.def Info: ../figures/ROC_image1.pdf used on input line 345.
+Package pdftex.def Info: ../figures/ROC_image1.pdf used on input line 343.
 (pdftex.def)             Requested size: 234.88132pt x 150.00046pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 345--346
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 343--344
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -845,10 +845,10 @@ AUC_12_folds.png> <../figures/ROC_fold_comparison.png>]
 File: ../figures/ROC_image4.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image4.pdf>
-Package pdftex.def Info: ../figures/ROC_image4.pdf used on input line 352.
+Package pdftex.def Info: ../figures/ROC_image4.pdf used on input line 350.
 (pdftex.def)             Requested size: 234.88132pt x 150.00046pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 352--353
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 350--351
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -856,15 +856,15 @@ Overfull \hbox (3.94826pt too wide) in paragraph at lines 352--353
 File: ../figures/ROC_image8.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image8.pdf>
-Package pdftex.def Info: ../figures/ROC_image8.pdf used on input line 355.
+Package pdftex.def Info: ../figures/ROC_image8.pdf used on input line 353.
 (pdftex.def)             Requested size: 234.88132pt x 150.00046pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 355--356
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 353--354
 []\OT1/cmr/m/n/10 s[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
@@ -872,10 +872,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--362
 File: ../figures/ROC_converge1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge1.pdf>
-Package pdftex.def Info: ../figures/ROC_converge1.pdf used on input line 365.
+Package pdftex.def Info: ../figures/ROC_converge1.pdf used on input line 363.
 (pdftex.def)             Requested size: 234.88132pt x 179.99745pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 365--366
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 363--364
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -883,10 +883,10 @@ Overfull \hbox (3.94826pt too wide) in paragraph at lines 365--366
 File: ../figures/AUCconverge.png Graphic file (type png)
 
 <use ../figures/AUCconverge.png>
-Package pdftex.def Info: ../figures/AUCconverge.png used on input line 370.
+Package pdftex.def Info: ../figures/AUCconverge.png used on input line 368.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 370--371
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 368--369
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -897,10 +897,10 @@ File: ../figures/ROC_converge_shuffle1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge_shuffle1.pdf>
 Package pdftex.def Info: ../figures/ROC_converge_shuffle1.pdf used on input lin
-e 378.
+e 376.
 (pdftex.def)             Requested size: 234.88132pt x 179.99745pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 378--379
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 376--377
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -909,15 +909,15 @@ File: ../figures/ROC_converge_shuffle2.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge_shuffle2.pdf>
 Package pdftex.def Info: ../figures/ROC_converge_shuffle2.pdf used on input lin
-e 381.
+e 379.
 (pdftex.def)             Requested size: 234.88132pt x 179.99745pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 381--382
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 379--380
 []\OT1/cmr/m/n/10 s[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
@@ -925,10 +925,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 386--387
 File: ../figures/Gini_mean_sd.png Graphic file (type png)
 
 <use ../figures/Gini_mean_sd.png>
-Package pdftex.def Info: ../figures/Gini_mean_sd.png used on input line 390.
+Package pdftex.def Info: ../figures/Gini_mean_sd.png used on input line 388.
 (pdftex.def)             Requested size: 187.89897pt x 140.00383pt.
 
-Overfull \hbox (3.94427pt too wide) in paragraph at lines 390--391
+Overfull \hbox (3.94427pt too wide) in paragraph at lines 388--389
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -936,11 +936,11 @@ Overfull \hbox (3.94427pt too wide) in paragraph at lines 390--391
 File: ../figures/Gini_importance.png Graphic file (type png)
 
 <use ../figures/Gini_importance.png>
-Package pdftex.def Info: ../figures/Gini_importance.png used on input line 393.
+Package pdftex.def Info: ../figures/Gini_importance.png used on input line 391.
 
 (pdftex.def)             Requested size: 281.86288pt x 179.9982pt.
 
-Overfull \hbox (3.95146pt too wide) in paragraph at lines 393--394
+Overfull \hbox (3.95146pt too wide) in paragraph at lines 391--392
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -950,11 +950,11 @@ _converge_shuffle1.pdf> <../figures/ROC_converge_shuffle2.pdf>]
 File: ../figures/classification_1.png Graphic file (type png)
 
 <use ../figures/classification_1.png>
-Package pdftex.def Info: ../figures/classification_1.png used on input line 402
+Package pdftex.def Info: ../figures/classification_1.png used on input line 400
 .
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 402--403
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 400--401
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -962,10 +962,10 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 402--403
 File: ../figures/label_1.png Graphic file (type png)
 
 <use ../figures/label_1.png>
-Package pdftex.def Info: ../figures/label_1.png used on input line 405.
+Package pdftex.def Info: ../figures/label_1.png used on input line 403.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 405--406
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 403--404
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -973,11 +973,11 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 405--406
 File: ../figures/classification_3.png Graphic file (type png)
 
 <use ../figures/classification_3.png>
-Package pdftex.def Info: ../figures/classification_3.png used on input line 411
+Package pdftex.def Info: ../figures/classification_3.png used on input line 409
 .
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 411--412
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 409--410
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -985,10 +985,10 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 411--412
 File: ../figures/label_3.png Graphic file (type png)
 
 <use ../figures/label_3.png>
-Package pdftex.def Info: ../figures/label_3.png used on input line 414.
+Package pdftex.def Info: ../figures/label_3.png used on input line 412.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 414--415
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 412--413
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -996,11 +996,11 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 414--415
 File: ../figures/classification_4.png Graphic file (type png)
 
 <use ../figures/classification_4.png>
-Package pdftex.def Info: ../figures/classification_4.png used on input line 420
+Package pdftex.def Info: ../figures/classification_4.png used on input line 418
 .
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 420--421
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 418--419
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -1008,10 +1008,10 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 420--421
 File: ../figures/label_4.png Graphic file (type png)
 
 <use ../figures/label_4.png>
-Package pdftex.def Info: ../figures/label_4.png used on input line 423.
+Package pdftex.def Info: ../figures/label_4.png used on input line 421.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 423--424
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 421--422
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -1022,11 +1022,11 @@ classification_1.png> <../figures/label_1.png> <../figures/classification_3.png
 File: ../figures/classification_9.png Graphic file (type png)
 
 <use ../figures/classification_9.png>
-Package pdftex.def Info: ../figures/classification_9.png used on input line 430
+Package pdftex.def Info: ../figures/classification_9.png used on input line 428
 .
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 430--431
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 428--429
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -1034,10 +1034,10 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 430--431
 File: ../figures/label_9.png Graphic file (type png)
 
 <use ../figures/label_9.png>
-Package pdftex.def Info: ../figures/label_9.png used on input line 433.
+Package pdftex.def Info: ../figures/label_9.png used on input line 431.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 433--434
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 431--432
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -1046,10 +1046,10 @@ File: ../figures/classification_10.png Graphic file (type png)
 
 <use ../figures/classification_10.png>
 Package pdftex.def Info: ../figures/classification_10.png used on input line 43
-9.
+7.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 439--440
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 437--438
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -1057,10 +1057,10 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 439--440
 File: ../figures/label_10.png Graphic file (type png)
 
 <use ../figures/label_10.png>
-Package pdftex.def Info: ../figures/label_10.png used on input line 442.
+Package pdftex.def Info: ../figures/label_10.png used on input line 440.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 442--443
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 440--441
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -1069,10 +1069,10 @@ File: ../figures/classification_11.png Graphic file (type png)
 
 <use ../figures/classification_11.png>
 Package pdftex.def Info: ../figures/classification_11.png used on input line 44
-8.
+6.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 448--449
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 446--447
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -1080,10 +1080,10 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 448--449
 File: ../figures/label_11.png Graphic file (type png)
 
 <use ../figures/label_11.png>
-Package pdftex.def Info: ../figures/label_11.png used on input line 451.
+Package pdftex.def Info: ../figures/label_11.png used on input line 449.
 (pdftex.def)             Requested size: 234.87839pt x 179.9982pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 451--452
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 449--450
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -1124,7 +1124,7 @@ e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2013/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on writeupLab4.pdf (14 pages, 5765963 bytes).
+Output written on writeupLab4.pdf (14 pages, 5758206 bytes).
 PDF statistics:
  253 PDF objects out of 1000 (max. 8388607)
  110 compressed objects within 2 object streams
