@@ -153,16 +153,14 @@ image3 <- mutate(image3,
                  fold = ifelse(block.x==TRUE & block.y==TRUE, 11, fold), 
                  fold = ifelse(block.x == FALSE & block.y == TRUE, 12, fold))
 
-combined <- rbind(image1, image2, image3)
-combined$block.x <- NULL
-combined$block.y <- NULL
+combined <- rbind(image1, image2, image3) %>%  # combine the three images 
+            dplyr::select(-block.x,-blocky) %>% # removes block.x and block.y
+            mutate(combined, label=as.factor(label)) %>%
+            filter(combined, label != 0) %>% #filter out unlabelled points.  
+            mutate(combined, label = droplevels(label))
 
-combined <- mutate(combined, label=as.factor(label)) %>%
-            filter(combined, label != 0)  #filter out unlabelled points.  
-combined <- mutate(combined, label = droplevels(label))
-
-#depending on whether we want to train on all features, or only NDAI, SD and 
-#CORR, we can set set TopThree to TRUE
+# Depending on whether we want to train on all features, or only NDAI, SD and 
+# CORR, we can set set TopThree to TRUE
 
 TopThree <- TRUE
 if (TopThree){
@@ -170,6 +168,7 @@ if (TopThree){
   names(combined)[7] <- "fold"
   combined <- tbl_df(combined)
 }
+
 ################################################################################
 # Apply Random Forest model to all 12 Folds
 
