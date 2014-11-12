@@ -1,5 +1,4 @@
-#In this document, we run random forest on our dataset and save them as Rdata
-#files to be loaded later in plots.R in order to do our analysis. 
+# This file contains the random forest section of the analysis
 
 library(dplyr)
 library(ggplot2)
@@ -330,8 +329,6 @@ ROC.curve.data.frame <- function(ROC.curve.data.frame.begin){
 
 
 ################################################################################
-
-################################################################################
 # False positive, False negative, True positive, True negative plots
 
 
@@ -396,7 +393,6 @@ False.positive.False.negative.Plots <- function(image, rf){
 
 #we gave an example of what riles contains the comparison csv, this is generated in the random_forest_functions.R file
 
-filename <- "ROC_convergence_comparison.csv"
 
 plot.roc <- function(filename){
     ROC.data <- read.csv(filename)
@@ -452,7 +448,7 @@ Gini.reformat <- function{
 ################################################################################
 # Reshape Gini
 
-Reshape.Gini <- function{
+Reshape.Gini <- function(Gini){
     # Reformats the Gini dataframe for plotting of Gini Importance:
     # Outputs the saved plot
     
@@ -522,6 +518,17 @@ if (ImageSave){
     image <- image3
     False.positive.False.negative.Plots(image, rf)
     
+    # ROC comparison plots
+    filename <- "ROC_convergence_comparison.csv"
+    
+    plot.roc(filename)
+    
+    #Gini plots
+    Gini <- Reshape.Gini(Gini.reformat(Gini.data.frame))
+    Reshape.Gini <- function(Gini)
+    
+    #AUC table
+    AUC.table
     
     
 }
