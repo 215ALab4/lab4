@@ -102,12 +102,12 @@ The feature CORR is an average linear correlation of radiation measurements at d
 
 \subsection{Plots of Raw and Expertly Labelled Images}
 Figure 1 displays the unprocessed image files for comparison with Figure 2, the expertly-labelled files. With the human eye it is not so difficult to parse cloud from ground based on these images, but we see that cloudy and clear pixels alike run through wide spans of AN so other features must be used.
-\begin{figure}[]
+\begin{figure}[h]
 \includegraphics[width = 18cm, height=5cm]{RAWEDA.png}
 \caption{Raw images with AN radiances.}
 \end{figure}
 
-\begin{figure}[]
+\begin{figure}[h]
 \includegraphics[width = 18cm, height=5cm]{EXPERTSEDA.png}
 \caption{Images with expert classifications. Proportions: 39.8$\%$ unknown, 23.4$\%$ cloudy, 36.8$\%$ clear.}
 \end{figure}
@@ -193,7 +193,7 @@ The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatiall
 \caption{Mapped CORR readings. Cloudy regions tend to be lighter, but not as strongly as in NDAI.}
 \end{figure}
 
-\section{Modeling}
+\section{Modeling} As shown in the EDA section, it is possible to separate cloudy and clear pixels based on the 3 engineered features. Density plots of the radiances do not display similar separations. This along with the random forests Gini importance cause us to focus on NDAI, SD, and CORR.
 
 \subsection{QDA/LDA}
 
@@ -214,7 +214,7 @@ The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatiall
     \caption{AUC Differences}
     \label{12-foldAUCdiff}
   \end{subfigure}    
-  \caption{(\ref{12-foldROC}) shows the ROC curves for each of the 12 folds of cross validation.  (\ref{12-foldAUC}) and (\ref{12-foldAUCdiff}) show evidence via AUC estimates that QDA performs slightly better than LDA.  Note that in both analysis, fold 1 has an abnormally low AUC.}
+  \caption{(\ref{12-foldROC}) shows the ROC curves for each of the 12 folds of cross validation and the ROC curve for the model with averaged parameters (AUC = .93).  (\ref{12-foldAUC}) and (\ref{12-foldAUCdiff}) show evidence via AUC estimates that QDA performs slightly better than LDA.  Note that in both analysis, fold 1 has an abnormally low AUC.}
   \label{fig:qda_lda}
 \end{figure}
 Linear discriminant analysis (LDA) for binary classification aims to separate the feature space using a hyperplane.  It assumes that the each class is normally distributed with means $\mu_0$ and $\mu_1$ and that the two classes are homoscedastic with covariance matrix $\Sigma_0=\Sigma_1=\Sigma$.  Quadratic discriminant analysis works in the same manner except that it makes no assumptions about the covariance matrix.  Thus given the multivariate Guassian distribution:
@@ -226,7 +226,7 @@ where $c=1,2$ is the class label.  Let $p_c$ be the prior probability of class $
 P(x \in \textrm{ Class } c \vert X=x) = \frac{f_c(x) p_c}{f_1(x) p_1 + f_2(x) p_2}
 \end{equation}
 We can then classify each point by selecting a probability threshold and hard-assigning based on whether or not the posterior probability was higher or lower than that threshold.  Both LDA and QDA were carried out during our analyis of the data, but as we suspected from our exploratory data anaylsis, QDA performed slightly better than LDA when we compared the results side-by-side (see figure \ref{fig:qda_lda}).
-During cross-validation, each image was divided into four horizontal strips, resulting in 12 folds to be used in our validation procedure.  In each iteration, we withheld one of the strips and trained on the remaining 11.  The resulting images after piecing the horizontal strips back together can be seen in figure \ref{fig:QDA}.
+During cross-validation, each image was divided into four horizontal strips, resulting in 12 folds to be used in our validation procedure.  Quadrants were considered but rejected because one quadrant has only clouds and thus QDA breaks down. In each iteration, we withheld one of the strips and trained on the remaining 11.  The resulting images after piecing the horizontal strips back together can be seen in figure \ref{fig:QDA}.
 Cross-validation for QDA revealed that while the method works extremely well in some cases, producing AUC scores of almost 1, it sometimes fails to perform better than even the theoretical random classifier.  In particular, the classifier does not seem to be good at discerning snow from clouds in regions where there are many dark pixels corresponding to geographical features.  The most indicative example of this is seen in image 1 where the algorithm misclassifies an entire ridge-filled region as clouds.  We also noticed that there were some misclassifications within large cloudy regions.  Figure \ref{fig:QDAconf} shows this nicely.
 
 \begin{figure}[h]
@@ -266,11 +266,11 @@ Cross-validation for QDA revealed that while the method works extremely well in 
 \end{figure}
 
 \subsection{Logit}
-Logistic regression is a widely-used discriminative classification model arising from the class of generalized linear models. It is among the simplest classification methods and models the conditional distribution of the outcome given the covariates as a Bernoulli random variable with success probability given by the logistic function evaluated at $X_i \beta$, where $X_i$ is the covariate vector and $\beta$ the coefficient vector. It further supposes that the response variables are independent conditioned on the observed features. To classify, a threshold probability is chosen and all response variables with success probability above this value are labelled a success; otherwise, they are denoted as a failure. In our case, success is equivalent to cloudy and failure to clear. Preliminary results showed similar performance between the probit and logit models,  so we chose to focus on logit due its fewer assumptions (probit requires homoscedasticity and normality of errors) and greater ubiquity in practice. Use of logistic regression also assumes that the model has been properly specified with all significant and no extraneous predictors included. 
+Logistic regression is a widely-used discriminative classification method which models the conditional distribution of the outcome given the covariates as a Bernoulli random variable with success probability given by the logistic function evaluated at $X_i \beta$. Here $X_i$ is the covariate vector and $\beta$ the coefficient vector. It further supposes that the response variables are independent conditioned on the observed features. Classification is performed in the same manner as in LDA according to a chosen threshold, above which a pixel is labelled cloudy. Preliminary results showed similar performance between the probit and logit models, so we focused on logit due its fewer assumptions (probit requires homoscedasticity and normality of errors) and greater ubiquity in practice. Use of logistic regression also assumes that the model has been properly specified with all significant and no extraneous predictors included. 
 
-The logit model obtained via averaging after 12-fold cross-validation has $y_i = -3.356 + 1.900 * NDAI_i - 0.074 * SD_i + 9.002 * CORR_i$ where $P_i$(Cloud) = $ \frac{1}{1 + e^{-y_i}}$. To choose our cutoff value for declaring a pixel cloudy, we varied the cutoffs from .01 to 1 and calculated the misclassification error of our model at that threshold on expertly-labelled pixels. The figure below shows that the optimal threshold for this model is at .38, with an error of just under 10.1$\%$. As a consequence of this low threshold, we observe more false positives than false negatives. This will be further explored below.
+The logit model obtained via averaging after 12-fold cross-validation has $y_i = -3.356 + 1.900 * NDAI_i - 0.074 * SD_i + 9.002 * CORR_i$ where $P_i$(Cloud) = $ \frac{1}{1 + e^{-y_i}}$. To choose a cutoff value, we varied the cutoffs from .01 to 1 and calculated the misclassification error of our model at that threshold on expertly-labelled pixels. The figure below shows that the optimal threshold for this model is at .38, with an error of just under 10.1$\%$. 
 
-Cross-validation was done by dividing each image into quandrants and holding one quadrant out for testing in each iteration of training. There were thus 12-folds in the CV procedure. We chose blocks to comprise each fold rather than a random subsample of points in order to compensate for the correlation of errors among neighboring points. The average CV error was 11.48$\%$. The ROC curve of the logit model is given in Figure 17 and has an AUC of .95.
+Cross-validation was done by dividing each image into quandrants and holding one quadrant out for testing in each iteration of training. There were thus 12-folds in the CV procedure. We chose blocks to comprise each fold rather than a random subsample of points in order to compensate for the correlation of errors among neighboring points. The average CV error was 11.48$\%$. The ROC curve of the logit model is given in Figure 17 and has an AUC of .95 as compared to the AUC of .93 for QDA.
 
 \begin{figure}[H]
 \begin{center}
@@ -296,7 +296,7 @@ Here we see the logit probabilites plotted spatially. This should approximate ho
 \caption{Classification results from logit with respect to the expert labels.}
 \end{figure}
 
-We now discuss the trends in misclassification. As depicted in the above figure, we have many more false positives than false negatives with large regions sometimes completely misclassified. These regions are often situated on boundaries of labelled and unlabelled points. Calculation shows the false negative rate to be 7.5$\%$ and the false positive rate to be 11.7$\%$. Models with interaction terms were considered and yielded very slight improvement as measured by drop in data-wide misclassification rate from .104 to .091. However, comparison of the misclassification plots showed that the increased complexity did not resolve the large clusters of false positives observed in each image. Especially concerning areas are the large tracts of false positives on the `island' in the southwest corner of image 1 and the southeast sections of images 2 and 3. Looking at the NDAI images only suggests these areas to be cloudy, but the AN radiance images have dark or uneven patches in these areas. Our model may thus be responding to irregularities in the ground's terrain.
+We now discuss the trends in misclassification. As depicted in the above figure, we have many more false positives than false negatives with large regions sometimes completely misclassified. These regions are often situated on boundaries of labelled and unlabelled points. Calculation shows the false negative rate to be 7.5$\%$ and the false positive rate to be 11.7$\%$. Models with interaction terms were considered and yielded very slight improvement as measured by drop in data-wide misclassification rate from 10.4$\%$ to 9.1$\%$. However, comparison of the misclassification plots showed that the increased complexity did not resolve the large clusters of false positives observed in each image. Especially concerning areas are the large tracts of false positives on the `island' in the southwest corner of image 1 and the southeast sections of images 2 and 3. Looking at the NDAI images only suggests these areas to be cloudy, but the AN radiance images have dark or uneven patches in these areas. Our model may thus be responding to irregularities in the ground's terrain.
 
 \begin{figure}[h]
   \centering 
@@ -313,11 +313,13 @@ We now discuss the trends in misclassification. As depicted in the above figure,
 
 The right half of Figure 17 displays the estimated coefficient values output by logistic regression at each stage of cross-validation. The points are a running average of the previously estimated coefficients, so we expect them to converge towards the higher iteration values. After the first few iterations for all four coefficients, we see convergent behavior, particularly for the intercept and NDAI terms. 
 
-As found in our other models, one image outperformed the others when used as a trainer. In the case of logit, training on image 3 gave substantially better predictions than training on either of the other images.The AUC's were .91, .876, and .96 when training was done on image 1, 2, and 3, respectively, with associated misclassification rates .155, .204, and .096. These results inform our hypothesis that images similar to image 3 will be difficult to classify unless similar data were included in the training set. Examination illustrates that image 3 has much sharper variation in its visual features than the other two images, a phenomenon that is only partially captured by our chosen covariates. Hence we expect our predictions to be fairly accurate on images with smooth changes within cloud and ground surfaces but possibly off in regions of intense heterogeneity.
+As found in our other models, one image outperformed the others when used as a trainer. In the case of logit, training on image 3 gave substantially better predictions than training on either of the other images.The AUC's were .91, .876, and .96 when training was done on image 1, 2, and 3, respectively, with associated misclassification rates 15.5$\%$, 20.4$\%$, and 9.6$\%$. These results inform our hypothesis that images similar to image 3 will be difficult to classify unless similar data were included in the training set. Examination illustrates that image 3 has much sharper variation in its visual features than the other two images, a phenomenon that is only partially captured by our chosen covariates. Hence we expect our predictions to be fairly accurate on images with smooth changes within cloud and ground surfaces but possibly off in regions of intense heterogeneity.
 
 \subsection{Random Forest}
 
-For random forest, as in all the other classifiers, we divided the three images into equal sized quadrants (2X2) rectangles in order to do 12 fold validation on the dataset.  That is, for each iteration of the validation, we dropped one of the quadrants as a test set, and trained on the remaining 11 quadrants.  Keeping the test segments as disjoint chunks from the test set ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  As such, we also expect the performance of the model on these test sets to be a much better predicator of how our model will perform on new images than if we randomly subsampled the validation folds.  Indeed, after doing random subsampling, we noticed that the AUC was at a high 0.999 for all cross validations, whereas by cross validating on the isolated quadrants, our AUC curves had much higher variance, as seen below: \\
+A random forest is a tree based model that improves generalizability of the model by bootstrapping to generate a forest of trees, then bagging by having the trees vote on the result predictions.  Both bagging and bootstrapping help decrease the variance of our predictions. This model does not have underlying assumptions on the dataset.  
+
+For the random forest, as in all the other classifiers, we divided the three images into equal sized quadrants (2X2) rectangles in order to do 12 fold validation on the dataset.  That is, for each iteration of the validation, we dropped one of the quadrants as a test set, and trained on the remaining 11 quadrants.  Keeping the test segments as disjoint chunks from the test set ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  As such, we also expect the performance of the model on these test sets to be a much better predicator of how our model will perform on new images than if we randomly subsampled the validation folds.  Indeed, after doing random subsampling, we noticed that the AUC was at a high 0.999 for all cross validations, whereas by cross validating on the isolated quadrants, our AUC curves had much higher variance, as seen below: \\
 
 \begin{figure}[H]
 \minipage{0.2\textwidth}
@@ -357,12 +359,12 @@ We also trained on each image and tested on the remaining two. \\
 
 \begin{figure}[H]
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts]{ROC_converge1.pdf}
+  \includegraphics[width=\linewidth, height = 170pts]{ROC_converge1.pdf}
     \caption{Convergence of ROC training on increasing number of quadrants}\label{}
 \endminipage
 \minipage{0.5\textwidth}
 
-\includegraphics[width=\linewidth, height = 180pts]{AUCconverge.png}
+\includegraphics[width=\linewidth, height = 170pts]{AUCconverge.png}
   \caption{Smoothed convergence of AUC for growing training set 50 trees and 3 features}\label{}
 \endminipage
 
@@ -370,10 +372,10 @@ We also trained on each image and tested on the remaining two. \\
   
   \begin{figure}[H]
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts ]{ROC_converge_shuffle1.pdf}
+  \includegraphics[width=\linewidth, height = 170pts ]{ROC_converge_shuffle1.pdf}
 \endminipage\hfill
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts]{ROC_converge_shuffle2.pdf}
+  \includegraphics[width=\linewidth, height = 170pts]{ROC_converge_shuffle2.pdf}
 \endminipage\hfill
   \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
 \end{figure}
@@ -394,38 +396,28 @@ To gather a quantitative measurement of the importance of each feature, we first
 
   \begin{figure}[H]
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts ]{classification_1.png}
+  \includegraphics[width=\linewidth, height = 170pts ]{classification_1.png}
 \endminipage\hfill
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts]{label_1.png}
+  \includegraphics[width=\linewidth, height = 170pts]{label_1.png}
 \endminipage\hfill
 \end{figure}
 
   \begin{figure}[H]
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts ]{classification_3.png}
+  \includegraphics[width=\linewidth, height = 170pts ]{classification_3.png}
 \endminipage\hfill
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts]{label_3.png}
+  \includegraphics[width=\linewidth, height = 170pts]{label_3.png}
 \endminipage\hfill
 \end{figure}
 
 \begin{figure}[H]
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts ]{classification_4.png}
+  \includegraphics[width=\linewidth, height = 170pts ]{classification_4.png}
 \endminipage\hfill
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts]{label_4.png}
-\endminipage\hfill
-\end{figure}
-
-
-\begin{figure}[H]
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts ]{classification_9.png}
-\endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts]{label_9.png}
+  \includegraphics[width=\linewidth, height = 170pts]{label_4.png}
 \endminipage\hfill
 \end{figure}
 
