@@ -318,9 +318,9 @@ As found in our other models, one image outperformed the others when used as a t
 
 \subsection{Random Forest}
 
-Random forest is a decision tree based model that improves generalizability of the model by bootstrapping the training data each time we train a new tree in the forest, and than bagging (bootstrapp-aggregate) the forest by having the trees vote on the result of the predictions.  This model does not have underlying assumptions on the dataset, expect perhaps that bootstrapping our dataset will produce a representative sample (this will not be true for distributions with heavy tails, which via density plots confirms our data is not distributed such). 
+Random forest is a decision tree based model that improves generalizability of the model by bootstrapping the training data each time we train a new tree in the forest, and than bagging (bootstrap-aggregate) the forest by having the trees vote on the result of the predictions.  This model does not have underlying assumptions on the dataset, expect perhaps that bootstrapping our dataset will produce a representative sample (this will not be true for distributions with heavy tails, which via density plots confirms our data is not distributed such). 
 
-In theory we do not need to cross validate as each bootstrap only trains on a randomly selected 2/3 of the data, and also randomly selects a subset of the features to grow the decision tree on.  So there is an inherit out of bag error that can be computed by training on the entire dataset.  Nonetheless, to be consistent with the other classifiers, we divided the three images into equal sized quadrants (2X2) rectangles in order to do 12 fold validation on the dataset. Keeping the test segments as disjoint chunks from the test set ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  As such, we also expect the performance of the model on these test sets to be a much better predicator of how our model will perform on new images than if we randomly subsampled the validation folds.  Indeed, after doing random subsampling, we noticed that the AUC was at a high 0.999 for all cross validations, whereas by cross validating on the isolated quadrants, our AUC curves had much higher variance, as seen below: \\
+In theory we do not need to cross validate as each bootstrap only trains on a randomly selected 2/3 of the data, and also randomly selects a subset of the features to grow the decision tree on.  So there is an inherit out of bag error that can be computed by training on the entire dataset.  Nonetheless, to compare with the other classifiers, we divided the three images into equal sized quadrants (2X2) in order to do 12 fold validation on the dataset. Keeping the test segments as disjoint chunks from the test set ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  As such, we also expect the model to general better than if we had randomly subsampled the validation folds.  Indeed, after doing random subsampling, we noticed that the AUC was at a high 0.999 for all cross validations, whereas by cross validating on the isolated quadrants, our AUC curves had much higher variance, as seen below: \\
 
 \begin{figure}[H]
 \minipage{0.2\textwidth}
@@ -332,19 +332,19 @@ In theory we do not need to cross validate as each bootstrap only trains on a ra
   \caption{ROC across all 12 folds of quadrants}\label{}
 \end{figure}
 
-We also trained on each image and tested on the remaining two, AUC values and ROC curves are plotted below!
+We also trained on each image and tested on the remaining two, AUC values and ROC curves are plotted below.
 
 \begin{figure}[H]
 \minipage{0.3\textwidth}
-  \includegraphics[width=\linewidth, height = 150pts]{ROC_image8.pdf}
+  \includegraphics[width=\linewidth, height = 100pts]{ROC_image8.pdf}
   \caption{train 1 and 2, test 3: AUC: 0.8857}
 \endminipage
 \minipage{0.3\textwidth}
-  \includegraphics[width=\linewidth, height = 150pts]{ROC_image1.pdf}
+  \includegraphics[width=\linewidth, height = 100pts]{ROC_image1.pdf}
   \caption{train 2 and 3, test 1: AUC: 0.9757}
 \endminipage
 \minipage{0.3\textwidth}
-  \includegraphics[width=\linewidth, height = 150pts]{ROC_image2.pdf}
+  \includegraphics[width=\linewidth, height = 100pts]{ROC_image2.pdf}
   \caption{train 1 and 3, test 2: AUC: 0.9462}
 \endminipage
 
@@ -352,7 +352,7 @@ We also trained on each image and tested on the remaining two, AUC values and RO
 
 
 {\bf Where was the model performing poorly?}
-The images below show classification errors for models trained on 2 images and tested on the other, as noted above in the AUC table, these models unsurprisingly performed worse than training on 11/12 of the folds.  Nonetheless, they are a useful indication of where prediction errors occurred.  In general, when the training set included image 3, the model performed better.  Only when image 3 was not included did we get obtain an AUC value less than 90.   Below, we plot the classfication error and juxtapose it with the feature with the highest Gini importance (explained below).  
+The images below show classification errors for models trained on 2 images and tested on the other. Unsurprisingly this model did not perform as well as the 11-fold trained one but plotting their classification error helps us see where the model failed.  Below, we plot the classfication error and juxtapose it with the feature with the highest Gini importance (explained below) NDAI.  We plot the best and worst of the 3.  
   \begin{figure}[H]
 \minipage{0.53\textwidth}
   \includegraphics[width=\linewidth, height = 170pts ]{classification_image1.png}
@@ -374,7 +374,7 @@ The images below show classification errors for models trained on 2 images and t
 \end{figure}
 
 {\bf Convergence} 
- To test convergence, we trained on an increasing number of quadrants and looked at whether the AUC values increased as we increased the training set.  We also trained random forest with a range of forest sizes, from 2 trees to 50, by 25 trees, we were seeing very similar predictive behaviour.  Finally, since we only had 9 and 3 features to train on, branching out on 2 features or greater per node in the tree was not necessary, we stuck with the finest level of detail possible and used 1 feature per node. It was interesting to note that the continuity of increasing the training set by neighbouring quadrants displayed much less convergence than by increasing the training quadrant set in a randomly subsampled way.  The following three plots make this clear.  This shows how important the continuity between neighbouring pixels are in prediction, which is something we did not want to pick up on in our models, since that does not generalize well to new data.  \\
+ To test convergence, we trained on an increasing number of quadrants and looked at whether the AUC values increased as we increased the training set.  We also trained random forest with a range of forest sizes, from 2 trees to 50. By 25 trees, we were seeing very similar predictive behaviour.  Finally, since we had less than 9 features to train on, we stuck with the finest level of detail possible and branched on one feature per node. It was interesting to note that the continuity of increasing the training set by neighbouring quadrants displayed much less convergence than by increasing the training quadrant set in a randomly subsampled way.  The following three plots make this clear.  This shows how important the continuity between neighbouring pixels are in prediction, which is something we did not want to pick up on in our models, since that does not generalize well to new data.  \\
 
 \begin{figure}[H]
 \minipage{0.5\textwidth}
@@ -396,10 +396,10 @@ The images below show classification errors for models trained on 2 images and t
 \minipage{0.5\textwidth}
   \includegraphics[width=\linewidth, height = 170pts]{ROC_converge_shuffle2.pdf}
 \endminipage\hfill
-  \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
+  \caption{Convergence of ROC training on increasing number of quadrants in shuffled order.  Shuffled randomly twice to generate two plots of AUC convergence}\label{}
 \end{figure}
   
-{\bf Variable Importance} To gather a quantitative measurement of the importance of each feature, we first ran random forest using all the features and looked at the Gini importance measure.  This is calculated by recording the difference between the Gini measure of a random forest's predictions on a fold and the Gini measure with a particular feature's values randomly shuffled.  The intuition is that if a feature were crucial to the forest's trees, than randomly shuffling that feature will drastically decrease its Gini measure.  Sure enough, NDAI, SD and CORR   consistently ranked as the clear top three in all cross validations. \\
+{\bf Variable Importance} To gather a quantitative measurement of the importance of each feature, we first ran random forest using all the features and looked at the Gini importance measure.  This is calculated by recording the difference between the Gini measure of a random forest's predictions on a fold and the Gini measure with a particular feature's values randomly shuffled.  The intuition is that if a feature were crucial to the forest's trees, than randomly shuffling that feature will drastically decrease its Gini measure.  Sure enough, NDAI, SD and CORR consistently ranked as the top three in all cross validations. \\
 
   \begin{figure}[H]
 \minipage{0.4\textwidth}
@@ -417,7 +417,7 @@ The images below show classification errors for models trained on 2 images and t
 {\bf How we organized out code and github repo}
 
 \section{Conclusion} 
-Logit, QDA and random forest all created reasonable predictive models with high AUC values.  On average, random forest did best based on the mean and variance the AUC values across the folds.  Prediction errors for all three models shared similar shortcomings as seen in the classification error plots.  
+Logit, QDA and random forest all created reasonable predictive models with high AUC values.  On average, random forest did best based on the mean and variance the AUC values across the folds.  Prediction errors for all three models shared similar shortcomings as seen in the classification error plots.  Nonetheless, it is not clear whether the models are failing for similar reasons.  Logit and QDA/LDA have similar assumptions on the distribution of the classifications, but random forest only assumes no heavy tails.  In the absence of significant domain knowledge, coupled with the better AUC/ROC performance, we are inclined to conclude random forest generalizes better.  It also helped confirm the significance of the derived features NDAI, CORR and SD.  
  \begin{thebibliography}{1}
 
 \bibitem{notes} 
