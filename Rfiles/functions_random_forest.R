@@ -295,6 +295,7 @@ ROC.curve.data.frame <- function(ROC.curve.data.frame.begin){
   # outputs the entire dataframe of ROC curve data for all other folds.  
   # to output ROC information for the convergence data, just substite 'block'
   # in sprintf below with 'convergence'.  Same with 'image'
+  # writes to csv the ROC dataframe to be plotted in the random_forest_plots.R file
   
   filename <- sprintf("%dRF_block.Rdata", i)
   load(filename)
@@ -308,23 +309,9 @@ ROC.curve.data.frame <- function(ROC.curve.data.frame.begin){
   data$x.values <- x.values
   data$y.values <- rocData@y.values[[1]]
   ROC.data <<- rbind(ROC.data, data)
-  
+  write.csv(ROC.data, "ROC_convergence_comparison.csv")
   return(ROC.data)
 }
-################################################################################
-# Relabel ROC curve rates and save plot 
 
-relabel <- function{
-  #relabel ROC curve rates and save plot 
-  
-  colnames(ROC.data)[2] <- "False.positive.rate"
-  colnames(ROC.data)[3] <- "True.positive.rate"
-  pdf("ROC_fold_comparison.df")
-  g <- ggplot(ROC.data)+geom_line(aes(x=False.positive.rate, y = 
-                                        True.positive.rate, colour= 
-                                        fold.number))
-  dev.off()
-  return(g)
-}
 
 ################################################################################
