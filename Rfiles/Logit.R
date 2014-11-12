@@ -1,7 +1,11 @@
-setwd('STAT215A')
+setwd('~/STAT215A')
 library(ggplot2)
 library(dplyr)
 library(AUC)
+library(gridExtra)
+
+# Flag for whether or not we want to save images
+ImageSave <- FALSE
 
 # Load the images
 image1 <- read.table('image1.txt', header = F)
@@ -9,10 +13,10 @@ image2 <- read.table('image2.txt', header = F)
 image3 <- read.table('image3.txt', header = F)
 
 # Give the columns the appropriate labels
-collabs <- c('y','x','label','NDAI','SD','CORR','DF','CF','BF','AF','AN')
-names(image1) <- collabs
-names(image2) <- collabs
-names(image3) <- collabs
+column.labels <- c('y','x','label','NDAI','SD','CORR','DF','CF','BF','AF','AN')
+names(image1) <- column.labels
+names(image2) <- column.labels
+names(image3) <- column.labels
 
 # Add label to each image so we can combine them to work on one data set
 image1 <- mutate(image1, Image=1)
@@ -51,7 +55,7 @@ sd.eda <- ggplot(all.images, aes(x=x, y=y, color = SD)) +
   scale_color_continuous(name='SD', low = '#3366CC', high = '#FFFFFF')
 
 # Plot images with CORR
-coor.eda <- ggplot(all.images, aes(x=x, y=y, color = CORR)) + 
+corr.eda <- ggplot(all.images, aes(x=x, y=y, color = CORR)) + 
   geom_point() + 
   facet_wrap(~ Image) + 
   ggtitle('Mapped CORR Readings') + 
@@ -76,7 +80,8 @@ image2.labelled <- filter(image2, label != 0)
 image3.labelled <- filter(image3, label != 0)
 labelled.data <- rbind(image1.labelled, image2.labelled, image3.labelled)
 
-# Changes coding of -1 for clear to 0 for clear for labelled pixels. Column 3 is expert label
+# Changes coding of -1 for clear to 0 for clear for labelled pixels. 
+# Column 3 is expert label
 bin.data <- mutate(labelled.data, label=(label+1)/2)
 
 # Set cutoff, above which pixel is considered cloudy
@@ -84,20 +89,21 @@ threshold <- .38
 
 # Initialize storage matrices for coefficients and prediction error
 coeff <- rep(0,4)
-co <- matrix(0, 12, 4)
-co2 <- matrix(0, 12, 4)
+coeff.folds <- matrix(0, 12, 4)
+coeff.running.avg <- matrix(0, 12, 4)
 prediction.error <- 0
-# Perform CV
 
+# Perform CV
 for (i in 1:12){  
   cv.data <- filter(bin.data, assignment != i)
   test.data <- filter(bin.data, assignment == i)
   
   logit <- glm(label ~ NDAI + SD + CORR, data = cv.data, family = "binomial") 
   coeff <- coeff + logit$coefficients
-  co[i,] <- logit$coefficients
-  co2[i,] <- coeff/i
-  misclassification <- sum(abs((predict(logit, test.data, type = 'response') >= threshold) - test.data$label))
+  coeff.folds[i,] <- logit$coefficients
+  coeff.running.avg[i,] <- coeff/i
+  misclassification <- sum(abs((predict(logit, test.data, type = 'response') >=
+                                  threshold) - test.data$label))
   prediction.error <- prediction.error + misclassification
 }
 
@@ -150,34 +156,9 @@ misclassification.plot <- ggplot(all.images) +
                                  "Unknown" = "#999999")) + 
   facet_wrap(~ Image)
 
-# Plot outcomes against feature values
-
-if (ImageSave=TRUE){
-plot(image1$NDAI, correct1)
-plot(image1$SD, correct1)
-plot(image1$CORR, correct1)
-
-plot(image2$NDAI, correct2)
-plot(image2$SD, correct2)
-plot(image2$CORR, correct2)
-
-plot(image3$NDAI, correct3)
-plot(image3$SD, correct3)
-plot(image3$CORR, correct3)
-}
-
-
-features <- filter(all.images, NDAI, SD, CORR)
-
-plot3d(features$NDAI[correct > 1], 
-       features$SD[correct > 1], 
-       features$CORR[correct > 1], 
-       col = factor(correct[correct > 1]),
-       xlab = 'NDAI', ylab = 'SD', zlab = 'CORR')
-
 # Generate vector with misclassification rate for each threshold from .01 to 1
 error.vec <- sapply(seq(.01,1, length=100),
-              function(x) sum((prediction >= x)*1 != bin.data$label)/nrow(bin.data))
+                    function(x) sum((prediction >= x)*1 != bin.data$label)/nrow(bin.data))
 
 # Plot misclassification rates against thresholds to find minimum
 plot(c(1:100)/100, 
@@ -190,14 +171,44 @@ plot(c(33:43)/100,
      ylab = 'Misclassification Rate')
 
 # Make plots of parameter values as CV progresses
-intercept.coeff <- data.frame(Value=co2[,1], Variable=1, Index=c(1:12))
-ndai.coeff <- data.frame(Value=co2[,2], Variable=2, Index=c(1:12))
-sd.coeff <- data.frame(Value=co2[,3], Variable=3, Index=c(1:12))
-corr.coeff <- data.frame(Value=co2[,4], Variable=4, Index=c(1:12))
+intercept.coeff <- data.frame(Value=coeff.running.avg[,1], Variable=1, Index=c(1:12))
+ndai.coeff <- data.frame(Value=coeff.running.avg[,2], Variable=2, Index=c(1:12))
+sd.coeff <- data.frame(Value=coeff.running.avg[,3], Variable=3, Index=c(1:12))
+corr.coeff <- data.frame(Value=coeff.running.avg[,4], Variable=4, Index=c(1:12))
 coeff.conv <- rbind_list(intercept.coeff, ndai.coeff, sd.coeff, corr.coeff)
 
 parameter.convergence <- ggplot(coeff.conv, aes(x = Index, y=Value)) + 
   geom_point() + 
   facet_wrap(~ Variable, scales = 'free_y') + 
   ggtitle('Parameter Convergence in CV')
+
+# Save plots if flag was set to TRUE
+if (ImageSave == TRUE){
+  ggsave(filename="RAWEDA.png", plot=raw.eda,
+         height=5, width=5)
+  ggsave(filename="EXPERTSEDA.png", plot=experts.eda,
+         height=5, width=5)
+  ggsave(filename="NDAIEDA.png", plot=ndai.eda,
+         height=5, width=5)
+  ggsave(filename="SDEDA.png", plot=sd.ndai.eda,
+         height=5, width=5)
+  ggsave(filename="CORREDA.png", plot=corr.eda,
+         height=5, width=5)
+  ggsave(filename="LogitClassification.png", plot=images.logit.class,
+         height=5, width=5)
+  ggsave(filename="LogitProbabilites.png", plot=images.prob,
+         height=5, width=5)
+  ggsave(filename="ClassificationOutcomes.png", plot=misclassification.plot,
+         height=5, width=5)
+  ggsave(filename="ParameterConvergence.png", plot=parameter.convergence,
+         height=5, width=5)
+}
+
+an.eda <- ggplot(image3) + geom_density(aes(x=AN, group=factor(label), fill=factor(label)), alpha=0.5)
+af.eda <- ggplot(image3) + geom_density(aes(x=AF, group=factor(label), fill=factor(label)), alpha=0.5)
+bf.eda <- ggplot(image3) + geom_density(aes(x=BF, group=factor(label), fill=factor(label)), alpha=0.5)
+cf.eda <- ggplot(image3) + geom_density(aes(x=CF, group=factor(label), fill=factor(label)), alpha=0.5)
+df.eda <- ggplot(image3) + geom_density(aes(x=DF, group=factor(label), fill=factor(label)), alpha=0.5)
+
+
 

@@ -66,7 +66,7 @@
 \usepackage{float}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=.95in]{geometry}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
 \newtheorem{corollary}{Corollary}[section]
@@ -145,6 +145,7 @@ The following three plots give us a sense of what can be learned from NDAI, SD a
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth, height = 100pts]{CORR1.png}
 \endminipage\hfill
+\vspace{-5mm}
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth, height = 100pts]{CORR2.png}
 \endminipage\hfill
@@ -155,7 +156,7 @@ The following three plots give us a sense of what can be learned from NDAI, SD a
 \end{figure}
 
 
-\begin{figure}[]
+\begin{figure}[h]
   \centering 
   \begin{subfigure}[b]{0.3\textwidth}
     \includegraphics[width=\linewidth]{CORR_vs_NDAI.png}
@@ -183,18 +184,27 @@ The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatiall
 \includegraphics[width = 18cm, height = 4.5cm]{NDAIEDA.png}
 \caption{Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.}
 \end{figure}
-
+\vspace{-8mm}
 \begin{figure}[H]
 \includegraphics[width = 18cm, height = 4.5cm]{SDEDA.png}
 \caption{Mapped SD readings. Higher values show cloud boundaries, though also show uneven terrain.}
 \end{figure}
-
+\vspace{-8mm}
 \begin{figure}[H]
 \includegraphics[width = 18cm, height = 4.5cm]{CORREDA.png}
 \caption{Mapped CORR readings. Cloudy regions tend to be lighter, but not as strongly as in NDAI.}
 \end{figure}
 
-\section{Modeling} As shown in the EDA section, it is possible to separate cloudy and clear pixels based on the 3 engineered features. Density plots of the radiances do not display similar separations. This along with the Gini importance from our random forests analysis cause us to focus on NDAI, SD, and CORR.
+\section{Modeling} As shown in the EDA section, it is possible to separate cloudy and clear pixels based on the 3 engineered features. Density plots of the radiances do not display similar separations. This along with the Gini importance from our random forests analysis cause us to focus on NDAI, SD, and CORR. Due to space limitations, we include the radiance densities only for image 3.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height = 3.25cm, width = 3.25 cm]{ANEDA.png}
+\includegraphics[height = 3.25cm, width = 3.25 cm]{AFEDA.png}
+\includegraphics[height = 3.25cm, width = 3.25 cm]{BFEDA.png}
+\includegraphics[height = 3.25cm, width = 3.25 cm]{CFEDA.png}
+\includegraphics[height = 3.25cm, width = 3.25 cm]{DFEDA.png}
+\end{center}
+\end{figure}
 
 \subsection{QDA/LDA}
 
@@ -417,10 +427,12 @@ The images below show classification errors for models trained on 2 images and t
 {\bf How we organized out code and github repo}
 
 \section{Conclusion} 
-Logit, QDA and random forest all created reasonable predictive models with high AUC values.  On average, random forest did best based on the mean and variance the AUC values across the folds.  Prediction errors for all three models shared similar shortcomings as seen in the classification error plots.  Nonetheless, it is not clear whether the models are failing for similar reasons.  Logit and QDA/LDA have similar assumptions on the distribution of the classifications, but random forest only assumes no heavy tails.  In the absence of significant domain knowledge, coupled with the better AUC/ROC performance, we are inclined to conclude random forest generalizes better.  It also helped confirm the significance of the derived features NDAI, CORR and SD.  
+Logit, QDA and random forest all created reasonable predictive models with high AUC values.  On average, random forest did best based on the mean and variance the AUC values across the folds.  Prediction errors for all three models shared similar shortcomings as seen in the classification error plots.  Nonetheless, it is not clear whether the models are failing for similar reasons.  Logit and QDA/LDA have parametric assumptions on the distribution of the classifications, but random forest only assumes no heavy tails.  In the absence of significant domain knowledge, coupled with the better AUC/ROC performance, we are inclined to conclude random forest generalizes better.  It also helped confirm the significance of the derived features NDAI, CORR and SD.  
  \begin{thebibliography}{1}
-
 \bibitem{notes} 
+Shi, Tao, et al. "Daytime arctic cloud detection based on multi-angle satellite data with case studies." Journal of the American Statistical Association 103.482 (2008): 584-593.
+\bibitem{website}
+https://www-misr.jpl.nasa.gov/Mission/misrInstrument/viewingAngles/
 \end{thebibliography}
 
 
