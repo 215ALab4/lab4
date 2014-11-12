@@ -493,7 +493,7 @@ AUC.table <- function{
     rownames(AUC) <- "AUC"
     AUC <- t(AUC)
     
-    png("AUC_12folds.png")
+    png("AUC_12_folds.png")
     grid.table(AUC,show.rownames=T)
     dev.off()
     return(AUC)
