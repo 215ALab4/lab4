@@ -20,18 +20,6 @@ setwd(file.path("/accounts/grad/janetlishali/Lab4"))
 ################################################################################
 # False positive, False negative, True positive, True negative plots 
 
-# Specify below which random forest model you would like to generate plots for.
-# Remember that for the 12 fold validation, the Rdata files are in the form:
-#   "iRF_block.Rdata", where 'i' is the fold number
-
-filename <- "10RF_block.Rdata"
-load(file=filename)
-rf  # this is the random forest class that we have loaded. 
-
-# Here, specify which image you would like to make the 
-# plots on.  Since the 10th fold choosen above lies in image 3, 
-# for example, we choose image to be image3 for now.
-image <- image3 
 
 False.positive.False.negative.Plots <- function(image, rf){
   # This script generates false positive false negative plots for a prediction  
@@ -39,7 +27,7 @@ False.positive.False.negative.Plots <- function(image, rf){
   # outputs 3 pdf files of the raw image with NDAI plotted via geom_point, the 
   # correct expert classification plotted, and finally the predictions with 
   # factors indication whether the prediction was a false positive, true 
-  # positive, false negative or true negative. 
+  # positive, false negative or true negative.
   
   #this is a prediction generated from rf on image
   image$predicted <- predict(rf, image[4:6])
@@ -87,6 +75,18 @@ False.positive.False.negative.Plots <- function(image, rf){
 
   return(im3+fpr)
 }
+
+#########################################
+# Image plots:
+
+filename <- "10RF_block.Rdata"
+load(file=filename)
+rf  # this is the random forest class that we have loaded.
+
+# Here, specify which image you would like to make the
+# plots on.  Since the 10th fold choosen above lies in image 3,
+# for example, we choose image to be image3 for now.
+image <- image3
 
 ################################################################################
 # ROC curve plots
@@ -197,5 +197,8 @@ AUC.table <- function{
   dev.off()
   return(AUC)
 }
+
+
+
 
 

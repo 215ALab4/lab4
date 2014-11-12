@@ -216,10 +216,10 @@ Random.Forest.folds <- foreach(i = 1:num.folds)%dopar% {
 # Lastly, this script saves the confusion matrix of each cross validation.
 # as ROC_imagei.csv
 
-image.cv <- foreach(i = c(1,4,8))%dopar% {
+image.cv.1.3 <- foreach(i = c(1,9))%dopar% {
 
-  train <- filter(combined, fold %in% i:(i:4)) #so we drop the ith fold
-  test <- anti_join(combined, train) #test on the ith fold
+  test <- filter(combined, fold %in% i:(i+4)) #so we drop the ith fold
+  train <- anti_join(combined, train) #test on the ith fold
   rf <- try(rf.specific(train, num.tree))
   conf <- try(confusion.generate(rf,test))
   filename.table <-sprintf("ROC_image%d.csv", i)
@@ -232,6 +232,21 @@ image.cv <- foreach(i = c(1,4,8))%dopar% {
   return(filename) 
 }
 
+image.cv.2 <- for(i in 5:5){
+    
+    test <- filter(combined, fold=5 | fold = 6 | fold = 8) #so we drop the ith fold
+    train <- anti_join(combined, train) #test on the ith fold
+    rf <- try(rf.specific(train, num.tree))
+    conf <- try(confusion.generate(rf,test))
+    filename.table <-sprintf("ROC_image%d.csv", i)
+    write.csv(conf, file=filename.table)
+    auc <- try(auc.value(rf, test))
+    filename.auc <- sprintf("AUC_image%d.csv", i)
+    write.csv(auc, file=filename.auc)
+    filename <- sprintf("%sRF_image.Rdata", i)
+    try(save(rf,file =filename))
+    return(filename) 
+}
 ################################################################################
 # Convergence analysis and validation
 
