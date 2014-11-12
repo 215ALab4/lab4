@@ -5,57 +5,69 @@ library(dplyr)
 library(ggplot2)
 library(randomForest)
 library(foreach)
-require(doParallel)
-require(parallel) 
+library(doParallel)
+library(parallel) 
 library(cvTools)
 library(ROCR)
 library(ggROC)
+
 nCores <- 4
 registerDoParallel(nCores)
 setwd(file.path("/accounts/grad/janetlishali/Lab4"))
 
-################################################################################
-#random Forest function catered to formatted image files with fold in last 
-#column
+###############################################################################
+# Random Forest function catered to formatted image files with fold in last 
+# column
 #
 
 rf.specific <- function(train, num.tree){
-  #takes image file and returns the random forest class
-  #train is our image file we want to train on.  It contains features in 
-    #columns 4 up to the second last.  The 3rd column contains the labels
-  #num.tree is the number of trees we wish to use in our forest
+  # Takes image file and returns the random forest class
+  # Input:
+  #   train - Image file to train on.  It contains features in 
+  #           columns 4 up to the second last.  The 3rd column contains the labels
+  #   num.tree - the number of trees to use in the forest
   
-  rf <- try(randomForest(x = train[,4:(ncol(train)-1)], y = 
-                           droplevels(as.factor(train[,3])), ntree=num.tree, 
-                         confusion = T, importance = T))
+  rf <- try(randomForest(x = train[,4:(ncol(train)-1)], 
+                         y = droplevels(as.factor(train[,3])), 
+                         ntree=num.tree, 
+                         confusion = T, 
+                         importance = T))
   return(rf)
 }
 
 ################################################################################
-#generate ROC plot data 
+# Generate ROC plot data 
 #
 
 roc.data <- function(rf, test){
-  #takes random forest class and another test data set in same format as the 
-    #trained dataset and returns the roc S4 class as given in ROCR package
-  #rf: random forest class
-  #test: test dataset
+  # Takes random forest class and another test data set in same format as the 
+  # trained dataset and returns the roc S4 class as given in ROCR package
+  # Input:
+  #   rf - random forest class
+  #   test - test dataset
   
   rf.predict.prob <- predict(rf, test[4:(ncol(test)-1)], type = "prob")  
   preds <- rf.predict.prob[,2] #to get the percentage positive predictions
   for.roc <- prediction(preds, test[[3]])
   for.roc <- performance(for.roc, 'tpr', 'fpr')
+  
   return(for.roc)
 }
 
 ################################################################################
-#AUC values
+# AUC values
 #
 
 auc.value <- function(rf, test){
-  #takes in a random forest class (trained on some training set), applies random
-    #forest model to a test set in the same format as the training set and gives
-    #the AUC values for the prediction generated. 
+  # Takes in a random forest class (trained on some training set), applies 
+  # random forest model to a test set in the same format as the training set 
+  # and gives the AUC values for the prediction generated. 
+  #
+  # Input:
+  #   rf - an object of class random forest
+  #   test - a validation set
+  # Output:
+  #   auc - the auc for the roc of the model
   
   rf.predict.prob <- predict(rf, test[4:(ncol(test)-1)], type = "prob") 
   preds <- rf.predict.prob[,2] #to get the percentage positive predictions
@@ -65,30 +77,34 @@ auc.value <- function(rf, test){
 }
 
 ################################################################################
-#Confusion matrix
+# Confusion matrix
 #
 
 confusion.generate <- function(rf, test){
-  #takes in a random forest class (trained on some training set), applies random
-  #forest model to a test set in the same format as the training set and gives
-  #the confusion matrix of classification results.
+  # Takes in a random forest class (trained on some training set), applies 
+  # random forest model to a test set in the same format as the training set 
+  # and gives the confusion matrix of classification results.
+  # Input:
+  #   rf - an object of class random forest
+  #   test - a validation set
+  # Output:
+  #   confusion.predict - a confusion matrix
   
   rf.predict <- predict(rf, test[,4:6])
   confusion.predict <- table(rf.predict, droplevels(as.factor(test[,3])))
   return(confusion.predict) 
 }
 
-################################################################################
-################################################################################
+
 ################################################################################
 ################################################################################
 ##
 ## Analysis begins here
 ## 
 
-#here we load the three image files and set up the 12 fold validation via 
-#quadrants.  The resulting file is 'combined' dataframe that contains the 
-#validation folds 
+# Here we load the three image files and set up the 12 fold validation via 
+# quadrants.  The resulting file is 'combined' dataframe that contains the 
+# validation folds 
 
 image1 <- read.table('image1.txt', header=F)
 image2 <- read.table('image2.txt', header=F)
@@ -97,55 +113,52 @@ image3 <- read.table('image3.txt', header=F)
 image1 <- tbl_df(image1)
 image2 <- tbl_df(image2)
 image3 <- tbl_df(image3)
-#we give them appropriate feature names
+
+# Name the columns usefully
 collabs <- c('y','x','label','NDAI','SD','CORR','DF','CF','BF','AF','AN')
 
 names(image1) <- collabs
 names(image2) <- collabs
 names(image3) <- collabs
 
-#assign quadrants cross validation groups: 
+# Assign quadrants cross validation groups: 
 
 image1 <- arrange(image1, (x))
 half.row <- as.integer(nrow(image1)/2)
 image1$block.x <- c(rep(TRUE,half.row), rep(FALSE, half.row+1))
 image1 <- arrange(image1, (y))
 image1$block.y <- c(rep(TRUE, half.row),rep(FALSE, half.row+1))
-image1 <- image1 %.% mutate(fold = ifelse(block.x==TRUE & block.y==FALSE, 2, 1),
-                            fold = ifelse(block.x==TRUE & block.y==TRUE, 3,
-                                          fold), 
-                            fold = ifelse(block.x == FALSE & block.y == TRUE, 4,
-                                          fold))
+image1 <-  mutate(image1, 
+                  fold = ifelse(block.x==TRUE & block.y==FALSE, 2, 1),
+                  fold = ifelse(block.x==TRUE & block.y==TRUE, 3, fold), 
+                  fold = ifelse(block.x == FALSE & block.y == TRUE, 4, fold))
 
 image2 <- arrange(image2, (x))
 half.row <- as.integer(nrow(image2)/2)
 image2$block.x <- c(rep(TRUE,half.row), rep(FALSE, half.row))
 image2 <- arrange(image2, (y))
 image2$block.y <- c(rep(TRUE, half.row),rep(FALSE, half.row))
-image2 <- image2 %.% mutate(fold = ifelse(block.x==TRUE & 
-                                            block.y==FALSE, 6, 5), 
-                            fold = ifelse(block.x==TRUE & 
-                                            block.y==TRUE, 7, fold), 
-                            fold = ifelse(block.x == FALSE & block.y == TRUE, 
-                                          8, fold))
+image2 <- mutate(image2, 
+                 fold = ifelse(block.x==TRUE & block.y==FALSE, 6, 5), 
+                 fold = ifelse(block.x==TRUE & block.y==TRUE, 7, fold), 
+                 fold = ifelse(block.x == FALSE & block.y == TRUE, 8, fold))
 
 image3 <- arrange(image3, (x))
 half.row <- as.integer(nrow(image3)/2)
 image3$block.x <- c(rep(TRUE,half.row), rep(FALSE, half.row+1))
 image3 <- arrange(image3, (y))
 image3$block.y <- c(rep(TRUE, half.row),rep(FALSE, half.row+1))
-image3 <- image3 %.% mutate(fold = ifelse(block.x==TRUE & block.y==FALSE,
-                                          10, 9), fold = ifelse(block.x==TRUE & 
-                                                                  block.y==TRUE,
-                                                                11, fold), fold 
-                            = ifelse(block.x == FALSE & block.y == TRUE, 12, 
-                                     fold))
+image3 <- mutate(image3, 
+                 fold = ifelse(block.x==TRUE & block.y==FALSE, 10, 9), 
+                 fold = ifelse(block.x==TRUE & block.y==TRUE, 11, fold), 
+                 fold = ifelse(block.x == FALSE & block.y == TRUE, 12, fold))
 
 combined <- rbind(image1, image2, image3)
 combined$block.x <- NULL
 combined$block.y <- NULL
-combined <- mutate(combined, label=as.factor(label))
-combined <- filter(combined, label != 0)  #filter out unlabelled points.  
+
+combined <- mutate(combined, label=as.factor(label)) %>%
+            filter(combined, label != 0)  #filter out unlabelled points.  
 combined <- mutate(combined, label = droplevels(label))
 
 #depending on whether we want to train on all features, or only NDAI, SD and 
@@ -160,8 +173,8 @@ if (TopThree){
 ################################################################################
 # Apply Random Forest model to all 12 Folds
 
-num.tree <-100 #set the number of trees you would like to train random forest on
-num.folds <- 12 #set to the number of folds in your CV set
+num.tree <- 100 # set the number of trees you would like to train random forest on
+num.folds <- 12 # set to the number of folds in your CV set
 
 Random.Forest.folds <- foreach(i = 1:num.folds)%dopar% {
   #This function applies random forest to all 12 folds using the 'combined'
@@ -190,21 +203,22 @@ Random.Forest.folds <- foreach(i = 1:num.folds)%dopar% {
 }
 
 ################################################################################
-#image-wise validation
+# Image-wise validation
+
+# This script applies random forest to all 2/3 of the 3 images and trains on 
+# remaining one. 
+
+# This will save the random forest class generated for each image as
+# an Rdata file to be retrieved later for plots. This file will be named
+# iRF_image.Rdata, where 'i' is 1, 4 or 8, representing image 1, 2, 3.. 
+
+# It also saves the AUC of each CV, as 'AUC_imagei.csv.  Same i as above. 
+
+# Lastly, this script saves the confusion matrix of each cross validation.
+# as ROC_imagei.csv
 
 image.cv <- foreach(i = c(1,4,8))%dopar% {
-  #This function applies random forest to all 2/3 of the 3 images and trains on 
-    #remaining one. 
-  
-  #This will save the random forest class generated for each image as
-  #an Rdata file to be retrieved later for plots. This file will be named
-  # iRF_image.Rdata, where 'i' is 1, 4 or 8, representing image 1, 2, 3.. 
-  
-  #It also saves the AUC of each CV, as 'AUC_imagei.csv.  Same i as above. 
-  
-  #Lastly, this function saves the confusion matrix of each cross validation.
-  #as ROC_imagei.csv
-  
+
   train <- filter(combined, fold %in% i:(i:4)) #so we drop the ith fold
   test <- anti_join(combined, train) #test on the ith fold
   rf <- try(rf.specific(train, num.tree))
@@ -220,22 +234,22 @@ image.cv <- foreach(i = c(1,4,8))%dopar% {
 }
 
 ################################################################################
-#convergence analysis and validation
+# Convergence analysis and validation
+
+# This script trains the random forest model on the first i folds and tests 
+# the remain folds
+
+# This will save the random forest class predicted for each test as
+# an Rdata file to be retrieved later for plots. This file will be named
+# iRF_converge.Rdata, where 'i' is 1-11. 
+
+# It also saves the AUC of each CV, as 'AUC_convergei.csv.  Same i as above. 
+
+# Lastly, this script saves the confusion matrix of each cross validation.
+# as ROC_convergei.csv
 
 convergence.cv <- foreach(i = 1:11)%dopar% {
-  #This function trains the random forest model on the first i folds and tests 
-    #the remain folds
-  
-  #This will save the random forest class predicted for each test as
-  #an Rdata file to be retrieved later for plots. This file will be named
-  # iRF_converge.Rdata, where 'i' is 1-11. 
-  
-  #It also saves the AUC of each CV, as 'AUC_convergei.csv.  Same i as above. 
-  
-  #Lastly, this function saves the confusion matrix of each cross validation.
-  #as ROC_convergei.csv
-  
-  
+
   train <- filter(combined, fold <= i) #so we drop the ith fold
   test <- anti_join(combined, train) #test on the ith fold
   rf <- try(rf.specific(train, num.tree))
@@ -251,16 +265,15 @@ convergence.cv <- foreach(i = 1:11)%dopar% {
 }
 
 ################################################################################
-
-#ROC curve data frame for plotting (of the 12 folds)
+# ROC curve data frame for plotting (of the 12 folds)
 #
 
 ROC.curve.data.frame.begin <- function{
-  #first seed the dataframe with the ROC curve information from the 1st fold
-  #gives us a dataframe with the 1st fold's ROC curve plotting info (x and y 
-    #values)
-  #to output ROC information for the convergence data, just substite 'block'
-  #in sprintf below with 'convergence'.  Same with 'image'
+  # First seed the dataframe with the ROC curve information from the 1st fold
+  # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y 
+  # values)
+  # To output ROC information for the convergence data, just substitute 'block'
+  # in sprintf below with 'convergence'.  Same with 'image'
   
   load("1RF_block.Rdata")
   roc.data <- roc.data(rf, filter(combined, fold == 1) )
@@ -275,14 +288,14 @@ ROC.curve.data.frame.begin <- function{
   return(ROC.data)
 }
 ################################################################################
-# create entire ROC curve dataframe
+# Create entire ROC curve dataframe
 
 ROC.curve.data.frame <- function(ROC.curve.data.frame.begin){
  
-  #input previous function: ROC.curve.data.frame.begin
-  #outputs the entire dataframe of ROC curve data for all other folds.  
-  #to output ROC information for the convergence data, just substite 'block'
-    #in sprintf below with 'convergence'.  Same with 'image'
+  # Input previous function: ROC.curve.data.frame.begin
+  # outputs the entire dataframe of ROC curve data for all other folds.  
+  # to output ROC information for the convergence data, just substite 'block'
+  # in sprintf below with 'convergence'.  Same with 'image'
   
   filename <- sprintf("%dRF_block.Rdata", i)
   load(filename)
@@ -300,7 +313,7 @@ ROC.curve.data.frame <- function(ROC.curve.data.frame.begin){
   return(ROC.data)
 }
 ################################################################################
-#relabel ROC curve rates and save plot 
+# Relabel ROC curve rates and save plot 
 
 relabel <- function{
   #relabel ROC curve rates and save plot 
