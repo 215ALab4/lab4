@@ -30,10 +30,10 @@ rf  # this is the random forest class that we have loaded.
 
 # Here, specify which image you would like to make the 
 # plots on.  Since the 10th fold choosen above lies in image 3, 
-# we choose image to be image3 for now. 
+# for example, we choose image to be image3 for now.
 image <- image3 
 
-False.positive.False.negative.Plots <- function{
+False.positive.False.negative.Plots <- function(image, rf){
   # This script generates false positive false negative plots for a prediction  
   # we use the rf and image loaded above
   # outputs 3 pdf files of the raw image with NDAI plotted via geom_point, the 
@@ -87,6 +87,23 @@ False.positive.False.negative.Plots <- function{
 
   return(im3+fpr)
 }
+
+################################################################################
+# ROC curve plots
+
+#we gave an example of what riles contains the comparison csv, this is generated in the random_forest_functions.R file
+
+filename <- "ROC_convergence_comparison.csv"
+
+plot.roc <- function(filename){
+    ROC.data <- read.csv(filename)
+    colnames(ROC.data)[2] <- "False.positive.rate"
+    colnames(ROC.data)[3] <- "True.positive.rate"
+    pdf("ROC_converge_comparison.pdf")
+    ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants))
+    dev.off()
+}
+
 
 ################################################################################
 # GINI importance from 9 feature training set 
