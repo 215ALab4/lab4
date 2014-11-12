@@ -516,9 +516,10 @@ AUC.table <- function{
     
     rownames(AUC) <- "AUC"
     AUC <- t(AUC)
+    AUC$fold <- rownames(AUC)
     
     png("AUCconverge.png")
-    ggplot(AUC, aes(x=rownnames, y = AUC))+geom_point()+geom_smooth
+    ggplot(AUC, aes(x=fold, y = AUC))+geom_point()+geom_smooth
     dev.off()
     
     png("AUC_12_folds.png")
