@@ -76,20 +76,9 @@ False.positive.False.negative.Plots <- function(image, rf){
   return(im3+fpr)
 }
 
-#########################################
-# Image plots:
-
-filename <- "10RF_block.Rdata"
-load(file=filename)
-rf  # this is the random forest class that we have loaded.
-
-# Here, specify which image you would like to make the
-# plots on.  Since the 10th fold choosen above lies in image 3,
-# for example, we choose image to be image3 for now.
-image <- image3
 
 ################################################################################
-# ROC curve plots
+# ROC curve plot functions
 
 #we gave an example of what riles contains the comparison csv, this is generated in the random_forest_functions.R file
 
@@ -199,6 +188,29 @@ AUC.table <- function{
 }
 
 
+################################################################################
+# - Image Files  -
+#
+# If you want to save the images, ImageSave to TRUE
+
+if (ImageSave){
+
+# Image False Classification plots:
+filename <- "ROC_image1.Rdata"
+image <- image1
+False.positive.False.negative.Plots(image, rf)
+
+filename <- "ROC_image5.Rdata"
+image <- image2
+False.positive.False.negative.Plots(image, rf)
+
+filename <- "ROC_image9.Rdata"
+image <- image3
+False.positive.False.negative.Plots(image, rf)
+
+
+
+}
 
 
 
