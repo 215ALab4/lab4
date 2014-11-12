@@ -14,6 +14,9 @@ nCores <- 4
 registerDoParallel(nCores)
 setwd(file.path("/accounts/grad/janetlishali/Lab4"))
 
+ImageSave <- FALSE
+
+
 ###############################################################################
 # Random Forest function catered to formatted image files with fold in last 
 # column
@@ -514,6 +517,10 @@ AUC.table <- function{
     rownames(AUC) <- "AUC"
     AUC <- t(AUC)
     
+    png("AUCconverge.png")
+    ggplot(AUC, aes(x=rownnames, y = AUC))+geom_point()+geom_smooth
+    dev.off()
+    
     png("AUC_12_folds.png")
     grid.table(AUC,show.rownames=T)
     dev.off()
@@ -553,7 +560,7 @@ if (ImageSave){
     #Gini_mean_sd table png
     Gini.Mean.sd(Gini.reformat(Gini.data.frame))
     
-    #AUC table
+    #AUC table and AUCconverge plot
     AUC.table
     
     
