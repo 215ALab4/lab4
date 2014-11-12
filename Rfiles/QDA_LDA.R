@@ -5,7 +5,8 @@ library(ROCR)
 library(mvtnorm)
 library(ggplot2)
 
-setwd("D:/coursework/stat215A/lab4")
+setwd("D:/coursework/stat215A/group")
+ImageSave <- FALSE
 
 ###############################################################################
 #  Split Image Function
@@ -461,8 +462,6 @@ qda3.12fold.conf <- ggplot(qda.recon.12fold$image3) + ggconf +
 #
 # If you want to save the images, ImageSave to TRUE
 
-ImageSave <- FALSE
-
 if (ImageSave){
 
 # EDA
@@ -505,4 +504,3 @@ ggsave(filename="qda2_prob.png", plot=qda2.prob.plot,
 ggsave(filename="qda3_prob.png", plot=qda3.prob.plot,
        height=5, width=5)
 }
-mahalanobis
