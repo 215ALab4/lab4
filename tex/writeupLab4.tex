@@ -90,14 +90,13 @@ Stat 215A, Fall 2014}
 
 \maketitle
 \section{Introduction}
-\subsection{Data} Based on the recordings from the NASA's Multi-angle Imaging SpectroRadiometer (MISR) imagery, the data used to train the classification models are a collection of measurements from the three different images provided. Data units for these images were provided from MISR measurement of blocks 20-22 over three consecutive orbits. Instead of overfitting to individual images, we combined data to construct general classification models. The true classification of pixels is taken to be provided by the expert labels. Nonetheless, some regions which were equivocal to the expert remained unlabelled.
+\subsection{Data} Based on the recordings from the NASA's Multi-angle Imaging SpectroRadiometer (MISR) imagery, the data used to train the classification models are a collection of measurements from the three different images provided. Data units for these images were provided from MISR measurements over three consecutive orbits. These data were used to construct general classification models. The true classification of pixels is taken to be provided by the expert labels, though some pixels remained unclassified.
 
-MISR collected electromagnetic radiation measurements using nine cameras at nine different angles, each of which views the Earth in four spectral bands (blue, green, red, and near-infrared).  MISR collects huge amount of data due to its global coverage at high spatial resolution. Each MISR pixel encompasses 275m$\times$275m region, yielding tremendous amounts of data. Due to the size of the MISR readings and transmission channel constraints, only the red radiances were transmitted at full resolution from all cameras. It was also stated that all four bands have similar reflectance signatures over ice, snow, and clouds. Thus, only the red radiances which have high spatial resolution were used in constructing three features SD, CORR, and NDAI.  In our data, in addition to the three features, five of the nine angles' radiances were given.
+MISR collected electromagnetic radiation measurements using nine cameras at nine different angles, each of which views the Earth in four spectral bands (blue, green, red, and near-infrared).  Each MISR pixel encompasses a 275m$\times$275m region, yielding tremendous amounts of data. Due to the size of the MISR readings and transmission channel constraints, only the red radiances were transmitted at full resolution from all cameras. It was also stated that all four bands have similar reflectance signatures over ice, snow, and clouds. Therefore, only the red radiances which have high spatial resolution were used in constructing three features SD, CORR, and NDAI.  In our data, in addition to the three features, five of the nine angles' radiances were given.
 
-\subsection{Features} The nine cameras had different views at the following angles: 70.5\textdegree (Df), 60.0\textdegree (Cf), 45.6\textdegree (Bf), and 26.1\textdegree (Af) in the forward direction; 0.0\textdegree (An) in the nadir direction and 26.1\textdegree (Aa), 45.6\textdegree (Ba), 60.0\textdegree (Ca), and 70.5\textdegree (Da) in the aft direction, where `f' indicated the forward
-direction, and `a' indicates the aft direction. Note that we are only given radiances for angles Df, Cf, Bf, An, Af. The nadir (vertically downward) viewing camera (An) has a strong advantage over cameras from other viewpoints since it is least influenced by atmospheric scattering and least distorted by surface topographic effects. Data derived from two angle Af and Aa cameras were aimed at determining topographic heights and cloud heights by using parallax from these two view angles. The two Bf and Ba cameras are positioned to utilize aerosol sensitivity. Based on theoretical findings that the directionally-oriented reflectance variation over different types of cloud is minimized at a 60.0 degree angle, the two Cf and Ca cameras are positioned at a 60.0 degree angle, which is also considered as crucial due to its significant role in estimating the amount of reflection at each ground point. The high angle view of Df and Da cameras is designed to present maximal sensitivity to off-nadir effects. 
+\subsection{Features} The nine cameras had different views at the following angles: 70.5\textdegree (Df), 60.0\textdegree (Cf), 45.6\textdegree (Bf), and 26.1\textdegree (Af) in the forward direction; 0.0\textdegree (An) in the nadir direction and 26.1\textdegree (Aa), 45.6\textdegree (Ba), 60.0\textdegree (Ca), and 70.5\textdegree (Da) in the aft direction, where `f' indicated the forward direction, and `a' indicates the aft direction. Note that we are only given radiances for angles Df, Cf, Bf, An, Af. The nadir (vertically downward) viewing camera (An) has a strong advantage over cameras from other viewpoints since it is least influenced by atmospheric scattering and least distorted by surface topographic effects. Data derived from the Af and Aa cameras were aimed at determining topographic heights and cloud heights by using parallax from these two view angles. The Bf and Ba cameras are positioned to utilize aerosol sensitivity. Based on theoretical findings that the directionally-oriented reflectance variation over different types of cloud is minimized at a 60.0 degree angle, the Cf and Ca cameras are positioned at a 60.0 degree angle, which is also considered as crucial due to its significant role in estimating the amount of reflection at each ground point. The high angle view of Df and Da cameras is designed to present maximal sensitivity to off-nadir effects. 
 
-The features CORR, SD, and NDAI are an average linear correlation of radiation measurements at different view angles, the standard deviation within groups of MISR angle An camera red radiation measurements, and a ratio between the difference and sum of the mean radiation measurements from the first and fifth angle associated with a particular pixel region, respectively. It was stated that extensive exploratory data analysis combined with specific domain knowledge, such as the fact that ice and snow surfaces scatter radiation more isotropically than clouds, found the three features to be most useful in differentiating surface pixels from cloudy ones. High values of CORR alludes to either cloud-free condition or the presence of low altitude cloud. SD is designed to aid identifying smooth surface where the correlation between different MISR viewpoints are muted by measurement noise. Larger NDAI values imply the presence of clouds.
+The feature CORR is an average linear correlation of radiation measurements at different view angles while SD is the standard deviation within groups of MISR angle An camera red radiation measurements. NDAI is the ratio between the difference and sum of the mean radiation measurements from the first and fifth angle associated with a particular pixel region. Extensive exploratory data analysis combined with specific domain knowledge, such as the fact that ice and snow surfaces scatter radiation more isotropically than clouds, motivated the development of NDAI, SD, and CORR. High values of CORR correlate with a lack of clouds or low altitude clouds. SD is designed to aid identifying smooth surface where the correlation between different MISR viewpoints are muted by measurement noise. Larger NDAI values imply the presence of clouds. For further details on these features, see the paper by Shi, Yu, Clothiaux, and Braverman [].
 
 \section{EDA}
 
@@ -114,7 +113,7 @@ Figure 1 displays the unprocessed image files for comparison with Figure 2, the 
 \end{figure}
 \subsection{Densities of NDAI, SD and CORR}
 
-The following three plots gives us a sense of what can be learned from NDAI, SD and CORR.  The densities are grouped by their expert labels, red is for `no cloud', green are for `unknown' and blue for `cloud'. We can see that NDAI has reasonably good separation between cloud and no cloud, in all three pictures, which is confirmed in our later modeling sections by Gini importance measures found in the random forest model and its importance as a variable in LDA/QDA and logit models. In comparison, SD does not have as  good of a separation within the smaller SD values, however it is still clear that pixels labelled as clouds are the only pixels with higher SD values.  We thus expect the two features in combination can help determine whether a pixel with high NDAI should be labelled as a cloud by using the SD feature.  Finally CORR values appear to be a good separator for image 2, but much less so for image 1.  This uneven distribution of CORR values between images prompted us to cross validate our models across images, in addition to the folds created by dividing each image into 4 quadrants. 
+The following three plots give us a sense of what can be learned from NDAI, SD and CORR.  The densities are grouped by their expert labels, red for `no cloud', green for `unknown' and blue for `cloud'. We see that NDAI has reasonably good separation between cloud and no cloud in all three pictures, which is confirmed in our later modeling sections by Gini importance measures found in the random forest model and its importance as a variable in LDA/QDA and logit models. In comparison, SD has worse separation within the smaller SD values, however it is still clear that pixels labelled as clouds are the only pixels with higher SD values.  We thus expect the two features in combination can help determine whether a pixel with high NDAI should be labelled as a cloud by using the SD feature.  Finally CORR values appear to be a good separator for image 2, but less so for image 1.  This uneven distribution of CORR values across images prompted us to cross validate our models across images in addition to the folds created by dividing each image into 4 quadrants. 
 
 \begin{figure}[H]
 \minipage{0.32\textwidth}
@@ -173,13 +172,12 @@ The following three plots gives us a sense of what can be learned from NDAI, SD 
     \caption{NDAI vs. SD Plot of Image1}
     \label{NdaiSd}
   \end{subfigure}
-  \caption{Scatter plots of the pairs of features used in the analyses. Red points denote pixels that were labeled as not clouds and blue points represent cloudy pixels.}
+  \caption{Scatter plots of the pairs of features used in the analyses. Red points denote pixels that were labeled as not clouds and blue points represent cloudy pixels. This shows hope that our selected features may be able to distinguish between cloudy and icy pixels.  The rounded boundaries suggest that non-linear surfaces may be necessary to separate the feature space.}
   \label{fig:Scatter}
 \end{figure}
-Figure \ref{fig:Scatter} shows hope that our selected features may be able to distinguish between cloudy and icy pixels.  The rounded boundaries suggest that non-linear surfaces may be necessary to separate the feature space.
 
 \subsection{Mapped Features}
-The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatially. In agreement with the NDAI density plots, higher NDAI values indicate increased likelihood of the presence of clouds, and the NDAI plots look quite similar to the binary classification plots. The SD maps show areas of high variance in the radiances thereby providing a decent outline of cloud boundaries. Unfortunately, this can also lead to the highlighting of uneven ground regions. Finally, the CORR images resemble weakened versions of their NDAI counterparts though with some additional strange behavior in the bottom left corners of Images 1 and 2. 
+The ensuing figures plot the engineered feature values (NDAI, SD, CORR) spatially. In agreement with the NDAI density plots, higher NDAI values indicate increased likelihood of the presence of clouds, and the NDAI plots look quite similar to the binary classification plots. The SD maps show areas of high variance in the radiances thereby providing a decent outline of cloud boundaries. Furthermore, SD performs well at detecting smooth regions in the image while NDAI is noisy throughout. Unfortunately, this can lead to the highlighting of uneven ground regions. Finally, the CORR images resemble weakened versions of their NDAI counterparts though with some additional strange behavior in the bottom left corners of Images 1 and 2. 
 \begin{figure}[H]
 \includegraphics[width = 18cm, height = 5cm]{NDAIEDA.png}
 \caption{Mapped NDAI readings. We see good correspondence between larger values and presence of clouds.}
@@ -431,23 +429,6 @@ To gather a quantitative measurement of the importance of each feature, we first
 \endminipage\hfill
 \end{figure}
 
-  \begin{figure}[H]
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts ]{classification_10.png}
-\endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts]{label_10.png}
-\endminipage\hfill
-\end{figure}
-
-\begin{figure}[H]
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts ]{classification_11.png}
-\endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 180pts]{label_11.png}
-\endminipage\hfill
-\end{figure}
 
 
 \section{Reproducibility}
