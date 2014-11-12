@@ -675,7 +675,7 @@ if (ImageSave){
     
     filename <- "ROC_image9.Rdata"
     image <- image3
-    False.positive.False.negative.Plots(image, rf, 3)
+    False.positive.False.negative.Plots(image, rf, 8)
     
     # ROC comparison plots
     filename <- "1RF_block.Rdata"
