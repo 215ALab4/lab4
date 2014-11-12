@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 NOV 2014 20:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 NOV 2014 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -814,10 +814,10 @@ AUC_12_folds.png> <../figures/ROC_fold_comparison.png>]
 File: ../figures/ROC_image8.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image8.pdf>
-Package pdftex.def Info: ../figures/ROC_image8.pdf used on input line 345.
+Package pdftex.def Info: ../figures/ROC_image8.pdf used on input line 346.
 (pdftex.def)             Requested size: 140.93033pt x 150.00046pt.
 
-Overfull \hbox (3.94684pt too wide) in paragraph at lines 345--346
+Overfull \hbox (3.94684pt too wide) in paragraph at lines 346--347
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -825,10 +825,10 @@ Overfull \hbox (3.94684pt too wide) in paragraph at lines 345--346
 File: ../figures/ROC_image1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image1.pdf>
-Package pdftex.def Info: ../figures/ROC_image1.pdf used on input line 349.
+Package pdftex.def Info: ../figures/ROC_image1.pdf used on input line 350.
 (pdftex.def)             Requested size: 140.93033pt x 150.00046pt.
 
-Overfull \hbox (3.94684pt too wide) in paragraph at lines 349--350
+Overfull \hbox (3.94684pt too wide) in paragraph at lines 350--351
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -836,10 +836,10 @@ Overfull \hbox (3.94684pt too wide) in paragraph at lines 349--350
 File: ../figures/ROC_image2.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image2.pdf>
-Package pdftex.def Info: ../figures/ROC_image2.pdf used on input line 353.
+Package pdftex.def Info: ../figures/ROC_image2.pdf used on input line 354.
 (pdftex.def)             Requested size: 140.93033pt x 150.00046pt.
 
-Overfull \hbox (3.94684pt too wide) in paragraph at lines 353--354
+Overfull \hbox (3.94684pt too wide) in paragraph at lines 354--355
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -848,10 +848,10 @@ File: ../figures/classification_image1.png Graphic file (type png)
 
 <use ../figures/classification_image1.png>
 Package pdftex.def Info: ../figures/classification_image1.png used on input lin
-e 363.
+e 365.
 (pdftex.def)             Requested size: 234.87839pt x 169.99992pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 363--364
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 365--366
 []\OT1/cmr/m/n/10 s[] 
  []
 
@@ -859,121 +859,120 @@ Overfull \hbox (3.94533pt too wide) in paragraph at lines 363--364
 File: ../figures/label_1.png Graphic file (type png)
 
 <use ../figures/label_1.png>
-Package pdftex.def Info: ../figures/label_1.png used on input line 366.
+Package pdftex.def Info: ../figures/label_1.png used on input line 368.
 (pdftex.def)             Requested size: 234.87839pt x 169.99992pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 366--367
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 368--369
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[10 <../figures/ROC_image8.pdf> <../figures/ROC_image1.pdf> <../figures/ROC_ima
-ge2.pdf>] <../figures/classification_image3.png, id=133, 481.8pt x 481.8pt>
+<../figures/classification_image3.png, id=114, 481.8pt x 481.8pt>
 File: ../figures/classification_image3.png Graphic file (type png)
 
 <use ../figures/classification_image3.png>
 Package pdftex.def Info: ../figures/classification_image3.png used on input lin
-e 373.
+e 375.
 (pdftex.def)             Requested size: 234.87839pt x 169.99992pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 373--374
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 375--376
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/label_9.png, id=134, 481.8pt x 481.8pt>
+<../figures/label_9.png, id=115, 481.8pt x 481.8pt>
 File: ../figures/label_9.png Graphic file (type png)
 
 <use ../figures/label_9.png>
-Package pdftex.def Info: ../figures/label_9.png used on input line 376.
+Package pdftex.def Info: ../figures/label_9.png used on input line 378.
 (pdftex.def)             Requested size: 234.87839pt x 169.99992pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 376--377
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 378--379
 []\OT1/cmr/m/n/10 s[] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 381--383
+[10 <../figures/ROC_image8.pdf> <../figures/ROC_image1.pdf> <../figures/ROC_ima
+ge2.pdf> <../figures/classification_image1.png> <../figures/label_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
 
  []
 
-<../figures/ROC_converge1.pdf, id=135, 505.89pt x 505.89pt>
+<../figures/ROC_converge1.pdf, id=137, 505.89pt x 505.89pt>
 File: ../figures/ROC_converge1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge1.pdf>
-Package pdftex.def Info: ../figures/ROC_converge1.pdf used on input line 386.
+Package pdftex.def Info: ../figures/ROC_converge1.pdf used on input line 388.
 (pdftex.def)             Requested size: 234.88132pt x 170.00102pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 386--387
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 388--389
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/AUCconverge.png, id=136, 481.8pt x 481.8pt>
+<../figures/AUCconverge.png, id=138, 481.8pt x 481.8pt>
 File: ../figures/AUCconverge.png Graphic file (type png)
 
 <use ../figures/AUCconverge.png>
-Package pdftex.def Info: ../figures/AUCconverge.png used on input line 391.
+Package pdftex.def Info: ../figures/AUCconverge.png used on input line 393.
 (pdftex.def)             Requested size: 234.87839pt x 169.99992pt.
 
-Overfull \hbox (3.94533pt too wide) in paragraph at lines 391--392
+Overfull \hbox (3.94533pt too wide) in paragraph at lines 393--394
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[11 <../figures/classification_image1.png> <../figures/label_1.png> <../figures
-/classification_image3.png> <../figures/label_9.png>]
-<../figures/ROC_converge_shuffle1.pdf, id=144, 505.89pt x 505.89pt>
+<../figures/ROC_converge_shuffle1.pdf, id=139, 505.89pt x 505.89pt>
 File: ../figures/ROC_converge_shuffle1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge_shuffle1.pdf>
 Package pdftex.def Info: ../figures/ROC_converge_shuffle1.pdf used on input lin
-e 399.
+e 401.
 (pdftex.def)             Requested size: 234.88132pt x 170.00102pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 399--400
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 401--402
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_converge_shuffle2.pdf, id=145, 505.89pt x 505.89pt>
+<../figures/ROC_converge_shuffle2.pdf, id=140, 505.89pt x 505.89pt>
 File: ../figures/ROC_converge_shuffle2.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge_shuffle2.pdf>
 Package pdftex.def Info: ../figures/ROC_converge_shuffle2.pdf used on input lin
-e 402.
+e 404.
 (pdftex.def)             Requested size: 234.88132pt x 170.00102pt.
 
-Overfull \hbox (3.94826pt too wide) in paragraph at lines 402--403
+Overfull \hbox (3.94826pt too wide) in paragraph at lines 404--405
 []\OT1/cmr/m/n/10 s[] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+[11 <../figures/classification_image3.png> <../figures/label_9.png> <../figures
+/ROC_converge1.pdf> <../figures/AUCconverge.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
 
  []
 
-<../figures/Gini_mean_sd.png, id=146, 389.455pt x 185.69376pt>
+<../figures/Gini_mean_sd.png, id=154, 389.455pt x 185.69376pt>
 File: ../figures/Gini_mean_sd.png Graphic file (type png)
 
 <use ../figures/Gini_mean_sd.png>
-Package pdftex.def Info: ../figures/Gini_mean_sd.png used on input line 411.
+Package pdftex.def Info: ../figures/Gini_mean_sd.png used on input line 413.
 (pdftex.def)             Requested size: 187.89897pt x 140.00383pt.
 
-Overfull \hbox (3.94427pt too wide) in paragraph at lines 411--412
+Overfull \hbox (3.94427pt too wide) in paragraph at lines 413--414
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/Gini_importance.png, id=147, 481.8pt x 481.8pt>
+<../figures/Gini_importance.png, id=155, 481.8pt x 481.8pt>
 File: ../figures/Gini_importance.png Graphic file (type png)
 
 <use ../figures/Gini_importance.png>
-Package pdftex.def Info: ../figures/Gini_importance.png used on input line 414.
+Package pdftex.def Info: ../figures/Gini_importance.png used on input line 416.
 
 (pdftex.def)             Requested size: 281.86288pt x 179.9982pt.
 
-Overfull \hbox (3.95146pt too wide) in paragraph at lines 414--415
+Overfull \hbox (3.95146pt too wide) in paragraph at lines 416--417
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[12 <../figures/ROC_converge1.pdf> <../figures/AUCconverge.png> <../figures/ROC
-_converge_shuffle1.pdf> <../figures/ROC_converge_shuffle2.pdf>] [13 <../figures
-/Gini_mean_sd.png> <../figures/Gini_importance.png>] (./writeupLab4.aux)
+[12 <../figures/ROC_converge_shuffle1.pdf> <../figures/ROC_converge_shuffle2.pd
+f> <../figures/Gini_mean_sd.png> <../figures/Gini_importance.png>] [13]
+(./writeupLab4.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1003,7 +1002,7 @@ e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
 2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2012/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on writeupLab4.pdf (13 pages, 5545988 bytes).
+Output written on writeupLab4.pdf (13 pages, 5546420 bytes).
 PDF statistics:
  232 PDF objects out of 1000 (max. 8388607)
  108 compressed objects within 2 object streams

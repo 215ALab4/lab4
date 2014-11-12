@@ -333,26 +333,28 @@ For the random forest, as in all the other classifiers, we divided the three ima
 \end{figure}
 
 We also trained on each image and tested on the remaining two. The AUC values obtained:
+
 \begin{itemize}
 \item train 1 and 2, test 3: 0.8857
 \item train 2 and 3, test 1: 0.9757
 \item train 3 and 1, test 2: 0.9462
 \end{itemize}
 
-\begin{figure}[H]
 
+\begin{figure}[H]
 \minipage{0.3\textwidth}
   \includegraphics[width=\linewidth, height = 150pts]{ROC_image8.pdf}
+  \caption{train 1 and 2, test 3}
 \endminipage
-\caption{train 1 and 2, test 3}
 \minipage{0.3\textwidth}
   \includegraphics[width=\linewidth, height = 150pts]{ROC_image1.pdf}
+  \caption{train 2 and 3, test 1}
 \endminipage
-\caption{train 2 and 3, test 1}
 \minipage{0.3\textwidth}
   \includegraphics[width=\linewidth, height = 150pts]{ROC_image2.pdf}
+  \caption{train 1 and 3, test 2}
 \endminipage
-\caption{train 1 and 3, test 2}
+
 \end{figure}
 
 
@@ -375,7 +377,7 @@ The images below show classification errors for models trained on 2 images and t
 \minipage{0.5\textwidth}
   \includegraphics[width=\linewidth, height = 170pts]{label_9.png}
 \endminipage\hfill
-\caption{prediction error for image 3-trainined on image 1 and 2}
+\caption{prediction error for image 3-trained on image 1 and 2}
 \end{figure}
 
 {\bf Convergence} 
@@ -389,7 +391,7 @@ The images below show classification errors for models trained on 2 images and t
 \minipage{0.5\textwidth}
 
 \includegraphics[width=\linewidth, height = 170pts]{AUCconverge.png}
-  \caption{Smoothed convergence of AUC for growing training set 50 trees and 3 features}\label{}
+  \caption{Smoothed convergence of AUC for growing training set with 50 trees and 3 features}\label{}
 \endminipage
 
   \end{figure}
