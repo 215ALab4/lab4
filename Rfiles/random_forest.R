@@ -391,7 +391,8 @@ False.positive.False.negative.Plots <- function(image, rf){
 ################################################################################
 # ROC curve plot functions
 
-#we gave an example of what riles contains the comparison csv, this is generated in the random_forest_functions.R file
+# We gave an example of what riles contains the comparison csv, 
+# this is generated in the random_forest.R file
 
 
 plot.roc <- function(filename){
@@ -399,7 +400,8 @@ plot.roc <- function(filename){
     colnames(ROC.data)[2] <- "False.positive.rate"
     colnames(ROC.data)[3] <- "True.positive.rate"
     pdf("ROC_converge_comparison.pdf")
-    ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants))
+    ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
+      geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants))
     dev.off()
 }
 
@@ -501,7 +503,7 @@ AUC.table <- function{
 ################################################################################
 # - Image Files  -
 #
-# If you want to save the images, ImageSave to TRUE
+# If you want to save the images, set ImageSave to TRUE
 
 if (ImageSave){
     
