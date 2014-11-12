@@ -318,7 +318,7 @@ As found in our other models, one image outperformed the others when used as a t
 
 \subsection{Random Forest}
 
-A random forest is a tree based model that improves generalizability of the model by bootstrapping to generate a forest of trees, then bagging by having the trees vote on the result predictions.  Both bagging and bootstrapping help decrease the variance of our predictions. This model does not have underlying assumptions on the dataset.  
+A random forest is a tree based model that improves generalizability of the model by bootstrapping to generate a forest of trees, then bagging by having the trees vote on the result predictions.  Both bagging and bootstrapping help decrease the variance of our predictions. This model does not have underlying assumptions on the dataset, expect perhaps the very minimal expectation that bootstrapping on our dataset can pick up a representative distribution (this will not be true for distributions with heavy tails).  
 
 For the random forest, as in all the other classifiers, we divided the three images into equal sized quadrants (2X2) rectangles in order to do 12 fold validation on the dataset.  That is, for each iteration of the validation, we dropped one of the quadrants as a test set, and trained on the remaining 11 quadrants.  Keeping the test segments as disjoint chunks from the test set ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  As such, we also expect the performance of the model on these test sets to be a much better predicator of how our model will perform on new images than if we randomly subsampled the validation folds.  Indeed, after doing random subsampling, we noticed that the AUC was at a high 0.999 for all cross validations, whereas by cross validating on the isolated quadrants, our AUC curves had much higher variance, as seen below: \\
 
@@ -346,7 +346,7 @@ The AUC values for training on 2/3 of the images and testing on the remaining im
 \end{figure}
 
 {\bf Where was the model performing poorly?}
-
+The images below show classification errors for models trained on 2 images and tested on the other, as noted above in the AUC table, these models unsurprisingly performed worse than training on 11/12 of the folds.  Nonetheless, they are a useful indication of where prediction errors occurred.  In general, when the training set included image 3, the model performed better.  Only when image 3 was not included did we get obtain an AUC value less than 90.   
   \begin{figure}[H]
 \minipage{0.5\textwidth}
   \includegraphics[width=\linewidth, height = 170pts ]{classification_image1.png}
@@ -354,6 +354,7 @@ The AUC values for training on 2/3 of the images and testing on the remaining im
 \minipage{0.5\textwidth}
   \includegraphics[width=\linewidth, height = 170pts]{label_1.png}
 \endminipage\hfill
+\caption{prediction error for image 1-trained on image 2 and 3}
 \end{figure}
 
   \begin{figure}[H]
@@ -363,6 +364,7 @@ The AUC values for training on 2/3 of the images and testing on the remaining im
 \minipage{0.5\textwidth}
   \includegraphics[width=\linewidth, height = 170pts]{label_9.png}
 \endminipage\hfill
+\caption{prediction error for image 3-trainined on image 1 and 2}
 \end{figure}
 
 {\bf Convergence} 
@@ -391,7 +393,7 @@ The AUC values for training on 2/3 of the images and testing on the remaining im
   \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
 \end{figure}
   
-To gather a quantitative measurement of the importance of each feature, we first ran random forest using all the features and looked at the Gini importance measure.  This is calculated by recording the difference between the Gini measure of a random forest's predictions on a fold and the Gini measure with a particular feature's values randomly shuffled.  The intuition is that if a feature were crucial to the forest's trees, than randomly shuffling that feature will drastically decrease its Gini measure.  Sure enough, NDAI, SD and CORR   consistently ranked as the clear top three in all cross validations. \\
+{\bf Variable Importance} To gather a quantitative measurement of the importance of each feature, we first ran random forest using all the features and looked at the Gini importance measure.  This is calculated by recording the difference between the Gini measure of a random forest's predictions on a fold and the Gini measure with a particular feature's values randomly shuffled.  The intuition is that if a feature were crucial to the forest's trees, than randomly shuffling that feature will drastically decrease its Gini measure.  Sure enough, NDAI, SD and CORR   consistently ranked as the clear top three in all cross validations. \\
 
   \begin{figure}[H]
 \minipage{0.4\textwidth}
@@ -408,7 +410,8 @@ To gather a quantitative measurement of the importance of each feature, we first
 
 {\bf How we organized out code and github repo}
 
-
+\section{Conclusion} 
+Logit, QDA and random forest all created reasonable predictive models with high AUC values.  On average, random forest did best based on the mean and variance the AUC values across the folds.  Prediction errors for all three models shared similar shortcomings as seen in the classification error plots.  
  \begin{thebibliography}{1}
 
 \bibitem{notes} 
