@@ -318,9 +318,9 @@ As found in our other models, one image outperformed the others when used as a t
 
 \subsection{Random Forest}
 
-A random forest is a tree based model that improves generalizability of the model by bootstrapping to generate a forest of trees, then bagging by having the trees vote on the result predictions.  Both bagging and bootstrapping help decrease the variance of our predictions. This model does not have underlying assumptions on the dataset, expect perhaps the very minimal expectation that bootstrapping on our dataset can pick up a representative distribution (this will not be true for distributions with heavy tails).  
+Random forest is a decision tree based model that improves generalizability of the model by bootstrapping the training data each time we train a new tree in the forest, and than bagging (bootstrapp-aggregate) the forest by having the trees vote on the result of the predictions.  This model does not have underlying assumptions on the dataset, expect perhaps that bootstrapping our dataset will produce a representative sample (this will not be true for distributions with heavy tails, which via density plots confirms our data is not distributed such). 
 
-For the random forest, as in all the other classifiers, we divided the three images into equal sized quadrants (2X2) rectangles in order to do 12 fold validation on the dataset.  That is, for each iteration of the validation, we dropped one of the quadrants as a test set, and trained on the remaining 11 quadrants.  Keeping the test segments as disjoint chunks from the test set ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  As such, we also expect the performance of the model on these test sets to be a much better predicator of how our model will perform on new images than if we randomly subsampled the validation folds.  Indeed, after doing random subsampling, we noticed that the AUC was at a high 0.999 for all cross validations, whereas by cross validating on the isolated quadrants, our AUC curves had much higher variance, as seen below: \\
+In theory we do not need to cross validate as each bootstrap only trains on a randomly selected 2/3 of the data, and also randomly selects a subset of the features to grow the decision tree on.  So there is an inherit out of bag error that can be computed by training on the entire dataset.  Nonetheless, to be consistent with the other classifiers, we divided the three images into equal sized quadrants (2X2) rectangles in order to do 12 fold validation on the dataset. Keeping the test segments as disjoint chunks from the test set ensured that our models were picking up on `higher' level structure of the dataset, and not the continuous variation of neighbouring pixels.  As such, we also expect the performance of the model on these test sets to be a much better predicator of how our model will perform on new images than if we randomly subsampled the validation folds.  Indeed, after doing random subsampling, we noticed that the AUC was at a high 0.999 for all cross validations, whereas by cross validating on the isolated quadrants, our AUC curves had much higher variance, as seen below: \\
 
 \begin{figure}[H]
 \minipage{0.2\textwidth}
@@ -332,34 +332,27 @@ For the random forest, as in all the other classifiers, we divided the three ima
   \caption{ROC across all 12 folds of quadrants}\label{}
 \end{figure}
 
-We also trained on each image and tested on the remaining two. The AUC values obtained:
-
-\begin{itemize}
-\item train 1 and 2, test 3: 0.8857
-\item train 2 and 3, test 1: 0.9757
-\item train 3 and 1, test 2: 0.9462
-\end{itemize}
-
+We also trained on each image and tested on the remaining two, AUC values and ROC curves are plotted below!
 
 \begin{figure}[H]
 \minipage{0.3\textwidth}
   \includegraphics[width=\linewidth, height = 150pts]{ROC_image8.pdf}
-  \caption{train 1 and 2, test 3}
+  \caption{train 1 and 2, test 3: AUC: 0.8857}
 \endminipage
 \minipage{0.3\textwidth}
   \includegraphics[width=\linewidth, height = 150pts]{ROC_image1.pdf}
-  \caption{train 2 and 3, test 1}
+  \caption{train 2 and 3, test 1: AUC: 0.9757}
 \endminipage
 \minipage{0.3\textwidth}
   \includegraphics[width=\linewidth, height = 150pts]{ROC_image2.pdf}
-  \caption{train 1 and 3, test 2}
+  \caption{train 1 and 3, test 2: AUC: 0.9462}
 \endminipage
 
 \end{figure}
 
 
 {\bf Where was the model performing poorly?}
-The images below show classification errors for models trained on 2 images and tested on the other, as noted above in the AUC table, these models unsurprisingly performed worse than training on 11/12 of the folds.  Nonetheless, they are a useful indication of where prediction errors occurred.  In general, when the training set included image 3, the model performed better.  Only when image 3 was not included did we get obtain an AUC value less than 90.   
+The images below show classification errors for models trained on 2 images and tested on the other, as noted above in the AUC table, these models unsurprisingly performed worse than training on 11/12 of the folds.  Nonetheless, they are a useful indication of where prediction errors occurred.  In general, when the training set included image 3, the model performed better.  Only when image 3 was not included did we get obtain an AUC value less than 90.   Below, we plot the classfication error and juxtapose it with the feature with the highest Gini importance (explained below).  
   \begin{figure}[H]
 \minipage{0.53\textwidth}
   \includegraphics[width=\linewidth, height = 170pts ]{classification_image1.png}
