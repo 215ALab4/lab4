@@ -13,5 +13,9 @@
 4) To generate the plots in the Logit\Probit section:
 
 5) To generate the plots in the Random Forests section:
+   a) Open "./Rfiles/random_forest.R"
+   b) Change the working directory
+   c) Change the value of ImageSave to TRUE
+   d) Run the whole script
 
 6) The latex file should now compile.  Edit the analysis results as necessary
