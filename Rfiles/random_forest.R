@@ -332,9 +332,11 @@ ROC.curve.data.frame <- function(ROC.curve.data.frame.begin){
 # False positive, False negative, True positive, True negative plots
 
 
-False.positive.False.negative.Plots <- function(image, rf){
+False.positive.False.negative.Plots <- function(image, rf, k){
     # This script generates false positive false negative plots for a prediction
-    # we use the rf and image loaded above
+    # rf is an object of the random forest class
+    # image is an image file of the format generated above
+    # k is the image number (1,2, or 3)
     # outputs 3 pdf files of the raw image with NDAI plotted via geom_point, the
     # correct expert classification plotted, and finally the predictions with
     # factors indication whether the prediction was a false positive, true
@@ -372,15 +374,18 @@ False.positive.False.negative.Plots <- function(image, rf){
     
     im3 <- ggplot(image)
     
-    png("classification_10.png")
+    filename.classifcation <- sprintf("classification_%d.png", k)
+    png(filename.classification)
     im3+fpr+colour
     dev.off()
     
-    png("label_10.png")
+    filename.label <- sprintf("label_%d.png", k)
+    png(filename.label)
     im3 + raw.image
     dev.off()
     
-    png("NDAI_10.png")
+    filename.NDAI <- sprintf("NDAI_%d.png", k)
+    png(filename.NDAI)
     im3 + image.NDAI
     dev.off()
     
@@ -510,15 +515,15 @@ if (ImageSave){
     # Image False Classification plots:
     filename <- "ROC_image1.Rdata"
     image <- image1
-    False.positive.False.negative.Plots(image, rf)
+    False.positive.False.negative.Plots(image, rf, 1)
     
     filename <- "ROC_image5.Rdata"
     image <- image2
-    False.positive.False.negative.Plots(image, rf)
+    False.positive.False.negative.Plots(image, rf, 2)
     
     filename <- "ROC_image9.Rdata"
     image <- image3
-    False.positive.False.negative.Plots(image, rf)
+    False.positive.False.negative.Plots(image, rf, 3)
     
     # ROC comparison plots
     filename <- "ROC_convergence_comparison.csv"
