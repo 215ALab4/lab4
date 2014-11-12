@@ -341,21 +341,31 @@ We also trained on each image and tested on the remaining two. \\
   \includegraphics[width=150pts, height = 80pts ]{AUC_images.png}
 \endminipage\hfill
 \minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 150pts]{ROC_image1.pdf}
+The AUC values for training on 2/3 of the images and testing on the remaining image is given to our left.  Since testing on image1 and image 2 performed well in comparison with testing on image 3, we include below the plots for misclassification only for image 1 and 3, and an example where the model performed better than the other.  
 \endminipage\hfill
-  \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
 \end{figure}
 
-%  \begin{figure}[H]
-%\minipage{0.5\textwidth}
-% \includegraphics[width=\linewidth, height = 150pts ]{ROC_image4.pdf}
-%\endminipage\hfill
-%\minipage{0.5\textwidth}
-%  \includegraphics[width=\linewidth, height = 150pts]{ROC_image8.pdf}
-%\endminipage\hfill
-%  \caption{Convergence of ROC training on increasing number of quadrants in shuffled order}\label{}
-%\end{figure}
+{\bf Where was the model performing poorly?}
 
+  \begin{figure}[H]
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 170pts ]{classification_image1.png}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 170pts]{label_1.png}
+\endminipage\hfill
+\end{figure}
+
+  \begin{figure}[H]
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 170pts ]{classification_image3.png}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth, height = 170pts]{label_9.png}
+\endminipage\hfill
+\end{figure}
+
+{\bf Convergence} 
  To test convergence, one of the things we did was increase the training set from including 1 quadrant, to including 2 quadrants, up to including 11 quadrants (using the complement as the test set).  For each of the 3 aforementioned classes of training, we trained on a range of forest sizes, from 2 trees to 50. It was interesting to note that the continuity of increasing the training set by neighbouring quadrants displayed much less convergence than by increasing the training quadrant set in a randomly subsampled way.  The following three plots make this clear.  In the first case....\\
 
 \begin{figure}[H]
@@ -392,36 +402,6 @@ To gather a quantitative measurement of the importance of each feature, we first
 \endminipage\hfill
   \caption{Gini importance measures across folds}\label{}
 \end{figure}
-
-{\bf Where was the model performing poorly?}
-
-  \begin{figure}[H]
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 170pts ]{classification_1.png}
-\endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 170pts]{label_1.png}
-\endminipage\hfill
-\end{figure}
-
-  \begin{figure}[H]
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 170pts ]{classification_3.png}
-\endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 170pts]{label_3.png}
-\endminipage\hfill
-\end{figure}
-
-\begin{figure}[H]
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 170pts ]{classification_4.png}
-\endminipage\hfill
-\minipage{0.5\textwidth}
-  \includegraphics[width=\linewidth, height = 170pts]{label_4.png}
-\endminipage\hfill
-\end{figure}
-
 
 
 \section{Reproducibility}
