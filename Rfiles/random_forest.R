@@ -346,7 +346,7 @@ ROC.curve.data.frame.begin <- function(filename){
 ################################################################################
 # Create entire ROC curve dataframe
 
-ROC.curve.data.frame <- function(ROC.curve.data.frame.begin(filname){
+ROC.curve.data.frame.block <- function(ROC.curve.data.frame.begin(filname)){
 
   # Input previous function: ROC.curve.data.frame.begin
   # outputs the entire dataframe of ROC curve data for all other folds.  
@@ -368,8 +368,61 @@ ROC.curve.data.frame <- function(ROC.curve.data.frame.begin(filname){
       data$y.values <- rocData@y.values[[1]]
       ROC.data <<- rbind(ROC.data, data)
   }
-  write.csv(ROC.data, "ROC_convergence_comparison.csv")
+  write.csv(ROC.data, "ROC_fold_comparison.csv")
   return(ROC.data)
+}
+
+ROC.curve.data.frame.converge <- function(ROC.curve.data.frame.begin(filname)){
+    
+    # Input previous function: ROC.curve.data.frame.begin
+    # outputs the entire dataframe of ROC curve data for all other folds.
+    # to output ROC information for the convergence data, just substite 'block'
+    # in sprintf below with 'convergence'.  Same with 'image'
+    # writes to csv the ROC dataframe to be plotted in the random_forest_plots.R file
+    
+    for (i in c(2:6, 8:12)){
+        filename <- sprintf("%dRF_converge.Rdata", i)
+        load(filename)
+        rocData <- roc.data(rf, filter(combined, fold == i) )
+        x.values <- rocData@x.values[[1]]
+        col.length <- length(x.values)
+        data <- as.data.frame(1:col.length)
+        colnames(data)[1] <- "fold.number"
+        fold.name <- sprintf("%d fold", i)
+        data[,1] <- fold.name
+        data$x.values <- x.values
+        data$y.values <- rocData@y.values[[1]]
+        ROC.data <<- rbind(ROC.data, data)
+    }
+    write.csv(ROC.data, "ROC_convergence_comparison.csv")
+    return(ROC.data)
+}
+
+
+ROC.curve.data.frame.shuffle <- function(ROC.curve.data.frame.begin(filname)){
+    
+    # Input previous function: ROC.curve.data.frame.begin
+    # outputs the entire dataframe of ROC curve data for all other folds.
+    # to output ROC information for the convergence data, just substite 'block'
+    # in sprintf below with 'convergence'.  Same with 'image'
+    # writes to csv the ROC dataframe to be plotted in the random_forest_plots.R file
+    
+    for (i in c(2:6, 8:12)){
+        filename <- sprintf("ROC_converge_shuffle1%d.Rdata", i)
+        load(filename)
+        rocData <- roc.data(rf, filter(combined, fold == i) )
+        x.values <- rocData@x.values[[1]]
+        col.length <- length(x.values)
+        data <- as.data.frame(1:col.length)
+        colnames(data)[1] <- "fold.number"
+        fold.name <- sprintf("%d fold", i)
+        data[,1] <- fold.name
+        data$x.values <- x.values
+        data$y.values <- rocData@y.values[[1]]
+        ROC.data <<- rbind(ROC.data, data)
+    }
+    write.csv(ROC.data, "ROC_converge_shuffle1.csv")
+    return(ROC.data)
 }
 
 
@@ -445,15 +498,50 @@ False.positive.False.negative.Plots <- function(image, rf, k){
 # this is generated in the random_forest.R file
 
 
-plot.roc <- function(filename){
+plot.roc.fold <- function(filename){
     
     
     ROC.data <- read.csv(filename)
     colnames(ROC.data)[2] <- "False.positive.rate"
     colnames(ROC.data)[3] <- "True.positive.rate"
-    pdf("ROC_fold_comparison.pdf")
+    png("ROC_fold_comparison.png")
     ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
       geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants))
+    dev.off()
+}
+
+plot.roc.converge <- function(filename){
+    
+    
+    ROC.data <- read.csv(filename)
+    colnames(ROC.data)[2] <- "False.positive.rate"
+    colnames(ROC.data)[3] <- "True.positive.rate"
+    pdf("ROC_converge1.pdf")
+    ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
+    geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants))
+    dev.off()
+}
+
+plot.roc.shuffle1 <- function(filename){
+    
+    
+    ROC.data <- read.csv(filename)
+    colnames(ROC.data)[2] <- "False.positive.rate"
+    colnames(ROC.data)[3] <- "True.positive.rate"
+    png("ROC_converge_shuffle1.png")
+    ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
+    geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants))
+    dev.off()
+}
+plot.roc.shuffle2 <- function(filename){
+    
+    
+    ROC.data <- read.csv(filename)
+    colnames(ROC.data)[2] <- "False.positive.rate"
+    colnames(ROC.data)[3] <- "True.positive.rate"
+    png("ROC_converge_shuffle2.png")
+    ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
+    geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants))
     dev.off()
 }
 
@@ -593,17 +681,21 @@ if (ImageSave){
     filename <- "1RF_block.Rdata"
     ROC.curve.data.frame <- function(ROC.curve.data.frame.begin(filname))
     
-    filename <- "ROC_convergence_comparison.csv"
+    filename <- "ROC_fold_comparison.csv"
     
-    plot.roc(filename)
-    
-    filename <- "ROC_convergence_comparison.csv"
-    
-    plot.roc(filename)
+    plot.roc.fold(filename)
     
     filename <- "ROC_convergence_comparison.csv"
     
-    plot.roc(filename)
+    plot.roc.converge(filename)
+    
+    filename <- "ROC_converge_shuffle1.csv"
+    
+    plot.roc.converge(filename)
+    
+    filename <- "ROC_converge_shuffle2.csv"
+    
+    plot.roc.shuffle1(filename)
     
     #Gini plots
     Gini <- Reshape.Gini(Gini.reformat(Gini.data.frame))
