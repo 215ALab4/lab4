@@ -374,7 +374,7 @@ False.positive.False.negative.Plots <- function(image, rf, k){
     
     im3 <- ggplot(image)
     
-    filename.classifcation <- sprintf("classification_%d.png", k)
+    filename.classifcation <- sprintf("classification_image%d.png", k)
     png(filename.classification)
     im3+fpr+colour
     dev.off()
@@ -384,7 +384,7 @@ False.positive.False.negative.Plots <- function(image, rf, k){
     im3 + raw.image
     dev.off()
     
-    filename.NDAI <- sprintf("NDAI_%d.png", k)
+    filename.NDAI <- sprintf("NDAI_image%d.png", k)
     png(filename.NDAI)
     im3 + image.NDAI
     dev.off()
@@ -476,11 +476,11 @@ Reshape.Gini <- function(Gini){
     Gini <- mutate(Gini, fold <- c(1:6, 8:12))
     colnames(Gini)[9] <- "fold.number"
     Gini <- melt(Gini, id = "fold.number")
-    colnames(Gini)[1]<- "fold"
+    colnames(Gini)[1] <- "fold"
     colnames(Gini)[2] <- "variable"
     colnames(Gini)[3] <- "GiniImportance"
     
-    pdf("Gini_Importance.pdf")
+    png("Gini_Importance.png")
     ggplot(Gini)+geom_point(aes(x=fold, y = GiniImportance, colour = variable))
     +geom_smooth(aes(group = variable, x = fold, y = GiniImportance))
     dev.off()
