@@ -765,8 +765,10 @@ if (ImageSave){
     False.positive.False.negative.Plots(image, rf, 8)
     
     # ROC comparison plots
-    filename <- "1RF_block.Rdata"
-    ROC.curve.data.frame <- function(ROC.curve.data.frame.begin(filname))
+    ROC.curve.data.frame.block
+    ROC.curve.data.frame.converge
+    ROC.curve.data.frame.shuffle1
+    ROC.curve.data.frame.shuffle2
     
     filename <- "ROC_fold_comparison.csv"
     
