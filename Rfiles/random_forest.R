@@ -59,7 +59,15 @@ roc.data <- function(rf, test){
   
   return(for.roc)
 }
+################################################################################
+#For image ROC plots: 
 
+roc.generate <- function(rf, test){
+  rf.predict.prob <- predict(rf, test[,4:(ncol(test)-1)], type = "prob") #to calculate ROC curves
+  preds <- rf.predict.prob[,2] #to get the percentage positive predictions
+  for.roc <- prediction(preds, test[[3]])
+  return(plot(performance(for.roc, 'tpr', 'fpr')))
+}
 ################################################################################
 # AUC values
 #
@@ -259,6 +267,11 @@ image.cv <- foreach(i = c(1,5,9))%dopar% {
   train <- anti_join(combined, test) #test on the ith fold
   rf <- try(rf.specific(train, num.tree))
   conf <- try(confusion.generate(rf,test))
+  roc.pic <- roc.generate(rf, test)
+  filename.pic <-sprintf("ROC_image%d.pdf", i)
+  pdf(filename.pic)
+  roc.generate(rf, test)
+  dev.off()
   filename.table <-sprintf("ROC_image%d.csv", i)
   try(write.csv(conf, file=filename.table))
   auc <- try(auc.value(rf, test))
