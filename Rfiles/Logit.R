@@ -5,8 +5,9 @@ library(gridExtra)
 
 
 # Flag for whether or not we want to save images
-ImageSave <- FALSE
 setwd('~/STAT215A')
+ImageSave <- FALSE
+
 
 # Load the images
 image1 <- read.table('image1.txt', header = F)

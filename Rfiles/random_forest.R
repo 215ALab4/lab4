@@ -12,8 +12,8 @@ library(ggROC)
 
 nCores <- 4
 registerDoParallel(nCores)
-setwd(file.path("/accounts/grad/janetlishali/Lab4"))
 
+setwd(file.path("/accounts/grad/janetlishali/Lab4"))
 ImageSave <- FALSE
 
 
