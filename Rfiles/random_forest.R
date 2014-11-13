@@ -267,7 +267,6 @@ image.cv <- foreach(i = c(1,5,9))%dopar% {
   train <- anti_join(combined, test) #test on the ith fold
   rf <- try(rf.specific(train, num.tree))
   conf <- try(confusion.generate(rf,test))
-  roc.pic <- roc.generate(rf, test)
   filename.table <-sprintf("ROC_image%d.csv", i)
   try(write.csv(conf, file=filename.table))
   auc <- try(auc.value(rf, test))
