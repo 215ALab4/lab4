@@ -8,6 +8,7 @@ library(doParallel)
 library(parallel) 
 library(cvTools)
 library(ROCR)
+library(reshape)
 library(ggROC)
 library(grid)
 library(gridBase)
@@ -255,7 +256,7 @@ Random.Forest.folds.9 <- foreach(i = 1:num.folds)%dopar% {
 image.cv <- foreach(i = c(1,5,9))%dopar% {
 
   test <- filter(combined, fold %in% c(i:(i+4))) #so we drop the ith fold
-  train <- anti_join(combined, train) #test on the ith fold
+  train <- anti_join(combined, test) #test on the ith fold
   rf <- try(rf.specific(train, num.tree))
   conf <- try(confusion.generate(rf,test))
   filename.table <-sprintf("ROC_image%d.csv", i)
@@ -479,7 +480,7 @@ ROC.curve.data.frame.shuffle2 <- function(ROC){
 # False positive, False negative, True positive, True negative plots
 
 
-False.positive.False.negative.Plots <- function(image, rf, k){
+False.positive.False.negative.Plots <- function(image, filename, k){
     # This script generates false positive false negative plots for a prediction
     # rf is an object of the random forest class
     # image is an image file of the format generated above
@@ -488,7 +489,7 @@ False.positive.False.negative.Plots <- function(image, rf, k){
     # correct expert classification plotted, and finally the predictions with
     # factors indication whether the prediction was a false positive, true
     # positive, false negative or true negative.
-    
+    load(filename)
     #this is a prediction generated from rf on image
     image$predicted <- predict(rf, image[,4:6])
     
@@ -613,7 +614,7 @@ Gini.data.frame.begin <- function(filename){
     
 compare.gini <- function(gini){
   #feed in output from Gini.data.frame.begin
-
+  Gini <- gini
   for (i in c(2:6, 8:12)){
         # This function generates a dataframe with all 12 folds of the Gini
         # importance measures
@@ -621,7 +622,7 @@ compare.gini <- function(gini){
         filename <- sprintf("%dRF_block_9.Rdata", i)
         load(filename)
         Forest <- sprintf("%dst fold", i)
-        Gini <<- cbind(Gini, as.data.frame(rf$importance[,4]))
+        Gini <- cbind(Gini, as.data.frame(rf$importance[,4]))
         colnames(Gini)[ncol(Gini)] <- Forest
     }
     return(Gini)
@@ -635,6 +636,9 @@ Gini.Mean.sd <- function(gini){
   
     Gini <- gini
     Gini$mean <- rowMeans(Gini)
+    rowVars <- function(x) {
+      rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1)
+    }
     Gini$variance <- rowVars(as.matrix(Gini[,1:11]))
     Gini$sd <- sqrt(Gini$variance)
     png("Gini_mean_sd.png")
@@ -662,8 +666,7 @@ Reshape.Gini <- function(gini){
     colnames(Gini)[3] <- "GiniImportance"
     
     png("Gini_Importance.png")
-    ggplot(Gini)+geom_point(aes(x=fold, y = GiniImportance, colour = variable))
-    +geom_smooth(aes(group = variable, x = fold, y = GiniImportance))
+    ggplot(Gini)+geom_point(aes(x=fold, y = GiniImportance, colour = variable))+geom_smooth(aes(group = variable, x = fold, y = GiniImportance))
     dev.off()
 }
 
@@ -682,7 +685,7 @@ AUC.table.begin <- function(filename){
     
 compare.AUC <- function(auc.object){
   #feed in output of AUC.table.begin
-  
+  AUC <- auc.object
   for (i in c(2:6, 8:12)){
         # Adds the rest of the AUC data using dataframe generated above
         filename <- sprintf("AUC_block%d.csv", i)
@@ -709,7 +712,8 @@ compare.AUC <- function(auc.object){
 AUC.plot <- function(auc){
   #feed in output of compare.auc
   AUC <- auc
-  ggsave(filename ="AUCconverge.pdf", plot = ggplot(AUC)+geom_point(aes(x=fold, y = AUC)+geom_smooth()))
+  ggsave(filename ="AUCconverge.pdf", plot = ggplot(AUC)
+         +geom_point(aes(x=fold, y = AUC))+geom_smooth(aes(group = 1, x=fold, y = AUC)))
 }
 
 
@@ -723,17 +727,17 @@ AUC.plot <- function(auc){
 if (ImageSave){
     
     # Image False Classification plots:
-    filename <- "ROC_image1.Rdata"
+    filename <- "1RF_image.Rdata"
     image <- image1
-    False.positive.False.negative.Plots(image, rf, 1)
+    False.positive.False.negative.Plots(image, filename, 1)
     
-    filename <- "ROC_image5.Rdata"
+    filename <- "5RF_image.Rdata"
     image <- image2
-    False.positive.False.negative.Plots(image, rf, 2)
+    False.positive.False.negative.Plots(image, filename, 2)
     
-    filename <- "ROC_image9.Rdata"
+    filename <- "9RF_image.Rdata"
     image <- image3
-    False.positive.False.negative.Plots(image, rf, 8)
+    False.positive.False.negative.Plots(image, filename, 8)
     
     # ROC comparison plots
     ROC.curve.data.frame.fold(ROC.curve.data.frame.begin(
@@ -762,15 +766,17 @@ if (ImageSave){
     plot.roc.shuffle1(filename)
     
     #Gini plots
-    Reshape.Gini(compare.gini(gini.data.frame.begin("1RF_block_9.Rdata")))
+    Reshape.Gini(compare.gini(Gini.data.frame.begin("1RF_block_9.Rdata")))
     
     #Gini_mean_sd table png
-    Gini.Mean.sd(compare.gini(gini.data.frame.begin("1RF_block_9.Rdata")))
+    Gini.Mean.sd(compare.gini(Gini.data.frame.begin("1RF_block_9.Rdata")))
     
     #AUC table
     compare.AUC(AUC.table.begin("AUC_block1.csv"))
     
     #AUC plot 
+    
+    AUC.plot(compare.AUC(AUC.table.begin("AUC_block1.csv")))
     
     
     
