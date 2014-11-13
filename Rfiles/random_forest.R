@@ -260,21 +260,10 @@ convergence.cv <- foreach(i = 1:11)%dopar% {
   filename.auc <- sprintf("AUC_converge%d.csv", i)
   try(write.csv(auc, file=filename.auc))
   filename <- sprintf("%sRF_converge.Rdata",i)
+  try(save(rf, file = filename))
+  return(filename)
 }
 
-convergence.cv <- foreach(i = 1:11)%dopar% {
-  train <- filter(combined, fold <= i) #so we drop the ith fold
-  test <- anti_join(combined, train) #test on the ith fold
-  rf <- rf.specific(train, num.tree)
-  conf <- try(confusion.generate(rf,test))
-  filename.table <-sprintf("ROC_converge%d.csv", i)
-  try(write.csv(conf, file=filename.table)
-  auc <- try(auc.value(rf, test))
-  filename.auc <- sprintf("AUC_converge%d.csv", i)
-  try(write.csv(auc, file=filename.auc))
-  filename <- sprintf("%sRF_converge.Rdata", i)
-  try(save(rf,file =filename))
-}
 
 ################################################################################
 #here we shuffle the folds to test convergence results
@@ -288,10 +277,10 @@ convergence.cv.shuffle.1 <- foreach(i = 1:11)%dopar% {
     rf <- try(rf.specific(train, num.tree))
     conf <- try(confusion.generate(rf,test))
     filename.table <-sprintf("ROC_converge_shuffle1%d.csv", i)
-    write.csv(conf, file=filename.table)
+    try(write.csv(conf, file=filename.table))
     auc <- try(auc.value(rf, test))
     filename.auc <- sprintf("AUC_converge_shuffle1%d.csv", i)
-    write.csv(auc, file=filename.auc)
+    try(write.csv(auc, file=filename.auc))
     filename <- sprintf("%sRF_converge_shuffle1.Rdata", i)
     try(save(rf,file =filename))
     return(filename) 
@@ -308,10 +297,10 @@ convergence.cv.shuffle.2 <- foreach(i = 1:11)%dopar% {
     rf <- try(rf.specific(train, num.tree))
     conf <- try(confusion.generate(rf,test))
     filename.table <-sprintf("ROC_converge_shuffle2%d.csv", i)
-    write.csv(conf, file=filename.table)
+    try(write.csv(conf, file=filename.table))
     auc <- try(auc.value(rf, test))
     filename.auc <- sprintf("AUC_converge_shuffle2%d.csv", i)
-    write.csv(auc, file=filename.auc)
+    try(write.csv(auc, file=filename.auc))
     filename <- sprintf("%sRF_converge_shuffle2.Rdata", i)
     try(save(rf,file =filename))
     return(filename) 
@@ -320,14 +309,14 @@ convergence.cv.shuffle.2 <- foreach(i = 1:11)%dopar% {
 # ROC curve data frame for plotting (of the 12 folds)
 #
 
-ROC.curve.data.frame.begin.fold <- function{
+ROC.curve.data.frame.begin <- function(filename){
   # First seed the dataframe with the ROC curve information from the 1st fold
   # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y 
   # values)
   # To output ROC information for the convergence data, just substitute 'block'
   # in sprintf below with 'convergence'.  Same with 'image'
   
-  load("1RF_block.Rdata")
+  load(filename)
   roc.data <- roc.data(rf, filter(combined, fold == 1) )
   x.values <- roc.data@x.values[[1]]
   col.length <- length(x.values)
@@ -341,71 +330,14 @@ ROC.curve.data.frame.begin.fold <- function{
 }
 
 
-ROC.curve.data.frame.begin.converge <- function{
-    # First seed the dataframe with the ROC curve information from the 1st fold
-    # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y
-    # values)
-    # To output ROC information for the convergence data, just substitute 'block'
-    # in sprintf below with 'convergence'.  Same with 'image'
-    
-    load("1RF_converge.Rdata")
-    roc.data <- roc.data(rf, filter(combined, fold == 1) )
-    x.values <- roc.data@x.values[[1]]
-    col.length <- length(x.values)
-    ROC.data <- as.data.frame(1:col.length)
-    ROC.data[,1] <- "1st fold"
-    colnames(ROC.data)[1] <- "fold.number"
-    ROC.data$x.values <- x.values
-    ROC.data$y.values <- roc.data@y.values[[1]]
-    
-    return(ROC.data)
-}
 
-ROC.curve.data.frame.begin.shuffle1 <- function{
-    # First seed the dataframe with the ROC curve information from the 1st fold
-    # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y
-    # values)
-    # To output ROC information for the convergence data, just substitute 'block'
-    # in sprintf below with 'convergence'.  Same with 'image'
-    
-    load("RF_converge_shuffle11.Rdata")
-    roc.data <- roc.data(rf, filter(combined, fold == 1) )
-    x.values <- roc.data@x.values[[1]]
-    col.length <- length(x.values)
-    ROC.data <- as.data.frame(1:col.length)
-    ROC.data[,1] <- "1st fold"
-    colnames(ROC.data)[1] <- "fold.number"
-    ROC.data$x.values <- x.values
-    ROC.data$y.values <- roc.data@y.values[[1]]
-    
-    return(ROC.data)
-}
-
-ROC.curve.data.frame.begin.shuffle2 <- function{
-    # First seed the dataframe with the ROC curve information from the 1st fold
-    # gives us a dataframe with the 1st fold's ROC curve plotting info (x and y
-    # values)
-    # To output ROC information for the convergence data, just substitute 'block'
-    # in sprintf below with 'convergence'.  Same with 'image'
-    
-    load("RF_converge_shuffle21.Rdata")
-    roc.data <- roc.data(rf, filter(combined, fold == 1) )
-    x.values <- roc.data@x.values[[1]]
-    col.length <- length(x.values)
-    ROC.data <- as.data.frame(1:col.length)
-    ROC.data[,1] <- "1st fold"
-    colnames(ROC.data)[1] <- "fold.number"
-    ROC.data$x.values <- x.values
-    ROC.data$y.values <- roc.data@y.values[[1]]
-    
-    return(ROC.data)
-}
 ################################################################################
 # Create entire ROC curve dataframe
 
-ROC.curve.data.frame.block <- function(ROC.curve.data.frame.begin.fold){
+ROC.curve.data.frame.fold <- function(ROC){
 
-  # Input previous function: ROC.curve.data.frame.begin
+  # Input previous function: ROC is the object return from 
+  # ROC.curve.data.frame.begin
   # outputs the entire dataframe of ROC curve data for all other folds.  
   # to output ROC information for the convergence data, just substite 'block'
   # in sprintf below with 'convergence'.  Same with 'image'
@@ -429,7 +361,7 @@ ROC.curve.data.frame.block <- function(ROC.curve.data.frame.begin.fold){
   return(ROC.data)
 }
 
-ROC.curve.data.frame.converge <- function(ROC.curve.data.frame.begin.converge){
+ROC.curve.data.frame.converge <- function(ROC){
     
     # Input previous function: ROC.curve.data.frame.begin
     # outputs the entire dataframe of ROC curve data for all other folds.
@@ -456,7 +388,7 @@ ROC.curve.data.frame.converge <- function(ROC.curve.data.frame.begin.converge){
 }
 
 
-ROC.curve.data.frame.shuffle <- function(ROC.curve.data.frame.begin.shuffle1){
+ROC.curve.data.frame.shuffle1 <- function(ROC){
     
     # Input previous function: ROC.curve.data.frame.begin
     # outputs the entire dataframe of ROC curve data for all other folds.
@@ -482,7 +414,7 @@ ROC.curve.data.frame.shuffle <- function(ROC.curve.data.frame.begin.shuffle1){
     return(ROC.data)
 }
 
-ROC.curve.data.frame.shuffle <- function(ROC.curve.data.frame.begin.shuffle2){
+ROC.curve.data.frame.shuffle2 <- function(ROC){
     
     # Input previous function: ROC.curve.data.frame.begin
     # outputs the entire dataframe of ROC curve data for all other folds.
@@ -761,10 +693,14 @@ if (ImageSave){
     False.positive.False.negative.Plots(image, rf, 8)
     
     # ROC comparison plots
-    ROC.curve.data.frame.block
-    ROC.curve.data.frame.converge
-    ROC.curve.data.frame.shuffle1
-    ROC.curve.data.frame.shuffle2
+    ROC.curve.data.frame.fold(ROC.curve.data.frame.begin(
+      "1RF_block.Rdata"))
+    ROC.curve.data.frame.converge(ROC.curve.data.frame.begin(
+      "1RF_converge.Rdata"))
+    ROC.curve.data.frame.shuffle1(ROC.curve.data.frame.begin(
+      "RF_converge_shuffle11.Rdata"))
+    ROC.curve.data.frame.shuffle2(ROC.curve.data.frame.begin(
+      "RF_converge_shuffle11.Rdata"))
     
     filename <- "ROC_fold_comparison.csv"
     
