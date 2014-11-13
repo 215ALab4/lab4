@@ -9,6 +9,8 @@ library(parallel)
 library(cvTools)
 library(ROCR)
 library(ggROC)
+library(grid)
+library(gridBase)
 
 nCores <- 4
 registerDoParallel(nCores)
@@ -48,7 +50,7 @@ roc.data <- function(rf, test){
   #   rf - random forest class
   #   test - test dataset
   
-  rf.predict.prob <- predict(rf, test[4:(ncol(test)-1)], type = "prob")  
+  rf.predict.prob <- predict(rf, test[,4:(ncol(test)-1)], type = "prob")  
   preds <- rf.predict.prob[,2] #to get the percentage positive predictions
   for.roc <- prediction(preds, test[[3]])
   for.roc <- performance(for.roc, 'tpr', 'fpr')
@@ -71,7 +73,7 @@ auc.value <- function(rf, test){
   # Output:
   #   auc - the auc for the roc of the model
   
-  rf.predict.prob <- predict(rf, test[4:(ncol(test)-1)], type = "prob") 
+  rf.predict.prob <- predict(rf, test[,4:(ncol(test)-1)], type = "prob") 
   preds <- rf.predict.prob[,2] #to get the percentage positive predictions
   for.roc <- prediction(preds, test[[3]])
   auc.tmp <- performance(for.roc,"auc"); auc <- as.numeric(auc.tmp@y.values)
@@ -164,6 +166,8 @@ combined <- rbind(image1, image2, image3) %>%  # combine the three images
 # Depending on whether we want to train on all features, or only NDAI, SD and 
 # CORR, we can set set TopThree to TRUE
 
+combined.all <- combined #save this one for calculating Gini importance measure 
+
 TopThree <- TRUE
 if (TopThree){
   combined <- cbind(combined[,1:7], combined[["fold"]])
@@ -199,6 +203,35 @@ Random.Forest.folds <- foreach(i = 1:num.folds)%dopar% {
   filename.auc <- sprintf("AUC_block%d.csv", i)
   try(write.csv(auc, file=filename.auc))
   filename <- sprintf("%sRF_block.Rdata", i)
+  try(save(rf,file =filename))
+  return(filename) 
+}
+
+################################################################################
+#Random forest model for all 9 features in order to calculate Gini importance
+
+Random.Forest.folds.9 <- foreach(i = 1:num.folds)%dopar% {
+  #This function applies random forest to all 12 folds using the 'combined'
+  #dataset given above.  
+  #This will save the random forest class generated for each fold as
+  #an Rdata file to be retrieved later for plots. This file will be named
+  # iRF_block.Rdata, where 'i' is the number of the fold. 
+  
+  #It also saves the AUC of each CV, as 'AUC_blocki.csv.  Same i as above. 
+  
+  #Lastly, this function saves the confusion matrix of each cross validation.
+  #as ROC_blocki.csv
+  
+  train <- filter(combined.all, fold != i) #so we drop the ith fold
+  test <- filter(combined.all, fold == i) #test on the ith fold
+  rf <- try(rf.specific(train, num.tree))
+  conf <- try(confusion.generate(rf,test))
+  filename.table <-sprintf("9ROC_block_%d.csv", i)
+  try(write.csv(conf, file=filename.table))
+  auc <- try(auc.value(rf, test))
+  filename.auc <- sprintf("9AUC_block%d.csv", i)
+  try(write.csv(auc, file=filename.auc))
+  filename <- sprintf("%sRF_block_9.Rdata", i)
   try(save(rf,file =filename))
   return(filename) 
 }
@@ -456,7 +489,7 @@ False.positive.False.negative.Plots <- function(image, rf, k){
     # positive, false negative or true negative.
     
     #this is a prediction generated from rf on image
-    image$predicted <- predict(rf, image[4:6])
+    image$predicted <- predict(rf, image[,4:6])
     
     image <- tbl_df(image) %>%
     mutate(classification = rep(0, nrow(image))) %>%
@@ -567,21 +600,24 @@ plot.roc.shuffle2 <- function(filename){
 ##################################################
 # Gini Data Frame for Comparison
 
-Gini.data.frame <- function{
+Gini.data.frame.begin <- function(filename){
     # This script creates a data frame with the Gini importance measure of each
     # feature for the all 12 folds.
     
-    load("1RF_block.Rdata")
-    rf # this is the random forest class that was loaded
-    
-    Gini <- as.data.frame(rf$importance[,4])
+    load(filename)
+    Gini <<- as.data.frame(rf$importance[,4])
     colnames(Gini)[1] <- "1st fold"
+    return(Gini)
+}
     
-    compare.gini <- for (i in c(2:6, 8:12)){
+compare.gini <- function(gini){
+  #feed in output from Gini.data.frame.begin
+
+  for (i in c(2:6, 8:12)){
         # This function generates a dataframe with all 12 folds of the Gini
         # importance measures
         
-        filename <- sprintf("%dRF_block.Rdata", i)
+        filename <- sprintf("%dRF_block_9.Rdata", i)
         load(filename)
         Forest <- sprintf("%dst fold", i)
         Gini <<- cbind(Gini, as.data.frame(rf$importance[,4]))
@@ -593,34 +629,28 @@ Gini.data.frame <- function{
 ################################################################################
 # Gives mean and variance summary for Gini dataframe:
 
-Gini.reformat <- function{
-    
+Gini.Mean.sd <- function(gini){
+  #pass in output from compare.gini
+  
+    Gini <- gini
     Gini$mean <- rowMeans(Gini)
     Gini$variance <- rowVars(as.matrix(Gini[,1:11]))
     Gini$sd <- sqrt(Gini$variance)
+    png("Gini_mean_sd.png")
+    grid.table(Gini[,12:14],show.rownames=T)
+    dev.off()
     return(Gini)
     
 }
 
 ################################################################################
-# Gives Gini mean importance file.
-
-Gini.Mean.sd <- function(Gini){
-    
-    #Gini should be passed in from Gini.reformat function.
-    png("Gini_mean_sd.png")
-    grid.table(Gini[,12:14],show.rownames=T)
-    dev.off()
-}
-
-
-################################################################################
 # Reshape Gini
 
-Reshape.Gini <- function(Gini){
+Reshape.Gini <- function(gini){
     # Reformats the Gini dataframe for plotting of Gini Importance:
     # Outputs the saved plot
     
+    Gini <- gini
     Gini <- t(Gini)
     Gini <- as.data.frame(Gini)
     Gini <- mutate(Gini, fold <- c(1:6, 8:12))
@@ -640,14 +670,19 @@ Reshape.Gini <- function(Gini){
 # AUC table
 #
 
-AUC.table <- function{
-    # Get table of AUC measurements
+AUC.table.begin <- function(filename){
+  # Get table of AUC measurements
+  
+  AUC <- read.csv(filename)
+  colnames(AUC)[2] <- "1st fold"
+  AUC <<- dplyr::select(AUC, -X)
+  return(AUC)
+}
     
-    AUC <-read.csv("AUC_block1.csv")
-    colnames(AUC)[2] <- "1st fold"
-    AUC <- dplyr::select(AUC, -X)
-    
-    compare.AUC <- for (i in c(2:6, 8:12)){
+compare.AUC <- function(auc.object){
+  #feed in output of AUC.table.begin
+  
+  for (i in c(2:6, 8:12)){
         # Adds the rest of the AUC data using dataframe generated above
         filename <- sprintf("AUC_block%d.csv", i)
         AUC.num <- sprintf("%dst fold", i)
@@ -657,8 +692,10 @@ AUC.table <- function{
         AUC <<- cbind(AUC, file)
     }
     
+    AUC <- as.data.frame(AUC)
     rownames(AUC) <- "AUC"
     AUC <- t(AUC)
+    AUC <- as.data.frame(AUC)
     AUC$fold <- rownames(AUC)
     
     png("AUCconverge.png")
@@ -668,6 +705,7 @@ AUC.table <- function{
     png("AUC_12_folds.png")
     grid.table(AUC,show.rownames=T)
     dev.off()
+    
     return(AUC)
 }
 
@@ -723,10 +761,10 @@ if (ImageSave){
     Reshape.Gini <- function(Gini)
     
     #Gini_mean_sd table png
-    Gini.Mean.sd(Gini.reformat(Gini.data.frame))
+    Gini.Mean.sd(compare.gini(gini.data.frame.begin("1RF_block_9.Rdata")))
     
     #AUC table and AUCconverge plot
-    AUC.table
+    compare.auc(AUC.table.begin("AUC_block1.csv"))
     
     
     
