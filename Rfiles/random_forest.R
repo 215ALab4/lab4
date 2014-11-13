@@ -524,19 +524,16 @@ False.positive.False.negative.Plots <- function(image, filename, k){
     im3 <- ggplot(image)
     
     filename.classification <- sprintf("classification_image%d.png", k)
-    png(filename.classification)
-    im3+fpr+colour
-    dev.off()
+    ggsave(filename = filename.classification, plot = im3+fpr+colour)
+    
     
     filename.label <- sprintf("label_%d.png", k)
-    png(filename.label)
-    im3 + raw.image
-    dev.off()
+    ggsave(filename = filename.label, plot = im3+raw.image)
+
     
     filename.NDAI <- sprintf("NDAI_image%d.png", k)
-    png(filename.NDAI)
-    im3 + image.NDAI
-    dev.off()
+    ggsave(filename = filename.NDAI, plot = im3+image.NDAI)
+
     
     return(im3+fpr)
 }
