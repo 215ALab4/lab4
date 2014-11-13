@@ -25,7 +25,7 @@
    b) Change the working directory
  to "~/Rfiles" (line 16)
    c) Change the value of ImageSave to TRUE
- (line 17) 
+ (line 17)
    d) Run the whole script
 
 6) All the image files should now be in "~/figures".  If there are any
