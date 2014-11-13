@@ -659,7 +659,7 @@ Reshape.Gini <- function(gini){
     Gini <- gini
     Gini <- t(Gini)
     Gini <- as.data.frame(Gini)
-    Gini <- mutate(Gini, fold <- c(1:6, 8:12))
+    Gini$fold <- c(1:6, 8:12)
     colnames(Gini)[9] <- "fold.number"
     Gini <- melt(Gini, id = "fold.number")
     colnames(Gini)[1] <- "fold"
@@ -667,7 +667,8 @@ Reshape.Gini <- function(gini){
     colnames(Gini)[3] <- "GiniImportance"
     
     png("Gini_Importance.png")
-    ggplot(Gini)+geom_point(aes(x=fold, y = GiniImportance, colour = variable))+geom_smooth(aes(group = variable, x = fold, y = GiniImportance))
+    ggplot(Gini)+geom_point(aes(x=fold, y = GiniImportance, 
+                                colour = variable))+geom_smooth(aes(group = variable, x = fold, y = GiniImportance))
     dev.off()
 }
 
