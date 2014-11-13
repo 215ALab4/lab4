@@ -13,8 +13,8 @@ library(ggROC)
 nCores <- 4
 registerDoParallel(nCores)
 
-setwd(file.path("/accounts/grad/janetlishali/Lab4"))
-ImageSave <- FALSE
+setwd(file.path("/Users/LishaLi/Desktop/test"))
+ImageSave <- TRUE
 
 
 ###############################################################################
@@ -29,11 +29,11 @@ rf.specific <- function(train, num.tree){
   #           columns 4 up to the second last.  The 3rd column contains the labels
   #   num.tree - the number of trees to use in the forest
   
-  rf <- try(randomForest(x = train[,4:(ncol(train)-1)], 
+  rf <- randomForest(x = train[,4:(ncol(train)-1)], 
                          y = droplevels(as.factor(train[,3])), 
                          ntree=num.tree, 
                          confusion = T, 
-                         importance = T))
+                         importance = T)
   return(rf)
 }
 
@@ -156,10 +156,10 @@ image3 <- mutate(image3,
                  fold = ifelse(block.x == FALSE & block.y == TRUE, 12, fold))
 
 combined <- rbind(image1, image2, image3) %>%  # combine the three images 
-            dplyr::select(-block.x,-blocky) %>% # removes block.x and block.y
-            mutate(combined, label=as.factor(label)) %>%
-            filter(combined, label != 0) %>% #filter out unlabelled points.  
-            mutate(combined, label = droplevels(label))
+            dplyr::select(-block.x,-block.y) %>% # removes block.x and block.y
+            mutate(label=as.factor(label)) %>%
+            filter(label != 0) %>% #filter out unlabelled points.  
+            mutate(label = droplevels(label))
 
 # Depending on whether we want to train on all features, or only NDAI, SD and 
 # CORR, we can set set TopThree to TRUE
@@ -174,7 +174,7 @@ if (TopThree){
 ################################################################################
 # Apply Random Forest model to all 12 Folds
 
-num.tree <- 100 # set the number of trees you would like to train random forest on
+num.tree <- 2 # set the number of trees you would like to train random forest on
 num.folds <- 12 # set to the number of folds in your CV set
 
 Random.Forest.folds <- foreach(i = 1:num.folds)%dopar% {
@@ -194,10 +194,10 @@ Random.Forest.folds <- foreach(i = 1:num.folds)%dopar% {
   rf <- try(rf.specific(train, num.tree))
   conf <- try(confusion.generate(rf,test))
   filename.table <-sprintf("ROC_block%d.csv", i)
-  write.csv(conf, file=filename.table)
+  try(write.csv(conf, file=filename.table))
   auc <- try(auc.value(rf, test))
   filename.auc <- sprintf("AUC_block%d.csv", i)
-  write.csv(auc, file=filename.auc)
+  try(write.csv(auc, file=filename.auc))
   filename <- sprintf("%sRF_block.Rdata", i)
   try(save(rf,file =filename))
   return(filename) 
