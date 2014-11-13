@@ -14,18 +14,18 @@
 4) To generate the plots in the Logit section:
    
    a) Open "./Rfiles/Logit.R”
-   b) Change the working directory "~/Rfiles" (line 8)
+   b) Change the working directory to "~/Rfiles" (line 8)
    c) Change the value of ImageSave to TRUE (line 9)
    d) Run the whole script
 
 5) To generate the plots in the Random Forests section:
-   
+
    a) Open "./Rfiles/random_forest.R"
-   
+
    b) Change the working directory
- "~/Rfiles" (line 16)
+ to "~/Rfiles" (line 16)
    c) Change the value of ImageSave to TRUE
- (line 17)  
+ (line 17) 
    d) Run the whole script
 
 6) All the image files should now be in "~/figures".  If there are any
