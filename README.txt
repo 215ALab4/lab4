@@ -21,9 +21,9 @@
    b) Change the working directory to "~/Rfiles" (line 16)
    c) Change the value of ImageSave to TRUE (line 17)
    d) Run the whole script
-	Remarks: remember to change number of trees you are training on.  
-	It is currently set at 100 but will likely be very slow for most
-	personal computers at such high number of trees. 
+   e) Change the number of trees by changing the num.tree variable.  For 
+	our analysis, we used the 50 trees for the plots. The script will 
+	some time for more than 50 trees (a couple of minutes).  
 
 6) To generate the plots in the EDA section:
    a) Open "~/Rfiles/EDA.R"

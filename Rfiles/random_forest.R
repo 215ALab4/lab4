@@ -268,10 +268,6 @@ image.cv <- foreach(i = c(1,5,9))%dopar% {
   rf <- try(rf.specific(train, num.tree))
   conf <- try(confusion.generate(rf,test))
   roc.pic <- roc.generate(rf, test)
-  filename.pic <-sprintf("ROC_image%d.pdf", i)
-  pdf(filename.pic)
-  roc.generate(rf, test)
-  dev.off()
   filename.table <-sprintf("ROC_image%d.csv", i)
   try(write.csv(conf, file=filename.table))
   auc <- try(auc.value(rf, test))
@@ -281,6 +277,7 @@ image.cv <- foreach(i = c(1,5,9))%dopar% {
   try(save(rf,file =filename))
   return(filename) 
 }
+
 
 ################################################################################
 # Convergence analysis and validation
@@ -786,8 +783,18 @@ if (ImageSave){
     
     AUC.plot(compare.AUC(AUC.table.begin("AUC_block1.csv")))
     
+    #ROC plots for image 1, 5 and 9 (1,2,3 but labelled thus):
+    load("1RF_image.Rdata")
+    test <- filter(combined, fold %in% c(1:(4)))
+    ggsave(filename ="ROC_image1.pdf", plot = roc.generate(rf, test))
     
+    load("5RF_image.Rdata")
+    test <- filter(combined, fold %in% c(5:(8)))
+    ggsave(filename ="ROC_image5.pdf", plot = roc.generate(rf, test))
     
+    load("9RF_image.Rdata")
+    test <- filter(combined, fold %in% c(9:(12)))
+    ggsave(filename ="ROC_image9.pdf", plot = roc.generate(rf, test))
 }
 
 
