@@ -11,6 +11,7 @@ library(ROCR)
 library(ggROC)
 library(grid)
 library(gridBase)
+library(gridExtra)
 
 nCores <- 4
 registerDoParallel(nCores)
@@ -675,7 +676,7 @@ AUC.table.begin <- function(filename){
   
   AUC <- read.csv(filename)
   colnames(AUC)[2] <- "1st fold"
-  AUC <<- dplyr::select(AUC, -X)
+  AUC <- dplyr::select(AUC, -X)
   return(AUC)
 }
     
@@ -689,7 +690,7 @@ compare.AUC <- function(auc.object){
         file <- read.csv(filename)
         colnames(file)[2] <- AUC.num
         file <- dplyr::select(file, -X)
-        AUC <<- cbind(AUC, file)
+        AUC <- cbind(AUC, file)
     }
     
     AUC <- as.data.frame(AUC)
@@ -698,16 +699,20 @@ compare.AUC <- function(auc.object){
     AUC <- as.data.frame(AUC)
     AUC$fold <- rownames(AUC)
     
-    png("AUCconverge.png")
-    ggplot(AUC, aes(x=fold, y = AUC))+geom_point()+geom_smooth
-    dev.off()
-    
     png("AUC_12_folds.png")
     grid.table(AUC,show.rownames=T)
     dev.off()
     
     return(AUC)
 }
+
+AUC.plot <- function(auc){
+  #feed in output of compare.auc
+  AUC <- auc
+  ggsave(filename ="AUCconverge.pdf", plot = ggplot(AUC)+geom_point(aes(x=fold, y = AUC)+geom_smooth()))
+}
+
+
 
 
 ################################################################################
@@ -757,15 +762,15 @@ if (ImageSave){
     plot.roc.shuffle1(filename)
     
     #Gini plots
-    Gini <- Reshape.Gini(Gini.reformat(Gini.data.frame))
-    Reshape.Gini <- function(Gini)
+    Reshape.Gini(compare.gini(gini.data.frame.begin("1RF_block_9.Rdata")))
     
     #Gini_mean_sd table png
     Gini.Mean.sd(compare.gini(gini.data.frame.begin("1RF_block_9.Rdata")))
     
-    #AUC table and AUCconverge plot
-    compare.auc(AUC.table.begin("AUC_block1.csv"))
+    #AUC table
+    compare.AUC(AUC.table.begin("AUC_block1.csv"))
     
+    #AUC plot 
     
     
     
