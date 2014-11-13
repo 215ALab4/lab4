@@ -166,8 +166,8 @@ combined <- rbind(image1, image2, image3) %>%  # combine the three images
 
 TopThree <- TRUE
 if (TopThree){
-  combined <- cbind(combined[,2:7], combined[["fold"]])
-  names(combined)[7] <- "fold"
+  combined <- cbind(combined[,1:7], combined[["fold"]])
+  names(combined)[8] <- "fold"
   combined <- tbl_df(combined)
 }
 
