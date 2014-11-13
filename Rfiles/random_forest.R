@@ -553,18 +553,20 @@ plot.roc.fold <- function(filename){
     
     
     ROC.data <- read.csv(filename)
-    colnames(ROC.data)[2] <- "False.positive.rate"
-    colnames(ROC.data)[3] <- "True.positive.rate"
+    colnames(ROC.data)[2] <- "fold.number"
+    colnames(ROC.data)[3] <- "False.positive.rate"
+    colnames(ROC.data)[4] <- "True.positive.rate"
     ggsave(filename = "ROC_fold_comparison.png", plot = ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
-      geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants)))
+      geom_line(aes(colour= fold.number, group = fold.number)))
 }
 
 plot.roc.converge <- function(filename){
     
     
     ROC.data <- read.csv(filename)
-    colnames(ROC.data)[2] <- "False.positive.rate"
-    colnames(ROC.data)[3] <- "True.positive.rate"
+    colnames(ROC.data)[2] <- "number.of.quadrants"
+    colnames(ROC.data)[3] <- "False.positive.rate"
+    colnames(ROC.data)[4] <- "True.positive.rate"
 
     ggsave(filename = "ROC_converge1.pdf", plot = ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
     geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants)))
@@ -574,8 +576,9 @@ plot.roc.shuffle1 <- function(filename){
     
     
     ROC.data <- read.csv(filename)
-    colnames(ROC.data)[2] <- "False.positive.rate"
-    colnames(ROC.data)[3] <- "True.positive.rate"
+    colnames(ROC.data)[2] <- "number.of.quadrants"
+    colnames(ROC.data)[3] <- "False.positive.rate"
+    colnames(ROC.data)[4] <- "True.positive.rate"
 
     ggsave(filename = "ROC_converge_shuffle1.png", plot = ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
     geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants)))
@@ -584,8 +587,9 @@ plot.roc.shuffle2 <- function(filename){
     
     
     ROC.data <- read.csv(filename)
-    colnames(ROC.data)[2] <- "False.positive.rate"
-    colnames(ROC.data)[3] <- "True.positive.rate"
+    colnames(ROC.data)[2] <- "number.of.quadrants"
+    colnames(ROC.data)[3] <- "False.positive.rate"
+    colnames(ROC.data)[4] <- "True.positive.rate"
     ggsave(filename ="ROC_converge_shuffle2.png",  ggplot(ROC.data, aes(x=False.positive.rate, y = True.positive.rate))+
     geom_line(aes(colour= number.of.quadrants, group = number.of.quadrants)))
 }
