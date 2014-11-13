@@ -5,7 +5,7 @@ library(ROCR)
 library(mvtnorm)
 library(ggplot2)
 
-setwd("D:/coursework/stat215A/group")
+setwd("D:/coursework/stat215A/group/Rfiles")
 ImageSave <- FALSE
 
 ###############################################################################
@@ -464,43 +464,47 @@ qda3.12fold.conf <- ggplot(qda.recon.12fold$image3) + ggconf +
 
 if (ImageSave){
 
-# EDA
-ggsave(filename="CORR_vs_NDAI.png", plot=corr.ndai.eda,
-       height=5, width=5)
-ggsave(filename="NDAI_vs_SD.png", plot=ndai.sd.eda,
-       height=5, width=5)
-ggsave(filename="CORR_vs_SD.png", plot=corr.sd.eda,
-       height=5, width=5)
-
 # ROC Curves + AUC
-ggsave(filename="ROC_12_folds_DA.png", plot=qda.roc.12folds,
+ggsave(path="../figures",
+       filename="ROC_12_folds_DA.png", plot=qda.roc.12folds,
        height=5, width=5)
-ggsave(filename="AUC_12_folds_DA.png", plot=auc.12folds,
+ggsave(path="../figures",
+       filename="AUC_12_folds_DA.png", plot=auc.12folds,
        height=5, width=5)
-ggsave(filename="AUC_difference.png",plot=auc.comp.plot,
+ggsave(path="../figures",
+       filename="AUC_difference.png",plot=auc.comp.plot,
        height=5, width=5)
 
 # Confusion Plots - Leave One Out CV
-ggsave(filename="qda1_loo_conf.png", plot=qda1.loo.conf,
+ggsave(path="../figures",
+       filename="qda1_loo_conf.png", plot=qda1.loo.conf,
        height=5, width=5)
-ggsave(filename="qda2_loo_conf.png", plot=qda2.loo.conf,
+ggsave(path="../figures",
+       filename="qda2_loo_conf.png", plot=qda2.loo.conf,
        height=5, width=5)
-ggsave(filename="qda3_loo_conf.png", plot=qda3.loo.conf,
+ggsave(path="../figures",
+       filename="qda3_loo_conf.png", plot=qda3.loo.conf,
        height=5, width=5)
 
 # Confusion Plots - 12-Fold CV
-ggsave(filename="qda1_12fold_conf.png", plot=qda1.12fold.conf,
+ggsave(path="../figures",
+       filename="qda1_12fold_conf.png", plot=qda1.12fold.conf,
        height=5, width=5)
-ggsave(filename="qda2_12fold_conf.png", plot=qda2.12fold.conf,
+ggsave(path="../figures",
+       filename="qda2_12fold_conf.png", plot=qda2.12fold.conf,
        height=5, width=5)
-ggsave(filename="qda3_12fold_conf.png", plot=qda3.12fold.conf,
+ggsave(path="../figures",
+       filename="qda3_12fold_conf.png", plot=qda3.12fold.conf,
        height=5, width=5)
 
 # Probability Plots
-ggsave(filename="qda1_prob.png", plot=qda1.prob.plot,
+ggsave(path="../figures",
+       filename="qda1_prob.png", plot=qda1.prob.plot,
        height=5, width=5)
-ggsave(filename="qda2_prob.png", plot=qda2.prob.plot,
+ggsave(path="../figures",
+       filename="qda2_prob.png", plot=qda2.prob.plot,
        height=5, width=5)
-ggsave(filename="qda3_prob.png", plot=qda3.prob.plot,
+ggsave(path="../figures",
+       filename="qda3_prob.png", plot=qda3.prob.plot,
        height=5, width=5)
 }

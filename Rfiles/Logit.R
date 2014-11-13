@@ -1,11 +1,12 @@
-setwd('~/STAT215A')
 library(ggplot2)
 library(dplyr)
 library(AUC)
 library(gridExtra)
 
+
 # Flag for whether or not we want to save images
 ImageSave <- FALSE
+setwd('~/STAT215A')
 
 # Load the images
 image1 <- read.table('image1.txt', header = F)
@@ -25,53 +26,6 @@ image3 <- mutate(image3, Image = 3)
 
 # Combine
 all.images <- rbind(image1, image2, image3)
-
-# Plot unlabelled images according to AN radiance
-raw.eda <- ggplot(all.images, aes(x = x, y = y, color = AN)) + 
-  geom_point() + 
-  facet_wrap(~ Image) +
-  ggtitle('Unlabelled Images with AN Radiances') +
-  scale_color_continuous(name='AN', low = '#3366CC', high = '#FFFFFF' )
-
-# Plot images with their expert labels
-experts.eda <- ggplot(all.images, aes(x = x, y = y, color = factor(label))) + 
-  geom_point() + facet_wrap(~ Image) +
-  ggtitle('Expertly Labelled Images')+ 
-  scale_color_discrete(name = '',breaks = c("-1", "0", "1"),
-                       labels = c("Clear", "Unknown", "Cloudy"))
- 
-# Plot images with NDAI
-ndai.eda <- ggplot(all.images, aes(x=x, y=y, color = NDAI)) + 
-  geom_point() + 
-  facet_wrap(~ Image) +
-  ggtitle('Mapped NDAI Readings') + 
-  scale_color_continuous(name='NDAI', low = '#3366CC', high = '#FFFFFF')
-
-# Plot images with SD
-sd.eda <- ggplot(all.images, aes(x = x, y = y, color = SD)) + 
-  geom_point() + 
-  facet_wrap(~ Image) + 
-  ggtitle('Mapped SD Readings') + 
-  scale_color_continuous(name = 'SD', low = '#3366CC', high = '#FFFFFF')
-
-# Plot images with CORR
-corr.eda <- ggplot(all.images, aes(x = x, y = y, color = CORR)) + 
-  geom_point() + 
-  facet_wrap(~ Image) + 
-  ggtitle('Mapped CORR Readings') + 
-  scale_color_continuous(name='CORR', low = '#3366CC', high = '#FFFFFF' )
-
-# Look at radiance densities for image 3
-an.eda <- ggplot(image3) + geom_density(aes(x = AN, group = factor(label), 
-                                            fill = factor(label)), alpha = 0.5)
-af.eda <- ggplot(image3) + geom_density(aes(x = AF, group = factor(label), 
-                                            fill = factor(label)), alpha = 0.5)
-bf.eda <- ggplot(image3) + geom_density(aes(x = BF, group = factor(label), 
-                                            fill = factor(label)), alpha = 0.5)
-cf.eda <- ggplot(image3) + geom_density(aes(x = CF, group = factor(label), 
-                                            fill = factor(label)), alpha = 0.5)
-df.eda <- ggplot(image3) + geom_density(aes(x = DF, group = factor(label), 
-                                            fill = factor(label)), alpha = 0.5)
 
 # Create the folds for CV by dividing each image into quadrants
 image1$assignment <- 1 + (image1$x < mean(image1$x) & 
@@ -253,34 +207,16 @@ parameter.convergence <- ggplot(coeff.conv, aes(x = Index, y = Value)) +
 
 # Save plots if flag was set to TRUE
 if (ImageSave == TRUE){
-  ggsave(filename = "RAWEDA.png", plot=raw.eda,
-         height=5, width=5)
-  ggsave(filename = "EXPERTSEDA.png", plot=experts.eda,
-         height=5, width=5)
-  ggsave(filename = "NDAIEDA.png", plot=ndai.eda,
-         height=5, width=5)
-  ggsave(filename = "SDEDA.png", plot=sd.ndai.eda,
-         height=5, width=5)
-  ggsave(filename = "CORREDA.png", plot=corr.eda,
-         height=5, width=5)
+
   ggsave(filename = "LogitClassification.png", plot=images.logit.class,
-         height=5, width=5)
+         path="../figures", height=3, width=8)
   ggsave(filename = "LogitProbabilites.png", plot=images.prob,
-         height=5, width=5)
+         path="../figures", height=3, width=8)
   ggsave(filename = "ClassificationOutcomes.png", plot=misclassification.plot,
-         height=5, width=5)
+         path="../figures", height=3, width=8)
   ggsave(filename = "ParameterConvergence.png", plot=parameter.convergence,
-         height=5, width=5)
-  ggsave(filename = "ANEDA.png", plot=an.eda,
-         height=5, width=5)
-  ggsave(filename = "AFEDA.png", plot=af.eda,
-         height=5, width=5)
-  ggsave(filename = "BFEDA.png", plot=bf.eda,
-         height=5, width=5)
-  ggsave(filename = "CFEDA.png", plot=cf.eda,
-         height=5, width=5)
-  ggsave(filename = "DFEDA.png", plot=df.eda,
-         height=5, width=5)
+         path="../figures", height=3, width=8)
+
 }
 
 
