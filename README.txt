@@ -1,4 +1,4 @@
-﻿1) Clone the github repository, maintaining the directory structure 
+1) Clone the github repository, maintaining the directory structure 
    git clone https://github.com/215ALab4/lab4.git
 
 2) Place the image files into the "~/Rfiles" where the "~/" signifies
@@ -21,6 +21,9 @@
    b) Change the working directory to "~/Rfiles" (line 16)
    c) Change the value of ImageSave to TRUE (line 17)
    d) Run the whole script
+	Remarks: remember to change number of trees you are training on.  
+	It is currently set at 100 but will likely be very slow for most
+	personal computers at such high number of trees. 
 
 6) To generate the plots in the EDA section:
    a) Open "~/Rfiles/EDA.R"
