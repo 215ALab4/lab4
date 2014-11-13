@@ -250,19 +250,30 @@ image.cv <- foreach(i = c(1,5,9))%dopar% {
 # as ROC_convergei.csv
 
 convergence.cv <- foreach(i = 1:11)%dopar% {
+  train <- filter(combined, fold <= i)
+  test <- anti_join(combined, train)
+  rf <- try(rf.specific(train,num.tree))
+  conf <- try(confusion.generate(rf,test))
+  filename.table <- sprintf("ROC_converge%d.csv", i)
+  try(write.csv(conf, file = filename.table))
+  auc <- try(auc.value(rf,test))
+  filename.auc <- sprintf("AUC_converge%d.csv", i)
+  try(write.csv(auc, file=filename.auc))
+  filename <- sprintf("%sRF_converge.Rdata",i)
+}
 
+convergence.cv <- foreach(i = 1:11)%dopar% {
   train <- filter(combined, fold <= i) #so we drop the ith fold
   test <- anti_join(combined, train) #test on the ith fold
-  rf <- try(rf.specific(train, num.tree))
+  rf <- rf.specific(train, num.tree)
   conf <- try(confusion.generate(rf,test))
   filename.table <-sprintf("ROC_converge%d.csv", i)
-  try(write.csv(conf, file=filename.table)_
+  try(write.csv(conf, file=filename.table)
   auc <- try(auc.value(rf, test))
   filename.auc <- sprintf("AUC_converge%d.csv", i)
   try(write.csv(auc, file=filename.auc))
   filename <- sprintf("%sRF_converge.Rdata", i)
   try(save(rf,file =filename))
-  return(filename) 
 }
 
 ################################################################################
