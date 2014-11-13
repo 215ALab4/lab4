@@ -24,6 +24,14 @@
    e) Change the number of trees by changing the num.tree variable.  For 
 	our analysis, we used the 50 trees for the plots. The script will 
 	some time for more than 50 trees (a couple of minutes).  
+	REMARK: running random_forest.R will generate a lot of Rdata and cdv
+	files in your directory.  Not all is used for the plots in the writeup.
+	They are very useful for further exploration, and only some of the 
+	analysis from them made it to the writeup.  The Rdata files all loads
+	random forest objects, which one can then use as predictors of other
+	image files.  Changing the loaded image files to any new ones and 
+	rerunning the entire script will print and save all plots used in the
+	writeup.  
 
 6) To generate the plots in the EDA section:
    a) Open "~/Rfiles/EDA.R"

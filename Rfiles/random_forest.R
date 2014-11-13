@@ -784,16 +784,22 @@ if (ImageSave){
     
     #ROC plots for image 1, 5 and 9 (1,2,3 but labelled thus):
     load("1RF_image.Rdata")
-    test <- filter(combined, fold %in% c(1:(4)))
-    ggsave(filename ="ROC_image1.pdf", plot = roc.generate(rf, test))
+    test <- filter(combined, fold %in% c(1:4))
+    pdf("ROC_image1.pdf")
+    roc.generate(rf, test)
+    dev.off()
     
     load("5RF_image.Rdata")
-    test <- filter(combined, fold %in% c(5:(8)))
-    ggsave(filename ="ROC_image5.pdf", plot = roc.generate(rf, test))
+    test <- filter(combined, fold %in% c(5:8))
+    pdf("ROC_image5.pdf")
+    plot = roc.generate(rf, test)
+    dev.off()
     
     load("9RF_image.Rdata")
     test <- filter(combined, fold %in% c(9:(12)))
-    ggsave(filename ="ROC_image9.pdf", plot = roc.generate(rf, test))
+    pdf("ROC_image9.pdf")
+    roc.generate(rf, test)
+    dev.off()
 }
 
 
