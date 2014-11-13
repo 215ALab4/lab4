@@ -10,7 +10,11 @@
    c) Change the value of ImageSave to TRUE (line 9)
    d) Run the whole script
 
-4) To generate the plots in the Logit\Probit section:
+4) To generate the plots in the Logit section:
+   a) Open "./Rfiles/Logit.R”
+   b) Change the working directory
+   c) Change the value of ImageSave to TRUE
+   d) Run the whole script
 
 5) To generate the plots in the Random Forests section:
    a) Open "./Rfiles/random_forest.R"
