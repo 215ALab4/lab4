@@ -172,8 +172,8 @@ combined.all <- combined #save this one for calculating Gini importance measure
 
 TopThree <- TRUE
 if (TopThree){
-  combined <- cbind(combined[,1:7], combined[["fold"]])
-  names(combined)[8] <- "fold"
+  combined <- cbind(combined[,1:6], combined[["fold"]])
+  names(combined)[7] <- "fold"
   combined <- tbl_df(combined)
 }
 
@@ -377,7 +377,7 @@ ROC.curve.data.frame.fold <- function(ROC){
   # to output ROC information for the convergence data, just substite 'block'
   # in sprintf below with 'convergence'.  Same with 'image'
   # writes to csv the ROC dataframe to be plotted in the random_forest_plots.R file
-  
+  ROC.data <- ROC
   for (i in c(2:6, 8:12)){
       filename <- sprintf("%dRF_block.Rdata", i)
       load(filename)
@@ -390,7 +390,7 @@ ROC.curve.data.frame.fold <- function(ROC){
       data[,1] <- fold.name
       data$x.values <- x.values
       data$y.values <- rocData@y.values[[1]]
-      ROC.data <<- rbind(ROC.data, data)
+      ROC.data <- rbind(ROC.data, data)
   }
   write.csv(ROC.data, "ROC_fold_comparison.csv")
   return(ROC.data)
@@ -403,8 +403,8 @@ ROC.curve.data.frame.converge <- function(ROC){
     # to output ROC information for the convergence data, just substite 'block'
     # in sprintf below with 'convergence'.  Same with 'image'
     # writes to csv the ROC dataframe to be plotted in the random_forest_plots.R file
-    
-    for (i in c(2:6, 8:12)){
+    ROC.data <- ROC
+    for (i in c(2:11)){
         filename <- sprintf("%dRF_converge.Rdata", i)
         load(filename)
         rocData <- roc.data(rf, filter(combined, fold == i) )
@@ -416,7 +416,7 @@ ROC.curve.data.frame.converge <- function(ROC){
         data[,1] <- fold.name
         data$x.values <- x.values
         data$y.values <- rocData@y.values[[1]]
-        ROC.data <<- rbind(ROC.data, data)
+        ROC.data <- rbind(ROC.data, data)
     }
     write.csv(ROC.data, "ROC_convergence_comparison.csv")
     return(ROC.data)
@@ -430,9 +430,9 @@ ROC.curve.data.frame.shuffle1 <- function(ROC){
     # to output ROC information for the convergence data, just substite 'block'
     # in sprintf below with 'convergence'.  Same with 'image'
     # writes to csv the ROC dataframe to be plotted in the random_forest_plots.R file
-    
+    ROC.data <- ROC
     for (i in c(2:6, 8:12)){
-        filename <- sprintf("ROC_converge_shuffle1%d.Rdata", i)
+        filename <- sprintf("1RF_converge_shuffle1.Rdata", i)
         load(filename)
         rocData <- roc.data(rf, filter(combined, fold == i) )
         x.values <- rocData@x.values[[1]]
@@ -443,7 +443,7 @@ ROC.curve.data.frame.shuffle1 <- function(ROC){
         data[,1] <- fold.name
         data$x.values <- x.values
         data$y.values <- rocData@y.values[[1]]
-        ROC.data <<- rbind(ROC.data, data)
+        ROC.data <- rbind(ROC.data, data)
     }
     write.csv(ROC.data, "ROC_converge_shuffle1.csv")
     return(ROC.data)
@@ -456,9 +456,9 @@ ROC.curve.data.frame.shuffle2 <- function(ROC){
     # to output ROC information for the convergence data, just substite 'block'
     # in sprintf below with 'convergence'.  Same with 'image'
     # writes to csv the ROC dataframe to be plotted in the random_forest_plots.R file
-    
+    ROC.data <- ROC
     for (i in c(2:6, 8:12)){
-        filename <- sprintf("ROC_converge_shuffle2%d.Rdata", i)
+        filename <- sprintf("1RF_converge_shuffle2.Rdata", i)
         load(filename)
         rocData <- roc.data(rf, filter(combined, fold == i) )
         x.values <- rocData@x.values[[1]]
@@ -469,7 +469,7 @@ ROC.curve.data.frame.shuffle2 <- function(ROC){
         data[,1] <- fold.name
         data$x.values <- x.values
         data$y.values <- rocData@y.values[[1]]
-        ROC.data <<- rbind(ROC.data, data)
+        ROC.data <- rbind(ROC.data, data)
     }
     write.csv(ROC.data, "ROC_converge_shuffle2.csv")
     return(ROC.data)
@@ -510,6 +510,7 @@ False.positive.False.negative.Plots <- function(image, filename, k){
     label == "-1",
     "false positive",
     classification))
+    
     fpr <- geom_point(aes(x=x, y=y, color=classification))
     image.NDAI <- geom_point(aes(x=x, y=y, color = NDAI))
     raw.image <- geom_point(aes(x=x, y=y, color=as.factor(label)))
@@ -522,7 +523,7 @@ False.positive.False.negative.Plots <- function(image, filename, k){
     
     im3 <- ggplot(image)
     
-    filename.classifcation <- sprintf("classification_image%d.png", k)
+    filename.classification <- sprintf("classification_image%d.png", k)
     png(filename.classification)
     im3+fpr+colour
     dev.off()
@@ -745,9 +746,9 @@ if (ImageSave){
     ROC.curve.data.frame.converge(ROC.curve.data.frame.begin(
       "1RF_converge.Rdata"))
     ROC.curve.data.frame.shuffle1(ROC.curve.data.frame.begin(
-      "RF_converge_shuffle11.Rdata"))
+      "1RF_converge_shuffle1.Rdata"))
     ROC.curve.data.frame.shuffle2(ROC.curve.data.frame.begin(
-      "RF_converge_shuffle11.Rdata"))
+      "1RF_converge_shuffle2.Rdata"))
     
     filename <- "ROC_fold_comparison.csv"
     
