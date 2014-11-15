@@ -139,9 +139,13 @@ names(image3) <- collabs
 
 image1 <- arrange(image1, (x))
 half.row <- as.integer(nrow(image1)/2)
-image1$block.x <- c(rep(TRUE,half.row), rep(FALSE, half.row+1))
+image1$block.x <- if((nrow(image1)%%2)==0){c(rep(TRUE,half.row),
+                                                  rep(FALSE, half.row))
+                     }else{c(rep(TRUE, half.row), rep(FALSE, half.row+1))}
 image1 <- arrange(image1, (y))
-image1$block.y <- c(rep(TRUE, half.row),rep(FALSE, half.row+1))
+image1$block.y <- if((nrow(image1)%%2)==0){c(rep(TRUE,half.row),
+                                                   rep(FALSE, half.row))
+                     }else{c(rep(TRUE, half.row), rep(FALSE, half.row+1))}
 image1 <-  mutate(image1, 
                   fold = ifelse(block.x==TRUE & block.y==FALSE, 2, 1),
                   fold = ifelse(block.x==TRUE & block.y==TRUE, 3, fold), 
@@ -149,9 +153,13 @@ image1 <-  mutate(image1,
 
 image2 <- arrange(image2, (x))
 half.row <- as.integer(nrow(image2)/2)
-image2$block.x <- c(rep(TRUE,half.row), rep(FALSE, half.row))
+image2$block.x <- if((nrow(image2)%%2)==0){c(rep(TRUE,half.row),
+                                                      rep(FALSE, half.row))
+                        }else{c(rep(TRUE, half.row), rep(FALSE, half.row+1))}
 image2 <- arrange(image2, (y))
-image2$block.y <- c(rep(TRUE, half.row),rep(FALSE, half.row))
+image2$block.y <- if((nrow(image2)%%2)==0){c(rep(TRUE,half.row),
+                                                      rep(FALSE, half.row))
+                        }else{c(rep(TRUE, half.row), rep(FALSE, half.row+1))}
 image2 <- mutate(image2, 
                  fold = ifelse(block.x==TRUE & block.y==FALSE, 6, 5), 
                  fold = ifelse(block.x==TRUE & block.y==TRUE, 7, fold), 
@@ -159,9 +167,13 @@ image2 <- mutate(image2,
 
 image3 <- arrange(image3, (x))
 half.row <- as.integer(nrow(image3)/2)
-image3$block.x <- c(rep(TRUE,half.row), rep(FALSE, half.row+1))
+image3$block.x <- if((nrow(image3)%%2)==0){c(rep(TRUE,half.row),
+                                                      rep(FALSE, half.row))
+                        }else{c(rep(TRUE, half.row), rep(FALSE, half.row+1))}
 image3 <- arrange(image3, (y))
-image3$block.y <- c(rep(TRUE, half.row),rep(FALSE, half.row+1))
+image3$block.y <- if((nrow(image3)%%2)==0){c(rep(TRUE,half.row),
+                                                      rep(FALSE, half.row))
+                        }else{c(rep(TRUE, half.row), rep(FALSE, half.row+1))}
 image3 <- mutate(image3, 
                  fold = ifelse(block.x==TRUE & block.y==FALSE, 10, 9), 
                  fold = ifelse(block.x==TRUE & block.y==TRUE, 11, fold), 
