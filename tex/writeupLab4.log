@@ -1,26 +1,22 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  12 NOV 2014 23:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.16)  15 NOV 2014 14:50
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
 **writeupLab4.tex
-(./writeupLab4.tex
+(D:\coursework\stat215a\lab4\tex\writeupLab4.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
-ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
-rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
-kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
- polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
-lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
-welsh, loaded.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("D:\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("D:\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -34,31 +30,31 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+("D:\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+("D:\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+("D:\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+("D:\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("D:\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("D:\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("D:\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("D:\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -66,15 +62,15 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+("D:\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/color.cfg
+("D:\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
+Package color Info: Driver file: pdftex.def on input line 137.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/framed/framed.sty
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip43
 \fb@frw=\dimen105
@@ -82,7 +78,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen107
 \FrameSep=\dimen108
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/textcomp.sty
+("D:\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -97,7 +93,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1enc.def
+("D:\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 266.
@@ -163,10 +159,10 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/alltt.sty
+("D:\MiKTeX 2.9\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip44
 \f@ncyO@elh=\skip45
 \f@ncyO@erh=\skip46
@@ -177,7 +173,7 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 \f@ncyO@olf=\skip51
 \f@ncyO@orf=\skip52
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amscls/amsthm.sty
+("D:\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2009/07/02 v2.20.1
 \thm@style=\toks15
 \thm@bodyfont=\toks16
@@ -189,41 +185,41 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@headsep=\skip55
 \dth@everypar=\toks20
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+("D:\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip56
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
+("D:\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
+("D:\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks21
 \ex@=\dimen109
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("D:\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen110
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
+("D:\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count89
 \leftroot@=\count90
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count91
 \DOTSCASE@=\count92
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen111
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count93
 \c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
@@ -244,10 +240,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip57
 \multlinetaggap=\skip58
 \mathdisplay@stack=\toks25
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
 \wrapoverhang=\dimen118
 \WF@size=\dimen119
 \c@WF@wrappedlines=\count100
@@ -255,7 +251,7 @@ LaTeX Info: Redefining \] on input line 2667.
 \WF@everypar=\toks26
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
+("D:\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count101
 \float@exts=\toks27
@@ -263,55 +259,58 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks28
 \@floatcapt=\box30
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen120
 \captionmargin@=\dimen121
 \captionwidth=\dimen122
-\caption@indent=\dimen123
-\caption@parindent=\dimen124
-\caption@hangindent=\dimen125
+\caption@tempdima=\dimen123
+\caption@indent=\dimen124
+\caption@parindent=\dimen125
+\caption@hangindent=\dimen126
 )
 \c@ContinuedFloat=\count102
 Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count103
 \c@subtable=\count104
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
+("D:\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("D:\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+("D:\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("D:\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count105
 \Gm@cntv=\count106
 \c@Gm@tempcnt=\count107
-\Gm@bindingoffset=\dimen126
-\Gm@wd@mp=\dimen127
-\Gm@odd@mp=\dimen128
-\Gm@even@mp=\dimen129
-\Gm@layoutwidth=\dimen130
-\Gm@layoutheight=\dimen131
-\Gm@layouthoffset=\dimen132
-\Gm@layoutvoffset=\dimen133
+\Gm@bindingoffset=\dimen127
+\Gm@wd@mp=\dimen128
+\Gm@odd@mp=\dimen129
+\Gm@even@mp=\dimen130
+\Gm@layoutwidth=\dimen131
+\Gm@layoutheight=\dimen132
+\Gm@layouthoffset=\dimen133
+\Gm@layoutvoffset=\dimen134
 \Gm@dimlist=\toks29
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/upquote/upquote.sty
+
+("D:\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
@@ -324,7 +323,7 @@ tim
 \c@proposition=\count114
 \c@definition=\count115
 
-(./writeupLab4.aux
+(D:\coursework\stat215a\lab4\tex\writeupLab4.aux
 
 LaTeX Warning: Label `' multiply defined.
 
@@ -344,8 +343,6 @@ LaTeX Warning: Label `' multiply defined.
 LaTeX Warning: Label `' multiply defined.
 
 )
-\openout1 = `writeupLab4.aux'.
-
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
@@ -360,68 +357,25 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 83.
- (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+ ("D:\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 83.
 
-(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+(C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
-\scratchdimen=\dimen134
+\scratchdimen=\dimen135
 \scratchbox=\box31
 \nofMPsegments=\count117
 \nofMParguments=\count118
 \everyMPshowfont=\toks30
 \MPscratchCnt=\count119
-\MPscratchDim=\dimen135
+\MPscratchDim=\dimen136
 \MPnumerator=\count120
 \makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks31
-) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -480,8 +434,8 @@ Overfull \hbox (35.19312pt too wide) in paragraph at lines 106--107
 
 [1
 
-{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../figures/EXPERTSEDA.png, id=14, 703.62875pt x 588.1975pt>
+{C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<../figures/EXPERTSEDA.png, id=13, 703.62875pt x 588.1975pt>
 File: ../figures/EXPERTSEDA.png Graphic file (type png)
 
 <use ../figures/EXPERTSEDA.png>
@@ -492,7 +446,7 @@ Overfull \hbox (35.15913pt too wide) in paragraph at lines 111--112
 [][] 
  []
 
-<../figures/NDAI1.png, id=15, 481.8pt x 481.8pt>
+<../figures/NDAI1.png, id=14, 481.8pt x 481.8pt>
 File: ../figures/NDAI1.png Graphic file (type png)
  <use ../figures/NDAI1.png>
 Package pdftex.def Info: ../figures/NDAI1.png used on input line 120.
@@ -502,7 +456,7 @@ Overfull \hbox (3.94185pt too wide) in paragraph at lines 120--121
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/NDAI2.png, id=16, 481.8pt x 481.8pt>
+<../figures/NDAI2.png, id=15, 481.8pt x 481.8pt>
 File: ../figures/NDAI2.png Graphic file (type png)
  <use ../figures/NDAI2.png>
 Package pdftex.def Info: ../figures/NDAI2.png used on input line 123.
@@ -512,7 +466,7 @@ Overfull \hbox (3.94185pt too wide) in paragraph at lines 123--124
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/NDAI3.png, id=17, 481.8pt x 481.8pt>
+<../figures/NDAI3.png, id=16, 481.8pt x 481.8pt>
 File: ../figures/NDAI3.png Graphic file (type png)
  <use ../figures/NDAI3.png>
 Package pdftex.def Info: ../figures/NDAI3.png used on input line 126.
@@ -522,10 +476,11 @@ Overfull \hbox (3.94185pt too wide) in paragraph at lines 126--127
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[2 <../figures/RAWEDA.png> <../figures/EXPERTSEDA.png>]
-<../figures/SD1.png, id=24, 481.8pt x 481.8pt>
+[2 <D:/coursework/stat215a/lab4/figures/RAWEDA.png> <D:/coursework/stat215a/lab
+4/figures/EXPERTSEDA.png>] <../figures/SD1.png, id=23, 481.8pt x 481.8pt>
 File: ../figures/SD1.png Graphic file (type png)
- <use ../figures/SD1.png>
+
+<use ../figures/SD1.png>
 Package pdftex.def Info: ../figures/SD1.png used on input line 133.
 (pdftex.def)             Requested size: 152.63528pt x 99.99736pt.
 
@@ -533,7 +488,7 @@ Overfull \hbox (3.94185pt too wide) in paragraph at lines 133--134
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/SD2.png, id=25, 481.8pt x 481.8pt>
+<../figures/SD2.png, id=24, 481.8pt x 481.8pt>
 File: ../figures/SD2.png Graphic file (type png)
  <use ../figures/SD2.png>
 Package pdftex.def Info: ../figures/SD2.png used on input line 136.
@@ -543,7 +498,7 @@ Overfull \hbox (3.94185pt too wide) in paragraph at lines 136--137
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/SD3.png, id=26, 481.8pt x 481.8pt>
+<../figures/SD3.png, id=25, 481.8pt x 481.8pt>
 File: ../figures/SD3.png Graphic file (type png)
  <use ../figures/SD3.png>
 Package pdftex.def Info: ../figures/SD3.png used on input line 139.
@@ -553,7 +508,7 @@ Overfull \hbox (3.94185pt too wide) in paragraph at lines 139--140
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/CORR1.png, id=27, 481.8pt x 481.8pt>
+<../figures/CORR1.png, id=26, 481.8pt x 481.8pt>
 File: ../figures/CORR1.png Graphic file (type png)
  <use ../figures/CORR1.png>
 Package pdftex.def Info: ../figures/CORR1.png used on input line 146.
@@ -563,7 +518,7 @@ Overfull \hbox (3.94185pt too wide) in paragraph at lines 146--147
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/CORR2.png, id=28, 481.8pt x 481.8pt>
+<../figures/CORR2.png, id=27, 481.8pt x 481.8pt>
 File: ../figures/CORR2.png Graphic file (type png)
  <use ../figures/CORR2.png>
 Package pdftex.def Info: ../figures/CORR2.png used on input line 150.
@@ -573,7 +528,7 @@ Overfull \hbox (3.94185pt too wide) in paragraph at lines 150--151
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/CORR3.png, id=29, 481.8pt x 481.8pt>
+<../figures/CORR3.png, id=28, 481.8pt x 481.8pt>
 File: ../figures/CORR3.png Graphic file (type png)
  <use ../figures/CORR3.png>
 Package pdftex.def Info: ../figures/CORR3.png used on input line 153.
@@ -583,32 +538,35 @@ Overfull \hbox (3.94185pt too wide) in paragraph at lines 153--154
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/CORR_vs_NDAI.png, id=30, 361.35pt x 361.35pt>
+<../figures/CORR_vs_NDAI.png, id=29, 361.35pt x 361.35pt>
 File: ../figures/CORR_vs_NDAI.png Graphic file (type png)
 
 <use ../figures/CORR_vs_NDAI.png>
 Package pdftex.def Info: ../figures/CORR_vs_NDAI.png used on input line 162.
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
 
-<../figures/CORR_vs_SD.png, id=31, 361.35pt x 361.35pt>
+<../figures/CORR_vs_SD.png, id=30, 361.35pt x 361.35pt>
 File: ../figures/CORR_vs_SD.png Graphic file (type png)
 
 <use ../figures/CORR_vs_SD.png>
 Package pdftex.def Info: ../figures/CORR_vs_SD.png used on input line 167.
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
 
-<../figures/NDAI_vs_SD.png, id=32, 361.35pt x 361.35pt>
+<../figures/NDAI_vs_SD.png, id=31, 361.35pt x 361.35pt>
 File: ../figures/NDAI_vs_SD.png Graphic file (type png)
 
 <use ../figures/NDAI_vs_SD.png>
 Package pdftex.def Info: ../figures/NDAI_vs_SD.png used on input line 172.
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
- [3 <../figures/NDAI1.png> <../figures/NDAI2.png> <../figures/NDAI3.png> <../fi
-gures/SD1.png> <../figures/SD2.png> <../figures/SD3.png> <../figures/CORR1.png>
- <../figures/CORR2.png> <../figures/CORR3.png> <../figures/CORR_vs_NDAI.png (PN
-G copy)> <../figures/CORR_vs_SD.png (PNG copy)> <../figures/NDAI_vs_SD.png (PNG
- copy)>]
-<../figures/NDAIEDA.png, id=46, 697.60625pt x 588.1975pt>
+ [3 <D:/coursework/stat215a/lab4/figures/NDAI1.png> <D:/coursework/stat215a/lab
+4/figures/NDAI2.png> <D:/coursework/stat215a/lab4/figures/NDAI3.png> <D:/course
+work/stat215a/lab4/figures/SD1.png> <D:/coursework/stat215a/lab4/figures/SD2.pn
+g> <D:/coursework/stat215a/lab4/figures/SD3.png> <D:/coursework/stat215a/lab4/f
+igures/CORR1.png> <D:/coursework/stat215a/lab4/figures/CORR2.png> <D:/coursewor
+k/stat215a/lab4/figures/CORR3.png> <D:/coursework/stat215a/lab4/figures/CORR_vs
+_NDAI.png (PNG copy)> <D:/coursework/stat215a/lab4/figures/CORR_vs_SD.png (PNG 
+copy)> <D:/coursework/stat215a/lab4/figures/NDAI_vs_SD.png (PNG copy)>]
+<../figures/NDAIEDA.png, id=45, 697.60625pt x 588.1975pt>
 File: ../figures/NDAIEDA.png Graphic file (type png)
 
 <use ../figures/NDAIEDA.png>
@@ -619,7 +577,7 @@ Overfull \hbox (35.19312pt too wide) in paragraph at lines 184--185
 [][] 
  []
 
-<../figures/SDEDA.png, id=47, 697.60625pt x 588.1975pt>
+<../figures/SDEDA.png, id=46, 697.60625pt x 588.1975pt>
 File: ../figures/SDEDA.png Graphic file (type png)
 
 <use ../figures/SDEDA.png>
@@ -630,7 +588,7 @@ Overfull \hbox (35.19312pt too wide) in paragraph at lines 189--190
 [][] 
  []
 
-<../figures/CORREDA.png, id=48, 697.60625pt x 588.1975pt>
+<../figures/CORREDA.png, id=47, 697.60625pt x 588.1975pt>
 File: ../figures/CORREDA.png Graphic file (type png)
 
 <use ../figures/CORREDA.png>
@@ -641,42 +599,43 @@ Overfull \hbox (35.19312pt too wide) in paragraph at lines 194--195
 [][] 
  []
 
-<../figures/ANEDA.png, id=49, 657.45625pt x 507.8975pt>
+<../figures/ANEDA.png, id=48, 657.45625pt x 507.8975pt>
 File: ../figures/ANEDA.png Graphic file (type png)
 
 <use ../figures/ANEDA.png>
 Package pdftex.def Info: ../figures/ANEDA.png used on input line 201.
 (pdftex.def)             Requested size: 92.46458pt x 92.47159pt.
 
-<../figures/AFEDA.png, id=50, 657.45625pt x 507.8975pt>
+<../figures/AFEDA.png, id=49, 657.45625pt x 507.8975pt>
 File: ../figures/AFEDA.png Graphic file (type png)
 
 <use ../figures/AFEDA.png>
 Package pdftex.def Info: ../figures/AFEDA.png used on input line 202.
 (pdftex.def)             Requested size: 92.46458pt x 92.47159pt.
 
-<../figures/BFEDA.png, id=51, 657.45625pt x 507.8975pt>
+<../figures/BFEDA.png, id=50, 657.45625pt x 507.8975pt>
 File: ../figures/BFEDA.png Graphic file (type png)
 
 <use ../figures/BFEDA.png>
 Package pdftex.def Info: ../figures/BFEDA.png used on input line 203.
 (pdftex.def)             Requested size: 92.46458pt x 92.47159pt.
 
-<../figures/CFEDA.png, id=52, 657.45625pt x 507.8975pt>
+<../figures/CFEDA.png, id=51, 657.45625pt x 507.8975pt>
 File: ../figures/CFEDA.png Graphic file (type png)
 
 <use ../figures/CFEDA.png>
 Package pdftex.def Info: ../figures/CFEDA.png used on input line 204.
 (pdftex.def)             Requested size: 92.46458pt x 92.47159pt.
 
-<../figures/DFEDA.png, id=53, 657.45625pt x 507.8975pt>
+<../figures/DFEDA.png, id=52, 657.45625pt x 507.8975pt>
 File: ../figures/DFEDA.png Graphic file (type png)
 
 <use ../figures/DFEDA.png>
 Package pdftex.def Info: ../figures/DFEDA.png used on input line 205.
 (pdftex.def)             Requested size: 92.46458pt x 92.47159pt.
- [4 <../figures/NDAIEDA.png> <../figures/SDEDA.png> <../figures/CORREDA.png>]
-<../figures/ROC_12_folds_DA.png, id=60, 361.35pt x 361.35pt>
+ [4 <D:/coursework/stat215a/lab4/figures/NDAIEDA.png> <D:/coursework/stat215a/l
+ab4/figures/SDEDA.png> <D:/coursework/stat215a/lab4/figures/CORREDA.png>]
+<../figures/ROC_12_folds_DA.png, id=59, 361.35pt x 361.35pt>
 File: ../figures/ROC_12_folds_DA.png Graphic file (type png)
 
 <use ../figures/ROC_12_folds_DA.png>
@@ -684,7 +643,7 @@ Package pdftex.def Info: ../figures/ROC_12_folds_DA.png used on input line 214.
 
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
 
-<../figures/AUC_12_folds_DA.png, id=61, 361.35pt x 361.35pt>
+<../figures/AUC_12_folds_DA.png, id=60, 361.35pt x 361.35pt>
 File: ../figures/AUC_12_folds_DA.png Graphic file (type png)
 
 <use ../figures/AUC_12_folds_DA.png>
@@ -692,16 +651,19 @@ Package pdftex.def Info: ../figures/AUC_12_folds_DA.png used on input line 219.
 
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
 
-<../figures/AUC_difference.png, id=62, 361.35pt x 361.35pt>
+<../figures/AUC_difference.png, id=61, 361.35pt x 361.35pt>
 File: ../figures/AUC_difference.png Graphic file (type png)
 
 <use ../figures/AUC_difference.png>
 Package pdftex.def Info: ../figures/AUC_difference.png used on input line 224.
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
- [5 <../figures/ANEDA.png> <../figures/AFEDA.png> <../figures/BFEDA.png> <../fi
-gures/CFEDA.png> <../figures/DFEDA.png> <../figures/ROC_12_folds_DA.png> <../fi
-gures/AUC_12_folds_DA.png> <../figures/AUC_difference.png>] <../figures/qda1_12
-fold_conf.png, id=81, 361.35pt x 361.35pt>
+ [5 <D:/coursework/stat215a/lab4/figures/ANEDA.png> <D:/coursework/stat215a/lab
+4/figures/AFEDA.png> <D:/coursework/stat215a/lab4/figures/BFEDA.png> <D:/course
+work/stat215a/lab4/figures/CFEDA.png> <D:/coursework/stat215a/lab4/figures/DFED
+A.png> <D:/coursework/stat215a/lab4/figures/ROC_12_folds_DA.png> <D:/coursework
+/stat215a/lab4/figures/AUC_12_folds_DA.png> <D:/coursework/stat215a/lab4/figure
+s/AUC_difference.png>]
+<../figures/qda1_12fold_conf.png, id=80, 361.35pt x 361.35pt>
 File: ../figures/qda1_12fold_conf.png Graphic file (type png)
 
 <use ../figures/qda1_12fold_conf.png>
@@ -709,7 +671,7 @@ Package pdftex.def Info: ../figures/qda1_12fold_conf.png used on input line 246
 .
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
 
-<../figures/qda2_12fold_conf.png, id=82, 361.35pt x 361.35pt>
+<../figures/qda2_12fold_conf.png, id=81, 361.35pt x 361.35pt>
 File: ../figures/qda2_12fold_conf.png Graphic file (type png)
 
 <use ../figures/qda2_12fold_conf.png>
@@ -717,7 +679,7 @@ Package pdftex.def Info: ../figures/qda2_12fold_conf.png used on input line 250
 .
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
 
-<../figures/qda3_12fold_conf.png, id=83, 361.35pt x 361.35pt>
+<../figures/qda3_12fold_conf.png, id=82, 361.35pt x 361.35pt>
 File: ../figures/qda3_12fold_conf.png Graphic file (type png)
 
 <use ../figures/qda3_12fold_conf.png>
@@ -725,37 +687,39 @@ Package pdftex.def Info: ../figures/qda3_12fold_conf.png used on input line 254
 .
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
 
-<../figures/qda1_prob.png, id=84, 361.35pt x 361.35pt>
+<../figures/qda1_prob.png, id=83, 361.35pt x 361.35pt>
 File: ../figures/qda1_prob.png Graphic file (type png)
 
 <use ../figures/qda1_prob.png>
 Package pdftex.def Info: ../figures/qda1_prob.png used on input line 264.
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
 
-<../figures/qda2_prob.png, id=85, 361.35pt x 361.35pt>
+<../figures/qda2_prob.png, id=84, 361.35pt x 361.35pt>
 File: ../figures/qda2_prob.png Graphic file (type png)
 
 <use ../figures/qda2_prob.png>
 Package pdftex.def Info: ../figures/qda2_prob.png used on input line 268.
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
 
-<../figures/qda3_prob.png, id=86, 361.35pt x 361.35pt>
+<../figures/qda3_prob.png, id=85, 361.35pt x 361.35pt>
 File: ../figures/qda3_prob.png Graphic file (type png)
 
 <use ../figures/qda3_prob.png>
 Package pdftex.def Info: ../figures/qda3_prob.png used on input line 272.
 (pdftex.def)             Requested size: 143.09619pt x 143.09283pt.
- [6 <../figures/qda1_12fold_conf.png> <../figures/qda2_12fold_conf.png> <../fig
-ures/qda3_12fold_conf.png> <../figures/qda1_prob.png (PNG copy)> <../figures/qd
-a2_prob.png (PNG copy)> <../figures/qda3_prob.png (PNG copy)>] <../figures/thre
-shold.png, id=93, 657.45625pt x 507.8975pt>
+ [6 <D:/coursework/stat215a/lab4/figures/qda1_12fold_conf.png> <D:/coursework/s
+tat215a/lab4/figures/qda2_12fold_conf.png> <D:/coursework/stat215a/lab4/figures
+/qda3_12fold_conf.png> <D:/coursework/stat215a/lab4/figures/qda1_prob.png (PNG 
+copy)> <D:/coursework/stat215a/lab4/figures/qda2_prob.png (PNG copy)> <D:/cours
+ework/stat215a/lab4/figures/qda3_prob.png (PNG copy)>] <../figures/threshold.pn
+g, id=92, 657.45625pt x 507.8975pt>
 File: ../figures/threshold.png Graphic file (type png)
 
 <use ../figures/threshold.png>
 Package pdftex.def Info: ../figures/threshold.png used on input line 288.
 (pdftex.def)             Requested size: 230.11313pt x 177.76678pt.
 
-<../figures/LogitClassification.png, id=94, 703.62875pt x 588.1975pt>
+<../figures/LogitClassification.png, id=93, 703.62875pt x 588.1975pt>
 File: ../figures/LogitClassification.png Graphic file (type png)
 
 <use ../figures/LogitClassification.png>
@@ -767,7 +731,7 @@ Overfull \hbox (35.15913pt too wide) in paragraph at lines 295--296
 [][] 
  []
 
-<../figures/LogitProbabilities.png, id=95, 703.62875pt x 588.1975pt>
+<../figures/LogitProbabilities.png, id=94, 703.62875pt x 588.1975pt>
 File: ../figures/LogitProbabilities.png Graphic file (type png)
 
 <use ../figures/LogitProbabilities.png>
@@ -779,8 +743,9 @@ Overfull \hbox (35.15913pt too wide) in paragraph at lines 301--302
 [][] 
  []
 
-[7 <../figures/threshold.png> <../figures/LogitClassification.png>]
-<../figures/ClassificationOutcomes.png, id=102, 789.95125pt x 588.1975pt>
+[7 <D:/coursework/stat215a/lab4/figures/threshold.png> <D:/coursework/stat215a/
+lab4/figures/LogitClassification.png>]
+<../figures/ClassificationOutcomes.png, id=101, 789.95125pt x 588.1975pt>
 File: ../figures/ClassificationOutcomes.png Graphic file (type png)
 
 <use ../figures/ClassificationOutcomes.png>
@@ -792,14 +757,14 @@ Overfull \hbox (35.16591pt too wide) in paragraph at lines 306--307
 [][] 
  []
 
-<../figures/LogitROC.png, id=103, 657.45625pt x 513.92pt>
+<../figures/LogitROC.png, id=102, 657.45625pt x 513.92pt>
 File: ../figures/LogitROC.png Graphic file (type png)
 
 <use ../figures/LogitROC.png>
 Package pdftex.def Info: ../figures/LogitROC.png used on input line 315.
 (pdftex.def)             Requested size: 166.94676pt x 130.49501pt.
 
-<../figures/ParameterConvergence.png, id=104, 657.45625pt x 507.8975pt>
+<../figures/ParameterConvergence.png, id=103, 657.45625pt x 507.8975pt>
 File: ../figures/ParameterConvergence.png Graphic file (type png)
 
 <use ../figures/ParameterConvergence.png>
@@ -810,13 +775,13 @@ Package pdftex.def Info: ../figures/ParameterConvergence.png used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8 <../figures/LogitProbabilities.png> <../figures/ClassificationOutcomes.png>]
-
+[8 <D:/coursework/stat215a/lab4/figures/LogitProbabilities.png> <D:/coursework/
+stat215a/lab4/figures/ClassificationOutcomes.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
-<../figures/AUC_12_folds.png, id=110, 173.64874pt x 247.92625pt>
+<../figures/AUC_12_folds.png, id=109, 173.64874pt x 247.92625pt>
 File: ../figures/AUC_12_folds.png Graphic file (type png)
 
 <use ../figures/AUC_12_folds.png>
@@ -827,7 +792,7 @@ Overfull \hbox (3.94786pt too wide) in paragraph at lines 337--338
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_fold_comparison.png, id=111, 481.8pt x 481.8pt>
+<../figures/ROC_fold_comparison.png, id=110, 481.8pt x 481.8pt>
 File: ../figures/ROC_fold_comparison.png Graphic file (type png)
 
 <use ../figures/ROC_fold_comparison.png>
@@ -839,7 +804,7 @@ Overfull \hbox (3.95262pt too wide) in paragraph at lines 340--341
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_image9.pdf, id=112, 505.89pt x 505.89pt>
+<../figures/ROC_image9.pdf, id=111, 505.89pt x 505.89pt>
 File: ../figures/ROC_image9.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image9.pdf>
@@ -850,7 +815,7 @@ Overfull \hbox (3.9477pt too wide) in paragraph at lines 349--350
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_image1.pdf, id=113, 505.89pt x 505.89pt>
+<../figures/ROC_image1.pdf, id=112, 505.89pt x 505.89pt>
 File: ../figures/ROC_image1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image1.pdf>
@@ -861,7 +826,7 @@ Overfull \hbox (3.9477pt too wide) in paragraph at lines 353--354
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_image5.pdf, id=114, 505.89pt x 505.89pt>
+<../figures/ROC_image5.pdf, id=113, 505.89pt x 505.89pt>
 File: ../figures/ROC_image5.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_image5.pdf>
@@ -872,9 +837,10 @@ Overfull \hbox (3.9477pt too wide) in paragraph at lines 357--358
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[9 <../figures/LogitROC.png> <../figures/ParameterConvergence.png> <../figures/
-AUC_12_folds.png> <../figures/ROC_fold_comparison.png>]
-<../figures/classification_image1.png, id=122, 481.8pt x 481.8pt>
+[9 <D:/coursework/stat215a/lab4/figures/LogitROC.png> <D:/coursework/stat215a/l
+ab4/figures/ParameterConvergence.png> <D:/coursework/stat215a/lab4/figures/AUC_
+12_folds.png> <D:/coursework/stat215a/lab4/figures/ROC_fold_comparison.png>]
+<../figures/classification_image1.png, id=121, 481.8pt x 481.8pt>
 File: ../figures/classification_image1.png Graphic file (type png)
 
 <use ../figures/classification_image1.png>
@@ -886,7 +852,7 @@ Overfull \hbox (3.9387pt too wide) in paragraph at lines 368--369
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/NDAI_image1.png, id=123, 481.8pt x 481.8pt>
+<../figures/NDAI_image1.png, id=122, 481.8pt x 481.8pt>
 File: ../figures/NDAI_image1.png Graphic file (type png)
 
 <use ../figures/NDAI_image1.png>
@@ -897,7 +863,7 @@ Overfull \hbox (3.94382pt too wide) in paragraph at lines 371--372
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/classification_image3.png, id=124, 481.8pt x 481.8pt>
+<../figures/classification_image3.png, id=123, 481.8pt x 481.8pt>
 File: ../figures/classification_image3.png Graphic file (type png)
 
 <use ../figures/classification_image3.png>
@@ -909,7 +875,7 @@ Overfull \hbox (3.9387pt too wide) in paragraph at lines 378--379
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/NDAI_image3.png, id=125, 481.8pt x 481.8pt>
+<../figures/NDAI_image3.png, id=124, 481.8pt x 481.8pt>
 File: ../figures/NDAI_image3.png Graphic file (type png)
 
 <use ../figures/NDAI_image3.png>
@@ -925,10 +891,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 386--388
 
  []
 
-[10 <../figures/ROC_image9.pdf> <../figures/ROC_image1.pdf> <../figures/ROC_ima
-ge5.pdf> <../figures/classification_image1.png> <../figures/NDAI_image1.png> <.
-./figures/classification_image3.png> <../figures/NDAI_image3.png>]
-<../figures/ROC_converge1.pdf, id=149, 505.89pt x 505.89pt>
+[10 <D:/coursework/stat215a/lab4/figures/ROC_image9.pdf> <D:/coursework/stat215
+a/lab4/figures/ROC_image1.pdf> <D:/coursework/stat215a/lab4/figures/ROC_image5.
+pdf> <D:/coursework/stat215a/lab4/figures/classification_image1.png> <D:/course
+work/stat215a/lab4/figures/NDAI_image1.png> <D:/coursework/stat215a/lab4/figure
+s/classification_image3.png> <D:/coursework/stat215a/lab4/figures/NDAI_image3.p
+ng>] <../figures/ROC_converge1.pdf, id=148, 505.89pt x 505.89pt>
 File: ../figures/ROC_converge1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge1.pdf>
@@ -939,7 +907,7 @@ Overfull \hbox (3.94714pt too wide) in paragraph at lines 391--392
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/AUCconverge.png, id=150, 481.8pt x 481.8pt>
+<../figures/AUCconverge.png, id=149, 481.8pt x 481.8pt>
 File: ../figures/AUCconverge.png Graphic file (type png)
 
 <use ../figures/AUCconverge.png>
@@ -950,7 +918,7 @@ Overfull \hbox (3.94127pt too wide) in paragraph at lines 396--397
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_converge_shuffle1.pdf, id=151, 505.89pt x 505.89pt>
+<../figures/ROC_converge_shuffle1.pdf, id=150, 505.89pt x 505.89pt>
 File: ../figures/ROC_converge_shuffle1.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge_shuffle1.pdf>
@@ -962,7 +930,7 @@ Overfull \hbox (3.94714pt too wide) in paragraph at lines 404--405
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/ROC_converge_shuffle2.pdf, id=152, 505.89pt x 505.89pt>
+<../figures/ROC_converge_shuffle2.pdf, id=151, 505.89pt x 505.89pt>
 File: ../figures/ROC_converge_shuffle2.pdf Graphic file (type pdf)
 
 <use ../figures/ROC_converge_shuffle2.pdf>
@@ -979,7 +947,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
-<../figures/Gini_mean_sd.png, id=153, 389.455pt x 185.69376pt>
+<../figures/Gini_mean_sd.png, id=152, 389.455pt x 185.69376pt>
 File: ../figures/Gini_mean_sd.png Graphic file (type png)
 
 <use ../figures/Gini_mean_sd.png>
@@ -990,7 +958,7 @@ Overfull \hbox (3.94144pt too wide) in paragraph at lines 416--417
 []\OT1/cmr/m/n/10 s[] 
  []
 
-<../figures/Gini_importance.png, id=154, 481.8pt x 481.8pt>
+<../figures/Gini_importance.png, id=153, 481.8pt x 481.8pt>
 File: ../figures/Gini_importance.png Graphic file (type png)
 
 <use ../figures/Gini_importance.png>
@@ -1002,42 +970,39 @@ Overfull \hbox (3.95242pt too wide) in paragraph at lines 419--420
 []\OT1/cmr/m/n/10 s[] 
  []
 
-[11 <../figures/ROC_converge1.pdf> <../figures/AUCconverge.png> <../figures/ROC
-_converge_shuffle1.pdf> <../figures/ROC_converge_shuffle2.pdf>] [12 <../figures
-/Gini_mean_sd.png> <../figures/Gini_importance.png>] (./writeupLab4.aux)
+[11 <D:/coursework/stat215a/lab4/figures/ROC_converge1.pdf> <D:/coursework/stat
+215a/lab4/figures/AUCconverge.png> <D:/coursework/stat215a/lab4/figures/ROC_con
+verge_shuffle1.pdf> <D:/coursework/stat215a/lab4/figures/ROC_converge_shuffle2.
+pdf>] [12 <D:/coursework/stat215a/lab4/figures/Gini_mean_sd.png> <D:/coursework
+/stat215a/lab4/figures/Gini_importance.png>]
+(D:\coursework\stat215a\lab4\tex\writeupLab4.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4873 strings out of 493488
- 75395 string characters out of 3141326
- 133134 words of memory out of 3000000
- 8057 multiletter control sequences out of 15000+200000
+ 4567 strings out of 493921
+ 68793 string characters out of 3152899
+ 123941 words of memory out of 3000000
+ 7763 multiletter control sequences out of 15000+200000
  10010 words of font info for 36 fonts, out of 3000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,11n,43p,1439b,446s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
-r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
-texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
-012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/te
-xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on writeupLab4.pdf (12 pages, 5941227 bytes).
+ 841 hyphenation exceptions out of 8191
+ 36i,11n,43p,1430b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
+crm1000.pk><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><D:/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y5.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on writeupLab4.pdf (12 pages, 5949628 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 235 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
