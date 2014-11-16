@@ -56,6 +56,16 @@ it should compile.
 ROC_converge_shuffle1.pdf and ROC_converge_shuffle2.pdf have the opposite problem and were saved as 'png' in the code, 
 so in the latex file, they should say 'png' instead of 'pdf'.
 
+The code to generate the plots  ROC_converge_shuffle1.png & ROC_converge_shuffle2.png
+are not calling the correct functions. Line 776 in random forest code, should read:
+    filename <- "ROC_converge_shuffle1.csv"
+    
+    plot.roc.shuffle1(filename)
+    
+    filename <- "ROC_converge_shuffle2.csv"
+    
+    plot.roc.shuffle2(filename)
+
 classification_image3.png was named in the code as classificaiton_image8.png, so if you replace 
 classification_image3.png with classification_image8.png the tex file will find it.  
 
